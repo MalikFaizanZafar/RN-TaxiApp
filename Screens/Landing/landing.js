@@ -1,7 +1,6 @@
 import React from "react";
-import { StyleSheet, Text, View, Button, Image, Dimensions } from "react-native";
+import { StyleSheet, Text, View, Button, Image, Dimensions, ScrollView } from "react-native";
 import { Icon, Badge } from "react-native-elements";
-import { ScrollView } from "react-native-gesture-handler";
 import { createDrawerNavigator} from 'react-navigation'
 const items = [
   {

@@ -3103,9 +3103,8 @@ public final class R {
     public static final int notification_template_icon_low_bg=0x7f06005d;
     public static final int notification_tile_bg=0x7f06005e;
     public static final int notify_panel_notification_icon_bg=0x7f06005f;
-    public static final int redbox_top_border_background=0x7f060060;
-    public static final int tooltip_frame_dark=0x7f060061;
-    public static final int tooltip_frame_light=0x7f060062;
+    public static final int tooltip_frame_dark=0x7f060060;
+    public static final int tooltip_frame_light=0x7f060061;
   }
   public static final class id {
     public static final int ALT=0x7f070000;
@@ -3389,13 +3388,12 @@ public final class R {
     public static final int catalyst_report_button=0x7f0b003e;
     public static final int catalyst_settings=0x7f0b003f;
     public static final int catalyst_settings_title=0x7f0b0040;
-    public static final int header_description=0x7f0b0041;
-    public static final int image_button_description=0x7f0b0042;
-    public static final int image_description=0x7f0b0043;
-    public static final int link_description=0x7f0b0044;
-    public static final int search_description=0x7f0b0045;
-    public static final int search_menu_title=0x7f0b0046;
-    public static final int status_bar_notification_info_overflow=0x7f0b0047;
+    public static final int image_button_description=0x7f0b0041;
+    public static final int image_description=0x7f0b0042;
+    public static final int link_description=0x7f0b0043;
+    public static final int search_description=0x7f0b0044;
+    public static final int search_menu_title=0x7f0b0045;
+    public static final int status_bar_notification_info_overflow=0x7f0b0046;
   }
   public static final class style {
     public static final int AlertDialog_AppCompat=0x7f0c0000;
@@ -12136,7 +12134,7 @@ public final class R {
     public static final int ViewStubCompat_android_inflatedId=2;
   }
   public static final class xml {
-    public static final int react_native_config=0x7f0e0000;
-    public static final int rn_dev_preferences=0x7f0e0001;
+    public static final int preferences=0x7f0e0000;
+    public static final int react_native_config=0x7f0e0001;
   }
 }

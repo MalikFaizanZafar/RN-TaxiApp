@@ -41,7 +41,7 @@
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\anim_catalyst_fade_in.xml.flat",
-        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.0.aar\\846dbbefdc729c87f33848e484aacd6c\\res\\anim\\catalyst_fade_in.xml"
+        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.57.5.aar\\9ce7e08f2b110ecacedf7e1be72f3e7a\\res\\anim\\catalyst_fade_in.xml"
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
@@ -289,7 +289,7 @@
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\anim_catalyst_slide_up.xml.flat",
-        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.0.aar\\846dbbefdc729c87f33848e484aacd6c\\res\\anim\\catalyst_slide_up.xml"
+        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.57.5.aar\\9ce7e08f2b110ecacedf7e1be72f3e7a\\res\\anim\\catalyst_slide_up.xml"
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xxhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
@@ -354,10 +354,6 @@
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
         "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\d64d4074500a214ac80db48002020a31\\res\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
-    },
-    {
-        "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_redbox_top_border_background.xml.flat",
-        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.0.aar\\846dbbefdc729c87f33848e484aacd6c\\res\\drawable\\redbox_top_border_background.xml"
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tooltip_frame_light.xml.flat",
@@ -525,7 +521,7 @@
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\anim_catalyst_fade_out.xml.flat",
-        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.0.aar\\846dbbefdc729c87f33848e484aacd6c\\res\\anim\\catalyst_fade_out.xml"
+        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.57.5.aar\\9ce7e08f2b110ecacedf7e1be72f3e7a\\res\\anim\\catalyst_fade_out.xml"
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
@@ -745,7 +741,7 @@
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\anim_catalyst_push_up_out.xml.flat",
-        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.0.aar\\846dbbefdc729c87f33848e484aacd6c\\res\\anim\\catalyst_push_up_out.xml"
+        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.57.5.aar\\9ce7e08f2b110ecacedf7e1be72f3e7a\\res\\anim\\catalyst_push_up_out.xml"
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
@@ -778,6 +774,10 @@
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_black_48dp.png.flat",
         "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\d64d4074500a214ac80db48002020a31\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_48dp.png"
+    },
+    {
+        "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\xml_preferences.xml.flat",
+        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.57.5.aar\\9ce7e08f2b110ecacedf7e1be72f3e7a\\res\\xml\\preferences.xml"
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21_notification_template_custom_big.xml.flat",
@@ -837,7 +837,7 @@
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_redbox_view.xml.flat",
-        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.0.aar\\846dbbefdc729c87f33848e484aacd6c\\res\\layout\\redbox_view.xml"
+        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.57.5.aar\\9ce7e08f2b110ecacedf7e1be72f3e7a\\res\\layout\\redbox_view.xml"
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
@@ -1145,11 +1145,7 @@
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\anim_catalyst_push_up_in.xml.flat",
-        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.0.aar\\846dbbefdc729c87f33848e484aacd6c\\res\\anim\\catalyst_push_up_in.xml"
-    },
-    {
-        "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\xml_rn_dev_preferences.xml.flat",
-        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.0.aar\\846dbbefdc729c87f33848e484aacd6c\\res\\xml\\rn_dev_preferences.xml"
+        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.57.5.aar\\9ce7e08f2b110ecacedf7e1be72f3e7a\\res\\anim\\catalyst_push_up_in.xml"
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_text_select_handle_right_mtrl_light.png.flat",
@@ -1157,7 +1153,7 @@
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_redbox_item_title.xml.flat",
-        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.0.aar\\846dbbefdc729c87f33848e484aacd6c\\res\\layout\\redbox_item_title.xml"
+        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.57.5.aar\\9ce7e08f2b110ecacedf7e1be72f3e7a\\res\\layout\\redbox_item_title.xml"
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
@@ -1165,7 +1161,7 @@
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_fps_view.xml.flat",
-        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.0.aar\\846dbbefdc729c87f33848e484aacd6c\\res\\layout\\fps_view.xml"
+        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.57.5.aar\\9ce7e08f2b110ecacedf7e1be72f3e7a\\res\\layout\\fps_view.xml"
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_activity_chooser_view.xml.flat",
@@ -1189,7 +1185,7 @@
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_dev_loading_view.xml.flat",
-        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.0.aar\\846dbbefdc729c87f33848e484aacd6c\\res\\layout\\dev_loading_view.xml"
+        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.57.5.aar\\9ce7e08f2b110ecacedf7e1be72f3e7a\\res\\layout\\dev_loading_view.xml"
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
@@ -1233,7 +1229,7 @@
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_redbox_item_frame.xml.flat",
-        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.0.aar\\846dbbefdc729c87f33848e484aacd6c\\res\\layout\\redbox_item_frame.xml"
+        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.57.5.aar\\9ce7e08f2b110ecacedf7e1be72f3e7a\\res\\layout\\redbox_item_frame.xml"
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_primary_text_material_light.xml.flat",
@@ -1601,7 +1597,7 @@
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\anim_catalyst_slide_down.xml.flat",
-        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.0.aar\\846dbbefdc729c87f33848e484aacd6c\\res\\anim\\catalyst_slide_down.xml"
+        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.57.5.aar\\9ce7e08f2b110ecacedf7e1be72f3e7a\\res\\anim\\catalyst_slide_down.xml"
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
