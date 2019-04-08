@@ -2,12 +2,9 @@ import React from "react";
 import { StyleSheet, Text, View, Button } from "react-native";
 import {
   createStackNavigator,
-  createAppContainer,
-  createBottomTabNavigator
+  createAppContainer
 } from "react-navigation";
-import LandingScreen, { MyDrawerNavigator } from "./Screens/Landing/landing";
-import AboutScreen from "./Screens/Landing/about";
-import SettingsScreen from "./Screens/Landing/settings";
+import { MyDrawerNavigator } from "./Screens/Landing/landing";
 
 const styles = StyleSheet.create({
   container: {
@@ -57,8 +54,6 @@ class HomeScreen extends React.Component {
     );
   }
 }
-
-
 const AppNavigator = createStackNavigator(
   {
     Home: HomeScreen,
