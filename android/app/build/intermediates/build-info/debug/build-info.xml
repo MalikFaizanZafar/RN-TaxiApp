@@ -6,26 +6,23 @@
     density="xhdpi"
     format="10"
     plugin-version="3.3.2"
-    timestamp="1554707074356"
+    timestamp="1554710260569"
     token="1094595276239507350"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="1510" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="131" />
+        duration="0" />
     <task
         name="verifier"
-        duration="100" />
+        duration="0" />
 
-    <artifact
-        location="E:\Office\subkuch-app\android\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-        type="SPLIT" />
     <artifact
         location="E:\Office\subkuch-app\android\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
         type="SPLIT_MAIN" />
@@ -37,6 +34,9 @@
         type="SPLIT" />
     <artifact
         location="E:\Office\subkuch-app\android\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+        type="SPLIT" />
+    <artifact
+        location="E:\Office\subkuch-app\android\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
         type="SPLIT" />
     <artifact
         location="E:\Office\subkuch-app\android\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
@@ -62,11 +62,8 @@
 
     <build
         build-mode="FULL"
-        timestamp="1554707074356"
+        timestamp="1554710260569"
         verifier="FULL_BUILD_REQUESTED" >
-        <artifact
-            location="E:\Office\subkuch-app\android\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-            type="SPLIT" />
         <artifact
             location="E:\Office\subkuch-app\android\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />
@@ -78,6 +75,9 @@
             type="SPLIT" />
         <artifact
             location="E:\Office\subkuch-app\android\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="E:\Office\subkuch-app\android\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
             location="E:\Office\subkuch-app\android\app\build\intermediates\split-apk\debug\dep\dependencies.apk"

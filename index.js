@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Button } from "react-native";
+import { AppRegistry, StyleSheet, Text, View, Button } from "react-native";
 import {
   createStackNavigator,
   createAppContainer
@@ -65,5 +65,5 @@ const AppNavigator = createStackNavigator(
     headerMode: "none"
   }
 );
-
+AppRegistry.registerComponent('SubQuch', () => HomeScreen)
 export default createAppContainer(AppNavigator);
