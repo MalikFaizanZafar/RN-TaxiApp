@@ -35,7 +35,7 @@ export default class LandingScreen extends React.Component {
     let imageWidth = dimensions.width;
     return (
       <View style={styles.container}>
-        <View style={styles.topBar}>
+        {/* <View style={styles.topBar}>
           <View style={styles.topBarIcon}>
             <Icon name="menu" color="white" size={iconSize}   onPress={() => this.props.navigation.openDrawer()}/>
           </View>
@@ -51,7 +51,7 @@ export default class LandingScreen extends React.Component {
                 "https://images.pexels.com/photos/1001990/pexels-photo-1001990.jpeg"
             }}
           />
-        </View>
+        </View> */}
         <View style={styles.containerItems}>
           <ScrollView horizontal={true} style={{ marginTop: 25, height: 50 }}>
             <View style={{ flex: 1, justifyContent: "center", width: 100 }}>
