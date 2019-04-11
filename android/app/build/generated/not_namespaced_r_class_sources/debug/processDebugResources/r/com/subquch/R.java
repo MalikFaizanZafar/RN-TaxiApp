@@ -2818,31 +2818,36 @@ public final class R {
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int uiTiltGestures=0x7f02013a;
+    public static final int uiScrollGesturesDuringRotateOrZoom=0x7f02013a;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int uiZoomControls=0x7f02013b;
+    public static final int uiTiltGestures=0x7f02013b;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int uiZoomGestures=0x7f02013c;
+    public static final int uiZoomControls=0x7f02013c;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int useViewLifecycle=0x7f02013d;
+    public static final int uiZoomGestures=0x7f02013d;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int useViewLifecycle=0x7f02013e;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int viewAspectRatio=0x7f02013e;
+    public static final int viewAspectRatio=0x7f02013f;
     /**
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int viewInflaterClass=0x7f02013f;
+    public static final int viewInflaterClass=0x7f020140;
     /**
      * Voice button icon
      * <p>May be a reference to another resource, in the form
@@ -2850,14 +2855,14 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int voiceIcon=0x7f020140;
+    public static final int voiceIcon=0x7f020141;
     /**
      * Flag indicating whether this window should have an Action Bar
      * in place of the usual title bar.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int windowActionBar=0x7f020141;
+    public static final int windowActionBar=0x7f020142;
     /**
      * Flag indicating whether this window's Action Bar should overlay
      * application content. Does nothing if the window would not
@@ -2865,14 +2870,14 @@ public final class R {
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int windowActionBarOverlay=0x7f020142;
+    public static final int windowActionBarOverlay=0x7f020143;
     /**
      * Flag indicating whether action modes should overlay window content
      * when there is not reserved space for their UI (such as an Action Bar).
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int windowActionModeOverlay=0x7f020143;
+    public static final int windowActionModeOverlay=0x7f020144;
     /**
      * A fixed height for the window along the major axis of the screen,
      * that is, when in portrait. Can be either an absolute dimension
@@ -2887,7 +2892,7 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int windowFixedHeightMajor=0x7f020144;
+    public static final int windowFixedHeightMajor=0x7f020145;
     /**
      * A fixed height for the window along the minor axis of the screen,
      * that is, when in landscape. Can be either an absolute dimension
@@ -2902,7 +2907,7 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int windowFixedHeightMinor=0x7f020145;
+    public static final int windowFixedHeightMinor=0x7f020146;
     /**
      * A fixed width for the window along the major axis of the screen,
      * that is, when in landscape. Can be either an absolute dimension
@@ -2917,7 +2922,7 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int windowFixedWidthMajor=0x7f020146;
+    public static final int windowFixedWidthMajor=0x7f020147;
     /**
      * A fixed width for the window along the minor axis of the screen,
      * that is, when in portrait. Can be either an absolute dimension
@@ -2932,7 +2937,7 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int windowFixedWidthMinor=0x7f020147;
+    public static final int windowFixedWidthMinor=0x7f020148;
     /**
      * The minimum width the window is allowed to be, along the major
      * axis of the screen.  That is, when in landscape.  Can be either
@@ -2948,7 +2953,7 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int windowMinWidthMajor=0x7f020148;
+    public static final int windowMinWidthMajor=0x7f020149;
     /**
      * The minimum width the window is allowed to be, along the minor
      * axis of the screen.  That is, when in portrait.  Can be either
@@ -2964,18 +2969,18 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int windowMinWidthMinor=0x7f020149;
+    public static final int windowMinWidthMinor=0x7f02014a;
     /**
      * Flag indicating whether there should be no title on this window.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int windowNoTitle=0x7f02014a;
+    public static final int windowNoTitle=0x7f02014b;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int zOrderOnTop=0x7f02014b;
+    public static final int zOrderOnTop=0x7f02014c;
   }
   public static final class bool {
     public static final int abc_action_bar_embed_tabs=0x7f030000;
@@ -5908,10 +5913,10 @@ public final class R {
       0x7f02010f, 0x7f020110, 0x7f020111, 0x7f020112, 
       0x7f020113, 0x7f020114, 0x7f020115, 0x7f020116, 
       0x7f020117, 0x7f020118, 0x7f02012d, 0x7f02012e, 
-      0x7f02012f, 0x7f020130, 0x7f02013f, 0x7f020141, 
-      0x7f020142, 0x7f020143, 0x7f020144, 0x7f020145, 
-      0x7f020146, 0x7f020147, 0x7f020148, 0x7f020149, 
-      0x7f02014a
+      0x7f02012f, 0x7f020130, 0x7f020140, 0x7f020142, 
+      0x7f020143, 0x7f020144, 0x7f020145, 0x7f020146, 
+      0x7f020147, 0x7f020148, 0x7f020149, 0x7f02014a, 
+      0x7f02014b
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#windowIsFloating}
@@ -8434,7 +8439,7 @@ public final class R {
       0x7f0200e4, 0x7f0200e5, 0x7f0200e6, 0x7f0200e7, 
       0x7f0200e8, 0x7f0200e9, 0x7f0200ea, 0x7f0200eb, 
       0x7f0200ec, 0x7f0200ed, 0x7f0200ee, 0x7f0200ef, 
-      0x7f02013e
+      0x7f02013f
     };
     /**
      * <p>This symbol is the offset where the {@link com.subquch.R.attr#actualImageScaleType}
@@ -9475,6 +9480,7 @@ public final class R {
      * <tr><td><code>{@link #MapAttrs_uiMapToolbar com.subquch:uiMapToolbar}</code></td><td></td></tr>
      * <tr><td><code>{@link #MapAttrs_uiRotateGestures com.subquch:uiRotateGestures}</code></td><td></td></tr>
      * <tr><td><code>{@link #MapAttrs_uiScrollGestures com.subquch:uiScrollGestures}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MapAttrs_uiScrollGesturesDuringRotateOrZoom com.subquch:uiScrollGesturesDuringRotateOrZoom}</code></td><td></td></tr>
      * <tr><td><code>{@link #MapAttrs_uiTiltGestures com.subquch:uiTiltGestures}</code></td><td></td></tr>
      * <tr><td><code>{@link #MapAttrs_uiZoomControls com.subquch:uiZoomControls}</code></td><td></td></tr>
      * <tr><td><code>{@link #MapAttrs_uiZoomGestures com.subquch:uiZoomGestures}</code></td><td></td></tr>
@@ -9499,6 +9505,7 @@ public final class R {
      * @see #MapAttrs_uiMapToolbar
      * @see #MapAttrs_uiRotateGestures
      * @see #MapAttrs_uiScrollGestures
+     * @see #MapAttrs_uiScrollGesturesDuringRotateOrZoom
      * @see #MapAttrs_uiTiltGestures
      * @see #MapAttrs_uiZoomControls
      * @see #MapAttrs_uiZoomGestures
@@ -9511,7 +9518,7 @@ public final class R {
       0x7f0200a3, 0x7f0200a4, 0x7f0200a5, 0x7f0200a6, 
       0x7f0200ba, 0x7f0200bd, 0x7f020136, 0x7f020137, 
       0x7f020138, 0x7f020139, 0x7f02013a, 0x7f02013b, 
-      0x7f02013c, 0x7f02013d, 0x7f02014b
+      0x7f02013c, 0x7f02013d, 0x7f02013e, 0x7f02014c
     };
     /**
      * <p>This symbol is the offset where the {@link com.subquch.R.attr#ambientEnabled}
@@ -9693,6 +9700,16 @@ public final class R {
      */
     public static final int MapAttrs_uiScrollGestures=17;
     /**
+     * <p>This symbol is the offset where the {@link com.subquch.R.attr#uiScrollGesturesDuringRotateOrZoom}
+     * attribute's value can be found in the {@link #MapAttrs} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.subquch:uiScrollGesturesDuringRotateOrZoom
+     */
+    public static final int MapAttrs_uiScrollGesturesDuringRotateOrZoom=18;
+    /**
      * <p>This symbol is the offset where the {@link com.subquch.R.attr#uiTiltGestures}
      * attribute's value can be found in the {@link #MapAttrs} array.
      *
@@ -9701,7 +9718,7 @@ public final class R {
      *
      * @attr name com.subquch:uiTiltGestures
      */
-    public static final int MapAttrs_uiTiltGestures=18;
+    public static final int MapAttrs_uiTiltGestures=19;
     /**
      * <p>This symbol is the offset where the {@link com.subquch.R.attr#uiZoomControls}
      * attribute's value can be found in the {@link #MapAttrs} array.
@@ -9711,7 +9728,7 @@ public final class R {
      *
      * @attr name com.subquch:uiZoomControls
      */
-    public static final int MapAttrs_uiZoomControls=19;
+    public static final int MapAttrs_uiZoomControls=20;
     /**
      * <p>This symbol is the offset where the {@link com.subquch.R.attr#uiZoomGestures}
      * attribute's value can be found in the {@link #MapAttrs} array.
@@ -9721,7 +9738,7 @@ public final class R {
      *
      * @attr name com.subquch:uiZoomGestures
      */
-    public static final int MapAttrs_uiZoomGestures=20;
+    public static final int MapAttrs_uiZoomGestures=21;
     /**
      * <p>This symbol is the offset where the {@link com.subquch.R.attr#useViewLifecycle}
      * attribute's value can be found in the {@link #MapAttrs} array.
@@ -9731,7 +9748,7 @@ public final class R {
      *
      * @attr name com.subquch:useViewLifecycle
      */
-    public static final int MapAttrs_useViewLifecycle=21;
+    public static final int MapAttrs_useViewLifecycle=22;
     /**
      * <p>This symbol is the offset where the {@link com.subquch.R.attr#zOrderOnTop}
      * attribute's value can be found in the {@link #MapAttrs} array.
@@ -9741,7 +9758,7 @@ public final class R {
      *
      * @attr name com.subquch:zOrderOnTop
      */
-    public static final int MapAttrs_zOrderOnTop=22;
+    public static final int MapAttrs_zOrderOnTop=23;
     /**
      * Attributes that can be used with a MenuGroup.
      * <p>Includes the following attributes:</p>
@@ -10584,7 +10601,7 @@ public final class R {
       0x7f020054, 0x7f020064, 0x7f02006f, 0x7f020091, 
       0x7f020099, 0x7f0200a7, 0x7f0200da, 0x7f0200db, 
       0x7f0200f1, 0x7f0200f2, 0x7f020104, 0x7f020109, 
-      0x7f020140
+      0x7f020141
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#focusable}
@@ -11019,7 +11036,7 @@ public final class R {
       0x7f0200e2, 0x7f0200e3, 0x7f0200e4, 0x7f0200e5, 
       0x7f0200e6, 0x7f0200e7, 0x7f0200e8, 0x7f0200e9, 
       0x7f0200ea, 0x7f0200eb, 0x7f0200ec, 0x7f0200ed, 
-      0x7f0200ee, 0x7f0200ef, 0x7f02013e
+      0x7f0200ee, 0x7f0200ef, 0x7f02013f
     };
     /**
      * <p>This symbol is the offset where the {@link com.subquch.R.attr#actualImageResource}

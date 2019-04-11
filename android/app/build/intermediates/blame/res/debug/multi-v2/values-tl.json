@@ -4,24 +4,7 @@
             "outputFile": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-tl\\values-tl.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-12.0.0.aar\\4f83d9b84a839b84c612510e3189a097\\res\\values-tl\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "204",
-                        "endOffsets": "451"
-                    },
-                    "to": {
-                        "startLines": "37",
-                        "startColumns": "4",
-                        "startOffsets": "4082",
-                        "endColumns": "204",
-                        "endOffsets": "4282"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-12.0.0.aar\\5a4fefee085169d46c0beea314d5e1cb\\res\\values-tl\\values.xml",
+                    "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.1.0.aar\\ea5dc9d8cc110a1dae93f9b230cb3114\\res\\values-tl\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -35,6 +18,23 @@
                         "startOffsets": "2865,2974,3182,3322,3433,3650,3788,3940,4287,4525,4634,4843,4983,5204,5413,5511,5607",
                         "endColumns": "108,207,139,110,216,137,151,141,237,108,208,139,220,208,97,95,109",
                         "endOffsets": "2969,3177,3317,3428,3645,3783,3935,4077,4520,4629,4838,4978,5199,5408,5506,5602,5712"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-16.2.0.aar\\b353d9e0f31677a9c2715b534cfdea15\\res\\values-tl\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "204",
+                        "endOffsets": "451"
+                    },
+                    "to": {
+                        "startLines": "37",
+                        "startColumns": "4",
+                        "startOffsets": "4082",
+                        "endColumns": "204",
+                        "endOffsets": "4282"
                     }
                 },
                 {

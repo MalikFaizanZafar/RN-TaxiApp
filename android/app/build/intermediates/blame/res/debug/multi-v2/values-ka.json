@@ -4,7 +4,7 @@
             "outputFile": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ka\\values-ka.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-12.0.0.aar\\5a4fefee085169d46c0beea314d5e1cb\\res\\values-ka\\values.xml",
+                    "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.1.0.aar\\ea5dc9d8cc110a1dae93f9b230cb3114\\res\\values-ka\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-12.0.0.aar\\4f83d9b84a839b84c612510e3189a097\\res\\values-ka\\values.xml",
+                    "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-16.2.0.aar\\b353d9e0f31677a9c2715b534cfdea15\\res\\values-ka\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
