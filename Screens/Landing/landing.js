@@ -2,6 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View, Button, Image, Dimensions, ScrollView } from "react-native";
 import { Icon, Badge } from "react-native-elements";
 import { createDrawerNavigator} from 'react-navigation'
+import MapScreen from "./map";
 const items = [
   {
     name: "Item 1",
@@ -35,11 +36,12 @@ export default class LandingScreen extends React.Component {
     let imageWidth = dimensions.width;
     return (
       <View style={styles.container}>
-        {/* <View style={styles.topBar}>
+        <View style={styles.topBar}>
           <View style={styles.topBarIcon}>
             <Icon name="menu" color="white" size={iconSize}   onPress={() => this.props.navigation.openDrawer()}/>
           </View>
           <View style={styles.topBarLogo}>
+            <Icon name="menu" color="white" size={iconSize}   onPress={() => this.props.navigation.openDrawer()}/>
             <Text style={{ fontSize: 20, color: "white" }}>SubQuch Logo</Text>
           </View>
         </View>
@@ -51,11 +53,11 @@ export default class LandingScreen extends React.Component {
                 "https://images.pexels.com/photos/1001990/pexels-photo-1001990.jpeg"
             }}
           />
-        </View> */}
+        </View>
         <View style={styles.containerItems}>
           <ScrollView horizontal={true} style={{ marginTop: 25, height: 50 }}>
             <View style={{ flex: 1, justifyContent: "center", width: 100 }}>
-              <Badge value="Pizza" status="primary" />
+              <Badge  textStyle={{ color: 'white', fontSize: 10, lineHeight: 10 }} value="Pizza" status="primary" />
             </View>
             <View style={{ flex: 1, justifyContent: "center", width: 100 }}>
               <Badge value="Burger" status="primary" />
@@ -114,15 +116,15 @@ const styles = StyleSheet.create({
     marginTop: 23
   },
   topBar: {
-    backgroundColor: "blue",
-    flexDirection: "row"
+    backgroundColor: "#7B1FA2",
+    flexDirection: "row",
+    height: 50
   },
   topBarIcon: {
     justifyContent: "flex-start",
     alignItems: "flex-start"
   },
   topBarLogo: {
-    marginLeft: 80,
     alignItems: "center",
     justifyContent: "center"
   },
@@ -159,34 +161,14 @@ const styles = StyleSheet.create({
   }
 });
 
-class SideBarScreen extends React.Component {
-  static navigationOptions = {
-    drawerLabel: 'Sidebar',
-    drawerIcon: ({ tintColor }) => (
-      <Image
-        source={{uri : "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg"}}
-        style={[styles.icon, {tintColor: tintColor}]}
-      />
-    ),
-  };
-
-  render() {
-    return (
-      <Button
-        onPress={() => this.props.navigation.goBack()}
-        title="Go back home"
-      />
-    );
-  }
-}
 
 export const MyDrawerNavigator = createDrawerNavigator({
   Landing: {
     screen: LandingScreen,
   },
-  Sidebar: {
-    screen: SideBarScreen,
-  },
+  Map: {
+    screen: MapScreen
+  }
 }, {
   backgroundColor: 'green',
   drawerWidth: 200,
