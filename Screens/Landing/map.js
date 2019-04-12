@@ -16,6 +16,14 @@ export default class MapScreen extends React.Component {
   };
 
   render() {
+    const markers = [
+      {
+        latitude: 33.676446,
+        longitude: 72.998152,
+        title: 'SubQuch',
+        subtitle: 'Inverse Square'
+      }
+    ];
     return (
       <View style={styles.container}>
         <MapView
@@ -27,7 +35,14 @@ export default class MapScreen extends React.Component {
             latitudeDelta: 0.0922,
             longitudeDelta: 0.0421
           }}
-        />
+        >
+        <MapView.Marker
+            coordinate={{latitude: 33.676446,
+            longitude: 72.998152}}
+            title={"SubQuch"}
+            description={"Inverse Square"}
+         />
+        </MapView>
         <Text>Welcome to SubQuch Maps</Text>
       </View>
     );
