@@ -1,5 +1,12 @@
 import React from "react";
-import { Text, View, Image, StyleSheet, Dimensions, PermissionsAndroid } from "react-native";
+import {
+  Text,
+  View,
+  Image,
+  StyleSheet,
+  Dimensions,
+  PermissionsAndroid
+} from "react-native";
 import MapView, { PROVIDER_GOOGLE } from "react-native-maps";
 import { Button } from "react-native-elements";
 export default class MapScreen extends React.Component {
@@ -21,38 +28,39 @@ export default class MapScreen extends React.Component {
     this.state = {
       latitude: null,
       longitude: null,
-      error:null,
-    }
-  } 
+      error: null
+    };
+  }
   async LocationSerivce() {
     try {
       const granted = await PermissionsAndroid.request(
         PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
         {
-          'title': 'Location Permission',
-          'message': 'This App needs access to your location ' +
-                     'so we can know where you are.'
+          title: "Location Permission",
+          message:
+            "This App needs access to your location " +
+            "so we can know where you are."
         }
-      )
+      );
       if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-        console.log("You can use locations ")
+        console.log("You can use locations ");
         navigator.geolocation.getCurrentPosition(
-          (position) => {
+          position => {
             console.log(position);
             this.setState({
               latitude: position.coords.latitude,
               longitude: position.coords.longitude,
-              error: null,
+              error: null
             });
           },
-          (error) => this.setState({ error: error.message }),
-          { enableHighAccuracy: false, timeout: 200000, maximumAge: 1000 },
-        )
+          error => this.setState({ error: error.message }),
+          { enableHighAccuracy: false, timeout: 200000, maximumAge: 1000 }
+        );
       } else {
-        console.log("Location permission denied")
+        console.log("Location permission denied");
       }
     } catch (err) {
-      console.warn(err)
+      console.warn(err);
     }
   }
   render() {
@@ -60,6 +68,9 @@ export default class MapScreen extends React.Component {
       <View style={styles.container}>
         <MapView
           provider={PROVIDER_GOOGLE}
+          ref={mapView => {
+            _mapView = mapView;
+          }}
           style={styles.map}
           initialRegion={{
             latitude: 33.6755329,
@@ -68,15 +79,33 @@ export default class MapScreen extends React.Component {
             longitudeDelta: 0.0421
           }}
         >
-        <MapView.Marker
-            coordinate={{latitude: 33.676446,
-            longitude: 72.998152}}
+          <MapView.Marker
+            coordinate={{ latitude: 33.676446, longitude: 72.998152 }}
             title={"SubQuch"}
             description={"Inverse Square"}
-         />
+          />
         </MapView>
-        <Button title="Near My Location" onPress={() => this.LocationSerivce()}/>
-        <Text> You Location : Lat : {this.state.latitude}, Long : {this.state.longitude} </Text>
+        <Button
+          title="Near My Location"
+          onPress={() => this.LocationSerivce()}
+        />
+        <Button
+          title="Animate to Location"
+          onPress={() =>
+            _mapView.animateToRegion(
+              {
+                latitude: this.state.latitude,
+                longitude: this.state.longitude,
+                latitudeDelta: 0.0922,
+                longitudeDelta: 0.0421
+              },
+              1000
+            )
+          }
+        />
+        <Text>
+          You Location : Lat : {this.state.latitude}, Long :{this.state.longitude}
+        </Text>
       </View>
     );
   }
