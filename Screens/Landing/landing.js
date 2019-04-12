@@ -1,8 +1,10 @@
 import React from "react";
 import { StyleSheet, Text, View, Button, Image, Dimensions, ScrollView } from "react-native";
-import { Icon, Badge } from "react-native-elements";
+import { Badge } from "react-native-elements";
+import Icon from 'react-native-vector-icons/MaterialIcons';
 import { createDrawerNavigator} from 'react-navigation'
 import MapScreen from "./map";
+const MyIcon = <Icon name="person-outline" size={30} color="#4F8EF7"  type="MaterialIcons" onPress={() => this.props.navigation.openDrawer()}/>
 const items = [
   {
     name: "Item 1",
@@ -38,10 +40,10 @@ export default class LandingScreen extends React.Component {
       <View style={styles.container}>
         <View style={styles.topBar}>
           <View style={styles.topBarIcon}>
-            <Icon name="menu" color="white" size={iconSize}   onPress={() => this.props.navigation.openDrawer()}/>
+          {MyIcon}
           </View>
           <View style={styles.topBarLogo}>
-            <Icon name="menu" color="white" size={iconSize}   onPress={() => this.props.navigation.openDrawer()}/>
+          <Icon name='person-outline' type="MaterialIcons" />
             <Text style={{ fontSize: 20, color: "white" }}>SubQuch Logo</Text>
           </View>
         </View>
