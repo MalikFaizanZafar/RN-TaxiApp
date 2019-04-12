@@ -58,8 +58,7 @@ export default class MapScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        if(this.state.latitude){
-          <MapView
+        <MapView
           provider={PROVIDER_GOOGLE}
           style={styles.map}
           initialRegion={{
@@ -76,9 +75,8 @@ export default class MapScreen extends React.Component {
             description={"Inverse Square"}
          />
         </MapView>
-        }
         <Button title="Near My Location" onPress={() => this.LocationSerivce()}/>
-        {/* <Text> You Location : Lat : {this.state.latitude}, Long : {this.state.longitude} </Text> */}
+        <Text> You Location : Lat : {this.state.latitude}, Long : {this.state.longitude} </Text>
       </View>
     );
   }
