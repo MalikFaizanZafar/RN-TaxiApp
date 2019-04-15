@@ -12,15 +12,15 @@ import { Button } from "react-native-elements";
 export default class MapScreen extends React.Component {
   static navigationOptions = {
     drawerLabel: "Map",
-    drawerIcon: ({ tintColor }) => (
-      <Image
-        source={{
-          uri:
-            "https://images.pexels.com/photos/240834/pexels-photo-240834.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=100"
-        }}
-        style={[styles.icon, { tintColor: tintColor }]}
-      />
-    )
+    // drawerIcon: ({ tintColor }) => (
+    //   <Image
+    //     source={{
+    //       uri:
+    //         "https://images.pexels.com/photos/240834/pexels-photo-240834.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=100"
+    //     }}
+    //     style={[styles.icon, { tintColor: tintColor }]}
+    //   />
+    // )
   };
   constructor(props) {
     super(props);

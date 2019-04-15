@@ -4,6 +4,7 @@ import { Badge } from "react-native-elements";
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { createDrawerNavigator} from 'react-navigation'
 import MapScreen from "./map";
+import MapScreenTwo from "./mapTwo";
 const MyIcon = <Icon name="person-outline" size={30} color="#4F8EF7"  type="MaterialIcons" onPress={() => this.props.navigation.openDrawer()}/>
 const items = [
   {
@@ -170,6 +171,9 @@ export const MyDrawerNavigator = createDrawerNavigator({
   },
   Map: {
     screen: MapScreen
+  },
+  MapTwo: {
+    screen: MapScreenTwo
   }
 }, {
   backgroundColor: 'green',
