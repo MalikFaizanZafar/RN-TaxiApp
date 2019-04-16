@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Apr 16 15:53:16 PKT 2019
+#Tue Apr 16 16:34:52 PKT 2019
 5.base=E\:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0
 22.path=fonts/Octicons.ttf
 32.set=ASSET
