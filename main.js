@@ -1,5 +1,5 @@
 import React from "react";
-import { AppRegistry, StyleSheet, Text, View, Button } from "react-native";
+import {StyleSheet, Text, View, Button, Image } from "react-native";
 import {
   createStackNavigator,
   createAppContainer
@@ -32,18 +32,19 @@ class HomeScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcomeText}>Welcome To Second Project App</Text>
         <View style={styles.innerContainer}>
           <View>
+            <Image style={{width: 250, height: 70}} source={require('./assets/subquch.png')}></Image>
+          </View>
+          <View style={{ marginTop: 20 }}>
             <Button
               title="Login With Facebook"
               onPress={() => this.props.navigation.navigate("Landing")}
             />
           </View>
-          <View style={{ marginTop: 15 }}>
+          <View style={{ marginTop: 8 }}>
             <Button
               color="red"
-              style={{ marginTop: 20 }}
               title="Login With Google"
               style={styles.btnGoogle}
               onPress={() => this.props.navigation.navigate("Landing")}
