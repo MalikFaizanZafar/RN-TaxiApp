@@ -8,6 +8,17 @@ class MapInput extends React.Component {
 
             <GooglePlacesAutocomplete
                 placeholder='Search'
+                styles={{
+                    listView: {
+                        position: 'absolute',
+                        marginTop: 40,
+                        backgroundColor: 'white',
+                        elevation: 10
+                    },
+                    separator: {
+                        opacity: 0
+                    }
+                }}
                 minLength={2}
                 autoFocus={true}
                 returnKeyType={'search'} 

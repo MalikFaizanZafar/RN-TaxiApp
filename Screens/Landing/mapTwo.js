@@ -59,7 +59,7 @@ class MapScreenTwo extends React.Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
-        <View style={{ flex: 0.4 }}>
+      <View style={{ flex: 0.5}}>
           <MapInput notifyChange={loc => this.getCoordsFromName(loc)} />
         </View>
         {this.state.region['latitude'] ? (
@@ -84,15 +84,6 @@ const styles = StyleSheet.create({
     bottom: 0,
     justifyContent: "flex-end",
     alignItems: "center"
-  },
-  map: {
-    flex: 1,
-    position: "absolute",
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    height: dimensions.height * 0.9
   },
   icon: {
     width: 24,

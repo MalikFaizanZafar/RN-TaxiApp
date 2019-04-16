@@ -1,9 +1,6 @@
 import React from "react";
-import {StyleSheet, Text, View, Button, Image } from "react-native";
-import {
-  createStackNavigator,
-  createAppContainer
-} from "react-navigation";
+import { StyleSheet, View, Button, Image } from "react-native";
+import { createStackNavigator, createAppContainer } from "react-navigation";
 import { MyDrawerNavigator } from "./Screens/Landing/landing";
 
 const styles = StyleSheet.create({
@@ -34,7 +31,10 @@ class HomeScreen extends React.Component {
       <View style={styles.container}>
         <View style={styles.innerContainer}>
           <View>
-            <Image style={{width: 250, height: 70}} source={require('./assets/subquch.png')}></Image>
+            <Image
+              style={{ width: 250, height: 70 }}
+              source={require("./assets/subquch.png")}
+            />
           </View>
           <View style={{ marginTop: 20 }}>
             <Button
@@ -66,6 +66,5 @@ const AppNavigator = createStackNavigator(
     headerMode: "none"
   }
 );
-// AppRegistry.registerComponent('SubQuch', () => AppNavigator)
 const AppContainer = createAppContainer(AppNavigator);
 export default AppContainer;
