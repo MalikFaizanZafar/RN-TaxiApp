@@ -7,10 +7,14 @@ INJECTED from E:\Office\subkuch-app\android\app\src\main\AndroidManifest.xml:1:1
 MERGED from E:\Office\subkuch-app\android\app\src\main\AndroidManifest.xml:1:1-29:12
 MERGED from [:react-native-gesture-handler] E:\Office\subkuch-app\node_modules\react-native-gesture-handler\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-vector-icons] E:\Office\subkuch-app\node_modules\react-native-vector-icons\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-google-signin] E:\Office\subkuch-app\node_modules\react-native-google-signin\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-maps] E:\Office\subkuch-app\node_modules\react-native-maps\lib\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-12:12
 MERGED from [com.facebook.react:react-native:0.57.5] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\react-native-0.57.5.aar\9ce7e08f2b110ecacedf7e1be72f3e7a\AndroidManifest.xml:2:1-15:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\d64d4074500a214ac80db48002020a31\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\1bfbfaf0e0e0b4607f6058e06ee56d18\AndroidManifest.xml:17:1-39:12
 MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\6fb0658e3051245dc3885a35dd12a503\AndroidManifest.xml:17:1-38:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:16.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-api-phone-16.0.0.aar\2bb7265c8937bfac57bfa3135585896e\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-16.0.0.aar\6105234d9a0f617611cdebc6febcdec2\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-base-16.1.0.aar\ea5dc9d8cc110a1dae93f9b230cb3114\AndroidManifest.xml:17:1-29:12
 MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\android-maps-utils-0.5.aar\fb95cc33c60307bd27a5a8e8ca2903c0\AndroidManifest.xml:2:1-13:12
 MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-tasks-16.0.1.aar\69edcb8f92275f215c75dfe6569ec593\AndroidManifest.xml:2:1-9:12
@@ -88,6 +92,8 @@ MERGED from E:\Office\subkuch-app\android\app\src\main\AndroidManifest.xml:6:5-2
 MERGED from E:\Office\subkuch-app\android\app\src\main\AndroidManifest.xml:6:5-27:19
 MERGED from [com.facebook.react:react-native:0.57.5] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\react-native-0.57.5.aar\9ce7e08f2b110ecacedf7e1be72f3e7a\AndroidManifest.xml:13:5-20
 MERGED from [com.facebook.react:react-native:0.57.5] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\react-native-0.57.5.aar\9ce7e08f2b110ecacedf7e1be72f3e7a\AndroidManifest.xml:13:5-20
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\1bfbfaf0e0e0b4607f6058e06ee56d18\AndroidManifest.xml:22:5-37:19
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\1bfbfaf0e0e0b4607f6058e06ee56d18\AndroidManifest.xml:22:5-37:19
 MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\6fb0658e3051245dc3885a35dd12a503\AndroidManifest.xml:30:5-36:19
 MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\6fb0658e3051245dc3885a35dd12a503\AndroidManifest.xml:30:5-36:19
 MERGED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-base-16.1.0.aar\ea5dc9d8cc110a1dae93f9b230cb3114\AndroidManifest.xml:22:5-27:19
@@ -174,14 +180,22 @@ MERGED from [:react-native-gesture-handler] E:\Office\subkuch-app\node_modules\r
 MERGED from [:react-native-gesture-handler] E:\Office\subkuch-app\node_modules\react-native-gesture-handler\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-vector-icons] E:\Office\subkuch-app\node_modules\react-native-vector-icons\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-vector-icons] E:\Office\subkuch-app\node_modules\react-native-vector-icons\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-google-signin] E:\Office\subkuch-app\node_modules\react-native-google-signin\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-google-signin] E:\Office\subkuch-app\node_modules\react-native-google-signin\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-maps] E:\Office\subkuch-app\node_modules\react-native-maps\lib\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-maps] E:\Office\subkuch-app\node_modules\react-native-maps\lib\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.react:react-native:0.57.5] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\react-native-0.57.5.aar\9ce7e08f2b110ecacedf7e1be72f3e7a\AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.57.5] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\react-native-0.57.5.aar\9ce7e08f2b110ecacedf7e1be72f3e7a\AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\d64d4074500a214ac80db48002020a31\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\d64d4074500a214ac80db48002020a31\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\1bfbfaf0e0e0b4607f6058e06ee56d18\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\1bfbfaf0e0e0b4607f6058e06ee56d18\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\6fb0658e3051245dc3885a35dd12a503\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\6fb0658e3051245dc3885a35dd12a503\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:16.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-api-phone-16.0.0.aar\2bb7265c8937bfac57bfa3135585896e\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:16.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-api-phone-16.0.0.aar\2bb7265c8937bfac57bfa3135585896e\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-16.0.0.aar\6105234d9a0f617611cdebc6febcdec2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-16.0.0.aar\6105234d9a0f617611cdebc6febcdec2\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-base-16.1.0.aar\ea5dc9d8cc110a1dae93f9b230cb3114\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-base-16.1.0.aar\ea5dc9d8cc110a1dae93f9b230cb3114\AndroidManifest.xml:20:5-44
 MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\android-maps-utils-0.5.aar\fb95cc33c60307bd27a5a8e8ca2903c0\AndroidManifest.xml:5:5-43
@@ -278,6 +292,24 @@ uses-permission#android.permission.ACCESS_COARSE_LOCATION
 ADDED from [:react-native-maps] E:\Office\subkuch-app\node_modules\react-native-maps\lib\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:10:5-81
 	android:name
 		ADDED from [:react-native-maps] E:\Office\subkuch-app\node_modules\react-native-maps\lib\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:10:22-78
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\1bfbfaf0e0e0b4607f6058e06ee56d18\AndroidManifest.xml:23:9-27:75
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\1bfbfaf0e0e0b4607f6058e06ee56d18\AndroidManifest.xml:25:13-46
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\1bfbfaf0e0e0b4607f6058e06ee56d18\AndroidManifest.xml:26:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\1bfbfaf0e0e0b4607f6058e06ee56d18\AndroidManifest.xml:27:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\1bfbfaf0e0e0b4607f6058e06ee56d18\AndroidManifest.xml:24:13-93
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\1bfbfaf0e0e0b4607f6058e06ee56d18\AndroidManifest.xml:33:9-36:110
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\1bfbfaf0e0e0b4607f6058e06ee56d18\AndroidManifest.xml:35:13-36
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\1bfbfaf0e0e0b4607f6058e06ee56d18\AndroidManifest.xml:36:13-107
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\1bfbfaf0e0e0b4607f6058e06ee56d18\AndroidManifest.xml:34:13-89
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\6fb0658e3051245dc3885a35dd12a503\AndroidManifest.xml:23:5-79
 	android:name
