@@ -59,9 +59,6 @@ class MapScreenTwo extends React.Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
-      <View style={{ flex: 0.5}}>
-          <MapInput notifyChange={loc => this.getCoordsFromName(loc)} />
-        </View>
         {this.state.region['latitude'] ? (
           <View style={{ flex: 1 }}>
             <MyMapView
@@ -70,6 +67,9 @@ class MapScreenTwo extends React.Component {
             />
           </View>
         ) : null}
+        <View style={{ flex: 0.75, marginBottom: 800}}>
+            <MapInput notifyChange={loc => this.getCoordsFromName(loc)} />
+        </View>
       </View>
     );
   }
