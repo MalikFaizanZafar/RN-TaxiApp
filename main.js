@@ -3,18 +3,9 @@ import { StyleSheet, View, Button, Image } from "react-native";
 import { createStackNavigator, createAppContainer } from "react-navigation";
 import { MyDrawerNavigator } from "./Screens/Landing/landing";
 
-import { GoogleSignin, GoogleSigninButton } from "react-native-google-signin";
+import { GoogleSignin, GoogleSigninButton, statusCodes } from "react-native-google-signin";
 import { LoginButton, AccessToken } from "react-native-fbsdk";
 
-GoogleSignin.configure({
-  scopes: ["https://www.googleapis.com/auth/drive.readonly"], // what API you want to access on behalf of the user, default is email and profile
-  webClientId: "AIzaSyB-EsaismaaJDTBDg0F2l-28Z-7zsVCTWU", // client ID of type WEB for your server (needed to verify user ID and offline access)
-  offlineAccess: true, // if you want to access Google API on behalf of the user FROM YOUR SERVER
-  hostedDomain: "", // specifies a hosted domain restriction
-  loginHint: "", // [iOS] The user's ID, or email address, to be prefilled in the authentication UI if possible. [See docs here](https://developers.google.com/identity/sign-in/ios/api/interface_g_i_d_sign_in.html#a0a68c7504c31ab0b728432565f6e33fd)
-  forceConsentPrompt: true, // [Android] if you want to show the authorization prompt at each login.
-  accountName: "" // [Android] specifies an account name on the device that should be used
-});
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -44,12 +35,25 @@ class HomeScreen extends React.Component {
       userInfo: {}
     };
   }
+  componentDidMount(){
+    console.log(" componentDidMount ");
+    GoogleSignin.configure({
+      scopes: ["https://www.googleapis.com/auth/drive.readonly"], // what API you want to access on behalf of the user, default is email and profile
+      webClientId: "895935298518-8apvnm51q2vj6ivbm6pbqj7ma5v7dsq9.apps.googleusercontent.com", // client ID of type WEB for your server (needed to verify user ID and offline access)
+      offlineAccess: true, // if you want to access Google API on behalf of the user FROM YOUR SERVER
+      hostedDomain: "", // specifies a hosted domain restriction
+      loginHint: "", // [iOS] The user's ID, or email address, to be prefilled in the authentication UI if possible. [See docs here](https://developers.google.com/identity/sign-in/ios/api/interface_g_i_d_sign_in.html#a0a68c7504c31ab0b728432565f6e33fd)
+      forceConsentPrompt: true, // [Android] if you want to show the authorization prompt at each login.
+      accountName: "" // [Android] specifies an account name on the device that should be used
+    });
+  }
   signIn = async () => {
     try {
       await GoogleSignin.hasPlayServices();
       const userInfo = await GoogleSignin.signIn();
+      console.log("userInfo :  ", userInfo.user);
       this.setState({ userInfo });
-      console.log("state has : ", this.state);
+      this.props.navigation.navigate("Landing")
     } catch (error) {
       if (error.code === statusCodes.SIGN_IN_CANCELLED) {
         // user cancelled the login flow
@@ -89,7 +93,7 @@ class HomeScreen extends React.Component {
               onLogoutFinished={() => console.log("logout.")}
             />
             <GoogleSigninButton
-              style={{ width: 237, height: 35, marginTop: 10 }}
+              style={{ width: 237, height: 35, marginTop: 10, elevation: 0 }}
               size={GoogleSigninButton.Size.Wide}
               color={GoogleSigninButton.Color.Light}
               onPress={this.signIn}
