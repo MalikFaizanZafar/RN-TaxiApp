@@ -374,6 +374,7 @@
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
     <string name="facebook_app_id">2327804567453388</string>
+    <string name="fb_login_protocol_scheme">fb{2327804567453388}</string>
     <string name="image_button_description" translatable="false">Button, Image</string>
     <string name="image_description" translatable="false">Image</string>
     <string name="link_description" translatable="false">Link</string>

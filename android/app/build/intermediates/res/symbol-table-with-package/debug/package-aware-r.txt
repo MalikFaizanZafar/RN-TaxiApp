@@ -1192,6 +1192,7 @@ string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
 string facebook_app_id
+string fb_login_protocol_scheme
 string image_button_description
 string image_description
 string link_description

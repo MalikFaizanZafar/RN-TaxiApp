@@ -1092,13 +1092,13 @@ public final class R {
         public static final int com_facebook_smart_login_confirmation_continue_as = 0x7f0c0055;
         public static final int com_facebook_smart_login_confirmation_title = 0x7f0c0056;
         public static final int com_facebook_tooltip_default = 0x7f0c0057;
-        public static final int image_button_description = 0x7f0c006b;
-        public static final int image_description = 0x7f0c006c;
-        public static final int link_description = 0x7f0c006d;
-        public static final int messenger_send_button_text = 0x7f0c006e;
-        public static final int search_description = 0x7f0c006f;
-        public static final int search_menu_title = 0x7f0c0070;
-        public static final int status_bar_notification_info_overflow = 0x7f0c0071;
+        public static final int image_button_description = 0x7f0c006c;
+        public static final int image_description = 0x7f0c006d;
+        public static final int link_description = 0x7f0c006e;
+        public static final int messenger_send_button_text = 0x7f0c006f;
+        public static final int search_description = 0x7f0c0070;
+        public static final int search_menu_title = 0x7f0c0071;
+        public static final int status_bar_notification_info_overflow = 0x7f0c0072;
     }
     public static final class style {
         private style() {}

@@ -36,7 +36,6 @@ class HomeScreen extends React.Component {
     };
   }
   componentDidMount(){
-    console.log(" componentDidMount ");
     GoogleSignin.configure({
       scopes: ["https://www.googleapis.com/auth/drive.readonly"], // what API you want to access on behalf of the user, default is email and profile
       webClientId: "895935298518-8apvnm51q2vj6ivbm6pbqj7ma5v7dsq9.apps.googleusercontent.com", // client ID of type WEB for your server (needed to verify user ID and offline access)
@@ -80,13 +79,16 @@ class HomeScreen extends React.Component {
             <LoginButton
               style={{ width: 230, height: 30 }}
               onLoginFinished={(error, result) => {
+                console.log('result has : ', result)
                 if (error) {
-                  console.log("login has error: " + result.error);
+                  console.log("login has error: " + error);
                 } else if (result.isCancelled) {
                   console.log("login is cancelled.");
                 } else {
                   AccessToken.getCurrentAccessToken().then(data => {
+                    console.log("data : ", data);
                     console.log(data.accessToken.toString());
+                    this.props.navigation.navigate("Landing")
                   });
                 }
               }}
