@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, View, Button, Image } from "react-native";
 import { connect } from 'react-redux';
 import { GoogleSignin, GoogleSigninButton, statusCodes } from "react-native-google-signin";
-import { LoginButton, AccessToken } from "react-native-fbsdk";
+import { LoginButton, AccessToken, LoginManager, GraphRequest, GraphRequestManager } from "react-native-fbsdk";
 import { addUser } from "../store/actions";
 import signUser from "../services/signUser";
 
@@ -81,21 +81,54 @@ class HomeScreen extends React.Component {
           <View style={{ marginTop: 20, justifyContent: "center", alignItems: "center" }}>
             <LoginButton
               style={{ width: 230, height: 30 }}
-              onLoginFinished={(error, result) => {
-                console.log('result has : ', result)
-                if (error) {
-                  console.log("login has error: " + error);
-                } else if (result.isCancelled) {
-                  console.log("login is cancelled.");
-                } else {
-                  AccessToken.getCurrentAccessToken().then(data => {
-                    console.log("data : ", data);
-                    console.log(data.accessToken.toString());
-                    this.props.navigation.navigate("Landing")
-                  });
+              onLoginFinished={
+                (error, result) => {
+                  if (error) {
+                    alert("login has error: " + result.error);
+                  } else if (result.isCancelled) {
+                    alert("login is cancelled.");
+                  } else {
+          
+                    AccessToken.getCurrentAccessToken().then(
+                      (data) => {
+                        let accessToken = data.accessToken
+                        alert(accessToken.toString())
+          
+                        const responseInfoCallback = (error, result) => {
+                          if (error) {
+                            console.log(error)
+                            alert('Error fetching data: ' + error.toString());
+                          } else {
+                            console.log(result)
+                            alert('Success fetching data: ' + result.toString());
+                          }
+                        }
+          
+                        const infoRequest = new GraphRequest(
+                          '/me',
+                          {
+                            accessToken: accessToken,
+                            parameters: {
+                              fields: {
+                                string: 'email,name'
+                              }
+                            }
+                          },
+                          (err, rslt) => {
+                            console.log('graphRequest result is : ', rslt)
+                          }
+                        );
+          
+                        // Start the graph request.
+                        new GraphRequestManager().addRequest(infoRequest).start()
+          
+                      }
+                    )
+          
+                  }
                 }
-              }}
-              onLogoutFinished={() => console.log("logout.")}
+              }
+              onLogoutFinished={() => alert("logout.")}
             />
             <GoogleSigninButton
               style={{ width: 237, height: 35, marginTop: 10, elevation: 0 }}
