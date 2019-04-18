@@ -51,7 +51,7 @@ class HomeScreen extends React.Component {
       await GoogleSignin.hasPlayServices();
       const userInfo = await GoogleSignin.signIn();
       this.setState({ userInfo });
-      signUser(userInfo).then(resp => {
+      signUser(userInfo, "GOOGLE").then(resp => {
         this.props.navigation.navigate("Landing")
       }).catch(resp2 => {
         console.log('msg 2 is ; ', msg2)
@@ -92,7 +92,6 @@ class HomeScreen extends React.Component {
                     AccessToken.getCurrentAccessToken().then(
                       (data) => {
                         let accessToken = data.accessToken
-                        alert(accessToken.toString())
           
                         const responseInfoCallback = (error, result) => {
                           if (error) {
@@ -110,12 +109,17 @@ class HomeScreen extends React.Component {
                             accessToken: accessToken,
                             parameters: {
                               fields: {
-                                string: 'email,name'
+                                string: 'email,name,picture'
                               }
                             }
                           },
                           (err, rslt) => {
-                            console.log('graphRequest result is : ', rslt)
+                            // console.log('graphRequest result is : ', rslt)
+                            signUser({...rslt,accessToken }, "FACEBOOK").then(resp => {
+                              this.props.navigation.navigate("Landing")
+                            }).catch(resp2 => {
+                              console.log('msg 2 is ; ', msg2)
+                            })
                           }
                         );
           
