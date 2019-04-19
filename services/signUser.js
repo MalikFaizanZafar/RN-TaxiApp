@@ -4,7 +4,6 @@ export default signUser = (userInfo, provider) => {
   return new Promise((resolve, reject) => {
     if(provider === "GOOGLE"){
       if(userInfo){
-        console.log('userInfo(Google) has : ', userInfo)
         let googleUser = {
           socialId: userInfo.user.id,
           password: '1234',
@@ -16,7 +15,7 @@ export default signUser = (userInfo, provider) => {
           birthday: '07-07-1995'
         }
         console.log('googleUser is : ', googleUser)
-        axios.post('http://192.168.1.13:3000/api/auth/user', googleUser).then(res => {
+        axios.post('http://192.168.10.2:8000/api/auth/user', googleUser).then(res => {
           console.log('response from server is : ', res)
           resolve(res)
         }).catch(error => {
@@ -46,7 +45,7 @@ export default signUser = (userInfo, provider) => {
           console.log('fbResponse is : ', fbResponse)
         }).catch(err => console.log('graphReq is : ', err)) 
 
-        axios.post('http://192.168.1.13:3000/api/auth/user', facebookUser).then(res => {
+        axios.post('http://192.168.10.2:8000/api/auth/user', facebookUser).then(res => {
           console.log('response from server is : ', res)
           resolve(res)
         }).catch(error => {
