@@ -1,12 +1,10 @@
 import axios from "axios";
 
-export default signUser = (userInfo, provider) => {
+export default signUser = (userInfo) => {
   return new Promise((resolve, reject) => {
-    if(provider === "GOOGLE"){
+    if(userInfo.provider === "GOOGLE"){
       if(userInfo){
-        console.log('googleUser is : ', userInfo)
-        axios.post('http://192.168.10.2:8000/api/auth/user', googleUser).then(res => {
-          // console.log('res.data from server is : ', res.data)
+        axios.post('http://192.168.10.2:8000/api/auth/user', userInfo).then(res => {
           resolve(res)
         }).catch(error => {
           console.log('error is ', error)
@@ -19,24 +17,13 @@ export default signUser = (userInfo, provider) => {
     }
     else{
       if(userInfo){
-        let facebookUser = {
-          socialId: userInfo.id,
-          password: '1234',
-          token: userInfo.accessToken,
-          name : userInfo.name,
-          email: userInfo.email,
-          photo: userInfo.picture.data.url,
-          gender: 'male',
-          birthday: '07-07-1995'
-        }
-        console.log('facebookUser is : ', facebookUser)
-        let graphAPI = `https://graph.facebook.com/v2.9/me?access_token=${facebookUser.token}&fields=gender,birthday,hometown%2Cage_range&method=get&pretty=0&sdk=joey&suppress_http_code=1`;
+        let graphAPI = `https://graph.facebook.com/v2.9/me?access_token=${userInfo.token}&fields=gender,birthday,hometown%2Cage_range&method=get&pretty=0&sdk=joey&suppress_http_code=1`;
         axios.get(graphAPI).then(fbResponse => {
-          console.log('fbResponse is : ', fbResponse)
+          // console.log('fbResponse is : ', fbResponse)
         }).catch(err => console.log('graphReq is : ', err)) 
 
-        axios.post('http://192.168.10.2:8000/api/auth/user', facebookUser).then(res => {
-          console.log('response from server is : ', res)
+        axios.post('http://192.168.10.2:8000/api/auth/user', userInfo).then(res => {
+          // console.log('response from server is : ', res)
           resolve(res)
         }).catch(error => {
           console.log('error is ', error)

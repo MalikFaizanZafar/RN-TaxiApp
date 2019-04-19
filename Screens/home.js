@@ -5,8 +5,9 @@ import { GoogleSignin, GoogleSigninButton, statusCodes } from "react-native-goog
 import { LoginButton, AccessToken, LoginManager, GraphRequest, GraphRequestManager } from "react-native-fbsdk";
 import { addUser } from "../store/actions";
 import signUser from "../services/signUser";
-import { Input, Avatar  } from 'react-native-elements';
-import RadioGroup,{Radio} from "react-native-radio-input";
+import { Avatar  } from 'react-native-elements';
+import RadioForm from 'react-native-simple-radio-button';
+import DatePicker from 'react-native-datepicker'
 
 const styles = StyleSheet.create({
   container: {
@@ -38,6 +39,8 @@ class HomeScreen extends React.Component {
     super(props);
     this.state = {
       userInfo: {},
+      gender: '',
+      birthday: '',
       modalVisible: false
     };
   }
@@ -46,6 +49,9 @@ class HomeScreen extends React.Component {
   }
   getChecked = (value) => {
     // value = our checked value
+    this.setState({
+      gender: value
+    })
     console.log(value)
   }
   componentDidMount(){
@@ -71,19 +77,10 @@ class HomeScreen extends React.Component {
         name : userInfo.user.name,
         email: userInfo.user.email,
         photo: userInfo.user.photo,
-        gender: 'male',
-        birthday: '07-07-1995'
+        provider: "GOOGLE"
       }
       this.setState({userInfo : googleUser })
       this.setState({modalVisible: true});
-      console.log('state is : ', this.state)
-      // signUser(googleUser, "GOOGLE").then(resp => {
-      //   console.log('resp 2 is ; ', resp)
-      //   this.setState({modalVisible: true});
-      //   // this.props.navigation.navigate("Landing")
-      // }).catch(msg2 => {
-      //   console.log('msg 2 is ; ', msg2)
-      // })
     } catch (error) {
       if (error.code === statusCodes.SIGN_IN_CANCELLED) {
         // user cancelled the login flow
@@ -143,16 +140,19 @@ class HomeScreen extends React.Component {
                           },
                           (err, rslt) => {
                             // console.log('graphRequest result is : ', rslt)
-                            signUser({...rslt,accessToken }, "FACEBOOK").then(resp => {
-                              console.log('resp result is : ', resp)
-                              this.setState({modalVisible: true});
-                              // this.props.navigation.navigate("Landing")
-                            }).catch(msg2 => {
-                              console.log('msg 2 is ; ', msg2)
-                            })
+                            let facebookUser = {
+                              socialId: rslt.id,
+                              password: '1234',
+                              token: accessToken,
+                              name : rslt.name,
+                              email: rslt.email,
+                              photo: rslt.picture.data.url,
+                              provider: "FACEBOOK"
+                            }
+                            this.setState({userInfo : facebookUser })
+                            this.setState({modalVisible: true})
                           }
                         );
-          
                         // Start the graph request.
                         new GraphRequestManager().addRequest(infoRequest).start()
           
@@ -173,6 +173,7 @@ class HomeScreen extends React.Component {
           </View>
           <View style={{ marginTop: 8 }}>
           <Modal
+          style={{justifyContent: "center", alignItems: "center"}}
           animationType="slide"
           transparent={false}
           visible={this.state.modalVisible}
@@ -181,7 +182,6 @@ class HomeScreen extends React.Component {
           }}>
           <View style={{marginTop: 22}}>
             <View>
-              <Text style={{justifyContent: "center", alignItems: "center"}}>Hello World!</Text>
               <View style={{justifyContent: "center", alignItems: "center"}}>
               <Avatar
                   rounded
@@ -191,34 +191,69 @@ class HomeScreen extends React.Component {
                     uri: this.state.userInfo.photo,
                   }}
                 />
-                <Text>{this.state.userInfo.name}</Text>
-                <Text>{this.state.userInfo.email}</Text>
+                <Text style={{marginTop: 10}}>{this.state.userInfo.name}</Text>
+                <Text style={{marginTop: 5}}>{this.state.userInfo.email}</Text>
               </View>
               <View style={{justifyContent: "center", alignItems: "center"}}>
-              <Input
-                placeholder={this.state.userInfo.email}
-                accessibilityStates = {['disabled']}
-              />
               </View>
               <View style={{justifyContent: "center", alignItems: "center"}}>
-              <Input
-                placeholder='Your Birthday'
-                errorStyle={{ color: 'red' }}
-                errorMessage='ENTER A VALID ERROR HERE'
-              />
+              <DatePicker
+                  style={{width: 300, marginTop: 20}}
+                  date={this.state.birthday}
+                  mode="date"
+                  placeholder="Your Date of Birth"
+                  format="DD-MM-YYYY"
+                  minDate="01-01-1950"
+                  maxDate="01-01-2030"
+                  confirmBtnText="Confirm"
+                  cancelBtnText="Cancel"
+                  customStyles={{
+                    dateIcon: {
+                      position: 'absolute',
+                      left: 0,
+                      top: 4,
+                      marginLeft: 0
+                    },
+                    dateInput: {
+                      marginLeft: 36
+                    }
+                  }}
+                  onDateChange={(date) => {this.setState({ birthday: date })
+                }}
+                />
               </View>
-              <View style={{justifyContent: "center", alignItems: "center"}}>
-              <Text style={{justifyContent: "center", alignItems: "center"}}>Your Gender</Text>
-              <RadioGroup getChecked={this.getChecked}>
-                <Radio iconName={"lens"} label={"Male"} value={"male"}/>
-                <Radio iconName={"lens"} label={"Female"} value={"female"}/>
-            </RadioGroup>
+              <View style={{justifyContent: "center", alignItems: "center", marginTop: 20}}>
+              <Text >Your Gender</Text>
+                <RadioForm
+                  radio_props={[
+                    {label: 'Male', value: 'male' },
+                    {label: 'Female', value: 'female' }
+                  ]}
+                  initial={'Male'}
+                  onPress={(value) => {this.setState({gender:value})}}
+                />
               </View>
               <TouchableHighlight
                 onPress={() => {
                   this.setModalVisible(!this.state.modalVisible);
                 }}>
-                <Text>Hide Modal</Text>
+                <View style={{justifyContent: "center", alignItems: "center", marginTop: 40}}>
+                <Button style={{ width : 400, height: 50}} title="Register" onPress={() => {
+                  let stateData = this.state
+                  let user = {
+                    ...stateData.userInfo,
+                    gender: stateData.gender,
+                    birthday: stateData.birthday
+                  }
+                  signUser(user).then(resp => {
+                    console.log('Server Resonse is : ', resp)
+                    this.setState({modalVisible: false})
+                    this.props.navigation.navigate("Landing")
+                  }).catch(msg2 => {
+                    console.log('msg 2 is ; ', msg2)
+                  })
+                }}></Button>
+                </View>
               </TouchableHighlight>
             </View>
           </View>
