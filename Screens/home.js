@@ -115,7 +115,7 @@ class HomeScreen extends React.Component {
     }
   };
   isSaveDisabled(){
-    if(this.state.phone === '' && this.state.birthday === '' && this.state.gender === ''){
+    if(this.state.phone === '' || this.state.birthday === '' || this.state.gender === ''){
       return true
     }
     else {
@@ -235,8 +235,8 @@ class HomeScreen extends React.Component {
                       justifyContent: "center",
                       alignItems: "center",
                       marginTop: 40,
-                      marginLeft: 57,
-                      width: 283
+                      marginLeft: 20,
+                      width: 320
                     }}
                   >
                     <Input
@@ -268,7 +268,7 @@ class HomeScreen extends React.Component {
                           marginLeft: 0
                         },
                         dateInput: {
-                          marginLeft: 36
+                          marginLeft: 0
                         }
                       }}
                       onDateChange={date => {
@@ -278,17 +278,21 @@ class HomeScreen extends React.Component {
                   </View>
                   <View
                     style={{
-                      justifyContent: "center",
                       alignItems: "center",
-                      marginTop: 20
+                      marginTop: 20,
+                      flexDirection: "row",
+                      marginLeft: 30
                     }}
                   >
-                    <Text>Your Gender</Text>
+                    <Text style={{ width : '30%'}}>Your Gender</Text>
                     <RadioForm
+                      style={{ width : '70%'}}
                       radio_props={[
                         { label: "Male", value: "male" },
                         { label: "Female", value: "female" }
                       ]}
+                      formHorizontal={true}
+                      labelStyle={{ padding : 5}}
                       initial={"Male"}
                       onPress={value => {
                         this.setState({ gender: value });
@@ -302,10 +306,9 @@ class HomeScreen extends React.Component {
                   >
                     <View
                       style={{
-                        justifyContent: "center",
-                        alignItems: "center",
                         marginTop: 40,
-                        width: 300
+                        marginLeft: 20,
+                        width: 320
                       }}
                     >
                       <Button
