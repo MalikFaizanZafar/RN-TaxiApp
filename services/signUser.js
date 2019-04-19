@@ -4,19 +4,9 @@ export default signUser = (userInfo, provider) => {
   return new Promise((resolve, reject) => {
     if(provider === "GOOGLE"){
       if(userInfo){
-        let googleUser = {
-          socialId: userInfo.user.id,
-          password: '1234',
-          token: userInfo.accessToken,
-          name : userInfo.user.name,
-          email: userInfo.user.email,
-          photo: userInfo.user.photo,
-          gender: 'male',
-          birthday: '07-07-1995'
-        }
-        console.log('googleUser is : ', googleUser)
+        console.log('googleUser is : ', userInfo)
         axios.post('http://192.168.10.2:8000/api/auth/user', googleUser).then(res => {
-          console.log('response from server is : ', res)
+          // console.log('res.data from server is : ', res.data)
           resolve(res)
         }).catch(error => {
           console.log('error is ', error)

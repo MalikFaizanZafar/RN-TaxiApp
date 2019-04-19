@@ -1,10 +1,12 @@
 import React from "react";
-import { StyleSheet, View, Button, Image } from "react-native";
+import { StyleSheet, View, Button, Text, Modal, TouchableHighlight, Image } from "react-native";
 import { connect } from 'react-redux';
 import { GoogleSignin, GoogleSigninButton, statusCodes } from "react-native-google-signin";
 import { LoginButton, AccessToken, LoginManager, GraphRequest, GraphRequestManager } from "react-native-fbsdk";
 import { addUser } from "../store/actions";
 import signUser from "../services/signUser";
+import { Input, Avatar  } from 'react-native-elements';
+import RadioGroup,{Radio} from "react-native-radio-input";
 
 const styles = StyleSheet.create({
   container: {
@@ -29,11 +31,22 @@ class HomeScreen extends React.Component {
   static navigationOptions = {
     header: null
   };
+  state = {
+    modalVisible: false
+  }
   constructor(props) {
     super(props);
     this.state = {
-      userInfo: {}
+      userInfo: {},
+      modalVisible: false
     };
+  }
+  setModalVisible(visible) {
+    this.setState({modalVisible: visible});
+  }
+  getChecked = (value) => {
+    // value = our checked value
+    console.log(value)
   }
   componentDidMount(){
     GoogleSignin.configure({
@@ -51,11 +64,26 @@ class HomeScreen extends React.Component {
       await GoogleSignin.hasPlayServices();
       const userInfo = await GoogleSignin.signIn();
       this.setState({ userInfo });
-      signUser(userInfo, "GOOGLE").then(resp => {
-        this.props.navigation.navigate("Landing")
-      }).catch(resp2 => {
-        console.log('msg 2 is ; ', msg2)
-      })
+      let googleUser = {
+        socialId: userInfo.user.id,
+        password: '1234',
+        token: userInfo.accessToken,
+        name : userInfo.user.name,
+        email: userInfo.user.email,
+        photo: userInfo.user.photo,
+        gender: 'male',
+        birthday: '07-07-1995'
+      }
+      this.setState({userInfo : googleUser })
+      this.setState({modalVisible: true});
+      console.log('state is : ', this.state)
+      // signUser(googleUser, "GOOGLE").then(resp => {
+      //   console.log('resp 2 is ; ', resp)
+      //   this.setState({modalVisible: true});
+      //   // this.props.navigation.navigate("Landing")
+      // }).catch(msg2 => {
+      //   console.log('msg 2 is ; ', msg2)
+      // })
     } catch (error) {
       if (error.code === statusCodes.SIGN_IN_CANCELLED) {
         // user cancelled the login flow
@@ -116,8 +144,10 @@ class HomeScreen extends React.Component {
                           (err, rslt) => {
                             // console.log('graphRequest result is : ', rslt)
                             signUser({...rslt,accessToken }, "FACEBOOK").then(resp => {
-                              this.props.navigation.navigate("Landing")
-                            }).catch(resp2 => {
+                              console.log('resp result is : ', resp)
+                              this.setState({modalVisible: true});
+                              // this.props.navigation.navigate("Landing")
+                            }).catch(msg2 => {
                               console.log('msg 2 is ; ', msg2)
                             })
                           }
@@ -142,12 +172,57 @@ class HomeScreen extends React.Component {
             />
           </View>
           <View style={{ marginTop: 8 }}>
-            {/* <Button
-              color="red"
-              title="Login With Google"
-              style={styles.btnGoogle}
-              onPress={() => this.props.navigation.navigate("Landing")}
-            /> */}
+          <Modal
+          animationType="slide"
+          transparent={false}
+          visible={this.state.modalVisible}
+          onRequestClose={() => {
+            Alert.alert('Modal has been closed.');
+          }}>
+          <View style={{marginTop: 22}}>
+            <View>
+              <Text style={{justifyContent: "center", alignItems: "center"}}>Hello World!</Text>
+              <View style={{justifyContent: "center", alignItems: "center"}}>
+              <Avatar
+                  rounded
+                  size="xlarge"
+                  title={this.state.userInfo.name}
+                  source={{
+                    uri: this.state.userInfo.photo,
+                  }}
+                />
+                <Text>{this.state.userInfo.name}</Text>
+                <Text>{this.state.userInfo.email}</Text>
+              </View>
+              <View style={{justifyContent: "center", alignItems: "center"}}>
+              <Input
+                placeholder={this.state.userInfo.email}
+                accessibilityStates = {['disabled']}
+              />
+              </View>
+              <View style={{justifyContent: "center", alignItems: "center"}}>
+              <Input
+                placeholder='Your Birthday'
+                errorStyle={{ color: 'red' }}
+                errorMessage='ENTER A VALID ERROR HERE'
+              />
+              </View>
+              <View style={{justifyContent: "center", alignItems: "center"}}>
+              <Text style={{justifyContent: "center", alignItems: "center"}}>Your Gender</Text>
+              <RadioGroup getChecked={this.getChecked}>
+                <Radio iconName={"lens"} label={"Male"} value={"male"}/>
+                <Radio iconName={"lens"} label={"Female"} value={"female"}/>
+            </RadioGroup>
+              </View>
+              <TouchableHighlight
+                onPress={() => {
+                  this.setModalVisible(!this.state.modalVisible);
+                }}>
+                <Text>Hide Modal</Text>
+              </TouchableHighlight>
+            </View>
+          </View>
+        </Modal>
           </View>
         </View>
       </View>
