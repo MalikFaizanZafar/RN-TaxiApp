@@ -23,7 +23,7 @@ import {
 } from "react-native-fbsdk";
 import { addUser } from "../store/actions";
 import signUser from "../services/signUser";
-import { Avatar } from "react-native-elements";
+import { Avatar, Input } from "react-native-elements";
 import RadioForm from "react-native-simple-radio-button";
 import DatePicker from "react-native-datepicker";
 
@@ -57,6 +57,7 @@ class HomeScreen extends React.Component {
     super(props);
     this.state = {
       userInfo: {},
+      phone: "",
       gender: "",
       birthday: "",
       modalVisible: false
@@ -96,6 +97,7 @@ class HomeScreen extends React.Component {
         name: userInfo.user.name,
         email: userInfo.user.email,
         photo: userInfo.user.photo,
+        verified: false,
         provider: "GOOGLE"
       };
       this.setState({ userInfo: googleUser });
@@ -112,6 +114,14 @@ class HomeScreen extends React.Component {
       }
     }
   };
+  isSaveDisabled(){
+    if(this.state.phone === '' && this.state.birthday === '' && this.state.gender === ''){
+      return true
+    }
+    else {
+      return false
+    }
+  }
   render() {
     return (
       <View style={styles.container}>
@@ -169,6 +179,7 @@ class HomeScreen extends React.Component {
                           name: rslt.name,
                           email: rslt.email,
                           photo: rslt.picture.data.url,
+                          verified: false,
                           provider: "FACEBOOK"
                         };
                         this.setState({ userInfo: facebookUser });
@@ -206,7 +217,7 @@ class HomeScreen extends React.Component {
                   >
                     <Avatar
                       rounded
-                      size="xlarge"
+                      size="large"
                       title={this.state.userInfo.name}
                       source={{
                         uri: this.state.userInfo.photo
@@ -220,8 +231,22 @@ class HomeScreen extends React.Component {
                     </Text>
                   </View>
                   <View
-                    style={{ justifyContent: "center", alignItems: "center" }}
-                  />
+                    style={{
+                      justifyContent: "center",
+                      alignItems: "center",
+                      marginTop: 40,
+                      marginLeft: 57,
+                      width: 283
+                    }}
+                  >
+                    <Input
+                      placeholder="Your Phone Number"
+                      keyboardType="numeric"
+                      onChangeText={value => {
+                        this.setState({ phone: value });
+                      }}
+                    />
+                  </View>
                   <View
                     style={{ justifyContent: "center", alignItems: "center" }}
                   >
@@ -279,18 +304,22 @@ class HomeScreen extends React.Component {
                       style={{
                         justifyContent: "center",
                         alignItems: "center",
-                        marginTop: 40
+                        marginTop: 40,
+                        width: 300
                       }}
                     >
                       <Button
-                        title="Register"
+                        title="Save"
+                        disabled={this.isSaveDisabled()}
                         onPress={() => {
                           let stateData = this.state;
                           let user = {
                             ...stateData.userInfo,
+                            phone: stateData.phone,
                             gender: stateData.gender,
                             birthday: stateData.birthday
                           };
+                          // console.log("user is ; ", user);
                           signUser(user)
                             .then(resp => {
                               console.log("Server Resonse is : ", resp);
