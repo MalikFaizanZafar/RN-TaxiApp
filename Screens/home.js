@@ -6,7 +6,8 @@ import {
   Text,
   Modal,
   TouchableHighlight,
-  Image
+  Image,
+  AsyncStorage
 } from "react-native";
 import { connect } from "react-redux";
 import {
@@ -122,6 +123,13 @@ class HomeScreen extends React.Component {
       return false
     }
   }
+  async componentWillMount(){
+    let subquch_user = await AsyncStorage.getItem('SubQuch_User')
+    console.log('subquch_user : ', subquch_user)
+    if(subquch_user){
+      this.props.navigation.navigate("Landing");
+    }
+  }
   render() {
     return (
       <View style={styles.container}>
@@ -210,7 +218,7 @@ class HomeScreen extends React.Component {
                 Alert.alert("Modal has been closed.");
               }}
             >
-              <View style={{ marginTop: 22 }}>
+              <View style={{ marginTop: 150 }}>
                 <View>
                   <View
                     style={{ justifyContent: "center", alignItems: "center" }}
