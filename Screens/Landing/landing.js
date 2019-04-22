@@ -23,7 +23,7 @@ export default class LandingScreen extends React.Component {
   };
   state = {
     search: "",
-    selectedCategory: null
+    selectedCategory: -1
   };
   updateIndex(selectedCategory) {
     this.setState({ selectedCategory });
@@ -31,18 +31,14 @@ export default class LandingScreen extends React.Component {
   updateSearch = search => {
     this.setState({ search });
   };
+  categoryClicked(id){
+    console.log('id is : ', id)
+    this.setState({
+      selectedCategory : id
+    })
+  }
   render() {
     const { search } = this.state;
-    const buttons = [
-      "Pizza",
-      "Burger",
-      "Chicken",
-      "Category 1",
-      "Category 1",
-      "Category 1",
-      "Category 1",
-      "Category 1"
-    ];
     const { selectedCategory } = this.state;
     let iconSize = 35;
     let dimensions = Dimensions.get("window");
@@ -108,23 +104,26 @@ export default class LandingScreen extends React.Component {
         <View style={styles.containerItems}>
           <ScrollView
             horizontal={true}
-            style={{ marginTop: 5, height: 45, backgroundColor: "#171616" }}
+            style={{height: 45}}
             showsHorizontalScrollIndicator={false}
           >
-            {categories.map((category, i) => {
+            {categories.map((category, categoryIndex) => {
               return (
                 <TouchableHighlight
-                  style={styles.button}
-                  onPress={category => console.log("category is : ", category)}
+                  key={categoryIndex}
+                  style={this.state.selectedCategory === categoryIndex? styles.buttonSelected :styles.button}
+                  activeOpacity={0.1}
+                  color='#f1c40f'
+                  onPress={this.categoryClicked.bind(this, categoryIndex)}
                 >
-                  <Text style={{color: "#fff"}}>{category}</Text>
+                  <Text style={{color: "#171616"}}>{category}</Text>
                 </TouchableHighlight>
               );
             })}
           </ScrollView>
           <ScrollView
             showsVerticalScrollIndicator={false}
-            style={{ marginTop: 5 }}
+            style={{ marginTop: 0 }}
           >
             {items.map((item, i) => {
               return (
@@ -196,6 +195,14 @@ const styles = StyleSheet.create({
     alignItems: "center"
   },
   button: {
+    alignItems: "center",
+    // backgroundColor: "#171616",
+    padding: 10,
+    width: 100,
+    borderRightWidth: 0.3,
+    borderColor: "#fff"
+  },
+  buttonSelected: {
     alignItems: "center",
     backgroundColor: "#171616",
     padding: 10,
