@@ -5,29 +5,9 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import { createDrawerNavigator} from 'react-navigation'
 import MapScreen from "./map";
 import MapScreenTwo from "./mapTwo";
+import { itemsData } from '../../store'
 const MyIcon = <Icon name="person-outline" size={30} color="#4F8EF7"  type="MaterialIcons" onPress={() => this.props.navigation.openDrawer()}/>
-const items = [
-  {
-    name: "Item 1",
-    pic: "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg"
-  },
-  {
-    name: "Item 2",
-    pic: "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg"
-  },
-  {
-    name: "Item 3",
-    pic: "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg"
-  },
-  {
-    name: "Item 4",
-    pic: "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg"
-  },
-  {
-    name: "Item 5",
-    pic: "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg"
-  }
-];
+const items = itemsData
 export default class LandingScreen extends React.Component {
   static navigationOptions = {
     header: null
@@ -40,17 +20,16 @@ export default class LandingScreen extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.topBar}>
-          <View style={styles.topBarIcon}>
+          {/* <View style={styles.topBarIcon}>
           {MyIcon}
-          </View>
-          <View style={styles.topBarLogo}>
-          <Icon name='person-outline' type="MaterialIcons" />
-            <Text style={{ fontSize: 20, color: "white" }}>SubQuch Logo</Text>
+          </View> */}
+          <View style={{marginLeft : 100, marginTop: 5}}>
+          <Image style={{ height: 42, width: 150 }} source={require('../../assets/subquch2.png')} />
           </View>
         </View>
         <View>
           <Image
-            style={{ height: 120 }}
+            style={{ height: 150 }}
             source={{
               uri:
                 "https://images.pexels.com/photos/1001990/pexels-photo-1001990.jpeg"
@@ -61,7 +40,7 @@ export default class LandingScreen extends React.Component {
           }} /> */}
         </View>
         <View style={styles.containerItems}>
-          <ScrollView horizontal={true} style={{ marginTop: 25, height: 50 }}>
+          {/* <ScrollView horizontal={true} style={{ marginTop: 25, height: 50 }}>
             <View style={{ flex: 1, justifyContent: "center", width: 100 }}>
               <Badge  textStyle={{ color: 'white', fontSize: 10, lineHeight: 10 }} value="Pizza" status="primary" />
             </View>
@@ -86,7 +65,7 @@ export default class LandingScreen extends React.Component {
             <View style={{ flex: 1, justifyContent: "center", width: 100 }}>
               <Badge value="Drinks" status="primary" />
             </View>
-          </ScrollView>
+          </ScrollView> */}
           <ScrollView showsVerticalScrollIndicator={false}>
             {items.map((item, i) => {
               return (
@@ -118,11 +97,10 @@ export default class LandingScreen extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    marginTop: 23
+    flex: 1
   },
   topBar: {
-    backgroundColor: "#7B1FA2",
+    backgroundColor: "#171616",
     flexDirection: "row",
     height: 50
   },
