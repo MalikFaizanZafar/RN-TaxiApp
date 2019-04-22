@@ -1,6 +1,6 @@
 import React from "react";
-import { StyleSheet, Text, View, Button, Image, Dimensions, ScrollView, AsyncStorage } from "react-native";
-import { Badge } from "react-native-elements";
+import { StyleSheet, Text, View, Button, Image,ImageBackground, Dimensions, ScrollView } from "react-native";
+import { Badge,SearchBar  } from "react-native-elements";
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { createDrawerNavigator} from 'react-navigation'
 import MapScreen from "./map";
@@ -12,7 +12,14 @@ export default class LandingScreen extends React.Component {
   static navigationOptions = {
     header: null
   };
+  state = {
+    search : ''
+  }
+  updateSearch = search => {
+    this.setState({ search });
+  };
   render() {
+    const { search } = this.state;
     let iconSize = 35;
     let dimensions = Dimensions.get("window");
     let imageHeight = dimensions.height * 0.6;
@@ -28,13 +35,22 @@ export default class LandingScreen extends React.Component {
           </View>
         </View>
         <View>
-          <Image
-            style={{ height: 150 }}
+          <ImageBackground 
+            style={{ height: 150, justifyContent: "center", alignItems: "center" }}
             source={{
               uri:
                 "https://images.pexels.com/photos/1001990/pexels-photo-1001990.jpeg"
             }}
+          >
+          <SearchBar
+            placeholder="Search an Item"
+            onChangeText={this.updateSearch}
+            value={search}
+            lightTheme={true}
+            containerStyle={{ width : 250, height: 35, padding: 0,backgroundColor: '#fff'}}
+            inputContainerStyle={{width : 250, height: 35, backgroundColor: '#fff'}}
           />
+          </ImageBackground >
           {/* <Button title="Clear" onPress={() => {
             AsyncStorage.removeItem("SubQuch_User")
           }} /> */}
