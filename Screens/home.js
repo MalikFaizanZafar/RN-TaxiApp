@@ -63,7 +63,12 @@ class HomeScreen extends React.Component {
       birthday: "",
       modalVisible: false
     };
+    this._bootstrapAsync();
   }
+  _bootstrapAsync = async () => {
+    const subquchUser = await AsyncStorage.getItem('SubQuch_User');
+    this.props.navigation.navigate(subquchUser ? 'Landing' : 'Home');
+  };
   setModalVisible(visible) {
     this.setState({ modalVisible: visible });
   }
@@ -121,13 +126,6 @@ class HomeScreen extends React.Component {
     }
     else {
       return false
-    }
-  }
-  async componentWillMount(){
-    let subquch_user = await AsyncStorage.getItem('SubQuch_User')
-    console.log('subquch_user : ', subquch_user)
-    if(subquch_user){
-      this.props.navigation.navigate("Landing");
     }
   }
   render() {
