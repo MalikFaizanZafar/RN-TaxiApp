@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View, Button, Image,ImageBackground, Dimensions, ScrollView } from "react-native";
-import { Badge,SearchBar  } from "react-native-elements";
+import { Badge,SearchBar } from "react-native-elements";
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { createDrawerNavigator} from 'react-navigation'
 import MapScreen from "./map";
@@ -13,13 +13,19 @@ export default class LandingScreen extends React.Component {
     header: null
   };
   state = {
-    search : ''
+    search : '',
+    selectedCategory: null
+  }
+  updateIndex (selectedCategory) {
+    this.setState({selectedCategory})
   }
   updateSearch = search => {
     this.setState({ search });
   };
   render() {
     const { search } = this.state;
+    const buttons = ['Pizza', 'Burger', 'Chicken', 'Category 1', 'Category 1', 'Category 1', 'Category 1', 'Category 1']
+    const { selectedCategory } = this.state
     let iconSize = 35;
     let dimensions = Dimensions.get("window");
     let imageHeight = dimensions.height * 0.6;
@@ -36,7 +42,7 @@ export default class LandingScreen extends React.Component {
         </View>
         <View>
           <ImageBackground 
-            style={{ height: 150, justifyContent: "center", alignItems: "center" }}
+            style={{ height: 150, justifyContent: "center", alignItems: "center"}}
             source={{
               uri:
                 "https://images.pexels.com/photos/1001990/pexels-photo-1001990.jpeg"
@@ -47,7 +53,7 @@ export default class LandingScreen extends React.Component {
             onChangeText={this.updateSearch}
             value={search}
             lightTheme={true}
-            containerStyle={{ width : 250, height: 35, padding: 0,backgroundColor: '#fff'}}
+            containerStyle={{ width : 250, height: 35, padding: 0,backgroundColor: '#fff', marginTop: 55}}
             inputContainerStyle={{width : 250, height: 35, backgroundColor: '#fff'}}
           />
           </ImageBackground >
@@ -57,37 +63,13 @@ export default class LandingScreen extends React.Component {
         </View>
         <View style={styles.containerItems}>
           {/* <ScrollView horizontal={true} style={{ marginTop: 25, height: 50 }}>
-            <View style={{ flex: 1, justifyContent: "center", width: 100 }}>
-              <Badge  textStyle={{ color: 'white', fontSize: 10, lineHeight: 10 }} value="Pizza" status="primary" />
-            </View>
-            <View style={{ flex: 1, justifyContent: "center", width: 100 }}>
-              <Badge value="Burger" status="primary" />
-            </View>
-            <View style={{ flex: 1, justifyContent: "center", width: 100 }}>
-              <Badge value="Chicken" status="primary" />
-            </View>
-            <View style={{ flex: 1, justifyContent: "center", width: 100 }}>
-              <Badge value="Chinese" status="primary" />
-            </View>
-            <View style={{ flex: 1, justifyContent: "center", width: 100 }}>
-              <Badge value="Italian" status="primary" />
-            </View>
-            <View style={{ flex: 1, justifyContent: "center", width: 100 }}>
-              <Badge value="French" status="primary" />
-            </View>
-            <View style={{ flex: 1, justifyContent: "center", width: 100 }}>
-              <Badge value="Vegetable" status="primary" />
-            </View>
-            <View style={{ flex: 1, justifyContent: "center", width: 100 }}>
-              <Badge value="Drinks" status="primary" />
-            </View>
           </ScrollView> */}
           <ScrollView showsVerticalScrollIndicator={false}>
             {items.map((item, i) => {
               return (
                 <View key={i} style={{ justifyContent: "center" }}>
                   <Image
-                    style={{ width: imageWidth * 0.8, height: imageHeight/2 }}
+                    style={{ width: imageWidth * 0.9, height: imageHeight/1.5 }}
                     source={{
                       uri: item.pic
                     }}
@@ -146,7 +128,7 @@ const styles = StyleSheet.create({
     flex: 1,
     // justifyContent: "center",
     backgroundColor: "#e5e5e5",
-    justifyContent: "center",
+    // justifyContent: "center",
     alignItems: "center"
   },
   headerText: {
