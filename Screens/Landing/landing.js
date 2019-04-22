@@ -113,19 +113,12 @@ export default class LandingScreen extends React.Component {
           >
             {categories.map((category, i) => {
               return (
-                <Button
-                  title={category}
-                  titleStyle={{
-                    color: "#fff",
-                    fontSize: 13
-                  }}
-                  type="clear"
-                  buttonStyle={{
-                    borderRightWidth: 1,
-                    borderRadius: 0,
-                    borderColor: "#fff"
-                  }}
-                />
+                <TouchableHighlight
+                  style={styles.button}
+                  onPress={category => console.log("category is : ", category)}
+                >
+                  <Text style={{color: "#fff"}}>{category}</Text>
+                </TouchableHighlight>
               );
             })}
           </ScrollView>
@@ -201,6 +194,13 @@ const styles = StyleSheet.create({
     backgroundColor: "#e5e5e5",
     // justifyContent: "center",
     alignItems: "center"
+  },
+  button: {
+    alignItems: "center",
+    backgroundColor: "#171616",
+    padding: 10,
+    borderRightWidth: 1,
+    borderColor: "#fff"
   },
   headerText: {
     fontSize: 20,
