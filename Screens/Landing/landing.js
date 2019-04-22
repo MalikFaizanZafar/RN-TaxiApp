@@ -1,12 +1,12 @@
 import React from "react";
-import { StyleSheet, Text, View, Image,ImageBackground, Dimensions, ScrollView } from "react-native";
-import {SearchBar, Button } from "react-native-elements";
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import { StyleSheet, Text, View, Image,ImageBackground, Dimensions, ScrollView,TouchableHighlight  } from "react-native";
+import {SearchBar, Button,Icon} from "react-native-elements";
+// import Icon from 'react-native-vector-icons/MaterialIcons';
 import { createDrawerNavigator} from 'react-navigation'
 import MapScreen from "./map";
 import MapScreenTwo from "./mapTwo";
 import { itemsData } from '../../store'
-const MyIcon = <Icon name="person-outline" size={30} color="#4F8EF7"  type="MaterialIcons" onPress={() => this.props.navigation.openDrawer()}/>
+// const MyIcon = <Icon name="person-outline" size={30} color="#4F8EF7"  type="MaterialIcons" onPress={() => this.props.navigation.openDrawer()}/>
 const items = itemsData
 export default class LandingScreen extends React.Component {
   static navigationOptions = {
@@ -62,73 +62,116 @@ export default class LandingScreen extends React.Component {
           }} /> */}
         </View>
         <View style={styles.containerItems}>
-          <ScrollView horizontal={true} style={{ marginTop: 10, height: 60 }} showsHorizontalScrollIndicator={false}>
-          <Button
+          <ScrollView horizontal={true} style={{ marginTop: 5, height: 45, backgroundColor: "#171616" }} showsHorizontalScrollIndicator={false}>
+          <TouchableHighlight underlayColor="white" underlayColor={'white'}
+          >
+            <Button
             title="Pizza"
+            titleStyle={{
+              color: "#fff",
+              fontSize: 13
+            }}
             type="clear"
             buttonStyle={{
               borderRightWidth: 1,
-              borderRadius:0
+              borderRadius:0,
+              borderColor: "#fff",
             }}
           />
+          </TouchableHighlight>
           <Button
             title="Burger"
+            titleStyle={{
+              color: "#fff",
+              fontSize: 13
+            }}
             type="clear"
             buttonStyle={{
               borderRightWidth: 1,
-              borderRadius:0
+              borderRadius:0,
+              borderColor: "#fff"
             }}
           />
           <Button
             title="Chicken"
+            titleStyle={{
+              color: "#fff",
+              fontSize: 13
+            }}
             type="clear"
             buttonStyle={{
               borderRightWidth: 1,
-              borderRadius:0
+              borderRadius:0,
+              borderColor: "#fff"
             }}
           />
           <Button
             title="Vegetable"
+            titleStyle={{
+              color: "#fff",
+              fontSize: 13
+            }}
             type="clear"
             buttonStyle={{
               borderRightWidth: 1,
-              borderRadius:0
+              borderRadius:0,
+              borderColor: "#fff"
             }}
           />
           <Button
             title="Drinks"
+            titleStyle={{
+              color: "#fff",
+              fontSize: 13
+            }}
             type="clear"
             buttonStyle={{
               borderRightWidth: 1,
-              borderRadius:0
+              borderRadius:0,
+              borderColor: "#fff"
             }}
           />
           <Button
             title="Ice Cream"
+            titleStyle={{
+              color: "#fff",
+              fontSize: 13
+            }}
             type="clear"
             buttonStyle={{
               borderRightWidth: 1,
-              borderRadius:0
+              borderRadius:0,
+              borderColor: "#fff"
             }}
           />
           <Button
             title="Coffee"
+            titleStyle={{
+              color: "#fff",
+              fontSize: 13
+            }}
             type="clear"
             buttonStyle={{
               borderRightWidth: 1,
-              borderRadius:0
+              borderRadius:0,
+              borderColor: "#fff"
             }}
           />
           <Button
             title="Chaaye"
+            titleStyle={{
+              color: "#fff",
+              fontSize: 13
+            }}
             type="clear"
             buttonStyle={{
               borderRightWidth: 1,
-              borderRadius:0
+              borderRadius:0,
+              borderColor: "#fff"
             }}
           />
           </ScrollView>
-          <ScrollView showsVerticalScrollIndicator={false} style={{marginTop: 10}}>
+          <ScrollView showsVerticalScrollIndicator={false} style={{marginTop: 5}}>
             {items.map((item, i) => {
               return (
                 <View key={i} style={{ justifyContent: "center" }}>
