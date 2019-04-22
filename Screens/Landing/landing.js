@@ -1,6 +1,6 @@
 import React from "react";
-import { StyleSheet, Text, View, Button, Image,ImageBackground, Dimensions, ScrollView } from "react-native";
-import { Badge,SearchBar } from "react-native-elements";
+import { StyleSheet, Text, View, Image,ImageBackground, Dimensions, ScrollView } from "react-native";
+import {SearchBar, Button } from "react-native-elements";
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { createDrawerNavigator} from 'react-navigation'
 import MapScreen from "./map";
@@ -62,9 +62,73 @@ export default class LandingScreen extends React.Component {
           }} /> */}
         </View>
         <View style={styles.containerItems}>
-          {/* <ScrollView horizontal={true} style={{ marginTop: 25, height: 50 }}>
-          </ScrollView> */}
-          <ScrollView showsVerticalScrollIndicator={false}>
+          <ScrollView horizontal={true} style={{ marginTop: 10, height: 60 }} showsHorizontalScrollIndicator={false}>
+          <Button
+            title="Pizza"
+            type="clear"
+            buttonStyle={{
+              borderRightWidth: 1,
+              borderRadius:0
+            }}
+          />
+          <Button
+            title="Burger"
+            type="clear"
+            buttonStyle={{
+              borderRightWidth: 1,
+              borderRadius:0
+            }}
+          />
+          <Button
+            title="Chicken"
+            type="clear"
+            buttonStyle={{
+              borderRightWidth: 1,
+              borderRadius:0
+            }}
+          />
+          <Button
+            title="Vegetable"
+            type="clear"
+            buttonStyle={{
+              borderRightWidth: 1,
+              borderRadius:0
+            }}
+          />
+          <Button
+            title="Drinks"
+            type="clear"
+            buttonStyle={{
+              borderRightWidth: 1,
+              borderRadius:0
+            }}
+          />
+          <Button
+            title="Ice Cream"
+            type="clear"
+            buttonStyle={{
+              borderRightWidth: 1,
+              borderRadius:0
+            }}
+          />
+          <Button
+            title="Coffee"
+            type="clear"
+            buttonStyle={{
+              borderRightWidth: 1,
+              borderRadius:0
+            }}
+          />
+          <Button
+            title="Chaaye"
+            type="clear"
+            buttonStyle={{
+              borderRightWidth: 1,
+              borderRadius:0
+            }}
+          />
+          </ScrollView>
+          <ScrollView showsVerticalScrollIndicator={false} style={{marginTop: 10}}>
             {items.map((item, i) => {
               return (
                 <View key={i} style={{ justifyContent: "center" }}>
