@@ -56,9 +56,9 @@ export default class LandingScreen extends React.Component {
                 "https://images.pexels.com/photos/1001990/pexels-photo-1001990.jpeg"
             }}
           />
-          <Button title="Clear" onPress={() => {
+          {/* <Button title="Clear" onPress={() => {
             AsyncStorage.removeItem("SubQuch_User")
-          }} />
+          }} /> */}
         </View>
         <View style={styles.containerItems}>
           <ScrollView horizontal={true} style={{ marginTop: 25, height: 50 }}>

@@ -4,8 +4,7 @@ import HomeScreen from "./Screens/home";
 
 const AppNavigator = createStackNavigator(
   {
-    Home: HomeScreen,
-    Landing: MyDrawerNavigator
+    Home: HomeScreen
   },
   {
     initialRouteName: "Home",
