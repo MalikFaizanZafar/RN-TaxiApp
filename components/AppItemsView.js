@@ -4,17 +4,19 @@ import {
   Text,
   View,
   Image,
+  ActivityIndicator,
   Dimensions,
   ScrollView,
   TouchableHighlight
 } from "react-native";
 import { Card, Rating } from "react-native-elements";
-import { itemsData } from '../store';
+import { Badge } from "react-native-elements";
 import axios from 'axios';
 export default class AppItemsView extends Component {
   constructor(props){
     super(props)
     this.state = {
+      isLoading: true,
       items: [],
       categories: [],
       selectedCategory: -1
@@ -25,15 +27,26 @@ export default class AppItemsView extends Component {
   }
 
   categoryClicked(id) {
+    console.log('categoryClicked', id)
     this.setState({
-      selectedCategory: id
+      selectedCategory: id,
+      isLoading: true
     });
+    axios.get(`http://192.168.1.12:8000/api/auth/itemcategory/${id}/items`).then(selectedCategoryResponse => {
+      console.log('selectedCategoryResponse is', selectedCategoryResponse )
+      this.setState({ items : selectedCategoryResponse.data.data, isLoading: false})
+    })
   }
   componentDidMount(){
+    console.log('componentDidMount')
     axios.get('http://192.168.1.12:8000/api/auth/itemcategory').then(categoriesResponse => {
       this.setState({ categories : categoriesResponse.data.data})
+      console.log('categoriesResponse is : ', categoriesResponse)
       axios.get('http://192.168.1.12:8000/api/auth/item').then(itemsResponse => {
-        this.setState({ items : itemsResponse.data.data})
+        console.log('itemsResponse is : ', itemsResponse)
+        this.setState({ items : itemsResponse.data.data}, () => {
+          this.setState({isLoading : false})
+        })
       })
     })
   }
@@ -41,7 +54,8 @@ export default class AppItemsView extends Component {
     let dimensions = Dimensions.get("window");
     return (
       <View style={styles.containerItems}>
-          <ScrollView
+          {
+            this.state.isLoading?<ActivityIndicator size="large" color="#000" style={{ marginTop: 150}} />:(<View><ScrollView
             horizontal={true}
             style={{ height: 45 }}
             showsHorizontalScrollIndicator={false}
@@ -51,13 +65,13 @@ export default class AppItemsView extends Component {
                 <TouchableHighlight
                   key={categoryIndex}
                   style={
-                    this.state.selectedCategory === categoryIndex
+                    this.state.selectedCategory === category.id
                       ? styles.buttonSelected
                       : styles.button
                   }
                   activeOpacity={0.1}
                   color="#f1c40f"
-                  onPress={this.categoryClicked.bind(this, categoryIndex)}
+                  onPress={this.categoryClicked.bind(this, category.id)}
                 >
                   <Text style={{ color: "#ffffff" }}>{category.name}</Text>
                 </TouchableHighlight>
@@ -82,7 +96,7 @@ export default class AppItemsView extends Component {
                       style={{
                         width: dimensions.width * 0.6,
                         alignItems: "center",
-                        justifyContent: "flex-start",
+                        justifyContent: "space-between",
                         flexDirection: "row"
                       }}
                     >
@@ -100,15 +114,25 @@ export default class AppItemsView extends Component {
                           imageSize={16}
                           readonly
                           startingValue={3}
-                          style={{}}
                         />
+                      </View>
+                      <View style={{ justifyContent: "flex-end", alignItems: "flex-end"}}>
+                        <View style={{ flexDirection: "row",justifyContent: "center", alignItems: "center"}}>
+                        <Text style={{ fontSize: 15,marginTop: 60, marginRight: 5 }}>
+                          Rs
+                        </Text>
+                        <Badge value={item.price} 
+                          badgeStyle={{ height: 25, width: 45, marginRight:10, marginTop: 60, backgroundColor: "#171616"}}
+                          textStyle={{ fontSize: 15, color: "#fff"}} />
+                        </View>
                       </View>
                     </View>
                   </View>
                 </Card>
               );
             })}
-          </ScrollView>
+          </ScrollView></View>)
+          }
       </View>
     )
   }
@@ -157,7 +181,8 @@ const styles = StyleSheet.create({
     padding: 10,
     width: 100,
     borderRightWidth: 0.25,
-    borderColor: "#fff"
+    borderColor: "#fff",
+    maxHeight: 40
   },
   buttonSelected: {
     alignItems: "center",
@@ -166,7 +191,8 @@ const styles = StyleSheet.create({
     width: 100,
     borderWidth: 1.5,
     borderColor: "#fff",
-    elevation: 20
+    elevation: 20,
+    maxHeight: 40
   },
   headerText: {
     fontSize: 20,
