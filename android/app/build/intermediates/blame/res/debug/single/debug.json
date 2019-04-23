@@ -484,6 +484,10 @@
         "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\d64d4074500a214ac80db48002020a31\\res\\drawable-xxhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
     },
     {
+        "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_subquch.png.flat",
+        "source": "E:\\Office\\subkuch-app\\android\\app\\src\\main\\res\\mipmap-xhdpi\\subquch.png"
+    },
+    {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_com_facebook_tooltip_black_bottomnub.png.flat",
         "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.34.0.aar\\11e665c66fe7bdd99ae5bb79797270e7\\res\\drawable-mdpi-v4\\com_facebook_tooltip_black_bottomnub.png"
     },
@@ -634,6 +638,10 @@
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ratingbar_small_material.xml.flat",
         "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\d64d4074500a214ac80db48002020a31\\res\\drawable\\abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_subquch.png.flat",
+        "source": "E:\\Office\\subkuch-app\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\subquch.png"
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_star_black_48dp.png.flat",
@@ -1144,6 +1152,10 @@
         "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.34.0.aar\\a8466396f1bac6d389abcbec1d083cfd\\res\\drawable-xxhdpi-v4\\com_facebook_button_icon_white.png"
     },
     {
+        "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_subquch.png.flat",
+        "source": "E:\\Office\\subkuch-app\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\subquch.png"
+    },
+    {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_black_48dp.png.flat",
         "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\d64d4074500a214ac80db48002020a31\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_48dp.png"
     },
@@ -1570,6 +1582,10 @@
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\d64d4074500a214ac80db48002020a31\\res\\drawable-xhdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_subquch.png.flat",
+        "source": "E:\\Office\\subkuch-app\\android\\app\\src\\main\\res\\mipmap-mdpi\\subquch.png"
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
@@ -2006,6 +2022,10 @@
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_media_custom.xml.flat",
         "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.2.aar\\48e7839e620f77e66696c27333e592ac\\res\\layout\\notification_template_media_custom.xml"
+    },
+    {
+        "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_subquch.png.flat",
+        "source": "E:\\Office\\subkuch-app\\android\\app\\src\\main\\res\\mipmap-hdpi\\subquch.png"
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_text_select_handle_right_mtrl_light.png.flat",

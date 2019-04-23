@@ -3878,6 +3878,7 @@ public final class R {
   public static final class mipmap {
     public static final int ic_launcher=0x7f0a0000;
     public static final int ic_launcher_round=0x7f0a0001;
+    public static final int subquch=0x7f0a0002;
   }
   public static final class raw {
     public static final int amu_ballon_gx_prefix=0x7f0b0000;
