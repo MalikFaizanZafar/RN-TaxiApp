@@ -1,21 +1,11 @@
 import React from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  ImageBackground,
-  Dimensions,
-  ScrollView,
-  TouchableHighlight
-} from "react-native";
-import { SearchBar, Card, Button, Rating } from "react-native-elements";
-import Icon from 'react-native-vector-icons/FontAwesome';
+import { StyleSheet, View } from "react-native";
 import { createDrawerNavigator } from "react-navigation";
 import MapScreen from "./map";
 import MapScreenTwo from "./mapTwo";
-import { itemsData } from "../../store";
-const items = itemsData;
+import AppTopBar from "../../components/AppTopBar";
+import AppSearchView from "../../components/AppSearchView";
+import AppItemsView from "../../components/AppItemsView";
 export default class LandingScreen extends React.Component {
   static navigationOptions = {
     header: null
@@ -24,131 +14,12 @@ export default class LandingScreen extends React.Component {
     search: "",
     selectedCategory: -1
   };
-  updateIndex(selectedCategory) {
-    this.setState({ selectedCategory });
-  }
-  updateSearch = search => {
-    this.setState({ search });
-  };
-  categoryClicked(id){
-    console.log('id is : ', id)
-    this.setState({
-      selectedCategory : id
-    })
-  }
   render() {
-    const { search } = this.state;
-    const { selectedCategory } = this.state;
-    let iconSize = 35;
-    let dimensions = Dimensions.get("window");
-    let imageHeight = dimensions.height * 0.6;
-    let imageWidth = dimensions.width;
-    categories = [
-      "Pizza",
-      "Burger",
-      "Chicken",
-      "Vegetable",
-      "Drinks",
-      "Coffee",
-      "Chaaye"
-    ];
     return (
       <View style={styles.container}>
-        <View style={styles.topBar}>
-          <View style={styles.topBarIcon}>
-          <Button title="|||" type="outline" buttonStyle={{marginLeft: 5,borderWidth:0}} titleStyle={{ fontWeight: 'bold',color: "#fff", fontSize: 25, transform: [{ rotate: '90deg'}]}} onPress={() => this.props.navigation.openDrawer()}/>
-          </View>
-          <View style={{ marginLeft: 75, marginTop: 5 }}>
-            <Image
-              style={{ height: 42, width: 150 }}
-              source={require("../../assets/subquch2.png")}
-            />
-          </View>
-        </View>
-        <View>
-          <ImageBackground
-            style={{
-              height: 150,
-              justifyContent: "center",
-              alignItems: "center"
-            }}
-            source={{
-              uri:
-                "https://images.pexels.com/photos/1001990/pexels-photo-1001990.jpeg"
-            }}
-          >
-            <SearchBar
-              placeholder="Search an Item"
-              onChangeText={this.updateSearch}
-              value={search}
-              lightTheme={true}
-              containerStyle={{
-                width: 250,
-                height: 35,
-                padding: 0,
-                backgroundColor: "#fff",
-                marginTop: 55
-              }}
-              inputContainerStyle={{
-                width: 250,
-                height: 35,
-                backgroundColor: "#fff"
-              }}
-            />
-          </ImageBackground>
-          {/* <Button title="Clear" onPress={() => {
-            AsyncStorage.removeItem("SubQuch_User")
-          }} /> */}
-        </View>
-        <View style={styles.containerItems}>
-          <ScrollView
-            horizontal={true}
-            style={{height: 45}}
-            showsHorizontalScrollIndicator={false}
-          >
-            {categories.map((category, categoryIndex) => {
-              return (
-                <TouchableHighlight
-                  key={categoryIndex}
-                  style={this.state.selectedCategory === categoryIndex? styles.buttonSelected :styles.button}
-                  activeOpacity={0.1}
-                  color='#f1c40f'
-                  onPress={this.categoryClicked.bind(this, categoryIndex)}
-                >
-                  <Text style={{color: "#ffffff"}}>{category}</Text>
-                </TouchableHighlight>
-              );
-            })}
-          </ScrollView>
-          <ScrollView
-            showsVerticalScrollIndicator={false}
-            style={{ marginTop: 0 }}
-          >
-            {items.map((item, i) => {
-              return (
-                <Card containerStyle={{padding:0}} > 
-                  <View style={{ flexDirection: "row", padding: 0}}>
-                    <View style={{width: dimensions.width*0.3, padding:0 }}>
-                      <Image style={{height: 100, width: 100}} source={{ uri: item.pic}} />
-                    </View>
-                    <View style={{width: dimensions.width*0.6, alignItems: "center", justifyContent: "flex-start", flexDirection: "row"}}>
-                      <View style={{ flexDirection: "column", alignItems: "flex-start"}}>
-                      <Text>{ item.name}</Text>
-                      <Text style={{ fontSize: 10}}>This is Items Description</Text>
-                        <Rating
-                        imageSize={16}
-                        readonly
-                        startingValue={3}
-                        style={{}}
-                      />
-                      </View>
-                    </View>
-                  </View>
-                </Card>
-              );
-            })}
-          </ScrollView>
-        </View>
+        <AppTopBar openSubquchDrawer={() => this.props.navigation.openDrawer()}/>
+        <AppSearchView />
+        <AppItemsView />
       </View>
     );
   }
@@ -205,7 +76,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#171616",
     padding: 10,
     width: 100,
-    borderWidth:1.5,
+    borderWidth: 1.5,
     borderColor: "#fff",
     elevation: 20
   },
