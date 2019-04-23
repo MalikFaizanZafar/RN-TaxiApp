@@ -10,20 +10,13 @@ import {
 } from "react-native";
 import { Card, Rating } from "react-native-elements";
 import { itemsData } from '../store';
+import axios from 'axios';
 export default class AppItemsView extends Component {
   constructor(props){
     super(props)
     this.state = {
-      items: itemsData,
-      categories: [
-        "Pizza",
-        "Burger",
-        "Chicken",
-        "Vegetable",
-        "Drinks",
-        "Coffee",
-        "Chaaye"
-      ],
+      items: [],
+      categories: [],
       selectedCategory: -1
     }
   }
@@ -35,6 +28,14 @@ export default class AppItemsView extends Component {
     this.setState({
       selectedCategory: id
     });
+  }
+  componentDidMount(){
+    axios.get('http://192.168.1.12:8000/api/auth/itemcategory').then(categoriesResponse => {
+      this.setState({ categories : categoriesResponse.data.data})
+      axios.get('http://192.168.1.12:8000/api/auth/item').then(itemsResponse => {
+        this.setState({ items : itemsResponse.data.data})
+      })
+    })
   }
   render() {
     let dimensions = Dimensions.get("window");
@@ -58,7 +59,7 @@ export default class AppItemsView extends Component {
                   color="#f1c40f"
                   onPress={this.categoryClicked.bind(this, categoryIndex)}
                 >
-                  <Text style={{ color: "#ffffff" }}>{category}</Text>
+                  <Text style={{ color: "#ffffff" }}>{category.name}</Text>
                 </TouchableHighlight>
               );
             })}
@@ -74,7 +75,7 @@ export default class AppItemsView extends Component {
                     <View style={{ width: dimensions.width * 0.3, padding: 0 }}>
                       <Image
                         style={{ height: 100, width: 100 }}
-                        source={{ uri: item.pic }}
+                        source={{ uri: item.image_url }}
                       />
                     </View>
                     <View

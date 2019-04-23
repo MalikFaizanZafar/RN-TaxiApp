@@ -21,6 +21,7 @@ export default signUser =  (userInfo) => {
       if(userInfo){
         
         axios.post('http://192.168.1.12:8000/api/auth/user', userInfo).then(res => {
+          console.log('res from server is ', res)
           storeUser(userInfo.socialId)
           resolve(res)
         }).catch(error => {
