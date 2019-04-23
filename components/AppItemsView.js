@@ -69,7 +69,7 @@ export default class AppItemsView extends Component {
           >
             {this.state.items.map((item, i) => {
               return (
-                <Card containerStyle={{ padding: 0 }}>
+                <Card containerStyle={{ padding: 0 }} key={i}>
                   <View style={{ flexDirection: "row", padding: 0 }}>
                     <View style={{ width: dimensions.width * 0.3, padding: 0 }}>
                       <Image
