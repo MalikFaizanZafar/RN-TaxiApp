@@ -9,7 +9,7 @@ import {
   ScrollView,
   TouchableHighlight
 } from "react-native";
-import { SearchBar, Button, Icon } from "react-native-elements";
+import { SearchBar, Card, Button, Rating } from "react-native-elements";
 // import Icon from 'react-native-vector-icons/MaterialIcons';
 import { createDrawerNavigator } from "react-navigation";
 import MapScreen from "./map";
@@ -127,26 +127,25 @@ export default class LandingScreen extends React.Component {
           >
             {items.map((item, i) => {
               return (
-                <View key={i} style={{ justifyContent: "center" }}>
-                  <Image
-                    style={{
-                      width: imageWidth * 0.9,
-                      height: imageHeight / 1.5
-                    }}
-                    source={{
-                      uri: item.pic
-                    }}
-                  />
-                  <Text
-                    style={{
-                      textAlign: "center",
-                      fontSize: 20,
-                      fontWeight: "bold"
-                    }}
-                  >
-                    {item.name}
-                  </Text>
-                </View>
+                <Card containerStyle={{padding:0}} > 
+                  <View style={{ flexDirection: "row", padding: 0}}>
+                    <View style={{width: dimensions.width*0.3, padding:0 }}>
+                      <Image style={{height: 100, width: 100}} source={{ uri: item.pic}} />
+                    </View>
+                    <View style={{width: dimensions.width*0.6, alignItems: "center", justifyContent: "flex-start", flexDirection: "row"}}>
+                      <View style={{ flexDirection: "column", alignItems: "flex-start"}}>
+                      <Text>{ item.name}</Text>
+                      <Text style={{ fontSize: 10}}>This is Items Description</Text>
+                        <Rating
+                        imageSize={16}
+                        readonly
+                        startingValue={3}
+                        style={{}}
+                      />
+                      </View>
+                    </View>
+                  </View>
+                </Card>
               );
             })}
           </ScrollView>
