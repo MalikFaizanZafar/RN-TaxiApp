@@ -116,7 +116,7 @@ export default class LandingScreen extends React.Component {
                   color='#f1c40f'
                   onPress={this.categoryClicked.bind(this, categoryIndex)}
                 >
-                  <Text style={{color: "#171616"}}>{category}</Text>
+                  <Text style={{color: "#ffffff"}}>{category}</Text>
                 </TouchableHighlight>
               );
             })}
@@ -196,10 +196,10 @@ const styles = StyleSheet.create({
   },
   button: {
     alignItems: "center",
-    // backgroundColor: "#171616",
+    backgroundColor: "#171616",
     padding: 10,
     width: 100,
-    borderRightWidth: 0.3,
+    borderRightWidth: 0.25,
     borderColor: "#fff"
   },
   buttonSelected: {
@@ -207,8 +207,9 @@ const styles = StyleSheet.create({
     backgroundColor: "#171616",
     padding: 10,
     width: 100,
-    borderRightWidth: 0.3,
-    borderColor: "#fff"
+    borderWidth:1.5,
+    borderColor: "#fff",
+    elevation: 20
   },
   headerText: {
     fontSize: 20,
