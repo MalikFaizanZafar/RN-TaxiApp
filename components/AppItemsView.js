@@ -16,9 +16,9 @@ export default class AppItemsView extends Component {
   constructor(props){
     super(props)
     this.state = {
-      isLoading: true,
       items: [],
       categories: [],
+      categoriesLoading: true,
       selectedCategory: -1
     }
   }
@@ -30,22 +30,24 @@ export default class AppItemsView extends Component {
     console.log('categoryClicked', id)
     this.setState({
       selectedCategory: id,
-      isLoading: true
+      categoriesLoading: true
     });
     axios.get(`http://192.168.1.12:8000/api/auth/itemcategory/${id}/items`).then(selectedCategoryResponse => {
       console.log('selectedCategoryResponse is', selectedCategoryResponse )
-      this.setState({ items : selectedCategoryResponse.data.data, isLoading: false})
+      this.setState({ items : selectedCategoryResponse.data.data, categoriesLoading: false})
     })
   }
   componentDidMount(){
     console.log('componentDidMount')
-    axios.get('http://192.168.1.12:8000/api/auth/itemcategory').then(categoriesResponse => {
-      this.setState({ categories : categoriesResponse.data.data})
+    axios.get('http://192.168.1.12:8080/api/auth/itemcategory').then(categoriesResponse => {
+      this.setState({ categories : categoriesResponse.data.data},() => {
+        this.setState({ categoriesLoading : false})
+      })
       console.log('categoriesResponse is : ', categoriesResponse)
-      axios.get('http://192.168.1.12:8000/api/auth/item').then(itemsResponse => {
+      axios.get('http://192.168.1.12:8080/api/auth/item').then(itemsResponse => {
         console.log('itemsResponse is : ', itemsResponse)
         this.setState({ items : itemsResponse.data.data}, () => {
-          this.setState({isLoading : false})
+          this.setState({categoriesLoading : false})
         })
       })
     })
@@ -55,7 +57,7 @@ export default class AppItemsView extends Component {
     return (
       <View style={styles.containerItems}>
           {
-            this.state.isLoading?<ActivityIndicator size="large" color="#000" style={{ marginTop: 150}} />:(<View><ScrollView
+            this.state.categoriesLoading?<ActivityIndicator size="large" color="#000" style={{ marginTop: 150}} />:(<View><ScrollView
             horizontal={true}
             style={{ height: 45 }}
             showsHorizontalScrollIndicator={false}
