@@ -5,7 +5,7 @@ export default signUser =  (userInfo) => {
   return new Promise((resolve, reject) => {
     if(userInfo.provider === "GOOGLE"){
       if(userInfo){
-        axios.post('http://192.168.1.12:8000/api/auth/user', userInfo).then(res => {
+        axios.post('http://192.168.1.12:8080/api/auth/user', userInfo).then(res => {
           storeUser(userInfo.socialId)
           resolve(res)
         }).catch(error => {
@@ -20,7 +20,7 @@ export default signUser =  (userInfo) => {
     else{
       if(userInfo){
         
-        axios.post('http://192.168.1.12:8000/api/auth/user', userInfo).then(res => {
+        axios.post('http://192.168.1.12:8080/api/auth/user', userInfo).then(res => {
           console.log('res from server is ', res)
           storeUser(userInfo.socialId)
           resolve(res)
