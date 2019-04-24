@@ -110,7 +110,7 @@ export default class AppItemsView extends Component {
                       >
                         <Text>{item.name}</Text>
                         <Text style={{ fontSize: 10 }}>
-                          This is Items Description
+                          {item.description}
                         </Text>
                         <Rating
                           imageSize={16}
