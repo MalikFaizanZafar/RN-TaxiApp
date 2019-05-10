@@ -12,6 +12,8 @@ import {
 import { Card, Rating } from "react-native-elements";
 import { Badge } from "react-native-elements";
 import axios from 'axios';
+import { SERVER_URL } from '../constants';
+const URL = SERVER_URL
 export default class AppItemsView extends Component {
   constructor(props){
     super(props)
@@ -32,24 +34,26 @@ export default class AppItemsView extends Component {
       selectedCategory: id,
       categoriesLoading: true
     });
-    axios.get(`http://192.168.1.12:8000/api/auth/itemcategory/${id}/items`).then(selectedCategoryResponse => {
+    axios.get(`${URL}/api/auth/itemcategory/${id}/items`).then(selectedCategoryResponse => {
       console.log('selectedCategoryResponse is', selectedCategoryResponse )
       this.setState({ items : selectedCategoryResponse.data.data, categoriesLoading: false})
     })
   }
   componentDidMount(){
     console.log('componentDidMount')
-    axios.get('http://192.168.1.12:8080/api/auth/itemcategory').then(categoriesResponse => {
+    axios.get(`${URL}/api/auth/itemcategory`).then(categoriesResponse => {
       this.setState({ categories : categoriesResponse.data.data},() => {
         this.setState({ categoriesLoading : false})
       })
       console.log('categoriesResponse is : ', categoriesResponse)
-      axios.get('http://192.168.1.12:8080/api/auth/item').then(itemsResponse => {
+      axios.get(`${URL}/api/auth/item`).then(itemsResponse => {
         console.log('itemsResponse is : ', itemsResponse)
         this.setState({ items : itemsResponse.data.data}, () => {
           this.setState({categoriesLoading : false})
         })
       })
+    }).catch(categoriesError => {
+      console.log('categoriesError is : ', categoriesError)
     })
   }
   render() {
