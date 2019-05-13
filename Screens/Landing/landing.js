@@ -1,5 +1,11 @@
 import React from "react";
-import { StyleSheet, View, ActivityIndicator } from "react-native";
+import {
+  StyleSheet,
+  View,
+  Text,
+  ActivityIndicator,
+  PermissionsAndroid
+} from "react-native";
 import { createDrawerNavigator } from "react-navigation";
 import MapScreen from "./map";
 import MapScreenTwo from "./mapTwo";
@@ -15,31 +21,75 @@ export default class LandingScreen extends React.Component {
     header: null
   };
   state = {
-    search: "",
+    latitude: null,
+    longitude: null,
+    error: null,
     brands: [],
-    searchKey: '',
+    searchKey: "",
     brandsLoading: true
   };
+  async LocationSerivce() {
+    try {
+      const granted = await PermissionsAndroid.request(
+        PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
+        {
+          title: "Location Permission",
+          message:
+            "SubQuch needs access to your location " +
+            "so we can know where you are."
+        }
+      );
+      if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+        console.log("You can use locations ");
+        navigator.geolocation.getCurrentPosition(
+          position => {
+            console.log(position);
+            this.setState({
+              latitude: position.coords.latitude,
+              longitude: position.coords.longitude,
+              error: null
+            });
+          },
+          error => this.setState({ error: error.message }),
+          { enableHighAccuracy: false, timeout: 200000, maximumAge: 1000 }
+        );
+      } else {
+        console.log("Location permission denied");
+      }
+    } catch (err) {
+      console.warn(err);
+    }
+  }
   componentDidMount() {
-    console.log("componentDidMount");
-    console.log('componentDidMount brandsLoading 1 : ', this.state.brandsLoading)
-    axios
-      .get(`${URL}/api/auth/filter?lat=33.494276&long=73.1012208&distance=35`)
+    this.LocationSerivce().then(location => {
+      axios
+      .get(`${URL}/api/auth/filter?lat=${this.state.latitude}&long=${this.state.longitude}&distance=35`)
       .then(brandsResponse => {
-        this.setState({ brands: brandsResponse.data.data, brandsLoading: false });
-        console.log('componentDidMount brandsLoading 2 : ', this.state.brandsLoading)
+        console.log('brandsResponse is : ', brandsResponse)
+        this.setState({
+          brands: brandsResponse.data.data.filter(data => data.type === 'franchise'),
+          brandsLoading: false
+        });
+        console.log('state is : ', this.state)
       })
       .catch(brandsError => {
         console.log("brandsError is : ", brandsError);
       });
+    })
   }
 
   onSearchHandler(searchKey) {
     this.setState({ brandsLoading: true });
     axios
-      .get(`${URL}/api/auth/filter?lat=33.494276&long=73.1012208&distance=35&filter=${searchKey}`)
+      .get(
+        `${URL}/api/auth/filter?lat=${this.state.latitude}&long=${this.state.longitude}&distance=35&filter=${searchKey}`
+      )
       .then(brandsResponse => {
-        this.setState({ brands: brandsResponse.data.data,  brandsLoading: false });
+        console.log('search brandsResponse is : ', brandsResponse)
+        this.setState({
+          brands: brandsResponse.data.data.filter(data => data.type === 'franchise'),
+          brandsLoading: false
+        });
       })
       .catch(brandsError => {
         console.log("brandsError is : ", brandsError);
@@ -47,18 +97,27 @@ export default class LandingScreen extends React.Component {
   }
   updateSearch = search => {
     this.setState({ search });
-    console.log('search in Parent has : ', search)
   };
   render() {
     return (
       <View style={styles.container}>
-        <AppTopBar openSubquchDrawer={() => this.props.navigation.openDrawer()}/>
-        <AppSearchView updateSearch={ val => {
-           this.onSearchHandler(val)
-        }}/>
+        <AppTopBar
+          openSubquchDrawer={() => this.props.navigation.openDrawer()}
+        />
+        <AppSearchView
+          updateSearch={val => {
+            this.onSearchHandler(val);
+          }}
+        />
         {/* <AppItemsView /> */}
-        {/* <AppBrandsListView brands={this.state.brands}/> */}
-        {this.state.brandsLoading?<ActivityIndicator size="large" color="#000" style={{ marginTop: 150 }}/>:<AppBrandsListView brands={this.state.brands}/>
+        {this.state.brandsLoading ? (
+          <ActivityIndicator
+            size="large"
+            color="#000"
+            style={{ marginTop: 150 }}
+          />
+        ) : this.state.brands.length === 0? <Text style={{marginLeft: 40, marginTop: 100}}>No Franchises within the Range of 35 Kms</Text>:<AppBrandsListView brands={this.state.brands} />
+        
         }
       </View>
     );
