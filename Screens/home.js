@@ -65,9 +65,12 @@ class HomeScreen extends React.Component {
     };
     this._bootstrapAsync();
   }
-  _bootstrapAsync = async () => {
-    const subquchUser = await AsyncStorage.getItem('SubQuch_User');
-    this.props.navigation.navigate(subquchUser ? 'Landing' : 'Home');
+  _bootstrapAsync = () => {
+    AsyncStorage.getItem('@SubQuch-User').then(data => {
+      if(data){
+        this.props.navigation.navigate('Landing');
+      }
+    });
   };
   setModalVisible(visible) {
     this.setState({ modalVisible: visible });
