@@ -9,6 +9,7 @@ export default class AppSearchView extends Component {
   };
   updateSearch = search => {
     this.setState({ search });
+    this.props.updateSearch(search)
   };
   render() {
     const { search } = this.state;
@@ -31,11 +32,11 @@ export default class AppSearchView extends Component {
             value={search}
             lightTheme={true}
             containerStyle={{
-              width: 250,
+              width: 300,
               height: 35,
               padding: 0,
               backgroundColor: "#fff",
-              marginTop: 55
+              marginTop: 5
             }}
             inputContainerStyle={{
               width: 250,
