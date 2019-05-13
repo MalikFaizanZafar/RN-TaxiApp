@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View, ImageBackground, Button } from "react-native";
 import { SearchBar} from "react-native-elements";
-// import {AsyncStorage} from 'react-native';
+import {AsyncStorage} from 'react-native';
 export default class AppSearchView extends Component {
   state = {
     search: "",
@@ -45,7 +45,11 @@ export default class AppSearchView extends Component {
           />
         </ImageBackground>
         {/* <Button title="Clear" onPress={() => {
-            AsyncStorage.removeItem("SubQuch_User")
+            const user = "";
+            AsyncStorage.getItem("@SubQuch-User").then(data => {
+              console.log("data is : ", data)
+            }) 
+            AsyncStorage.removeItem("@SubQuch-User")
           }} /> */}
       </View>
     );

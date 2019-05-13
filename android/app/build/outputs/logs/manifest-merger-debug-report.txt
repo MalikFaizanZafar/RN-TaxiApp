@@ -10,62 +10,62 @@ MERGED from [:react-native-vector-icons] E:\Office\subkuch-app\node_modules\reac
 MERGED from [:react-native-google-signin] E:\Office\subkuch-app\node_modules\react-native-google-signin\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-maps] E:\Office\subkuch-app\node_modules\react-native-maps\lib\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-12:12
 MERGED from [:react-native-fbsdk] E:\Office\subkuch-app\node_modules\react-native-fbsdk\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:1-30:12
-MERGED from [com.facebook.android:facebook-android-sdk:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-android-sdk-4.34.0.aar\d195da785ef5bf26feb6db3da6702c17\AndroidManifest.xml:21:1-31:12
-MERGED from [com.facebook.react:react-native:0.57.5] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\react-native-0.57.5.aar\9ce7e08f2b110ecacedf7e1be72f3e7a\AndroidManifest.xml:2:1-15:12
-MERGED from [com.facebook.android:facebook-login:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-login-4.34.0.aar\11e665c66fe7bdd99ae5bb79797270e7\AndroidManifest.xml:21:1-31:12
-MERGED from [com.facebook.android:facebook-share:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-share-4.34.0.aar\909fbadc8c6385e20fb0e2f0b0d40a6e\AndroidManifest.xml:21:1-31:12
-MERGED from [com.facebook.android:facebook-common:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-common-4.34.0.aar\a8466396f1bac6d389abcbec1d083cfd\AndroidManifest.xml:21:1-37:12
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\d64d4074500a214ac80db48002020a31\AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\1bfbfaf0e0e0b4607f6058e06ee56d18\AndroidManifest.xml:17:1-39:12
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\6fb0658e3051245dc3885a35dd12a503\AndroidManifest.xml:17:1-38:12
-MERGED from [com.google.android.gms:play-services-auth-api-phone:16.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-api-phone-16.0.0.aar\2bb7265c8937bfac57bfa3135585896e\AndroidManifest.xml:2:1-7:12
-MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-16.0.0.aar\6105234d9a0f617611cdebc6febcdec2\AndroidManifest.xml:2:1-7:12
-MERGED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-base-16.1.0.aar\ea5dc9d8cc110a1dae93f9b230cb3114\AndroidManifest.xml:17:1-29:12
-MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\android-maps-utils-0.5.aar\fb95cc33c60307bd27a5a8e8ca2903c0\AndroidManifest.xml:2:1-13:12
-MERGED from [com.facebook.android:facebook-places:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-places-4.34.0.aar\9a86400ae863694c0e774beabbadd5eb\AndroidManifest.xml:21:1-31:12
-MERGED from [com.facebook.android:facebook-applinks:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-applinks-4.34.0.aar\fff85fac70290c66e07ec8ea197e7779\AndroidManifest.xml:21:1-31:12
-MERGED from [com.facebook.android:facebook-messenger:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-messenger-4.34.0.aar\cb82da37dbfd93436252311c3acd01d9\AndroidManifest.xml:21:1-31:12
-MERGED from [com.facebook.android:facebook-marketing:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-marketing-4.34.0.aar\89f1e889b1696aa1b686e704cabc970d\AndroidManifest.xml:21:1-35:12
-MERGED from [com.facebook.android:facebook-core:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-core-4.34.0.aar\a943c22aea06a0aa583890584d32e3a6\AndroidManifest.xml:21:1-53:12
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-tasks-16.0.1.aar\69edcb8f92275f215c75dfe6569ec593\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.2.0.aar\b353d9e0f31677a9c2715b534cfdea15\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-v4:27.0.2] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\support-v4-27.0.2.aar\ebf31499c52660b51dd09ad3067daad4\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\58ec117b916693c222c74a71830691cf\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\78854b53c6b2b1b461d0ba784f18096a\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\19c3c14e24e7a787f90dd13d38710620\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\82d0bcf29d82eab5234e30c9b591d262\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\f07a547299af31116e8d42c225a52433\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:customtabs:27.0.2] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\customtabs-27.0.2.aar\0ebabb6bf6aa2f38b9ba07db465f170d\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:loader:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\87850388fa72e37687fcad74bc998caa\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-media-compat:27.0.2] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.0.2.aar\48e7839e620f77e66696c27333e592ac\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\cbe136a330bc37eeccf6c7f73d5d2c19\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\808582eaa43cb4e34291de1fb8f268f2\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\a13d3b488fffe373d6135ceea0285038\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\6714712aa3507febb2effe6b70256785\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:customview:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\7a2cc7950d818ddd3f50200b802ccfa1\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\d382bbee1034dc19ee7a161df1b1ff2e\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\5dfb57fbb660815bf4e2fec41f556095\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\17603653ddf5b71978cd9aaba050b58b\AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\06925350d31c5f03cb3078d9c90b7a12\AndroidManifest.xml:17:1-25:12
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\fa1f0d03b3f1a2c7da07b1e06089fa4d\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:cardview-v7:27.0.2] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.0.2.aar\f1ee06bf40946bb2ea94f08b202a674a\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\0a4c4a6208ea0d2e7f25b302c534c9a0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\0e60d9908ce8935370715f319644d4a5\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\4aa5f95a3ef7598e9f393eaa191f8bcf\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:print:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\d3304e43ef5e75ee925d22f5593542c3\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\54b7f55f028ffc48f8af78c412d7ca87\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\354ad855cc619ed3b0ac50af26b84355\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\c7dd3f30f44aee1892bc878293883918\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\05a491b774f9aeae6ebee7d979d97ac0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\dfd22af621413c8eba843910055b17cd\AndroidManifest.xml:17:1-22:12
-MERGED from [com.facebook.fresco:fresco:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\fresco-1.10.0.aar\3ce60b1947992e0033d6fd00aefd8f2b\AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\imagepipeline-okhttp3-1.10.0.aar\dc5cdc66d80da11867298d1c16b61a65\AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:drawee:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\drawee-1.10.0.aar\3b904bac6a134f833b698947d95d4ef1\AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\imagepipeline-1.10.0.aar\1ce1ce8d47a4c947cc6b12b01df8dffe\AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\imagepipeline-base-1.10.0.aar\5f05b1a9d2f844806a20588e85f665e6\AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.soloader:soloader:0.5.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\soloader-0.5.1.aar\8d9bd7fdcfdf6bab428447ab0d3ee6d5\AndroidManifest.xml:2:1-13:12
-MERGED from [org.webkit:android-jsc:r174650] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\android-jsc-r174650.aar\8c4ebe62b1c4bb8c4cbc6bf4d96f33a2\AndroidManifest.xml:1:1-3:12
-MERGED from [com.facebook.fresco:fbcore:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\fbcore-1.10.0.aar\885213e773dfb6a54676ced0b513423f\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.android:facebook-android-sdk:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\1d90b88e3d7540e3a0e2939e390aff83\AndroidManifest.xml:21:1-31:12
+MERGED from [com.facebook.react:react-native:0.57.5] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\d5cd7e4e88a4df580a2c235b2b5ab850\AndroidManifest.xml:2:1-15:12
+MERGED from [com.facebook.android:facebook-login:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\835fdab5f661dfd069414048a607bc4a\AndroidManifest.xml:21:1-31:12
+MERGED from [com.facebook.android:facebook-share:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\c463ecb07321f4468aa68c561aafaf5a\AndroidManifest.xml:21:1-31:12
+MERGED from [com.facebook.android:facebook-common:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\c881adf6be6c124263336a8803d25688\AndroidManifest.xml:21:1-37:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\49ef45c75d69b3da2555d584b4cd13b8\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\a995ef83fc330010bb73d94c2f0c113d\AndroidManifest.xml:17:1-39:12
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\7c0a0b280fa045c2dee34002c6389c95\AndroidManifest.xml:17:1-38:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:16.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\f13ac20b96cf4e61c7430e47cab27a42\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\0510bf1dab57f9d298b40e33876476f0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\5674254f2bde671e65b2074c732f5d92\AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\196266a559b36817b0647dadd45b41b2\AndroidManifest.xml:2:1-13:12
+MERGED from [com.facebook.android:facebook-places:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\34203f24198c0a53af67c646a9ba681e\AndroidManifest.xml:21:1-31:12
+MERGED from [com.facebook.android:facebook-applinks:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\0a855464700857670399304da977c60c\AndroidManifest.xml:21:1-31:12
+MERGED from [com.facebook.android:facebook-messenger:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\5f339d115b835a3f0de35d5f6df9667c\AndroidManifest.xml:21:1-31:12
+MERGED from [com.facebook.android:facebook-marketing:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\47028110d0a30854c92e89d03abc29fa\AndroidManifest.xml:21:1-35:12
+MERGED from [com.facebook.android:facebook-core:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\0459003c2ee814d7118eb67a705ae51c\AndroidManifest.xml:21:1-53:12
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\de987ebe25adba8451fc2426689afdc4\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\1d9760ee6cb72feb63d28f7f2ac0970e\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:27.0.2] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\3da3ca45e9ee1ec6c58ed13cbdd6ef09\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\c426a7f03a05ee9897f2f74830777883\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\643035197ff6277270b4f8137fef0904\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\b72a1fe633f0fcad5881ff0f1a7691b4\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\e73fbec4d253308f10ed497c179d0a45\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\c468e509c122712e78c630ed2fbcd5bb\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customtabs:27.0.2] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\ffeb25cdb1e5975c25f4f08392a13bfd\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\70ec9861adf149128e21d3ea2e2967c1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.0.2] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\3917a83bb984c6b975bd411fd8359620\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\7b73c4826ba0b29b7e9334463f66da8d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\70c4f0da4824346851bd273e7c866caa\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\47a6ed9467d0747d8cb85ce508b133b3\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\d97de9fba88e696dd71ccfa25751135a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\457ec236c287a473e6aed537c2b7dbf8\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\5a52eeae9682feb35f008c2e225c6614\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\7abf11618fdfdd728dfa606af5c02852\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\38af1004aa35efa089df775a7ae7277c\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\50a7a4a4672a6d0fe4cd9cff18d79d05\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\c9f35ca818b069e41d267b157df82d41\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:27.0.2] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\cfba31d2902f502f5e7b83984d41371b\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\d2a5f1159e052fb0d0464546da876724\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\24602e5d9fb549a32e3e99fc7a7b4d2d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\3fabc47c2d566b922b6c55bc1ef0f731\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\63b0c49c26ea4e1aae0f4ef54fc5fbcd\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\845a733bbdc79b08efa2fd50e5d8af72\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\7727c80c3043a1539cef9f6139e272b4\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\14f3f18125c697b5a0e78c2058348094\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\f9a4469c92a8876dd0eb69a3c2a0a10f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\4e0b5eda01eaa799c64c552ea0d16674\AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.fresco:fresco:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\c37d0adea6df1ecfd1d5af631936aae5\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\12c7798b4d3c795341762aca4a1a6bca\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:drawee:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\0ab65928569fda40ebb875fc20a004ea\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\850f8bac5c092fbce5997eb7a8735375\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\bf82c01c3d62d34c46c274004a04b707\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.soloader:soloader:0.5.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\ae9e157e3e63fa022d0d0323bd07eb6b\AndroidManifest.xml:2:1-13:12
+MERGED from [org.webkit:android-jsc:r174650] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\efcd232ba571093311dfa398aafe68cf\AndroidManifest.xml:1:1-3:12
+MERGED from [com.facebook.fresco:fbcore:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\526946bb44fe229a8a6116f09ac5e100\AndroidManifest.xml:2:1-9:12
 INJECTED from E:\Office\subkuch-app\android\app\src\debug\AndroidManifest.xml:2:1-8:12
 INJECTED from E:\Office\subkuch-app\android\app\src\debug\AndroidManifest.xml:2:1-8:12
 INJECTED from E:\Office\subkuch-app\android\app\src\debug\AndroidManifest.xml:2:1-8:12
@@ -90,8 +90,8 @@ uses-permission#android.permission.INTERNET
 ADDED from E:\Office\subkuch-app\android\app\src\main\AndroidManifest.xml:4:5-67
 MERGED from [:react-native-maps] E:\Office\subkuch-app\node_modules\react-native-maps\lib\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-67
 MERGED from [:react-native-maps] E:\Office\subkuch-app\node_modules\react-native-maps\lib\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-67
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\6fb0658e3051245dc3885a35dd12a503\AndroidManifest.xml:24:5-67
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\6fb0658e3051245dc3885a35dd12a503\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\7c0a0b280fa045c2dee34002c6389c95\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\7c0a0b280fa045c2dee34002c6389c95\AndroidManifest.xml:24:5-67
 	android:name
 		ADDED from E:\Office\subkuch-app\android\app\src\main\AndroidManifest.xml:4:22-64
 uses-permission#android.permission.ACCESS_FINE_LOCATION
@@ -104,50 +104,50 @@ MERGED from E:\Office\subkuch-app\android\app\src\main\AndroidManifest.xml:6:5-2
 MERGED from E:\Office\subkuch-app\android\app\src\main\AndroidManifest.xml:6:5-28:19
 MERGED from [:react-native-fbsdk] E:\Office\subkuch-app\node_modules\react-native-fbsdk\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:28:5-20
 MERGED from [:react-native-fbsdk] E:\Office\subkuch-app\node_modules\react-native-fbsdk\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:28:5-20
-MERGED from [com.facebook.android:facebook-android-sdk:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-android-sdk-4.34.0.aar\d195da785ef5bf26feb6db3da6702c17\AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-android-sdk:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-android-sdk-4.34.0.aar\d195da785ef5bf26feb6db3da6702c17\AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.react:react-native:0.57.5] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\react-native-0.57.5.aar\9ce7e08f2b110ecacedf7e1be72f3e7a\AndroidManifest.xml:13:5-20
-MERGED from [com.facebook.react:react-native:0.57.5] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\react-native-0.57.5.aar\9ce7e08f2b110ecacedf7e1be72f3e7a\AndroidManifest.xml:13:5-20
-MERGED from [com.facebook.android:facebook-login:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-login-4.34.0.aar\11e665c66fe7bdd99ae5bb79797270e7\AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-login:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-login-4.34.0.aar\11e665c66fe7bdd99ae5bb79797270e7\AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-share:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-share-4.34.0.aar\909fbadc8c6385e20fb0e2f0b0d40a6e\AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-share:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-share-4.34.0.aar\909fbadc8c6385e20fb0e2f0b0d40a6e\AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-common:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-common-4.34.0.aar\a8466396f1bac6d389abcbec1d083cfd\AndroidManifest.xml:28:5-35:19
-MERGED from [com.facebook.android:facebook-common:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-common-4.34.0.aar\a8466396f1bac6d389abcbec1d083cfd\AndroidManifest.xml:28:5-35:19
-MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\1bfbfaf0e0e0b4607f6058e06ee56d18\AndroidManifest.xml:22:5-37:19
-MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\1bfbfaf0e0e0b4607f6058e06ee56d18\AndroidManifest.xml:22:5-37:19
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\6fb0658e3051245dc3885a35dd12a503\AndroidManifest.xml:30:5-36:19
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\6fb0658e3051245dc3885a35dd12a503\AndroidManifest.xml:30:5-36:19
-MERGED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-base-16.1.0.aar\ea5dc9d8cc110a1dae93f9b230cb3114\AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-base-16.1.0.aar\ea5dc9d8cc110a1dae93f9b230cb3114\AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\android-maps-utils-0.5.aar\fb95cc33c60307bd27a5a8e8ca2903c0\AndroidManifest.xml:7:5-11:19
-MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\android-maps-utils-0.5.aar\fb95cc33c60307bd27a5a8e8ca2903c0\AndroidManifest.xml:7:5-11:19
-MERGED from [com.facebook.android:facebook-places:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-places-4.34.0.aar\9a86400ae863694c0e774beabbadd5eb\AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-places:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-places-4.34.0.aar\9a86400ae863694c0e774beabbadd5eb\AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-applinks:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-applinks-4.34.0.aar\fff85fac70290c66e07ec8ea197e7779\AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-applinks:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-applinks-4.34.0.aar\fff85fac70290c66e07ec8ea197e7779\AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-messenger:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-messenger-4.34.0.aar\cb82da37dbfd93436252311c3acd01d9\AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-messenger:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-messenger-4.34.0.aar\cb82da37dbfd93436252311c3acd01d9\AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-marketing:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-marketing-4.34.0.aar\89f1e889b1696aa1b686e704cabc970d\AndroidManifest.xml:28:5-33:19
-MERGED from [com.facebook.android:facebook-marketing:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-marketing-4.34.0.aar\89f1e889b1696aa1b686e704cabc970d\AndroidManifest.xml:28:5-33:19
-MERGED from [com.facebook.android:facebook-core:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-core-4.34.0.aar\a943c22aea06a0aa583890584d32e3a6\AndroidManifest.xml:28:5-51:19
-MERGED from [com.facebook.android:facebook-core:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-core-4.34.0.aar\a943c22aea06a0aa583890584d32e3a6\AndroidManifest.xml:28:5-51:19
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-tasks-16.0.1.aar\69edcb8f92275f215c75dfe6569ec593\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-tasks-16.0.1.aar\69edcb8f92275f215c75dfe6569ec593\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.2.0.aar\b353d9e0f31677a9c2715b534cfdea15\AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.2.0.aar\b353d9e0f31677a9c2715b534cfdea15\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\17603653ddf5b71978cd9aaba050b58b\AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\17603653ddf5b71978cd9aaba050b58b\AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\06925350d31c5f03cb3078d9c90b7a12\AndroidManifest.xml:22:5-23:19
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\06925350d31c5f03cb3078d9c90b7a12\AndroidManifest.xml:22:5-23:19
-MERGED from [com.facebook.soloader:soloader:0.5.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\soloader-0.5.1.aar\8d9bd7fdcfdf6bab428447ab0d3ee6d5\AndroidManifest.xml:11:5-20
-MERGED from [com.facebook.soloader:soloader:0.5.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\soloader-0.5.1.aar\8d9bd7fdcfdf6bab428447ab0d3ee6d5\AndroidManifest.xml:11:5-20
-MERGED from [org.webkit:android-jsc:r174650] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\android-jsc-r174650.aar\8c4ebe62b1c4bb8c4cbc6bf4d96f33a2\AndroidManifest.xml:2:3-17
-MERGED from [org.webkit:android-jsc:r174650] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\android-jsc-r174650.aar\8c4ebe62b1c4bb8c4cbc6bf4d96f33a2\AndroidManifest.xml:2:3-17
+MERGED from [com.facebook.android:facebook-android-sdk:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\1d90b88e3d7540e3a0e2939e390aff83\AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-android-sdk:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\1d90b88e3d7540e3a0e2939e390aff83\AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.react:react-native:0.57.5] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\d5cd7e4e88a4df580a2c235b2b5ab850\AndroidManifest.xml:13:5-20
+MERGED from [com.facebook.react:react-native:0.57.5] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\d5cd7e4e88a4df580a2c235b2b5ab850\AndroidManifest.xml:13:5-20
+MERGED from [com.facebook.android:facebook-login:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\835fdab5f661dfd069414048a607bc4a\AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-login:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\835fdab5f661dfd069414048a607bc4a\AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-share:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\c463ecb07321f4468aa68c561aafaf5a\AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-share:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\c463ecb07321f4468aa68c561aafaf5a\AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-common:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\c881adf6be6c124263336a8803d25688\AndroidManifest.xml:28:5-35:19
+MERGED from [com.facebook.android:facebook-common:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\c881adf6be6c124263336a8803d25688\AndroidManifest.xml:28:5-35:19
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\a995ef83fc330010bb73d94c2f0c113d\AndroidManifest.xml:22:5-37:19
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\a995ef83fc330010bb73d94c2f0c113d\AndroidManifest.xml:22:5-37:19
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\7c0a0b280fa045c2dee34002c6389c95\AndroidManifest.xml:30:5-36:19
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\7c0a0b280fa045c2dee34002c6389c95\AndroidManifest.xml:30:5-36:19
+MERGED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\5674254f2bde671e65b2074c732f5d92\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\5674254f2bde671e65b2074c732f5d92\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\196266a559b36817b0647dadd45b41b2\AndroidManifest.xml:7:5-11:19
+MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\196266a559b36817b0647dadd45b41b2\AndroidManifest.xml:7:5-11:19
+MERGED from [com.facebook.android:facebook-places:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\34203f24198c0a53af67c646a9ba681e\AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-places:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\34203f24198c0a53af67c646a9ba681e\AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-applinks:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\0a855464700857670399304da977c60c\AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-applinks:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\0a855464700857670399304da977c60c\AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-messenger:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\5f339d115b835a3f0de35d5f6df9667c\AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-messenger:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\5f339d115b835a3f0de35d5f6df9667c\AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-marketing:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\47028110d0a30854c92e89d03abc29fa\AndroidManifest.xml:28:5-33:19
+MERGED from [com.facebook.android:facebook-marketing:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\47028110d0a30854c92e89d03abc29fa\AndroidManifest.xml:28:5-33:19
+MERGED from [com.facebook.android:facebook-core:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\0459003c2ee814d7118eb67a705ae51c\AndroidManifest.xml:28:5-51:19
+MERGED from [com.facebook.android:facebook-core:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\0459003c2ee814d7118eb67a705ae51c\AndroidManifest.xml:28:5-51:19
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\de987ebe25adba8451fc2426689afdc4\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\de987ebe25adba8451fc2426689afdc4\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\1d9760ee6cb72feb63d28f7f2ac0970e\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\1d9760ee6cb72feb63d28f7f2ac0970e\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\38af1004aa35efa089df775a7ae7277c\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\38af1004aa35efa089df775a7ae7277c\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\50a7a4a4672a6d0fe4cd9cff18d79d05\AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\50a7a4a4672a6d0fe4cd9cff18d79d05\AndroidManifest.xml:22:5-23:19
+MERGED from [com.facebook.soloader:soloader:0.5.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\ae9e157e3e63fa022d0d0323bd07eb6b\AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.5.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\ae9e157e3e63fa022d0d0323bd07eb6b\AndroidManifest.xml:11:5-20
+MERGED from [org.webkit:android-jsc:r174650] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\efcd232ba571093311dfa398aafe68cf\AndroidManifest.xml:2:3-17
+MERGED from [org.webkit:android-jsc:r174650] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\efcd232ba571093311dfa398aafe68cf\AndroidManifest.xml:2:3-17
 	android:appComponentFactory
-		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\17603653ddf5b71978cd9aaba050b58b\AndroidManifest.xml:22:18-91
+		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\38af1004aa35efa089df775a7ae7277c\AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from [com.facebook.android:facebook-android-sdk:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-android-sdk-4.34.0.aar\d195da785ef5bf26feb6db3da6702c17\AndroidManifest.xml:28:18-44
+		ADDED from [com.facebook.android:facebook-android-sdk:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\1d90b88e3d7540e3a0e2939e390aff83\AndroidManifest.xml:28:18-44
 	android:label
 		ADDED from E:\Office\subkuch-app\android\app\src\main\AndroidManifest.xml:8:7-39
 		ADDED from E:\Office\subkuch-app\android\app\src\main\AndroidManifest.xml:8:7-39
@@ -222,116 +222,116 @@ MERGED from [:react-native-maps] E:\Office\subkuch-app\node_modules\react-native
 MERGED from [:react-native-maps] E:\Office\subkuch-app\node_modules\react-native-maps\lib\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-fbsdk] E:\Office\subkuch-app\node_modules\react-native-fbsdk\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:24:5-26:41
 MERGED from [:react-native-fbsdk] E:\Office\subkuch-app\node_modules\react-native-fbsdk\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-android-sdk:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-android-sdk-4.34.0.aar\d195da785ef5bf26feb6db3da6702c17\AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-android-sdk:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-android-sdk-4.34.0.aar\d195da785ef5bf26feb6db3da6702c17\AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.react:react-native:0.57.5] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\react-native-0.57.5.aar\9ce7e08f2b110ecacedf7e1be72f3e7a\AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.react:react-native:0.57.5] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\react-native-0.57.5.aar\9ce7e08f2b110ecacedf7e1be72f3e7a\AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.android:facebook-login:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-login-4.34.0.aar\11e665c66fe7bdd99ae5bb79797270e7\AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-login:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-login-4.34.0.aar\11e665c66fe7bdd99ae5bb79797270e7\AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-share:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-share-4.34.0.aar\909fbadc8c6385e20fb0e2f0b0d40a6e\AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-share:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-share-4.34.0.aar\909fbadc8c6385e20fb0e2f0b0d40a6e\AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-common:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-common-4.34.0.aar\a8466396f1bac6d389abcbec1d083cfd\AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-common:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-common-4.34.0.aar\a8466396f1bac6d389abcbec1d083cfd\AndroidManifest.xml:24:5-26:41
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\d64d4074500a214ac80db48002020a31\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\d64d4074500a214ac80db48002020a31\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\1bfbfaf0e0e0b4607f6058e06ee56d18\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\1bfbfaf0e0e0b4607f6058e06ee56d18\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\6fb0658e3051245dc3885a35dd12a503\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\6fb0658e3051245dc3885a35dd12a503\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-auth-api-phone:16.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-api-phone-16.0.0.aar\2bb7265c8937bfac57bfa3135585896e\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-auth-api-phone:16.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-api-phone-16.0.0.aar\2bb7265c8937bfac57bfa3135585896e\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-16.0.0.aar\6105234d9a0f617611cdebc6febcdec2\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-16.0.0.aar\6105234d9a0f617611cdebc6febcdec2\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-base-16.1.0.aar\ea5dc9d8cc110a1dae93f9b230cb3114\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-base-16.1.0.aar\ea5dc9d8cc110a1dae93f9b230cb3114\AndroidManifest.xml:20:5-44
-MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\android-maps-utils-0.5.aar\fb95cc33c60307bd27a5a8e8ca2903c0\AndroidManifest.xml:5:5-43
-MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\android-maps-utils-0.5.aar\fb95cc33c60307bd27a5a8e8ca2903c0\AndroidManifest.xml:5:5-43
-MERGED from [com.facebook.android:facebook-places:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-places-4.34.0.aar\9a86400ae863694c0e774beabbadd5eb\AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-places:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-places-4.34.0.aar\9a86400ae863694c0e774beabbadd5eb\AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-applinks:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-applinks-4.34.0.aar\fff85fac70290c66e07ec8ea197e7779\AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-applinks:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-applinks-4.34.0.aar\fff85fac70290c66e07ec8ea197e7779\AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-messenger:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-messenger-4.34.0.aar\cb82da37dbfd93436252311c3acd01d9\AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-messenger:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-messenger-4.34.0.aar\cb82da37dbfd93436252311c3acd01d9\AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-marketing:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-marketing-4.34.0.aar\89f1e889b1696aa1b686e704cabc970d\AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-marketing:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-marketing-4.34.0.aar\89f1e889b1696aa1b686e704cabc970d\AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-core:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-core-4.34.0.aar\a943c22aea06a0aa583890584d32e3a6\AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-core:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-core-4.34.0.aar\a943c22aea06a0aa583890584d32e3a6\AndroidManifest.xml:24:5-26:41
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-tasks-16.0.1.aar\69edcb8f92275f215c75dfe6569ec593\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-tasks-16.0.1.aar\69edcb8f92275f215c75dfe6569ec593\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.2.0.aar\b353d9e0f31677a9c2715b534cfdea15\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.2.0.aar\b353d9e0f31677a9c2715b534cfdea15\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.0.2] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\support-v4-27.0.2.aar\ebf31499c52660b51dd09ad3067daad4\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.0.2] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\support-v4-27.0.2.aar\ebf31499c52660b51dd09ad3067daad4\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\58ec117b916693c222c74a71830691cf\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\58ec117b916693c222c74a71830691cf\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\78854b53c6b2b1b461d0ba784f18096a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\78854b53c6b2b1b461d0ba784f18096a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\19c3c14e24e7a787f90dd13d38710620\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\19c3c14e24e7a787f90dd13d38710620\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\82d0bcf29d82eab5234e30c9b591d262\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\82d0bcf29d82eab5234e30c9b591d262\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\f07a547299af31116e8d42c225a52433\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\f07a547299af31116e8d42c225a52433\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customtabs:27.0.2] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\customtabs-27.0.2.aar\0ebabb6bf6aa2f38b9ba07db465f170d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customtabs:27.0.2] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\customtabs-27.0.2.aar\0ebabb6bf6aa2f38b9ba07db465f170d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\87850388fa72e37687fcad74bc998caa\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\87850388fa72e37687fcad74bc998caa\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.0.2] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.0.2.aar\48e7839e620f77e66696c27333e592ac\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.0.2] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.0.2.aar\48e7839e620f77e66696c27333e592ac\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\cbe136a330bc37eeccf6c7f73d5d2c19\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\cbe136a330bc37eeccf6c7f73d5d2c19\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\808582eaa43cb4e34291de1fb8f268f2\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\808582eaa43cb4e34291de1fb8f268f2\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\a13d3b488fffe373d6135ceea0285038\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\a13d3b488fffe373d6135ceea0285038\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\6714712aa3507febb2effe6b70256785\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\6714712aa3507febb2effe6b70256785\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\7a2cc7950d818ddd3f50200b802ccfa1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\7a2cc7950d818ddd3f50200b802ccfa1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\d382bbee1034dc19ee7a161df1b1ff2e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\d382bbee1034dc19ee7a161df1b1ff2e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\5dfb57fbb660815bf4e2fec41f556095\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\5dfb57fbb660815bf4e2fec41f556095\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\17603653ddf5b71978cd9aaba050b58b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\17603653ddf5b71978cd9aaba050b58b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\06925350d31c5f03cb3078d9c90b7a12\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\06925350d31c5f03cb3078d9c90b7a12\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\fa1f0d03b3f1a2c7da07b1e06089fa4d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\fa1f0d03b3f1a2c7da07b1e06089fa4d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:27.0.2] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.0.2.aar\f1ee06bf40946bb2ea94f08b202a674a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:27.0.2] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.0.2.aar\f1ee06bf40946bb2ea94f08b202a674a\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\0a4c4a6208ea0d2e7f25b302c534c9a0\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\0a4c4a6208ea0d2e7f25b302c534c9a0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\0e60d9908ce8935370715f319644d4a5\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\0e60d9908ce8935370715f319644d4a5\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\4aa5f95a3ef7598e9f393eaa191f8bcf\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\4aa5f95a3ef7598e9f393eaa191f8bcf\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\d3304e43ef5e75ee925d22f5593542c3\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\d3304e43ef5e75ee925d22f5593542c3\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\54b7f55f028ffc48f8af78c412d7ca87\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\54b7f55f028ffc48f8af78c412d7ca87\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\354ad855cc619ed3b0ac50af26b84355\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\354ad855cc619ed3b0ac50af26b84355\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\c7dd3f30f44aee1892bc878293883918\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\c7dd3f30f44aee1892bc878293883918\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\05a491b774f9aeae6ebee7d979d97ac0\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\05a491b774f9aeae6ebee7d979d97ac0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\dfd22af621413c8eba843910055b17cd\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\dfd22af621413c8eba843910055b17cd\AndroidManifest.xml:20:5-44
-MERGED from [com.facebook.fresco:fresco:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\fresco-1.10.0.aar\3ce60b1947992e0033d6fd00aefd8f2b\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fresco:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\fresco-1.10.0.aar\3ce60b1947992e0033d6fd00aefd8f2b\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\imagepipeline-okhttp3-1.10.0.aar\dc5cdc66d80da11867298d1c16b61a65\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\imagepipeline-okhttp3-1.10.0.aar\dc5cdc66d80da11867298d1c16b61a65\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:drawee:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\drawee-1.10.0.aar\3b904bac6a134f833b698947d95d4ef1\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:drawee:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\drawee-1.10.0.aar\3b904bac6a134f833b698947d95d4ef1\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\imagepipeline-1.10.0.aar\1ce1ce8d47a4c947cc6b12b01df8dffe\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\imagepipeline-1.10.0.aar\1ce1ce8d47a4c947cc6b12b01df8dffe\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\imagepipeline-base-1.10.0.aar\5f05b1a9d2f844806a20588e85f665e6\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\imagepipeline-base-1.10.0.aar\5f05b1a9d2f844806a20588e85f665e6\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.soloader:soloader:0.5.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\soloader-0.5.1.aar\8d9bd7fdcfdf6bab428447ab0d3ee6d5\AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.soloader:soloader:0.5.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\soloader-0.5.1.aar\8d9bd7fdcfdf6bab428447ab0d3ee6d5\AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.fresco:fbcore:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\fbcore-1.10.0.aar\885213e773dfb6a54676ced0b513423f\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fbcore:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\fbcore-1.10.0.aar\885213e773dfb6a54676ced0b513423f\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.android:facebook-android-sdk:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\1d90b88e3d7540e3a0e2939e390aff83\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-android-sdk:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\1d90b88e3d7540e3a0e2939e390aff83\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.react:react-native:0.57.5] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\d5cd7e4e88a4df580a2c235b2b5ab850\AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.57.5] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\d5cd7e4e88a4df580a2c235b2b5ab850\AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.android:facebook-login:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\835fdab5f661dfd069414048a607bc4a\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-login:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\835fdab5f661dfd069414048a607bc4a\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-share:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\c463ecb07321f4468aa68c561aafaf5a\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-share:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\c463ecb07321f4468aa68c561aafaf5a\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-common:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\c881adf6be6c124263336a8803d25688\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-common:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\c881adf6be6c124263336a8803d25688\AndroidManifest.xml:24:5-26:41
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\49ef45c75d69b3da2555d584b4cd13b8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\49ef45c75d69b3da2555d584b4cd13b8\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\a995ef83fc330010bb73d94c2f0c113d\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\a995ef83fc330010bb73d94c2f0c113d\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\7c0a0b280fa045c2dee34002c6389c95\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\7c0a0b280fa045c2dee34002c6389c95\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:16.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\f13ac20b96cf4e61c7430e47cab27a42\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:16.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\f13ac20b96cf4e61c7430e47cab27a42\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\0510bf1dab57f9d298b40e33876476f0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\0510bf1dab57f9d298b40e33876476f0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\5674254f2bde671e65b2074c732f5d92\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\5674254f2bde671e65b2074c732f5d92\AndroidManifest.xml:20:5-44
+MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\196266a559b36817b0647dadd45b41b2\AndroidManifest.xml:5:5-43
+MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\196266a559b36817b0647dadd45b41b2\AndroidManifest.xml:5:5-43
+MERGED from [com.facebook.android:facebook-places:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\34203f24198c0a53af67c646a9ba681e\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-places:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\34203f24198c0a53af67c646a9ba681e\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-applinks:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\0a855464700857670399304da977c60c\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-applinks:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\0a855464700857670399304da977c60c\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-messenger:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\5f339d115b835a3f0de35d5f6df9667c\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-messenger:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\5f339d115b835a3f0de35d5f6df9667c\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-marketing:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\47028110d0a30854c92e89d03abc29fa\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-marketing:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\47028110d0a30854c92e89d03abc29fa\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-core:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\0459003c2ee814d7118eb67a705ae51c\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-core:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\0459003c2ee814d7118eb67a705ae51c\AndroidManifest.xml:24:5-26:41
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\de987ebe25adba8451fc2426689afdc4\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\de987ebe25adba8451fc2426689afdc4\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\1d9760ee6cb72feb63d28f7f2ac0970e\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\1d9760ee6cb72feb63d28f7f2ac0970e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.0.2] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\3da3ca45e9ee1ec6c58ed13cbdd6ef09\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.0.2] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\3da3ca45e9ee1ec6c58ed13cbdd6ef09\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\c426a7f03a05ee9897f2f74830777883\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\c426a7f03a05ee9897f2f74830777883\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\643035197ff6277270b4f8137fef0904\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\643035197ff6277270b4f8137fef0904\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\b72a1fe633f0fcad5881ff0f1a7691b4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\b72a1fe633f0fcad5881ff0f1a7691b4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\e73fbec4d253308f10ed497c179d0a45\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\e73fbec4d253308f10ed497c179d0a45\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\c468e509c122712e78c630ed2fbcd5bb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\c468e509c122712e78c630ed2fbcd5bb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customtabs:27.0.2] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\ffeb25cdb1e5975c25f4f08392a13bfd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customtabs:27.0.2] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\ffeb25cdb1e5975c25f4f08392a13bfd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\70ec9861adf149128e21d3ea2e2967c1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\70ec9861adf149128e21d3ea2e2967c1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.0.2] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\3917a83bb984c6b975bd411fd8359620\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.0.2] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\3917a83bb984c6b975bd411fd8359620\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\7b73c4826ba0b29b7e9334463f66da8d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\7b73c4826ba0b29b7e9334463f66da8d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\70c4f0da4824346851bd273e7c866caa\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\70c4f0da4824346851bd273e7c866caa\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\47a6ed9467d0747d8cb85ce508b133b3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\47a6ed9467d0747d8cb85ce508b133b3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\d97de9fba88e696dd71ccfa25751135a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\d97de9fba88e696dd71ccfa25751135a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\457ec236c287a473e6aed537c2b7dbf8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\457ec236c287a473e6aed537c2b7dbf8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\5a52eeae9682feb35f008c2e225c6614\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\5a52eeae9682feb35f008c2e225c6614\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\7abf11618fdfdd728dfa606af5c02852\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\7abf11618fdfdd728dfa606af5c02852\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\38af1004aa35efa089df775a7ae7277c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\38af1004aa35efa089df775a7ae7277c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\50a7a4a4672a6d0fe4cd9cff18d79d05\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\50a7a4a4672a6d0fe4cd9cff18d79d05\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\c9f35ca818b069e41d267b157df82d41\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\c9f35ca818b069e41d267b157df82d41\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.0.2] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\cfba31d2902f502f5e7b83984d41371b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.0.2] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\cfba31d2902f502f5e7b83984d41371b\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\d2a5f1159e052fb0d0464546da876724\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\d2a5f1159e052fb0d0464546da876724\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\24602e5d9fb549a32e3e99fc7a7b4d2d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\24602e5d9fb549a32e3e99fc7a7b4d2d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\3fabc47c2d566b922b6c55bc1ef0f731\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\3fabc47c2d566b922b6c55bc1ef0f731\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\63b0c49c26ea4e1aae0f4ef54fc5fbcd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\63b0c49c26ea4e1aae0f4ef54fc5fbcd\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\845a733bbdc79b08efa2fd50e5d8af72\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\845a733bbdc79b08efa2fd50e5d8af72\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\7727c80c3043a1539cef9f6139e272b4\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\7727c80c3043a1539cef9f6139e272b4\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\14f3f18125c697b5a0e78c2058348094\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\14f3f18125c697b5a0e78c2058348094\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\f9a4469c92a8876dd0eb69a3c2a0a10f\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\f9a4469c92a8876dd0eb69a3c2a0a10f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\4e0b5eda01eaa799c64c552ea0d16674\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\4e0b5eda01eaa799c64c552ea0d16674\AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.fresco:fresco:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\c37d0adea6df1ecfd1d5af631936aae5\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\c37d0adea6df1ecfd1d5af631936aae5\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\12c7798b4d3c795341762aca4a1a6bca\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\12c7798b4d3c795341762aca4a1a6bca\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\0ab65928569fda40ebb875fc20a004ea\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\0ab65928569fda40ebb875fc20a004ea\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\850f8bac5c092fbce5997eb7a8735375\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\850f8bac5c092fbce5997eb7a8735375\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\bf82c01c3d62d34c46c274004a04b707\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\bf82c01c3d62d34c46c274004a04b707\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.soloader:soloader:0.5.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\ae9e157e3e63fa022d0d0323bd07eb6b\AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.soloader:soloader:0.5.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\ae9e157e3e63fa022d0d0323bd07eb6b\AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.fresco:fbcore:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\526946bb44fe229a8a6116f09ac5e100\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\526946bb44fe229a8a6116f09ac5e100\AndroidManifest.xml:5:5-7:41
 INJECTED from E:\Office\subkuch-app\android\app\src\debug\AndroidManifest.xml
 INJECTED from E:\Office\subkuch-app\android\app\src\debug\AndroidManifest.xml
 	android:targetSdkVersion
@@ -342,8 +342,8 @@ INJECTED from E:\Office\subkuch-app\android\app\src\debug\AndroidManifest.xml
 		INJECTED from E:\Office\subkuch-app\android\app\src\debug\AndroidManifest.xml
 uses-permission#android.permission.SYSTEM_ALERT_WINDOW
 ADDED from E:\Office\subkuch-app\android\app\src\debug\AndroidManifest.xml:5:5-77
-MERGED from [com.facebook.react:react-native:0.57.5] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\react-native-0.57.5.aar\9ce7e08f2b110ecacedf7e1be72f3e7a\AndroidManifest.xml:11:5-78
-MERGED from [com.facebook.react:react-native:0.57.5] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\react-native-0.57.5.aar\9ce7e08f2b110ecacedf7e1be72f3e7a\AndroidManifest.xml:11:5-78
+MERGED from [com.facebook.react:react-native:0.57.5] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\d5cd7e4e88a4df580a2c235b2b5ab850\AndroidManifest.xml:11:5-78
+MERGED from [com.facebook.react:react-native:0.57.5] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\d5cd7e4e88a4df580a2c235b2b5ab850\AndroidManifest.xml:11:5-78
 	android:name
 		ADDED from E:\Office\subkuch-app\android\app\src\debug\AndroidManifest.xml:5:22-75
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
@@ -351,99 +351,99 @@ ADDED from [:react-native-maps] E:\Office\subkuch-app\node_modules\react-native-
 	android:name
 		ADDED from [:react-native-maps] E:\Office\subkuch-app\node_modules\react-native-maps\lib\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:10:22-78
 activity#com.facebook.FacebookActivity
-ADDED from [com.facebook.android:facebook-common:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-common-4.34.0.aar\a8466396f1bac6d389abcbec1d083cfd\AndroidManifest.xml:29:9-32:66
+ADDED from [com.facebook.android:facebook-common:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\c881adf6be6c124263336a8803d25688\AndroidManifest.xml:29:9-32:66
 	android:configChanges
-		ADDED from [com.facebook.android:facebook-common:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-common-4.34.0.aar\a8466396f1bac6d389abcbec1d083cfd\AndroidManifest.xml:31:13-96
+		ADDED from [com.facebook.android:facebook-common:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\c881adf6be6c124263336a8803d25688\AndroidManifest.xml:31:13-96
 	android:theme
-		ADDED from [com.facebook.android:facebook-common:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-common-4.34.0.aar\a8466396f1bac6d389abcbec1d083cfd\AndroidManifest.xml:32:13-63
+		ADDED from [com.facebook.android:facebook-common:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\c881adf6be6c124263336a8803d25688\AndroidManifest.xml:32:13-63
 	android:name
-		ADDED from [com.facebook.android:facebook-common:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-common-4.34.0.aar\a8466396f1bac6d389abcbec1d083cfd\AndroidManifest.xml:30:13-57
+		ADDED from [com.facebook.android:facebook-common:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\c881adf6be6c124263336a8803d25688\AndroidManifest.xml:30:13-57
 activity#com.facebook.CustomTabMainActivity
-ADDED from [com.facebook.android:facebook-common:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-common-4.34.0.aar\a8466396f1bac6d389abcbec1d083cfd\AndroidManifest.xml:33:9-71
+ADDED from [com.facebook.android:facebook-common:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\c881adf6be6c124263336a8803d25688\AndroidManifest.xml:33:9-71
 	android:name
-		ADDED from [com.facebook.android:facebook-common:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-common-4.34.0.aar\a8466396f1bac6d389abcbec1d083cfd\AndroidManifest.xml:33:19-68
+		ADDED from [com.facebook.android:facebook-common:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\c881adf6be6c124263336a8803d25688\AndroidManifest.xml:33:19-68
 activity#com.facebook.CustomTabActivity
-ADDED from [com.facebook.android:facebook-common:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-common-4.34.0.aar\a8466396f1bac6d389abcbec1d083cfd\AndroidManifest.xml:34:9-67
+ADDED from [com.facebook.android:facebook-common:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\c881adf6be6c124263336a8803d25688\AndroidManifest.xml:34:9-67
 	android:name
-		ADDED from [com.facebook.android:facebook-common:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-common-4.34.0.aar\a8466396f1bac6d389abcbec1d083cfd\AndroidManifest.xml:34:19-64
+		ADDED from [com.facebook.android:facebook-common:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\c881adf6be6c124263336a8803d25688\AndroidManifest.xml:34:19-64
 activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
-ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\1bfbfaf0e0e0b4607f6058e06ee56d18\AndroidManifest.xml:23:9-27:75
+ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\a995ef83fc330010bb73d94c2f0c113d\AndroidManifest.xml:23:9-27:75
 	android:excludeFromRecents
-		ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\1bfbfaf0e0e0b4607f6058e06ee56d18\AndroidManifest.xml:25:13-46
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\a995ef83fc330010bb73d94c2f0c113d\AndroidManifest.xml:25:13-46
 	android:exported
-		ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\1bfbfaf0e0e0b4607f6058e06ee56d18\AndroidManifest.xml:26:13-37
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\a995ef83fc330010bb73d94c2f0c113d\AndroidManifest.xml:26:13-37
 	android:theme
-		ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\1bfbfaf0e0e0b4607f6058e06ee56d18\AndroidManifest.xml:27:13-72
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\a995ef83fc330010bb73d94c2f0c113d\AndroidManifest.xml:27:13-72
 	android:name
-		ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\1bfbfaf0e0e0b4607f6058e06ee56d18\AndroidManifest.xml:24:13-93
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\a995ef83fc330010bb73d94c2f0c113d\AndroidManifest.xml:24:13-93
 service#com.google.android.gms.auth.api.signin.RevocationBoundService
-ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\1bfbfaf0e0e0b4607f6058e06ee56d18\AndroidManifest.xml:33:9-36:110
+ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\a995ef83fc330010bb73d94c2f0c113d\AndroidManifest.xml:33:9-36:110
 	android:exported
-		ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\1bfbfaf0e0e0b4607f6058e06ee56d18\AndroidManifest.xml:35:13-36
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\a995ef83fc330010bb73d94c2f0c113d\AndroidManifest.xml:35:13-36
 	android:permission
-		ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\1bfbfaf0e0e0b4607f6058e06ee56d18\AndroidManifest.xml:36:13-107
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\a995ef83fc330010bb73d94c2f0c113d\AndroidManifest.xml:36:13-107
 	android:name
-		ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-auth-16.0.1.aar\1bfbfaf0e0e0b4607f6058e06ee56d18\AndroidManifest.xml:34:13-89
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\a995ef83fc330010bb73d94c2f0c113d\AndroidManifest.xml:34:13-89
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\6fb0658e3051245dc3885a35dd12a503\AndroidManifest.xml:23:5-79
+ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\7c0a0b280fa045c2dee34002c6389c95\AndroidManifest.xml:23:5-79
 	android:name
-		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\6fb0658e3051245dc3885a35dd12a503\AndroidManifest.xml:23:22-76
+		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\7c0a0b280fa045c2dee34002c6389c95\AndroidManifest.xml:23:22-76
 uses-feature#0x00020000
-ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\6fb0658e3051245dc3885a35dd12a503\AndroidManifest.xml:26:5-28:35
+ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\7c0a0b280fa045c2dee34002c6389c95\AndroidManifest.xml:26:5-28:35
 	android:glEsVersion
-		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\6fb0658e3051245dc3885a35dd12a503\AndroidManifest.xml:27:9-41
+		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\7c0a0b280fa045c2dee34002c6389c95\AndroidManifest.xml:27:9-41
 	android:required
-		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\6fb0658e3051245dc3885a35dd12a503\AndroidManifest.xml:28:9-32
+		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\7c0a0b280fa045c2dee34002c6389c95\AndroidManifest.xml:28:9-32
 uses-library#org.apache.http.legacy
-ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\6fb0658e3051245dc3885a35dd12a503\AndroidManifest.xml:33:9-35:40
+ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\7c0a0b280fa045c2dee34002c6389c95\AndroidManifest.xml:33:9-35:40
 	android:required
-		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\6fb0658e3051245dc3885a35dd12a503\AndroidManifest.xml:35:13-37
+		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\7c0a0b280fa045c2dee34002c6389c95\AndroidManifest.xml:35:13-37
 	android:name
-		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\6fb0658e3051245dc3885a35dd12a503\AndroidManifest.xml:34:13-50
+		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\7c0a0b280fa045c2dee34002c6389c95\AndroidManifest.xml:34:13-50
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-base-16.1.0.aar\ea5dc9d8cc110a1dae93f9b230cb3114\AndroidManifest.xml:23:9-26:75
+ADDED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\5674254f2bde671e65b2074c732f5d92\AndroidManifest.xml:23:9-26:75
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-base-16.1.0.aar\ea5dc9d8cc110a1dae93f9b230cb3114\AndroidManifest.xml:25:13-37
+		ADDED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\5674254f2bde671e65b2074c732f5d92\AndroidManifest.xml:25:13-37
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-base-16.1.0.aar\ea5dc9d8cc110a1dae93f9b230cb3114\AndroidManifest.xml:26:13-72
+		ADDED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\5674254f2bde671e65b2074c732f5d92\AndroidManifest.xml:26:13-72
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-base-16.1.0.aar\ea5dc9d8cc110a1dae93f9b230cb3114\AndroidManifest.xml:24:13-79
+		ADDED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\5674254f2bde671e65b2074c732f5d92\AndroidManifest.xml:24:13-79
 meta-data#com.google.android.gms.version
-ADDED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\android-maps-utils-0.5.aar\fb95cc33c60307bd27a5a8e8ca2903c0\AndroidManifest.xml:8:9-10:69
-MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.2.0.aar\b353d9e0f31677a9c2715b534cfdea15\AndroidManifest.xml:23:9-25:69
-MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.2.0.aar\b353d9e0f31677a9c2715b534cfdea15\AndroidManifest.xml:23:9-25:69
+ADDED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\196266a559b36817b0647dadd45b41b2\AndroidManifest.xml:8:9-10:69
+MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\1d9760ee6cb72feb63d28f7f2ac0970e\AndroidManifest.xml:23:9-25:69
+MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\1d9760ee6cb72feb63d28f7f2ac0970e\AndroidManifest.xml:23:9-25:69
 	android:value
-		ADDED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\android-maps-utils-0.5.aar\fb95cc33c60307bd27a5a8e8ca2903c0\AndroidManifest.xml:10:13-66
+		ADDED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\196266a559b36817b0647dadd45b41b2\AndroidManifest.xml:10:13-66
 	android:name
-		ADDED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\android-maps-utils-0.5.aar\fb95cc33c60307bd27a5a8e8ca2903c0\AndroidManifest.xml:9:13-58
+		ADDED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\196266a559b36817b0647dadd45b41b2\AndroidManifest.xml:9:13-58
 provider#com.facebook.marketing.internal.MarketingInitProvider
-ADDED from [com.facebook.android:facebook-marketing:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-marketing-4.34.0.aar\89f1e889b1696aa1b686e704cabc970d\AndroidManifest.xml:29:9-32:40
+ADDED from [com.facebook.android:facebook-marketing:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\47028110d0a30854c92e89d03abc29fa\AndroidManifest.xml:29:9-32:40
 	android:authorities
-		ADDED from [com.facebook.android:facebook-marketing:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-marketing-4.34.0.aar\89f1e889b1696aa1b686e704cabc970d\AndroidManifest.xml:31:13-73
+		ADDED from [com.facebook.android:facebook-marketing:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\47028110d0a30854c92e89d03abc29fa\AndroidManifest.xml:31:13-73
 	android:exported
-		ADDED from [com.facebook.android:facebook-marketing:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-marketing-4.34.0.aar\89f1e889b1696aa1b686e704cabc970d\AndroidManifest.xml:32:13-37
+		ADDED from [com.facebook.android:facebook-marketing:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\47028110d0a30854c92e89d03abc29fa\AndroidManifest.xml:32:13-37
 	android:name
-		ADDED from [com.facebook.android:facebook-marketing:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-marketing-4.34.0.aar\89f1e889b1696aa1b686e704cabc970d\AndroidManifest.xml:30:13-81
+		ADDED from [com.facebook.android:facebook-marketing:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\47028110d0a30854c92e89d03abc29fa\AndroidManifest.xml:30:13-81
 provider#com.facebook.internal.FacebookInitProvider
-ADDED from [com.facebook.android:facebook-core:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-core-4.34.0.aar\a943c22aea06a0aa583890584d32e3a6\AndroidManifest.xml:39:9-42:40
+ADDED from [com.facebook.android:facebook-core:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\0459003c2ee814d7118eb67a705ae51c\AndroidManifest.xml:39:9-42:40
 	android:authorities
-		ADDED from [com.facebook.android:facebook-core:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-core-4.34.0.aar\a943c22aea06a0aa583890584d32e3a6\AndroidManifest.xml:41:13-72
+		ADDED from [com.facebook.android:facebook-core:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\0459003c2ee814d7118eb67a705ae51c\AndroidManifest.xml:41:13-72
 	android:exported
-		ADDED from [com.facebook.android:facebook-core:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-core-4.34.0.aar\a943c22aea06a0aa583890584d32e3a6\AndroidManifest.xml:42:13-37
+		ADDED from [com.facebook.android:facebook-core:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\0459003c2ee814d7118eb67a705ae51c\AndroidManifest.xml:42:13-37
 	android:name
-		ADDED from [com.facebook.android:facebook-core:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-core-4.34.0.aar\a943c22aea06a0aa583890584d32e3a6\AndroidManifest.xml:40:13-70
+		ADDED from [com.facebook.android:facebook-core:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\0459003c2ee814d7118eb67a705ae51c\AndroidManifest.xml:40:13-70
 receiver#com.facebook.CurrentAccessTokenExpirationBroadcastReceiver
-ADDED from [com.facebook.android:facebook-core:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-core-4.34.0.aar\a943c22aea06a0aa583890584d32e3a6\AndroidManifest.xml:44:9-50:20
+ADDED from [com.facebook.android:facebook-core:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\0459003c2ee814d7118eb67a705ae51c\AndroidManifest.xml:44:9-50:20
 	android:exported
-		ADDED from [com.facebook.android:facebook-core:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-core-4.34.0.aar\a943c22aea06a0aa583890584d32e3a6\AndroidManifest.xml:46:13-37
+		ADDED from [com.facebook.android:facebook-core:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\0459003c2ee814d7118eb67a705ae51c\AndroidManifest.xml:46:13-37
 	android:name
-		ADDED from [com.facebook.android:facebook-core:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-core-4.34.0.aar\a943c22aea06a0aa583890584d32e3a6\AndroidManifest.xml:45:13-86
+		ADDED from [com.facebook.android:facebook-core:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\0459003c2ee814d7118eb67a705ae51c\AndroidManifest.xml:45:13-86
 intent-filter#action:name:com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED
-ADDED from [com.facebook.android:facebook-core:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-core-4.34.0.aar\a943c22aea06a0aa583890584d32e3a6\AndroidManifest.xml:47:13-49:29
+ADDED from [com.facebook.android:facebook-core:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\0459003c2ee814d7118eb67a705ae51c\AndroidManifest.xml:47:13-49:29
 action#com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED
-ADDED from [com.facebook.android:facebook-core:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-core-4.34.0.aar\a943c22aea06a0aa583890584d32e3a6\AndroidManifest.xml:48:17-95
+ADDED from [com.facebook.android:facebook-core:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\0459003c2ee814d7118eb67a705ae51c\AndroidManifest.xml:48:17-95
 	android:name
-		ADDED from [com.facebook.android:facebook-core:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-1\files-1.1\facebook-core-4.34.0.aar\a943c22aea06a0aa583890584d32e3a6\AndroidManifest.xml:48:25-92
+		ADDED from [com.facebook.android:facebook-core:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\0459003c2ee814d7118eb67a705ae51c\AndroidManifest.xml:48:25-92
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 IMPLIED from E:\Office\subkuch-app\android\app\src\debug\AndroidManifest.xml:2:1-8:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
 uses-permission#android.permission.READ_PHONE_STATE

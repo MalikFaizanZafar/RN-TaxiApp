@@ -37,7 +37,7 @@ export default signUser =  (userInfo) => {
 
 storeUser = async (socialId) => {
   try {
-    await AsyncStorage.setItem('SubQuch_User', socialId);
+    await AsyncStorage.setItem('@SubQuch-User', socialId);
   } catch (error) {
     // Error saving data
   }

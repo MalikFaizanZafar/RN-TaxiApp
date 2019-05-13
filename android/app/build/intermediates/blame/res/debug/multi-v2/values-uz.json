@@ -4,7 +4,24 @@
             "outputFile": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-uz\\values-uz.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\d64d4074500a214ac80db48002020a31\\res\\values-uz\\values-uz.xml",
+                    "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\1d9760ee6cb72feb63d28f7f2ac0970e\\res\\values-uz\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "208",
+                        "endOffsets": "455"
+                    },
+                    "to": {
+                        "startLines": "37",
+                        "startColumns": "4",
+                        "startOffsets": "3960",
+                        "endColumns": "208",
+                        "endOffsets": "4164"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\49ef45c75d69b3da2555d584b4cd13b8\\res\\values-uz\\values-uz.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,24 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\17603653ddf5b71978cd9aaba050b58b\\res\\values-uz\\values-uz.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "48",
-                        "startColumns": "4",
-                        "startOffsets": "5619",
-                        "endColumns": "100",
-                        "endOffsets": "5715"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.1.0.aar\\ea5dc9d8cc110a1dae93f9b230cb3114\\res\\values-uz\\values.xml",
+                    "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\5674254f2bde671e65b2074c732f5d92\\res\\values-uz\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -55,20 +55,20 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-16.2.0.aar\\b353d9e0f31677a9c2715b534cfdea15\\res\\values-uz\\values.xml",
+                    "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\38af1004aa35efa089df775a7ae7277c\\res\\values-uz\\values-uz.xml",
                     "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "208",
-                        "endOffsets": "455"
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
                     },
                     "to": {
-                        "startLines": "37",
+                        "startLines": "48",
                         "startColumns": "4",
-                        "startOffsets": "3960",
-                        "endColumns": "208",
-                        "endOffsets": "4164"
+                        "startOffsets": "5619",
+                        "endColumns": "100",
+                        "endOffsets": "5715"
                     }
                 }
             ]

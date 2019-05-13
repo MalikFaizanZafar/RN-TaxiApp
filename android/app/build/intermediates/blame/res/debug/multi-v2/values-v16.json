@@ -4,7 +4,7 @@
             "outputFile": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\d64d4074500a214ac80db48002020a31\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\49ef45c75d69b3da2555d584b4cd13b8\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\17603653ddf5b71978cd9aaba050b58b\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\38af1004aa35efa089df775a7ae7277c\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
