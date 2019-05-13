@@ -7,10 +7,14 @@ import { AsyncStorage } from "react-native";
 import { MyDrawerNavigator } from "./Screens/Landing/landing";
 import HomeScreen from "./Screens/home";
 
-_bootstrapAsync = async () => {
-  const subquchUser = await AsyncStorage.getItem("SubQuch_User");
+_bootstrapAsync = () => {
+  let user = "";
+  AsyncStorage.getItem("@SubQuch-User")
+  subquchPromise.then(data => {
+    user = data
+  })
   console.log("subquchUser is : ", subquchUser)
-  return subquchUser;
+  return user.length == 0? true : false;
 };
 
 const AppNavigator = createStackNavigator(
@@ -40,7 +44,7 @@ const switchNavigator = createSwitchNavigator(
     Landing: AppNavigatorTwo
   },
   {
-    initialRouteName: _bootstrapAsync? "Landing" : "Home"
+    initialRouteName: "Home"
   }
 );
 const AppContainer = createAppContainer(switchNavigator);
