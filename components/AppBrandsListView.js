@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import {
-  StyleSheet,
   Text,
   View,
   Image,
@@ -9,7 +8,6 @@ import {
 } from "react-native";
 import { Card, Rating } from "react-native-elements";
 import { Badge } from "react-native-elements";
-import { SERVER_URL } from "../constants";
 export default class AppBrandsListView extends Component {
   constructor(props) {
     super(props);
@@ -17,7 +15,7 @@ export default class AppBrandsListView extends Component {
   render() {
     let dimensions = Dimensions.get("window");
     return (
-      <View style={styles.containerItems}>
+      <View style={{ flex: 1}}>
         <ScrollView
               showsVerticalScrollIndicator={false}
               style={{ marginTop: 0 }}
@@ -81,71 +79,3 @@ export default class AppBrandsListView extends Component {
     );
   }
 }
-const styles = StyleSheet.create({
-  container: {
-    flex: 1
-  },
-  topBar: {
-    backgroundColor: "#171616",
-    flexDirection: "row",
-    height: 50
-  },
-  topBarIcon: {
-    justifyContent: "flex-start",
-    alignItems: "flex-start"
-  },
-  topBarLogo: {
-    alignItems: "center",
-    justifyContent: "center"
-  },
-  itemCard: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    borderBottomWidth: 1,
-    borderBottomColor: "#47315a"
-  },
-  itemText: {
-    alignItems: "flex-start",
-    justifyContent: "center"
-  },
-  itemBtn: {
-    alignItems: "center",
-    justifyContent: "center"
-  },
-  containerItems: {
-    flex: 1,
-    // justifyContent: "center",
-    backgroundColor: "#e5e5e5",
-    // justifyContent: "center",
-    alignItems: "center"
-  },
-  button: {
-    alignItems: "center",
-    backgroundColor: "#171616",
-    padding: 10,
-    width: 100,
-    borderRightWidth: 0.25,
-    borderColor: "#fff",
-    maxHeight: 40
-  },
-  buttonSelected: {
-    alignItems: "center",
-    backgroundColor: "#171616",
-    padding: 10,
-    width: 100,
-    borderWidth: 1.5,
-    borderColor: "#fff",
-    elevation: 20,
-    maxHeight: 40
-  },
-  headerText: {
-    fontSize: 20,
-    textAlign: "center",
-    margin: 10,
-    fontWeight: "bold"
-  },
-  icon: {
-    width: 24,
-    height: 24
-  }
-});
