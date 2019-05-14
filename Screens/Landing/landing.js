@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  StyleSheet,
   View,
   Text,
   ScrollView,
@@ -14,11 +13,9 @@ import MapScreenTwo from "./mapTwo";
 import AppTopBar from "../../components/AppTopBar";
 import AppSearchView from "../../components/AppSearchView";
 import AppBrandsListView from "../../components/AppBrandsListView";
-import axios from "axios";
-import { SERVER_URL } from "../../constants";
 import { getFilterQueryData } from "../../services/getIntialData";
 import { getNearestFranchises, LandingTabClickHandler, LandingSearchHandler } from "../../services/helperFunctions";
-const URL = SERVER_URL;
+import LandingScreenStyles from './../../Styles/landing'
 export default class LandingScreen extends React.Component {
   static navigationOptions = {
     header: null
@@ -115,7 +112,7 @@ export default class LandingScreen extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <View style={LandingScreenStyles.container}>
         <AppTopBar
           openSubquchDrawer={() => this.props.navigation.openDrawer()}
         />
@@ -137,14 +134,14 @@ export default class LandingScreen extends React.Component {
                 activeOpacity={1.0}
                 style={
                   this.state.selectedTab === i
-                    ? styles.buttonSelected
-                    : styles.button
+                    ? LandingScreenStyles.buttonSelected
+                    : LandingScreenStyles.button
                 }>
                   <Text
                     style={
                       this.state.selectedTab === i
-                        ? styles.buttonSelectedText
-                        : styles.buttonText
+                        ? LandingScreenStyles.buttonSelectedText
+                        : LandingScreenStyles.buttonText
                     }
                   >
                     {item}
@@ -172,75 +169,7 @@ export default class LandingScreen extends React.Component {
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1
-  },
-  topBar: {
-    backgroundColor: "#171616",
-    flexDirection: "row",
-    height: 50
-  },
-  topBarIcon: {
-    justifyContent: "flex-start",
-    alignItems: "flex-start"
-  },
-  topBarLogo: {
-    alignItems: "center",
-    justifyContent: "center"
-  },
-  itemCard: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    borderBottomWidth: 1,
-    borderBottomColor: "#47315a"
-  },
-  itemText: {
-    alignItems: "flex-start",
-    justifyContent: "center"
-  },
-  itemBtn: {
-    alignItems: "center",
-    justifyContent: "center"
-  },
-  containerItems: {
-    flex: 1,
-    backgroundColor: "#e5e5e5",
-    alignItems: "center"
-  },
-  button: {
-    alignItems: "center",
-    backgroundColor: "#171616",
-    padding: 10,
-    width: 180,
-    borderRightWidth: 0.25,
-    borderColor: "#fff"
-  },
-  buttonText: {
-    color: "#fff"
-  },
-  buttonSelected: {
-    alignItems: "center",
-    backgroundColor: "#171616",
-    padding: 10,
-    width: 180,
-    borderRightWidth: 0.25,
-    borderColor: "#fff"
-  },
-  buttonSelectedText: {
-    color: "#03a9f4"
-  },
-  headerText: {
-    fontSize: 20,
-    textAlign: "center",
-    margin: 10,
-    fontWeight: "bold"
-  },
-  icon: {
-    width: 24,
-    height: 24
-  }
-});
+
 
 export const MyDrawerNavigator = createDrawerNavigator(
   {
