@@ -3,7 +3,9 @@ import {
   StyleSheet,
   View,
   Text,
+  ScrollView,
   ActivityIndicator,
+  TouchableOpacity,
   PermissionsAndroid
 } from "react-native";
 import { createDrawerNavigator } from "react-navigation";
@@ -11,23 +13,31 @@ import MapScreen from "./map";
 import MapScreenTwo from "./mapTwo";
 import AppTopBar from "../../components/AppTopBar";
 import AppSearchView from "../../components/AppSearchView";
-import AppItemsView from "../../components/AppItemsView";
 import AppBrandsListView from "../../components/AppBrandsListView";
 import axios from "axios";
 import { SERVER_URL } from "../../constants";
+import { getFilterQueryData } from "../../services/getIntialData";
+import { getNearestFranchises, LandingTabClickHandler, LandingSearchHandler } from "../../services/helperFunctions";
 const URL = SERVER_URL;
 export default class LandingScreen extends React.Component {
   static navigationOptions = {
     header: null
-  };
+  }
+
   state = {
     latitude: null,
     longitude: null,
     error: null,
+    dataArray: [],
+    searchResult: [],
+    ListViewData: [],
     brands: [],
     searchKey: "",
-    brandsLoading: true
-  };
+    brandsLoading: true,
+    tabItems: ["Brands", "Deals"],
+    selectedTab: 0
+  }
+
   async LocationSerivce() {
     try {
       const granted = await PermissionsAndroid.request(
@@ -49,6 +59,19 @@ export default class LandingScreen extends React.Component {
               longitude: position.coords.longitude,
               error: null
             });
+            getFilterQueryData(this.state.latitude, this.state.longitude, 35).then(promiseResponse => {
+              console.log("promiseResponse is : ", promiseResponse);
+              this.setState({
+                dataArray: promiseResponse.data.data,
+                brandsLoading: false,
+              });
+              this.setState({
+                ListViewData: getNearestFranchises(this.state.dataArray, 'franchise'),
+                selectedTab: 0
+              });
+            }).catch(promiseError => {
+              console.log("promiseError is : ", promiseError);
+            })
           },
           error => this.setState({ error: error.message }),
           { enableHighAccuracy: false, timeout: 200000, maximumAge: 1000 }
@@ -60,44 +83,36 @@ export default class LandingScreen extends React.Component {
       console.warn(err);
     }
   }
+
   componentDidMount() {
-    this.LocationSerivce().then(location => {
-      axios
-      .get(`${URL}/api/auth/filter?lat=${this.state.latitude}&long=${this.state.longitude}&distance=35`)
-      .then(brandsResponse => {
-        console.log('brandsResponse is : ', brandsResponse)
-        this.setState({
-          brands: brandsResponse.data.data.filter(data => data.type === 'franchise'),
-          brandsLoading: false
-        });
-        console.log('state is : ', this.state)
-      })
-      .catch(brandsError => {
-        console.log("brandsError is : ", brandsError);
-      });
-    })
+    this.LocationSerivce();
   }
 
   onSearchHandler(searchKey) {
     this.setState({ brandsLoading: true });
-    axios
-      .get(
-        `${URL}/api/auth/filter?lat=${this.state.latitude}&long=${this.state.longitude}&distance=35&filter=${searchKey}`
-      )
-      .then(brandsResponse => {
-        console.log('search brandsResponse is : ', brandsResponse)
-        this.setState({
-          brands: brandsResponse.data.data.filter(data => data.type === 'franchise'),
-          brandsLoading: false
-        });
+    LandingSearchHandler(this.state.latitude, this.state.longitude, 35, searchKey, this.state.selectedTab).then(promiseResponse => {
+      this.setState({
+        ListViewData: promiseResponse
+      }, () => {
+        this.setState({ brandsLoading: false })
       })
-      .catch(brandsError => {
-        console.log("brandsError is : ", brandsError);
-      });
+    })
   }
+
   updateSearch = search => {
     this.setState({ search });
   };
+
+  tabClicked(id) {
+    this.setState({
+      selectedTab: id
+    }, () => {
+        this.setState({
+          ListViewData: LandingTabClickHandler(this.state.dataArray, this.state.selectedTab)
+        })
+    });
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -109,16 +124,48 @@ export default class LandingScreen extends React.Component {
             this.onSearchHandler(val);
           }}
         />
-        {/* <AppItemsView /> */}
+        <View>
+          <ScrollView
+            horizontal={true}
+            style={{ height: 45 }}
+            showsHorizontalScrollIndicator={false}
+          >
+            {this.state.tabItems.map((item, i) => {
+              return (
+                <TouchableOpacity onPress={this.tabClicked.bind(this, i)} key={i}
+                activeOpacity={1.0}
+                style={
+                  this.state.selectedTab === i
+                    ? styles.buttonSelected
+                    : styles.button
+                }>
+                  <Text
+                    style={
+                      this.state.selectedTab === i
+                        ? styles.buttonSelectedText
+                        : styles.buttonText
+                    }
+                  >
+                    {item}
+                  </Text>
+                </TouchableOpacity> 
+              );
+            })}
+          </ScrollView>
+        </View>
         {this.state.brandsLoading ? (
           <ActivityIndicator
             size="large"
             color="#000"
             style={{ marginTop: 150 }}
           />
-        ) : this.state.brands.length === 0? <Text style={{marginLeft: 40, marginTop: 100}}>No Franchises within the Range of 35 Kms</Text>:<AppBrandsListView brands={this.state.brands} />
-        
-        }
+        ) : this.state.dataArray.length === 0 ? (
+          <Text style={{ marginLeft: 40, marginTop: 100 }}>
+            No Franchises within the Range of 5 Kms
+          </Text>
+        ) : (
+          <AppBrandsListView data={this.state.ListViewData} />
+        )}
       </View>
     );
   }
@@ -157,27 +204,30 @@ const styles = StyleSheet.create({
   },
   containerItems: {
     flex: 1,
-    // justifyContent: "center",
     backgroundColor: "#e5e5e5",
-    // justifyContent: "center",
     alignItems: "center"
   },
   button: {
     alignItems: "center",
     backgroundColor: "#171616",
     padding: 10,
-    width: 100,
+    width: 180,
     borderRightWidth: 0.25,
     borderColor: "#fff"
+  },
+  buttonText: {
+    color: "#fff"
   },
   buttonSelected: {
     alignItems: "center",
     backgroundColor: "#171616",
     padding: 10,
-    width: 100,
-    borderWidth: 1.5,
-    borderColor: "#fff",
-    elevation: 20
+    width: 180,
+    borderRightWidth: 0.25,
+    borderColor: "#fff"
+  },
+  buttonSelectedText: {
+    color: "#03a9f4"
   },
   headerText: {
     fontSize: 20,

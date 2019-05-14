@@ -26,7 +26,7 @@ export default class AppBrandsListView extends Component {
               showsVerticalScrollIndicator={false}
               style={{ marginTop: 0 }}
             >
-              {this.props.brands.map((brand, i) => {
+              {this.props.data.map((datum, i) => {
                 return (
                   <Card containerStyle={{ padding: 0 }} key={i}>
                     <View style={{ flexDirection: "row", padding: 0 }}>
@@ -35,7 +35,7 @@ export default class AppBrandsListView extends Component {
                       >
                         <Image
                           style={{ height: 100, width: 100 }}
-                          source={{ uri: brand.imageUrl }}
+                          source={{ uri: datum.imageUrl }}
                         />
                       </View>
                       <View
@@ -52,8 +52,8 @@ export default class AppBrandsListView extends Component {
                             alignItems: "flex-start"
                           }}
                         >
-                          <Text>{brand.name}</Text>
-                          <Text style={{ fontSize: 10 }}>{brand.address}</Text>
+                          <Text>{ datum.type == 'franchise'? datum.name : datum.typeName}</Text>
+                          <Text style={{ fontSize: 10 }}>{datum.type == 'franchise'? datum.address : ''}</Text>
                           <Rating imageSize={16} readonly startingValue={3} />
                           <View
                             style={{
@@ -64,7 +64,7 @@ export default class AppBrandsListView extends Component {
                             }}
                           >
                             <Badge
-                              value={brand.distance.toFixed(2)}
+                              value={datum.type=== "franchise"? datum.distance.toFixed(2): '100 Rs'}
                               badgeStyle={{
                                 height: 25,
                                 width: 50,
