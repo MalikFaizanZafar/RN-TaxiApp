@@ -16,6 +16,7 @@ import AppBrandsListView from "../../components/AppBrandsListView";
 import { getFilterQueryData } from "../../services/getIntialData";
 import { getNearestFranchises, LandingTabClickHandler, LandingSearchHandler } from "../../services/helperFunctions";
 import LandingScreenStyles from './../../Styles/landing'
+import LandingTabBar from "../../components/LandingTabBar";
 export default class LandingScreen extends React.Component {
   static navigationOptions = {
     header: null
@@ -120,35 +121,7 @@ export default class LandingScreen extends React.Component {
           }}
           searchType={this.state.selectedTab === 0? 'brands': 'deals'}
         />
-        <View>
-          <ScrollView
-            horizontal={true}
-            style={{ height: 45 }}
-            showsHorizontalScrollIndicator={false}
-          >
-            {this.state.tabItems.map((item, i) => {
-              return (
-                <TouchableOpacity onPress={this.tabClicked.bind(this, i)} key={i}
-                activeOpacity={1.0}
-                style={
-                  this.state.selectedTab === i
-                    ? LandingScreenStyles.buttonSelected
-                    : LandingScreenStyles.button
-                }>
-                  <Text
-                    style={
-                      this.state.selectedTab === i
-                        ? LandingScreenStyles.buttonSelectedText
-                        : LandingScreenStyles.buttonText
-                    }
-                  >
-                    {item}
-                  </Text>
-                </TouchableOpacity> 
-              );
-            })}
-          </ScrollView>
-        </View>
+        <LandingTabBar tabItems={this.state.tabItems} tabClicked={(id) => this.tabClicked(id)} selectedTab={this.state.selectedTab} />
         {this.state.dataLoading ? (
           <ActivityIndicator
             size="large"
