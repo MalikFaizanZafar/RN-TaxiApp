@@ -4,16 +4,12 @@ import {
   Text,
   View,
   Image,
-  ActivityIndicator,
   Dimensions,
-  ScrollView,
-  TouchableHighlight
+  ScrollView
 } from "react-native";
 import { Card, Rating } from "react-native-elements";
 import { Badge } from "react-native-elements";
-import axios from "axios";
 import { SERVER_URL } from "../constants";
-const URL = SERVER_URL;
 export default class AppBrandsListView extends Component {
   constructor(props) {
     super(props);
@@ -64,7 +60,7 @@ export default class AppBrandsListView extends Component {
                             }}
                           >
                             <Badge
-                              value={datum.type=== "franchise"? datum.distance.toFixed(2): '100 Rs'}
+                              value={datum.type=== "franchise"? datum.distance.toFixed(2): '100'}
                               badgeStyle={{
                                 height: 25,
                                 width: 50,
@@ -72,7 +68,7 @@ export default class AppBrandsListView extends Component {
                               }}
                               textStyle={{ fontSize: 10, color: "#fff" }}
                             />
-                            <Text style={{ fontSize: 10}}> Km</Text>
+                            <Text style={{ fontSize: 10}}>{datum.type=== "franchise"? 'Km': 'Rs'}</Text>
                           </View>
                         </View>
                       </View>

@@ -26,11 +26,9 @@ export default class LandingScreen extends React.Component {
     longitude: null,
     error: null,
     dataArray: [],
-    searchResult: [],
     ListViewData: [],
-    brands: [],
     searchKey: "",
-    brandsLoading: true,
+    dataLoading: true,
     tabItems: ["Brands", "Deals"],
     selectedTab: 0
   }
@@ -60,7 +58,7 @@ export default class LandingScreen extends React.Component {
               console.log("promiseResponse is : ", promiseResponse);
               this.setState({
                 dataArray: promiseResponse.data.data,
-                brandsLoading: false,
+                dataLoading: false,
               });
               this.setState({
                 ListViewData: getNearestFranchises(this.state.dataArray, 'franchise'),
@@ -86,12 +84,12 @@ export default class LandingScreen extends React.Component {
   }
 
   onSearchHandler(searchKey) {
-    this.setState({ brandsLoading: true });
+    this.setState({ dataLoading: true });
     LandingSearchHandler(this.state.latitude, this.state.longitude, 35, searchKey, this.state.selectedTab).then(promiseResponse => {
       this.setState({
         ListViewData: promiseResponse
       }, () => {
-        this.setState({ brandsLoading: false })
+        this.setState({ dataLoading: false })
       })
     })
   }
@@ -151,7 +149,7 @@ export default class LandingScreen extends React.Component {
             })}
           </ScrollView>
         </View>
-        {this.state.brandsLoading ? (
+        {this.state.dataLoading ? (
           <ActivityIndicator
             size="large"
             color="#000"
