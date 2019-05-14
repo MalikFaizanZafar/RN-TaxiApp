@@ -2,21 +2,16 @@ import React from "react";
 import {
   View,
   Text,
-  ScrollView,
   ActivityIndicator,
-  TouchableOpacity,
   PermissionsAndroid
 } from "react-native";
-import { createDrawerNavigator } from "react-navigation";
-import MapScreen from "./map";
-import MapScreenTwo from "./mapTwo";
 import AppTopBar from "../../components/AppTopBar";
 import AppSearchView from "../../components/AppSearchView";
+import LandingTabBar from "../../components/LandingTabBar";
 import AppBrandsListView from "../../components/AppBrandsListView";
 import { getFilterQueryData } from "../../services/getIntialData";
 import { getNearestFranchises, LandingTabClickHandler, LandingSearchHandler } from "../../services/helperFunctions";
 import LandingScreenStyles from './../../Styles/landing'
-import LandingTabBar from "../../components/LandingTabBar";
 export default class LandingScreen extends React.Component {
   static navigationOptions = {
     header: null
@@ -140,23 +135,3 @@ export default class LandingScreen extends React.Component {
   }
 }
 
-
-
-export const MyDrawerNavigator = createDrawerNavigator(
-  {
-    Landing: {
-      screen: LandingScreen
-    },
-    Map: {
-      screen: MapScreen
-    },
-    MapTwo: {
-      screen: MapScreenTwo
-    }
-  },
-  {
-    backgroundColor: "green",
-    drawerWidth: 200,
-    initialRouteName: "Landing"
-  }
-);

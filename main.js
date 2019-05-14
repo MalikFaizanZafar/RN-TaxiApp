@@ -4,7 +4,7 @@ import {
   createAppContainer
 } from "react-navigation";
 import { AsyncStorage } from "react-native";
-import { MyDrawerNavigator } from "./Screens/Landing/landing";
+import { MyDrawerNavigator } from "./Screens/Landing";
 import HomeScreen from "./Screens/home";
 
 _bootstrapAsync = () => {
