@@ -21,13 +21,10 @@ export default class AppSearchView extends Component {
             justifyContent: "center",
             alignItems: "center"
           }}
-          source={{
-            uri:
-              "https://images.pexels.com/photos/1001990/pexels-photo-1001990.jpeg"
-          }}
+          source={require("../assets/subquch3.jpeg")}
         >
           <SearchBar
-            placeholder="Search an Item"
+            placeholder={`Search for ${this.props.searchType}`}
             onChangeText={this.updateSearch}
             value={search}
             lightTheme={true}

@@ -123,6 +123,7 @@ export default class LandingScreen extends React.Component {
           updateSearch={val => {
             this.onSearchHandler(val);
           }}
+          searchType={this.state.selectedTab === 0? 'brands': 'deals'}
         />
         <View>
           <ScrollView
