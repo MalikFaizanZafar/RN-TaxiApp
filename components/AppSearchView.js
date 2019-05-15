@@ -37,7 +37,7 @@ export default class AppSearchView extends Component {
             }}
             inputContainerStyle={{
               width: 250,
-              height: 35,
+              height: 33,
               backgroundColor: "#fff"
             }}
           />

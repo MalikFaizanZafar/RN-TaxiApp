@@ -3,6 +3,7 @@ import {
   Text,
   View,
   Image,
+  ActivityIndicator,
   Dimensions,
   ScrollView
 } from "react-native";
@@ -16,7 +17,17 @@ export default class AppBrandsListView extends Component {
     let dimensions = Dimensions.get("window");
     return (
       <View style={{ flex: 1}}>
-        <ScrollView
+        {this.props.dataLoading ? (
+          <ActivityIndicator
+            size="large"
+            color="#000"
+            style={{ marginTop: 150 }}
+          />
+        ) : this.props.data.length === 0 ? (
+          <Text style={{ marginLeft: 40, marginTop: 100 }}>
+            No Franchises within the Range of 5 Kms
+          </Text>
+        ) :(<ScrollView
               showsVerticalScrollIndicator={false}
               style={{ marginTop: 0 }}
             >
@@ -74,7 +85,7 @@ export default class AppBrandsListView extends Component {
                   </Card>
                 );
               })}
-            </ScrollView>
+            </ScrollView>)}
       </View>
     );
   }

@@ -1,15 +1,10 @@
 import React from "react";
-import {
-  View,
-  Text,
-  ActivityIndicator,
-  PermissionsAndroid
-} from "react-native";
+import { View, PermissionsAndroid } from "react-native";
 import AppTopBar from "../../components/AppTopBar";
 import AppSearchView from "../../components/AppSearchView";
 import LandingTabBar from "../../components/LandingTabBar";
 import AppBrandsListView from "../../components/AppBrandsListView";
-import { getFilterQueryData } from "../../services/getIntialData";
+import { getFilterQueryData, getUserLocation } from "../../services/getIntialData";
 import { getNearestFranchises, LandingTabClickHandler, LandingSearchHandler } from "../../services/helperFunctions";
 import LandingScreenStyles from './../../Styles/landing'
 export default class LandingScreen extends React.Component {
@@ -77,6 +72,15 @@ export default class LandingScreen extends React.Component {
 
   componentDidMount() {
     this.LocationSerivce();
+    // getUserLocation().then(getUserLocationResponse => {
+    //   this.setState({ dataArray: getUserLocationResponse.data, ListViewData: getNearestFranchises(this.state.dataArray, 'franchise')}, () => {
+    //     this.setState({
+    //       latitude: getUserLocationResponse.latitude,
+    //       longitude: getUserLocationResponse.longitude,
+    //       dataLoading: false
+    //     })
+    //   })
+    // })
   }
 
   onSearchHandler(searchKey) {
@@ -117,19 +121,7 @@ export default class LandingScreen extends React.Component {
           searchType={this.state.selectedTab === 0? 'brands': 'deals'}
         />
         <LandingTabBar tabItems={this.state.tabItems} tabClicked={(id) => this.tabClicked(id)} selectedTab={this.state.selectedTab} />
-        {this.state.dataLoading ? (
-          <ActivityIndicator
-            size="large"
-            color="#000"
-            style={{ marginTop: 150 }}
-          />
-        ) : this.state.dataArray.length === 0 ? (
-          <Text style={{ marginLeft: 40, marginTop: 100 }}>
-            No Franchises within the Range of 5 Kms
-          </Text>
-        ) : (
-          <AppBrandsListView data={this.state.ListViewData} />
-        )}
+        <AppBrandsListView data={this.state.ListViewData} dataLoading={this.state.dataLoading} />
       </View>
     );
   }
