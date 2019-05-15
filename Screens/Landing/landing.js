@@ -1,5 +1,5 @@
 import React from "react";
-import { View, PermissionsAndroid } from "react-native";
+import { View, PermissionsAndroid, Alert } from "react-native";
 import AppTopBar from "../../components/AppTopBar";
 import AppSearchView from "../../components/AppSearchView";
 import LandingTabBar from "../../components/LandingTabBar";
@@ -45,19 +45,27 @@ export default class LandingScreen extends React.Component {
               longitude: position.coords.longitude,
               error: null
             });
-            getFilterQueryData(this.state.latitude, this.state.longitude, 35).then(promiseResponse => {
-              console.log("promiseResponse is : ", promiseResponse);
-              this.setState({
-                dataArray: promiseResponse.data.data,
-                dataLoading: false,
-              });
-              this.setState({
-                ListViewData: getNearestFranchises(this.state.dataArray, 'franchise'),
-                selectedTab: 0
-              });
-            }).catch(promiseError => {
-              console.log("promiseError is : ", promiseError);
-            })
+            this.populateInitialData(position.coords.latitude, position.coords.longitude, 35)
+            // getFilterQueryData(this.state.latitude, this.state.longitude, 35).then(promiseResponse => {
+            //   console.log("promiseResponse is : ", promiseResponse);
+            //   this.setState({
+            //     dataArray: promiseResponse.data.data,
+            //     dataLoading: false,
+            //   });
+            //   this.setState({
+            //     ListViewData: getNearestFranchises(this.state.dataArray, 'franchise'),
+            //     selectedTab: 0
+            //   });
+            // }).catch(promiseError => {
+            //   Alert.alert(
+            //     'Network Problem',
+            //     'No Internet Connection. Make Sure Your Wifi is Turned On',
+            //     [
+            //       {text: 'OK', onPress: () => console.log('OK Pressed')},
+            //     ],
+            //     {cancelable: false},
+            //   );
+            // })
           },
           error => this.setState({ error: error.message }),
           { enableHighAccuracy: false, timeout: 200000, maximumAge: 1000 }
@@ -68,6 +76,30 @@ export default class LandingScreen extends React.Component {
     } catch (err) {
       console.warn(err);
     }
+  }
+  populateInitialData(latitude, longitude, distance){
+
+    getFilterQueryData(latitude, longitude, distance).then(promiseResponse => {
+      console.log("promiseResponse is : ", promiseResponse);
+      this.setState({
+        dataArray: promiseResponse.data.data,
+        dataLoading: false,
+      });
+      this.setState({
+        ListViewData: getNearestFranchises(this.state.dataArray, 'franchise'),
+        selectedTab: 0
+      });
+    }).catch(promiseError => {
+      Alert.alert(
+        'Network Problem',
+        'No Internet Connection. Make Sure Your Wifi is Turned On',
+        [
+          {text: 'OK', onPress: () => this.populateInitialData(this.state.latitude, this.state.longitude, distance)},
+        ],
+        {cancelable: false},
+      );
+    })
+
   }
 
   componentDidMount() {

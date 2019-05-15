@@ -11,7 +11,6 @@ export const getFilterQueryData = (latitude, longitude,distance) => {
         resolve(dataResponse);
       })
       .catch(brandsError => {
-        console.log("brandsError is : ", brandsError);
         reject(brandsError);
       });
   });
