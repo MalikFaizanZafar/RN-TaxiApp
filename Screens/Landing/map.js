@@ -146,6 +146,22 @@ export default class MapScreen extends Component {
     this.mapView = null;
   }
 
+  componentDidMount(){
+    const { params } = this.props.navigation.state;
+    console.log("map params are : ", params)
+    this.setState({
+      coordinates: [
+        {
+          latitude: Number(params.userLat),
+          longitude: Number(params.userLon), // 33.639849, 72.987583
+        },
+        {
+          latitude: Number(params.latitude),
+          longitude: Number(params.longitude), //33.668819, 72.998826
+        },
+      ],
+    })
+}
   onMapPress = (e) => {
     this.setState({
       coordinates: [
@@ -159,8 +175,8 @@ export default class MapScreen extends Component {
     return (
       <MapView
         initialRegion={{
-          latitude: LATITUDE,
-          longitude: LONGITUDE,
+          latitude: this.state.coordinates[0].latitude,
+          longitude: this.state.coordinates[0].longitude,
           latitudeDelta: LATITUDE_DELTA,
           longitudeDelta: LONGITUDE_DELTA,
         }}

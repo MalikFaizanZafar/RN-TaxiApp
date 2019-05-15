@@ -122,7 +122,7 @@ export default class LandingScreen extends React.Component {
   
   franchiseOnPressHandler(id){
     if(this.state.selectedTab === 0){
-        this.props.navigation.navigate('Franchise', { franchiseId : id})
+        this.props.navigation.navigate('Franchise', { franchiseId : id, userLat: this.state.latitude, userLon: this.state.longitude})
     }else {
     }
   }
