@@ -50,6 +50,10 @@ export default class FranchiseMainScreen extends Component {
       });
     }
   }
+  viewMapHandler(latitude, longitude){
+    console.log(`Latitude/Longitude (Screen) : ${latitude}/${longitude}`);
+    this.props.navigation.navigate('Map', { latitude , longitude})
+  }
   render() {
     const franchise = this.state.franchise;
     let dimensions = Dimensions.get("window");
@@ -58,7 +62,7 @@ export default class FranchiseMainScreen extends Component {
         <AppTopBar
           openSubquchDrawer={() => this.props.navigation.openDrawer()}
         />
-        <FranchiseInfoCard franchiseInfo={franchise} />
+        <FranchiseInfoCard franchiseInfo={franchise} viewMapPressed={(lat, lon) => this.viewMapHandler(lat, lon)} />
         <FranchiseCategoriesBar
           categories={this.state.categories}
           selectedCategory={id => this.onCategoryPressedHandler(id)}

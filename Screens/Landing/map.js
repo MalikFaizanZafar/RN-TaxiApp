@@ -2,13 +2,10 @@ import React from "react";
 import {
   Text,
   View,
-  Image,
   StyleSheet,
   Dimensions,
-  PermissionsAndroid
 } from "react-native";
 import MapView, { PROVIDER_GOOGLE } from "react-native-maps";
-import { Button } from "react-native-elements";
 export default class MapScreen extends React.Component {
   static navigationOptions = {
     drawerLabel: "Map",
@@ -31,37 +28,14 @@ export default class MapScreen extends React.Component {
       error: null
     };
   }
-  async LocationSerivce() {
-    try {
-      const granted = await PermissionsAndroid.request(
-        PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
-        {
-          title: "Location Permission",
-          message:
-            "This App needs access to your location " +
-            "so we can know where you are."
-        }
-      );
-      if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-        console.log("You can use locations ");
-        navigator.geolocation.getCurrentPosition(
-          position => {
-            console.log(position);
-            this.setState({
-              latitude: position.coords.latitude,
-              longitude: position.coords.longitude,
-              error: null
-            });
-          },
-          error => this.setState({ error: error.message }),
-          { enableHighAccuracy: false, timeout: 200000, maximumAge: 1000 }
-        );
-      } else {
-        console.log("Location permission denied");
-      }
-    } catch (err) {
-      console.warn(err);
-    }
+  componentDidMount(){
+    const { params } = this.props.navigation.state;
+    console.log("map params are : ", params)
+    this.setState({
+      latitude: Number(params.latitude),
+      longitude: Number(params.longitude)
+    })
+    console.log('this.state has : ', this.state)
   }
   render() {
     return (
@@ -73,19 +47,19 @@ export default class MapScreen extends React.Component {
           }}
           style={styles.map}
           initialRegion={{
-            latitude: 33.6755329,
-            longitude: 73.0006774,
+            latitude: this.state.latitude,
+            longitude: this.state.longitude,
             latitudeDelta: 0.0922,
             longitudeDelta: 0.0421
           }}
         >
           <MapView.Marker
-            coordinate={{ latitude: 33.676446, longitude: 72.998152 }}
+            coordinate={{ latitude: this.state.latitude, longitude: this.state.longitude }}
             title={"SubQuch"}
             description={"Inverse Square"}
           />
         </MapView>
-        <Button
+        {/* <Button
           title="Near My Location"
           onPress={() => this.LocationSerivce()}
         />
@@ -102,10 +76,10 @@ export default class MapScreen extends React.Component {
               1000
             )
           }
-        />
-        <Text>
+        /> */}
+        {/* <Text>
           You Location : Lat : {this.state.latitude}, Long :{this.state.longitude}
-        </Text>
+        </Text> */}
       </View>
     );
   }
