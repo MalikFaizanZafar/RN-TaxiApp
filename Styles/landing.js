@@ -40,7 +40,7 @@ export default StyleSheet.create({
     backgroundColor: "#171616",
     padding: 10,
     width: 180,
-    borderRightWidth: 0.25,
+    // borderWidth: 0.15,
     borderColor: "#fff"
   },
   buttonText: {
@@ -51,8 +51,8 @@ export default StyleSheet.create({
     backgroundColor: "#171616",
     padding: 10,
     width: 180,
-    borderRightWidth: 0.25,
-    borderColor: "#fff"
+    borderBottomWidth: 0.25,
+    borderColor: "#03a9f4"
   },
   buttonSelectedText: {
     color: "#03a9f4"

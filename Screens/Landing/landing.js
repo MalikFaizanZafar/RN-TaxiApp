@@ -46,26 +46,6 @@ export default class LandingScreen extends React.Component {
               error: null
             });
             this.populateInitialData(position.coords.latitude, position.coords.longitude, 35)
-            // getFilterQueryData(this.state.latitude, this.state.longitude, 35).then(promiseResponse => {
-            //   console.log("promiseResponse is : ", promiseResponse);
-            //   this.setState({
-            //     dataArray: promiseResponse.data.data,
-            //     dataLoading: false,
-            //   });
-            //   this.setState({
-            //     ListViewData: getNearestFranchises(this.state.dataArray, 'franchise'),
-            //     selectedTab: 0
-            //   });
-            // }).catch(promiseError => {
-            //   Alert.alert(
-            //     'Network Problem',
-            //     'No Internet Connection. Make Sure Your Wifi is Turned On',
-            //     [
-            //       {text: 'OK', onPress: () => console.log('OK Pressed')},
-            //     ],
-            //     {cancelable: false},
-            //   );
-            // })
           },
           error => this.setState({ error: error.message }),
           { enableHighAccuracy: false, timeout: 200000, maximumAge: 1000 }
@@ -152,8 +132,8 @@ export default class LandingScreen extends React.Component {
           }}
           searchType={this.state.selectedTab === 0? 'brands': 'deals'}
         />
-        <LandingTabBar tabItems={this.state.tabItems} tabClicked={(id) => this.tabClicked(id)} selectedTab={this.state.selectedTab} />
         <AppBrandsListView data={this.state.ListViewData} dataLoading={this.state.dataLoading} />
+        <LandingTabBar tabItems={this.state.tabItems} tabClicked={(id) => this.tabClicked(id)} selectedTab={this.state.selectedTab} />
       </View>
     );
   }
