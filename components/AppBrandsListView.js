@@ -4,14 +4,17 @@ import {
   View,
   Image,
   ActivityIndicator,
+  TouchableOpacity,
   Dimensions,
   ScrollView
 } from "react-native";
-import { Card, Rating } from "react-native-elements";
-import { Badge } from "react-native-elements";
+import { Card, Rating, Badge } from "react-native-elements";
 export default class AppBrandsListView extends Component {
   constructor(props) {
     super(props);
+  }
+  franchisePress(franchiseId){
+    this.props.franchiseOnPress(franchiseId)
   }
   render() {
     let dimensions = Dimensions.get("window");
@@ -33,7 +36,8 @@ export default class AppBrandsListView extends Component {
             >
               {this.props.data.map((datum, i) => {
                 return (
-                  <Card containerStyle={{ padding: 0 }} key={i}>
+                  <TouchableOpacity onPress={ () => this.franchisePress(datum.franchiseId)} key={i} activeOpacity={0.6} >
+                  <Card containerStyle={{ padding: 0 }} key={i} >
                     <View style={{ flexDirection: "row", padding: 0 }}>
                       <View
                         style={{ width: dimensions.width * 0.3, padding: 0 }}
@@ -69,7 +73,7 @@ export default class AppBrandsListView extends Component {
                             }}
                           >
                             <Badge
-                              value={datum.type=== "franchise"? datum.distance.toFixed(2): '100'}
+                              value={datum.type=== "franchise"? datum.distance.toFixed(2): datum.price}
                               badgeStyle={{
                                 height: 25,
                                 width: 50,
@@ -77,12 +81,13 @@ export default class AppBrandsListView extends Component {
                               }}
                               textStyle={{ fontSize: 10, color: "#fff" }}
                             />
-                            <Text style={{ fontSize: 10}}>{datum.type=== "franchise"? 'Km': 'Rs'}</Text>
+                            <Text style={{ fontSize: 10}}>{datum.type=== "franchise"? ' Km': ' Rs'}</Text>
                           </View>
                         </View>
                       </View>
                     </View>
                   </Card>
+                  </TouchableOpacity>
                 );
               })}
             </ScrollView>)}

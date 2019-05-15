@@ -119,7 +119,12 @@ export default class LandingScreen extends React.Component {
         })
     });
   }
-
+  franchiseOnPressHandler(id){
+    if(this.state.selectedTab === 0){
+        this.props.navigation.navigate('Franchise', { franchiseId : id})
+    }else {
+    }
+  }
   render() {
     return (
       <View style={LandingScreenStyles.container}>
@@ -132,7 +137,7 @@ export default class LandingScreen extends React.Component {
           }}
           searchType={this.state.selectedTab === 0? 'brands': 'deals'}
         />
-        <AppBrandsListView data={this.state.ListViewData} dataLoading={this.state.dataLoading} />
+        <AppBrandsListView data={this.state.ListViewData} dataLoading={this.state.dataLoading} franchiseOnPress={(id) => this.franchiseOnPressHandler(id)}/>
         <LandingTabBar tabItems={this.state.tabItems} tabClicked={(id) => this.tabClicked(id)} selectedTab={this.state.selectedTab} />
       </View>
     );
