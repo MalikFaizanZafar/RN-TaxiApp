@@ -63,7 +63,7 @@ export default class FranchiseMainScreen extends Component {
           categories={this.state.categories}
           selectedCategory={id => this.onCategoryPressedHandler(id)}
         />
-        <View style={{ height: dimensions.height * 0.59 }}>
+        <View style={{ height: dimensions.height * 0.50 }}>
           {this.state.dataLoading ? (
             <ActivityIndicator
               size="large"
