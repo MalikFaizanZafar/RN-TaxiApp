@@ -49,3 +49,15 @@ export const LandingSearchHandler = (latitude, longitude,distance,searchKey, tab
     }
   })
 }
+
+export const getUniqueFranchiseCategories = (itemArray) => {
+  const categories = [{id: -1, name: 'All'}];
+    const d = itemArray
+      .map(item => item.category.id)
+      .filter((val, index, self) => self.indexOf(val) === index);
+    d.forEach(i => {
+      const filteredRes = itemArray.filter(item => i === item.category.id)[0];
+      categories.push({id : filteredRes.category.id , name: filteredRes.category.name});
+    });
+  return categories;
+}

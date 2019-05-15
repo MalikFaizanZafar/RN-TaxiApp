@@ -119,12 +119,14 @@ export default class LandingScreen extends React.Component {
         })
     });
   }
+  
   franchiseOnPressHandler(id){
     if(this.state.selectedTab === 0){
         this.props.navigation.navigate('Franchise', { franchiseId : id})
     }else {
     }
   }
+
   render() {
     return (
       <View style={LandingScreenStyles.container}>

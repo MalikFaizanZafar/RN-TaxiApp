@@ -20,7 +20,8 @@ export default class FranchiseInfoCard extends Component {
                   width: dimensions.width * 0.6,
                   alignItems: "center",
                   justifyContent: "space-between",
-                  flexDirection: "row"
+                  flexDirection: "row",
+                  paddingLeft: 10
                 }}
               >
                 <View

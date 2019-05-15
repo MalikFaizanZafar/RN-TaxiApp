@@ -51,12 +51,36 @@ export default StyleSheet.create({
     backgroundColor: "#171616",
     padding: 10,
     width: 180,
-    borderBottomWidth: 0.25,
+    // borderBottomWidth: 0.25,
     borderColor: "#03a9f4"
   },
   buttonSelectedText: {
     color: "#03a9f4"
   },
+  
+  categoryButton: {
+    alignItems: "center",
+    backgroundColor: "#171616",
+    padding: 10,
+    width: 120,
+    // borderWidth: 0.15,
+    borderColor: "#fff"
+  },
+  categoryButtonText: {
+    color: "#fff"
+  },
+  categoryButtonSelected: {
+    alignItems: "center",
+    backgroundColor: "#171616",
+    padding: 10,
+    width: 120,
+    // borderBottomWidth: 0.25,
+    borderColor: "#03a9f4"
+  },
+  categoryButtonSelectedText: {
+    color: "#03a9f4"
+  },
+
   headerText: {
     fontSize: 20,
     textAlign: "center",

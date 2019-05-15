@@ -1,50 +1,56 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 import { View, Text, ScrollView, TouchableHighlight } from "react-native";
-import LandingScreenStyles from './../../Styles/landing'
+import LandingScreenStyles from "./../../Styles/landing";
 export default class FranchiseCategoriesBar extends Component {
-  constructor(props){
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
-      items: [],
-      categories: [{id: 1, name:'Category 1'}, {id: 2, name:'Category 2'}, {id: 2, name:'Category 3'}],
-      categoriesLoading: true,
+      categories: [],
       selectedCategory: -1
-    }
+    };
   }
   categoryClicked(id) {
-    console.log('categoryClicked', id)
     this.setState({
       selectedCategory: id,
       categoriesLoading: true
-    })
+    });
+    this.props.selectedCategory(id);
   }
   render() {
     return (
-      <View style={{marginTop: 40}} >
+      <View style={{ marginTop: 40 }}>
         <ScrollView
-            horizontal={true}
-            style={{ height: 45 }}
-            showsHorizontalScrollIndicator={false}
-          >
-            {this.state.categories.map((category, categoryIndex) => {
-              return (
-                <TouchableHighlight
-                  key={categoryIndex}
+          horizontal={true}
+          style={{ height: 45 }}
+          showsHorizontalScrollIndicator={false}
+        >
+          {this.props.categories.map((category, categoryIndex) => {
+            return (
+              <TouchableHighlight
+                key={categoryIndex}
+                style={
+                  this.state.selectedCategory === category.id
+                    ? LandingScreenStyles.categoryButtonSelected
+                    : LandingScreenStyles.categoryButton
+                }
+                activeOpacity={1}
+                color="#f1c40f"
+                onPress={this.categoryClicked.bind(this, category.id)}
+              >
+                <Text
                   style={
                     this.state.selectedCategory === category.id
-                      ? LandingScreenStyles.buttonSelected
-                      : LandingScreenStyles.button
+                      ? LandingScreenStyles.categoryButtonSelectedText
+                      : LandingScreenStyles.categoryButtonText
                   }
-                  activeOpacity={1}
-                  color="#f1c40f"
-                  onPress={this.categoryClicked.bind(this, category.id)}
                 >
-                  <Text style={{ color: "#ffffff" }}>{category.name}</Text>
-                </TouchableHighlight>
-              );
-            })}
-          </ScrollView>
-        </View>
-    )
+                  {category.name}
+                </Text>
+              </TouchableHighlight>
+            );
+          })}
+        </ScrollView>
+      </View>
+    );
   }
 }
