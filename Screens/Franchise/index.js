@@ -35,8 +35,8 @@ export default class FranchiseMainScreen extends Component {
     return (
       <View style={{ padding: 0 }}>
         <FranchiseInfoCard franchiseInfo={franchise} />
-        <FranchiseCategoriesBar />
-        <View style={{height: dimensions.height* 0.645}}>
+        <FranchiseCategoriesBar/>
+        <View style={{height: dimensions.height* 0.59}}>
         {this.state.dataLoading ? (
           <ActivityIndicator
             size="large"
