@@ -139,6 +139,8 @@ export default class MapScreen extends Component {
           longitude: 72.998826, //33.668819, 72.998826
         },
       ],
+      distance: 0,
+      duration: 0
     };
 
     this.mapView = null;
@@ -157,9 +159,7 @@ export default class MapScreen extends Component {
           latitude: Number(params.latitude),
           longitude: Number(params.longitude), //33.668819, 72.998826
         },
-      ],
-      distance: 0,
-      duration: 0
+      ]
     })
 }
   onMapPress = (e) => {

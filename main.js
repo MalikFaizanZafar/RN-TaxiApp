@@ -10,8 +10,7 @@ import { FranchiseDrawerNavigator } from "./Screens/Franchise";
 
 _bootstrapAsync = () => {
   let user = "";
-  AsyncStorage.getItem("@SubQuch-User")
-  subquchPromise.then(data => {
+  AsyncStorage.getItem("@SubQuch-User").then(data => {
     user = data
   })
   console.log("subquchUser is : ", subquchUser)
@@ -46,7 +45,7 @@ const switchNavigator = createSwitchNavigator(
     Landing: AppNavigatorTwo
   },
   {
-    initialRouteName: "Home"
+    initialRouteName: _bootstrapAsync? "Landing" : "Home"
   }
 );
 const AppContainer = createAppContainer(switchNavigator);
