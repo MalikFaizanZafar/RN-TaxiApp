@@ -111,14 +111,12 @@
 // });
 
 import React, { Component } from 'react';
-import { Dimensions, StyleSheet } from 'react-native';
+import { Dimensions, StyleSheet, Text } from 'react-native';
 import MapView from 'react-native-maps';
 import MapViewDirections from 'react-native-maps-directions';
 
 const { width, height } = Dimensions.get('window');
 const ASPECT_RATIO = width / height;
-const LATITUDE = 33.639849;
-const LONGITUDE = 72.987583;
 const LATITUDE_DELTA = 0.0922;
 const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
 
@@ -160,6 +158,8 @@ export default class MapScreen extends Component {
           longitude: Number(params.longitude), //33.668819, 72.998826
         },
       ],
+      distance: 0,
+      duration: 0
     })
 }
   onMapPress = (e) => {
@@ -197,11 +197,12 @@ export default class MapScreen extends Component {
             strokeColor="tomato"
             optimizeWaypoints={true}
             onStart={(params) => {
-              console.log(`Started routing between "${params.origin}" and "${params.destination}"`);
+              console.log(`Started routing between ${params.origin} and ${params.destination}`);
             }}
             onReady={result => {
-              console.log('Distance: ${result.distance} km')
-              console.log('Duration: ${result.duration} min.')
+              console.log(`Distance: ${result.distance} km`)
+              console.log(`Duration: ${result.duration} min.`)
+              this.setState({distance: result.distance, duration: result.duration})
               
               this.mapView.fitToCoordinates(result.coordinates, {
                 edgePadding: {
@@ -217,6 +218,8 @@ export default class MapScreen extends Component {
             }}
           />
         )}
+        <Text style={{marginLeft: 10, marginTop: 10, color: "tomato", fontWeight: "bold"}}>Distance : { this.state.distance?`${this.state.distance.toFixed(2)} Km`: ''}</Text>
+        <Text style={{marginLeft: 10, marginTop: 10, color: "tomato", fontWeight: "bold"}}>Duration : { this.state.distance?`${this.state.duration.toFixed(2)} Minutes`: ''}</Text>
       </MapView>
     );
   }
