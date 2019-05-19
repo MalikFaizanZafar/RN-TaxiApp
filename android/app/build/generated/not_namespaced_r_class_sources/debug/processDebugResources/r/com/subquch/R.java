@@ -3426,14 +3426,18 @@ public final class R {
     public static final int notification_subtext_size=0x7f05007a;
     public static final int notification_top_pad=0x7f05007b;
     public static final int notification_top_pad_large_text=0x7f05007c;
-    public static final int tooltip_corner_radius=0x7f05007d;
-    public static final int tooltip_horizontal_padding=0x7f05007e;
-    public static final int tooltip_margin=0x7f05007f;
-    public static final int tooltip_precise_anchor_extra_offset=0x7f050080;
-    public static final int tooltip_precise_anchor_threshold=0x7f050081;
-    public static final int tooltip_vertical_padding=0x7f050082;
-    public static final int tooltip_y_offset_non_touch=0x7f050083;
-    public static final int tooltip_y_offset_touch=0x7f050084;
+    public static final int subtitle_corner_radius=0x7f05007d;
+    public static final int subtitle_outline_width=0x7f05007e;
+    public static final int subtitle_shadow_offset=0x7f05007f;
+    public static final int subtitle_shadow_radius=0x7f050080;
+    public static final int tooltip_corner_radius=0x7f050081;
+    public static final int tooltip_horizontal_padding=0x7f050082;
+    public static final int tooltip_margin=0x7f050083;
+    public static final int tooltip_precise_anchor_extra_offset=0x7f050084;
+    public static final int tooltip_precise_anchor_threshold=0x7f050085;
+    public static final int tooltip_vertical_padding=0x7f050086;
+    public static final int tooltip_y_offset_non_touch=0x7f050087;
+    public static final int tooltip_y_offset_touch=0x7f050088;
   }
   public static final class drawable {
     public static final int abc_ab_share_pack_mtrl_alpha=0x7f060000;
@@ -4033,15 +4037,24 @@ public final class R {
     public static final int common_open_on_phone=0x7f0c0067;
     public static final int common_signin_button_text=0x7f0c0068;
     public static final int common_signin_button_text_long=0x7f0c0069;
-    public static final int facebook_app_id=0x7f0c006a;
-    public static final int fb_login_protocol_scheme=0x7f0c006b;
-    public static final int image_button_description=0x7f0c006c;
-    public static final int image_description=0x7f0c006d;
-    public static final int link_description=0x7f0c006e;
-    public static final int messenger_send_button_text=0x7f0c006f;
-    public static final int search_description=0x7f0c0070;
-    public static final int search_menu_title=0x7f0c0071;
-    public static final int status_bar_notification_info_overflow=0x7f0c0072;
+    public static final int default_web_client_id=0x7f0c006a;
+    public static final int facebook_app_id=0x7f0c006b;
+    public static final int fb_login_protocol_scheme=0x7f0c006c;
+    public static final int fcm_fallback_notification_channel_label=0x7f0c006d;
+    public static final int firebase_database_url=0x7f0c006e;
+    public static final int gcm_defaultSenderId=0x7f0c006f;
+    public static final int google_api_key=0x7f0c0070;
+    public static final int google_app_id=0x7f0c0071;
+    public static final int google_crash_reporting_api_key=0x7f0c0072;
+    public static final int google_storage_bucket=0x7f0c0073;
+    public static final int image_button_description=0x7f0c0074;
+    public static final int image_description=0x7f0c0075;
+    public static final int link_description=0x7f0c0076;
+    public static final int messenger_send_button_text=0x7f0c0077;
+    public static final int project_id=0x7f0c0078;
+    public static final int search_description=0x7f0c0079;
+    public static final int search_menu_title=0x7f0c007a;
+    public static final int status_bar_notification_info_overflow=0x7f0c007b;
   }
   public static final class style {
     public static final int AlertDialog_AppCompat=0x7f0d0000;

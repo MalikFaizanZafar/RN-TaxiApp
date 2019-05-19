@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "54989238851",
+    "firebase_url": "https://subquch-d4369.firebaseio.com",
+    "project_id": "subquch-d4369",
+    "storage_bucket": "subquch-d4369.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:54989238851:android:0a57b084b369fa24",
+        "android_client_info": {
+          "package_name": "com.subquch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "54989238851-3dldbv2i90f7atlge5ssd6rd9tiau4tf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC57TPzzimuTGYH0618sejzQKhm99e7IsY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "54989238851-3dldbv2i90f7atlge5ssd6rd9tiau4tf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

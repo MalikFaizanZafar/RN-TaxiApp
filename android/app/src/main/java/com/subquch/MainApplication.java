@@ -15,6 +15,10 @@ import com.facebook.CallbackManager;
 import com.facebook.FacebookSdk;
 import com.facebook.reactnative.androidsdk.FBSDKPackage;
 import com.facebook.appevents.AppEventsLogger;
+import io.invertase.firebase.RNFirebasePackage;
+import io.invertase.firebase.database.RNFirebaseDatabasePackage;
+import io.invertase.firebase.messaging.RNFirebaseMessagingPackage;
+import io.invertase.firebase.notifications.RNFirebaseNotificationsPackage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -41,7 +45,11 @@ public class MainApplication extends Application implements ReactApplication {
               new MapsPackage(),
               new VectorIconsPackage(),
               new RNGoogleSigninPackage(),
-              new FBSDKPackage(mCallbackManager)
+              new FBSDKPackage(mCallbackManager),
+              new RNFirebasePackage(),
+              new RNFirebaseMessagingPackage(),
+              new RNFirebaseDatabasePackage(),
+              new RNFirebaseNotificationsPackage()
       );
     }
 

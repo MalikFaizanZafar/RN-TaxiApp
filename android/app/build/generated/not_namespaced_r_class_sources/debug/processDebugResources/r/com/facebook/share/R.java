@@ -535,14 +535,14 @@ public final class R {
         public static final int notification_subtext_size = 0x7f05007a;
         public static final int notification_top_pad = 0x7f05007b;
         public static final int notification_top_pad_large_text = 0x7f05007c;
-        public static final int tooltip_corner_radius = 0x7f05007d;
-        public static final int tooltip_horizontal_padding = 0x7f05007e;
-        public static final int tooltip_margin = 0x7f05007f;
-        public static final int tooltip_precise_anchor_extra_offset = 0x7f050080;
-        public static final int tooltip_precise_anchor_threshold = 0x7f050081;
-        public static final int tooltip_vertical_padding = 0x7f050082;
-        public static final int tooltip_y_offset_non_touch = 0x7f050083;
-        public static final int tooltip_y_offset_touch = 0x7f050084;
+        public static final int tooltip_corner_radius = 0x7f050081;
+        public static final int tooltip_horizontal_padding = 0x7f050082;
+        public static final int tooltip_margin = 0x7f050083;
+        public static final int tooltip_precise_anchor_extra_offset = 0x7f050084;
+        public static final int tooltip_precise_anchor_threshold = 0x7f050085;
+        public static final int tooltip_vertical_padding = 0x7f050086;
+        public static final int tooltip_y_offset_non_touch = 0x7f050087;
+        public static final int tooltip_y_offset_touch = 0x7f050088;
     }
     public static final class drawable {
         private drawable() {}
@@ -901,8 +901,8 @@ public final class R {
         public static final int com_facebook_smart_login_confirmation_continue_as = 0x7f0c0055;
         public static final int com_facebook_smart_login_confirmation_title = 0x7f0c0056;
         public static final int com_facebook_tooltip_default = 0x7f0c0057;
-        public static final int search_menu_title = 0x7f0c0071;
-        public static final int status_bar_notification_info_overflow = 0x7f0c0072;
+        public static final int search_menu_title = 0x7f0c007a;
+        public static final int status_bar_notification_info_overflow = 0x7f0c007b;
     }
     public static final class style {
         private style() {}

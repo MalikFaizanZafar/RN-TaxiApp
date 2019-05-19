@@ -7,6 +7,7 @@ import AppBrandsListView from "../../components/AppBrandsListView";
 import { getFilterQueryData, getUserLocation } from "../../services/getIntialData";
 import { getNearestFranchises, LandingTabClickHandler, LandingSearchHandler } from "../../services/helperFunctions";
 import LandingScreenStyles from './../../Styles/landing'
+import firebase from 'react-native-firebase'
 export default class LandingScreen extends React.Component {
   static navigationOptions = {
     header: null
@@ -81,20 +82,129 @@ export default class LandingScreen extends React.Component {
     })
 
   }
-
-  componentDidMount() {
-    this.LocationSerivce();
-    // getUserLocation().then(getUserLocationResponse => {
-    //   this.setState({ dataArray: getUserLocationResponse.data, ListViewData: getNearestFranchises(this.state.dataArray, 'franchise')}, () => {
-    //     this.setState({
-    //       latitude: getUserLocationResponse.latitude,
-    //       longitude: getUserLocationResponse.longitude,
-    //       dataLoading: false
-    //     })
-    //   })
-    // })
+  getNotificationToken = async () => {
+    const fcmToken = await firebase.messaging().getToken();
+      if (fcmToken) {
+          console.log("fcmToken is : ", fcmToken)
+          firebase.initializeApp({
+            apiKey: "AIzaSyBVuIpEpE4Ke9xam26eRzVZItTslj6iTMY",
+            authDomain: "subquch-d4369.firebaseapp.com",
+            databaseURL: "https://subquch-d4369.firebaseio.com",
+            projectId: "subquch-d4369",
+            storageBucket: "gs://subquch-d4369.appspot.com",
+            messagingSenderId: "54989238851"
+          })
+          const DB = firebase.database().ref('fcmTokens/')
+          const data = { [(Math.random()*100000).toFixed(0)]: fcmToken }
+           DB.set(data).then(saveResponse => {
+             console.log("saveResponse is : ", saveResponse)
+           })
+      } else {
+          // user doesn't have a device token yet
+      }
   }
+  // componentDidMount() {
+  //   this.LocationSerivce();
+  //   this.getNotificationToken()
+  //   // getUserLocation().then(getUserLocationResponse => {
+  //   //   this.setState({ dataArray: getUserLocationResponse.data, ListViewData: getNearestFranchises(this.state.dataArray, 'franchise')}, () => {
+  //   //     this.setState({
+  //   //       latitude: getUserLocationResponse.latitude,
+  //   //       longitude: getUserLocationResponse.longitude,
+  //   //       dataLoading: false
+  //   //     })
+  //   //   })
+  //   // })
+  // }
 
+  async componentDidMount() {
+    this.checkPermission();
+    this.LocationSerivce();
+    this.getNotificationToken();
+    this.createNotificationListeners();
+  }
+  
+  componentWillUnmount() {
+    this.notificationListener();
+    this.notificationOpenedListener();
+  }
+  
+  async createNotificationListeners() {
+    /*
+    * Triggered when a particular notification has been received in foreground
+    * */
+    this.notificationListener = firebase.notifications().onNotification((notification) => {
+        const { title, body } = notification;
+        this.showAlert(title, body);
+    });
+  
+    /*
+    * If your app is in background, you can listen for when a notification is clicked / tapped / opened as follows:
+    * */
+    this.notificationOpenedListener = firebase.notifications().onNotificationOpened((notificationOpen) => {
+        const { title, body } = notificationOpen.notification;
+        this.showAlert(title, body);
+    });
+  
+    /*
+    * If your app is closed, you can check if it was opened by a notification being clicked / tapped / opened as follows:
+    * */
+    const notificationOpen = await firebase.notifications().getInitialNotification();
+    if (notificationOpen) {
+        const { title, body } = notificationOpen.notification;
+        this.showAlert(title, body);
+    }
+    /*
+    * Triggered for data only payload in foreground
+    * */
+    this.messageListener = firebase.messaging().onMessage((message) => {
+      //process data message
+      console.log(JSON.stringify(message));
+    });
+  }
+  
+  showAlert(title, body) {
+    Alert.alert(
+      title, body,
+      [
+          { text: 'OK', onPress: () => console.log('OK Pressed') },
+      ],
+      { cancelable: false },
+    );
+  }
+    //1
+  async checkPermission() {
+    const enabled = await firebase.messaging().hasPermission();
+    if (enabled) {
+        this.getToken();
+    } else {
+        this.requestPermission();
+    }
+  }
+  
+    //3
+  async getToken() {
+    let fcmToken = await AsyncStorage.getItem('fcmToken');
+    if (!fcmToken) {
+        fcmToken = await firebase.messaging().getToken();
+        if (fcmToken) {
+            // user has a device token
+            await AsyncStorage.setItem('fcmToken', fcmToken);
+        }
+    }
+  }
+  
+    //2
+  async requestPermission() {
+    try {
+        await firebase.messaging().requestPermission();
+        // User has authorised
+        this.getToken();
+    } catch (error) {
+        // User has rejected permissions
+        console.log('permission rejected');
+    }
+  }
   onSearchHandler(searchKey) {
     this.setState({ dataLoading: true });
     LandingSearchHandler(this.state.latitude, this.state.longitude, 35, searchKey, this.state.selectedTab).then(promiseResponse => {
