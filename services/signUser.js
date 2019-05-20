@@ -42,3 +42,11 @@ storeUser = async (socialId) => {
     // Error saving data
   }
 };
+
+export const storeUserData = async (key, value) => {
+  try {
+    await AsyncStorage.setItem(`@SubQuch-User-${key}`, value);
+  } catch (error) {
+    // Error saving data
+  }
+}

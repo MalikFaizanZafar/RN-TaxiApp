@@ -23,7 +23,7 @@ import {
   GraphRequestManager
 } from "react-native-fbsdk";
 import { addUser } from "../store/actions";
-import signUser from "../services/signUser";
+import signUser, { storeUserData } from "../services/signUser";
 import { Avatar, Input } from "react-native-elements";
 import RadioForm from "react-native-simple-radio-button";
 import DatePicker from "react-native-datepicker";
@@ -66,9 +66,9 @@ class HomeScreen extends React.Component {
     this._bootstrapAsync();
   }
   _bootstrapAsync = () => {
-    AsyncStorage.getItem('@SubQuch-User').then(data => {
-      if(data){
-        this.props.navigation.navigate('Landing');
+    AsyncStorage.getItem("@SubQuch-User").then(data => {
+      if (data) {
+        this.props.navigation.navigate("Landing");
       }
     });
   };
@@ -123,14 +123,38 @@ class HomeScreen extends React.Component {
       }
     }
   };
-  isSaveDisabled(){
-    if(this.state.phone === '' || this.state.birthday === '' || this.state.gender === ''){
-      return true
-    }
-    else {
-      return false
+  isSaveDisabled() {
+    if (
+      this.state.phone === "" ||
+      this.state.birthday === "" ||
+      this.state.gender === ""
+    ) {
+      return true;
+    } else {
+      return false;
     }
   }
+
+  storeDataToStorage = async (
+    id,
+    socialId,
+    token,
+    name,
+    email,
+    photo,
+    gender,
+    birthday
+  ) => {
+    await storeUserData("id", id);
+    await storeUserData("socialId", socialId);
+    await storeUserData("token", token);
+    await storeUserData("name", name);
+    await storeUserData("email", email);
+    await storeUserData("photo", photo);
+    await storeUserData("gender", gender);
+    await storeUserData("birthday", birthday);
+  };
+
   render() {
     return (
       <View style={styles.container}>
@@ -293,15 +317,15 @@ class HomeScreen extends React.Component {
                       marginLeft: 30
                     }}
                   >
-                    <Text style={{ width : '30%'}}>Your Gender</Text>
+                    <Text style={{ width: "30%" }}>Your Gender</Text>
                     <RadioForm
-                      style={{ width : '70%'}}
+                      style={{ width: "70%" }}
                       radio_props={[
                         { label: "Male", value: "male" },
                         { label: "Female", value: "female" }
                       ]}
                       formHorizontal={true}
-                      labelStyle={{ padding : 5}}
+                      labelStyle={{ padding: 5 }}
                       initial={"Male"}
                       onPress={value => {
                         this.setState({ gender: value });
@@ -333,8 +357,18 @@ class HomeScreen extends React.Component {
                           };
                           // console.log("user is ; ", user);
                           signUser(user)
-                            .then(resp => {
-                              console.log("Server Resonse is : ", resp);
+                            .then(res => {
+                              console.log("Server Resonse is : ", res);
+                              this.storeDataToStorage(
+                                res.data.data.userId.toString(),
+                                res.data.data.socialId.toString(),
+                                res.data.data.token.toString(),
+                                res.data.data.name.toString(),
+                                res.data.data.email.toString(),
+                                res.data.data.photo.toString(),
+                                res.data.data.gender.toString(),
+                                res.data.data.birthday.toString()
+                              );
                               this.setState({ modalVisible: false });
                               this.props.navigation.navigate("Landing");
                             })

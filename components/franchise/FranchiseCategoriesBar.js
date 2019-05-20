@@ -18,7 +18,7 @@ export default class FranchiseCategoriesBar extends Component {
   }
   render() {
     return (
-      <View style={{ marginTop: 40 }}>
+      <View style={{ marginTop: 30 }}>
         <ScrollView
           horizontal={true}
           style={{ height: 45 }}

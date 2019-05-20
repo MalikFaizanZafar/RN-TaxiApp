@@ -45,7 +45,7 @@ const switchNavigator = createSwitchNavigator(
     Landing: AppNavigatorTwo
   },
   {
-    initialRouteName: _bootstrapAsync? "Landing" : "Home"
+    initialRouteName: "Home"
   }
 );
 const AppContainer = createAppContainer(switchNavigator);
