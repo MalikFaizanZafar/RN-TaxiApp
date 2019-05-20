@@ -125,14 +125,14 @@ export default class LandingScreen extends React.Component {
     this.LocationSerivce();
     this.getNotificationToken();
     this.createNotificationListeners();
-    // try {
-    //   // AsyncStorage.clear()
-    //   const keys = await AsyncStorage.getAllKeys();
-    //   const items = await AsyncStorage.multiGet(keys);
-    //   console.log("AsyncStorage Item has : ", items);
-    // } catch (error) {
-    //   console.log("AsyncStorage error has : ", error);
-    // }
+    try {
+      // AsyncStorage.clear()
+      const keys = await AsyncStorage.getAllKeys();
+      const items = await AsyncStorage.multiGet(keys);
+      console.log("AsyncStorage Item has : ", items);
+    } catch (error) {
+      console.log("AsyncStorage error has : ", error);
+    }
   }
 
   componentWillUnmount() {
@@ -204,13 +204,7 @@ export default class LandingScreen extends React.Component {
     if (!fcmToken) {
       fcmToken = await firebase.messaging().getToken();
       if (fcmToken) {
-        // user has a device token
-        // let user = {
-        //   name : 'Malik Faizan Zafar',
-        //   age : 26
-        // }
         await AsyncStorage.setItem("@SubQuch-User-fcmToken", fcmToken);
-        // await AsyncStorage.setItem('User',user);
       }
     }
   }

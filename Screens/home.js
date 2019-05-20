@@ -153,6 +153,7 @@ class HomeScreen extends React.Component {
     await storeUserData("photo", photo);
     await storeUserData("gender", gender);
     await storeUserData("birthday", birthday);
+    await storeUserData("auth", "1");
   };
 
   render() {
