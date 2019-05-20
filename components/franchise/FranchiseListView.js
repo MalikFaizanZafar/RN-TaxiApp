@@ -4,12 +4,42 @@ import {
   View,
   Image,
   Dimensions,
-  ScrollView
+  ScrollView,
+  TouchableOpacity,
+  Alert
 } from "react-native";
 import { Card, Rating, Badge } from "react-native-elements";
+import { addToCart } from "../../services/addToCart";
 export default class FranchiseListView extends Component {
   constructor(props) {
     super(props);
+  }
+
+  itemDealPressed = (datum) => {
+    let cartItemDeal = {
+      id : datum.id,
+      name: datum.name,
+      price: datum.price,
+      discount: datum.discount,
+      franchiseId: this.props.franchiseId
+    }
+    Alert.alert(
+      'Cart',
+      'Add This Item/Deal to the Cart?',
+      [
+        {
+          text: 'No',
+          onPress: () => console.log('Cancel Pressed'),
+          style: 'cancel',
+        },
+        {text: 'Yes', onPress: () => this.addToCartFunction(cartItemDeal)},
+      ],
+      {cancelable: false},
+    );
+  }
+
+  addToCartFunction = (data) => {
+    addToCart(data)
   }
   render() {
     let dimensions = Dimensions.get("window");
@@ -21,7 +51,8 @@ export default class FranchiseListView extends Component {
             >
               {this.props.data.map((datum, i) => {
                 return (
-                  <Card containerStyle={{ padding: 0 }} key={i} >
+                  <TouchableOpacity onPress={() => this.itemDealPressed(datum)} key={i}>
+                  <Card containerStyle={{ padding: 0 }}  >
                     <View style={{ flexDirection: "row", padding: 0 }}>
                       <View
                         style={{ width: dimensions.width * 0.3, padding: 0 }}
@@ -71,6 +102,7 @@ export default class FranchiseListView extends Component {
                       </View>
                     </View>
                   </Card>
+                  </TouchableOpacity>
                 );
               })}
             </ScrollView>

@@ -50,3 +50,11 @@ export const storeUserData = async (key, value) => {
     // Error saving data
   }
 }
+
+export const removeUserData = async (key, value) => {
+  try {
+    await AsyncStorage.removeItem(`@SubQuch-User-${key}`);
+  } catch (error) {
+    // Error saving data
+  }
+}

@@ -51,7 +51,6 @@ export default class FranchiseMainScreen extends Component {
     }
   }
   viewMapHandler(latitude, longitude){
-    console.log(`Latitude/Longitude (Screen) : ${latitude}/${longitude}`);
     this.props.navigation.navigate('Map', { latitude , longitude})
   }
   render() {
@@ -81,6 +80,7 @@ export default class FranchiseMainScreen extends Component {
                   ? this.state.items
                   : this.state.deals
               }
+              franchiseId={this.state.franchise.id}
             />
           )}
         </View>
