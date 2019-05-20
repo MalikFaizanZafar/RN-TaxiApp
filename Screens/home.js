@@ -135,24 +135,8 @@ class HomeScreen extends React.Component {
     }
   }
 
-  storeDataToStorage = async (
-    id,
-    socialId,
-    token,
-    name,
-    email,
-    photo,
-    gender,
-    birthday
-  ) => {
-    await storeUserData("id", id);
-    await storeUserData("socialId", socialId);
-    await storeUserData("token", token);
-    await storeUserData("name", name);
-    await storeUserData("email", email);
-    await storeUserData("photo", photo);
-    await storeUserData("gender", gender);
-    await storeUserData("birthday", birthday);
+  storeDataToStorage = async (userData) => {
+    await storeUserData("info", JSON.stringify(userData));
     await storeUserData("auth", "1");
   };
 
@@ -360,16 +344,7 @@ class HomeScreen extends React.Component {
                           signUser(user)
                             .then(res => {
                               console.log("Server Resonse is : ", res);
-                              this.storeDataToStorage(
-                                res.data.data.userId.toString(),
-                                res.data.data.socialId.toString(),
-                                res.data.data.token.toString(),
-                                res.data.data.name.toString(),
-                                res.data.data.email.toString(),
-                                res.data.data.photo.toString(),
-                                res.data.data.gender.toString(),
-                                res.data.data.birthday.toString()
-                              );
+                              this.storeDataToStorage(res.data.data);
                               this.setState({ modalVisible: false });
                               this.props.navigation.navigate("Landing");
                             })
