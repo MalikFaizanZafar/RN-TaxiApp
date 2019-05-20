@@ -53,6 +53,10 @@ export default class FranchiseMainScreen extends Component {
   viewMapHandler(latitude, longitude){
     this.props.navigation.navigate('Map', { latitude , longitude})
   }
+  itemPressHandler(item){
+    console.log("currentItem is : ", item)
+    this.props.navigation.navigate('Item', {item, franchiseId: this.state.franchise.id})
+  }
   render() {
     const franchise = this.state.franchise;
     let dimensions = Dimensions.get("window");
@@ -81,6 +85,7 @@ export default class FranchiseMainScreen extends Component {
                   : this.state.deals
               }
               franchiseId={this.state.franchise.id}
+              itemPressHandler={(itemId) => this.itemPressHandler(itemId)}
             />
           )}
         </View>

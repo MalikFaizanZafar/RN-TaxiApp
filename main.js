@@ -7,6 +7,7 @@ import { AsyncStorage } from "react-native";
 import { MyDrawerNavigator } from "./Screens/Landing";
 import HomeScreen from "./Screens/home";
 import { FranchiseDrawerNavigator } from "./Screens/Franchise";
+import { ItemDrawerNavigator } from "./Screens/Item";
 
 _bootstrapAsync = () => {
   let user = "";
@@ -30,7 +31,8 @@ const AppNavigator = createStackNavigator(
 const AppNavigatorTwo = createStackNavigator(
   {
     Landing: MyDrawerNavigator,
-    Franchise: FranchiseDrawerNavigator
+    Franchise: FranchiseDrawerNavigator,
+    Item: ItemDrawerNavigator
   },
   {
     initialRouteName: "Landing",

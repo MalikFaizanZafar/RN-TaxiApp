@@ -6,40 +6,44 @@ import {
   Dimensions,
   ScrollView,
   TouchableOpacity,
-  Alert
+  Alert,
+  AsyncStorage
 } from "react-native";
 import { Card, Rating, Badge } from "react-native-elements";
 import { addToCart } from "../../services/addToCart";
+// import { getCartItems } from "../../services/getCartItems";
 export default class FranchiseListView extends Component {
   constructor(props) {
     super(props);
   }
 
   itemDealPressed = (datum) => {
-    let cartItemDeal = {
-      id : datum.id,
-      name: datum.name,
-      price: datum.price,
-      discount: datum.discount,
-      franchiseId: this.props.franchiseId
-    }
-    Alert.alert(
-      'Cart',
-      'Add This Item/Deal to the Cart?',
-      [
-        {
-          text: 'No',
-          onPress: () => console.log('Cancel Pressed'),
-          style: 'cancel',
-        },
-        {text: 'Yes', onPress: () => this.addToCartFunction(cartItemDeal)},
-      ],
-      {cancelable: false},
-    );
+    this.props.itemPressHandler(datum)
+    // this.props.navigation.navigate('Item')
+    // let cartItemDeal = {
+    //   id : datum.id,
+    //   name: datum.name,
+    //   price: datum.price,
+    //   discount: datum.discount,
+    //   franchiseId: this.props.franchiseId
+    // }
+    // Alert.alert(
+    //   'Cart',
+    //   'Add This Item/Deal to the Cart?',
+    //   [
+    //     {
+    //       text: 'No',
+    //       onPress: () => console.log('Cancel Pressed'),
+    //       style: 'cancel',
+    //     },
+    //     {text: 'Yes', onPress: () => this.addToCartFunction(cartItemDeal)},
+    //   ],
+    //   {cancelable: false},
+    // );
   }
 
   addToCartFunction = (data) => {
-    addToCart(data)
+    addToCart(data)    
   }
   render() {
     let dimensions = Dimensions.get("window");
