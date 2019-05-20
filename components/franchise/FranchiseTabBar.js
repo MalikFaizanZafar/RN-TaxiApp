@@ -15,7 +15,7 @@ export default class FranchiseTabBar extends Component {
       <View>
       <ScrollView
         horizontal={true}
-        style={{ height: 45 }}
+        style={{ height: 50 }}
         showsHorizontalScrollIndicator={false}
       >
         {this.props.tabItems.map((item, i) => {

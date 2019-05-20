@@ -54,7 +54,6 @@ export default class FranchiseMainScreen extends Component {
     this.props.navigation.navigate('Map', { latitude , longitude})
   }
   itemPressHandler(item){
-    console.log("currentItem is : ", item)
     this.props.navigation.navigate('Item', {item, franchiseId: this.state.franchise.id})
   }
   render() {

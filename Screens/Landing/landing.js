@@ -111,7 +111,7 @@ export default class LandingScreen extends React.Component {
     const fcmToken = await firebase.messaging().getToken();
     if (fcmToken) {
       console.log("fcmToken is : ", fcmToken);
-      firebase.initializeApp(fbConfig);
+      // firebase.initializeApp(fbConfig);
     } else {
       // user doesn't have a device token yet
     }
