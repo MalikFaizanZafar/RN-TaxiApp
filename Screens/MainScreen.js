@@ -8,14 +8,14 @@ import HomeScreen from "./home";
 export default class MainScreen extends React.Component {
 
   state = {
-    user : null
+    userAuthStatus : "0"
   }
   async componentWillMount(){
-    let subquch_user = await AsyncStorage.getItem('SubQuch_User')
-    console.log('subquch_user : ', subquch_user)
+    let subquch_user = await AsyncStorage.getItem('@SubQuch-User-auth')
+    console.log('@SubQuch-User-auth : ', subquch_user)
     if(subquch_user){
       this.setState({
-        user : subquch_user
+        userAuthStatus : subquch_user
       })
       // this.props.navigation.navigate("Landing");
     }
@@ -24,7 +24,7 @@ export default class MainScreen extends React.Component {
   render() {
     return (
       <View>
-        if(this.state.user){
+        if(this.state.userAuthStatus === "1"){
           <LandingScreen />
         }else {
           <HomeScreen />

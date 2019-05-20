@@ -8,6 +8,7 @@ import { MyDrawerNavigator } from "./Screens/Landing";
 import HomeScreen from "./Screens/home";
 import { FranchiseDrawerNavigator } from "./Screens/Franchise";
 import { ItemDrawerNavigator } from "./Screens/Item";
+import { userAuthStatus } from "./services/userAuth";
 
 _bootstrapAsync = () => {
   let user = "";
@@ -47,7 +48,7 @@ const switchNavigator = createSwitchNavigator(
     Landing: AppNavigatorTwo
   },
   {
-    initialRouteName: "Home"
+    initialRouteName: userAuthStatus?"Landing": "Home"
   }
 );
 const AppContainer = createAppContainer(switchNavigator);

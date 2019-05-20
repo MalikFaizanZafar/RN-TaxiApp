@@ -63,15 +63,15 @@ class HomeScreen extends React.Component {
       birthday: "",
       modalVisible: false
     };
-    this._bootstrapAsync();
+    // this._bootstrapAsync();
   }
-  _bootstrapAsync = () => {
-    AsyncStorage.getItem("@SubQuch-User").then(data => {
-      if (data) {
-        this.props.navigation.navigate("Landing");
-      }
-    });
-  };
+  // _bootstrapAsync = () => {
+  //   AsyncStorage.getItem("@SubQuch-User").then(data => {
+  //     if (data) {
+  //       this.props.navigation.navigate("Landing");
+  //     }
+  //   });
+  // };
   setModalVisible(visible) {
     this.setState({ modalVisible: visible });
   }
