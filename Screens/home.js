@@ -6,10 +6,8 @@ import {
   Text,
   Modal,
   TouchableHighlight,
-  Image,
-  AsyncStorage
+  Image
 } from "react-native";
-import { connect } from "react-redux";
 import {
   GoogleSignin,
   GoogleSigninButton,
@@ -18,7 +16,6 @@ import {
 import {
   LoginButton,
   AccessToken,
-  LoginManager,
   GraphRequest,
   GraphRequestManager
 } from "react-native-fbsdk";
@@ -28,25 +25,7 @@ import { Avatar, Input } from "react-native-elements";
 import RadioForm from "react-native-simple-radio-button";
 import DatePicker from "react-native-datepicker";
 import { googleConfig } from "../configs/googleConfig";
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center"
-  },
-  welcomeText: {
-    color: "red",
-    marginBottom: 10
-  },
-  innerContainer: {
-    padding: 10
-  },
-  btnGoogle: {
-    color: "black"
-  }
-});
+import HomeStyles from '../Styles/home'
 
 class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -119,15 +98,15 @@ class HomeScreen extends React.Component {
     }
   }
 
-  storeDataToStorage = async (userData) => {
+  storeDataToStorage = async userData => {
     await storeUserData("info", JSON.stringify(userData));
     await storeUserData("auth", "1");
   };
 
   render() {
     return (
-      <View style={styles.container}>
-        <View style={styles.innerContainer}>
+      <View style={HomeStyles.container}>
+        <View style={HomeStyles.innerContainer}>
           <View>
             <Image
               style={{ width: 250, height: 70 }}
