@@ -11,7 +11,7 @@ export default class FranchiseInfoCard extends Component {
     let dimensions = Dimensions.get("window");
     const franchiseInfo = this.props.franchiseInfo;
     return (
-      <View>
+      <View style={{height: dimensions.height*0.2}}>
         <Card containerStyle={{ padding: 0 }}>
           <View style={{ flexDirection: "row", padding: 0 }}>
             <View style={{ padding: 0 }}>
@@ -65,7 +65,7 @@ export default class FranchiseInfoCard extends Component {
                         color: "#03a9f4",
                         fontSize: 12,
                         marginLeft: 150,
-                        marginBottom: 5
+                        marginBottom: 25
                       }}
                     >
                       View Map
