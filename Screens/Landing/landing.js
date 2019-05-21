@@ -17,6 +17,7 @@ import LandingScreenStyles from "./../../Styles/landing";
 import firebase from "react-native-firebase";
 import { fbConfig } from "../../configs/firebaseConfig";
 import { storeUserData } from "../../services/signUser";
+import { cartItemsCount } from "../../services/addToCart";
 export default class LandingScreen extends React.Component {
   static navigationOptions = {
     header: null
@@ -31,7 +32,8 @@ export default class LandingScreen extends React.Component {
     searchKey: "",
     dataLoading: true,
     tabItems: ["Brands", "Deals"],
-    selectedTab: 0
+    selectedTab: 0,
+    cartItems: 0
   };
 
   async LocationSerivce() {
