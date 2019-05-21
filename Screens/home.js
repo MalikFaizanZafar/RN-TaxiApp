@@ -27,6 +27,7 @@ import signUser, { storeUserData } from "../services/signUser";
 import { Avatar, Input } from "react-native-elements";
 import RadioForm from "react-native-simple-radio-button";
 import DatePicker from "react-native-datepicker";
+import { googleConfig } from "../configs/googleConfig";
 
 const styles = StyleSheet.create({
   container: {
@@ -63,15 +64,7 @@ class HomeScreen extends React.Component {
       birthday: "",
       modalVisible: false
     };
-    // this._bootstrapAsync();
   }
-  // _bootstrapAsync = () => {
-  //   AsyncStorage.getItem("@SubQuch-User").then(data => {
-  //     if (data) {
-  //       this.props.navigation.navigate("Landing");
-  //     }
-  //   });
-  // };
   setModalVisible(visible) {
     this.setState({ modalVisible: visible });
   }
@@ -83,16 +76,7 @@ class HomeScreen extends React.Component {
     console.log(value);
   };
   componentDidMount() {
-    GoogleSignin.configure({
-      scopes: ["https://www.googleapis.com/auth/drive.readonly"], // what API you want to access on behalf of the user, default is email and profile
-      webClientId:
-        "895935298518-8apvnm51q2vj6ivbm6pbqj7ma5v7dsq9.apps.googleusercontent.com", // client ID of type WEB for your server (needed to verify user ID and offline access)
-      offlineAccess: true, // if you want to access Google API on behalf of the user FROM YOUR SERVER
-      hostedDomain: "", // specifies a hosted domain restriction
-      loginHint: "", // [iOS] The user's ID, or email address, to be prefilled in the authentication UI if possible. [See docs here](https://developers.google.com/identity/sign-in/ios/api/interface_g_i_d_sign_in.html#a0a68c7504c31ab0b728432565f6e33fd)
-      forceConsentPrompt: true, // [Android] if you want to show the authorization prompt at each login.
-      accountName: "" // [Android] specifies an account name on the device that should be used
-    });
+    GoogleSignin.configure(googleConfig);
   }
   signIn = async () => {
     try {
