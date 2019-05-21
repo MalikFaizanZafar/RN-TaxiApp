@@ -17,15 +17,14 @@ export default class AppTopBar extends Component {
     AsyncStorage.getItem("@SubQuch-User-cart").then(itemsCount => {
       cartItemsCount.next(JSON.parse(itemsCount).length)
       this.setState({cartItemsCount: JSON.parse(itemsCount).length})
-      console.log("AppTopBar itemsCount(1) is : ", JSON.parse(itemsCount).length)
+      // console.log("AppTopBar itemsCount(1) is : ", JSON.parse(itemsCount).length)
     })
     cartItemsCount.pipe(takeUntil(this.destroy$)).subscribe(cartCount => {
-      console.log("AppTopBar itemsCount(2) is : ", cartCount)
+      // console.log("AppTopBar itemsCount(2) is : ", cartCount)
       this.setState({cartItemsCount: cartCount})
     })
   }
   componentWillUnmount(){
-    // cartItemsCount.unsubscribe()
     this.destroy$.next();
     this.destroy$.complete();
   }

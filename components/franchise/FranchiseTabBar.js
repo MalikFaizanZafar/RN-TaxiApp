@@ -5,7 +5,7 @@ import {
   ScrollView,
   TouchableOpacity
 } from "react-native";
-import LandingScreenStyles from './../../Styles/landing'
+import FranchiseScreenStyles from './../../Styles/franchise'
 export default class FranchiseTabBar extends Component {
   tabClicked(id){
     this.props.tabClicked(id)
@@ -24,14 +24,14 @@ export default class FranchiseTabBar extends Component {
             activeOpacity={1.0}
             style={
               this.props.selectedTab === i
-                ? LandingScreenStyles.buttonSelected
-                : LandingScreenStyles.button
+                ? FranchiseScreenStyles.buttonSelected
+                : FranchiseScreenStyles.button
             }>
               <Text
                 style={
                   this.props.selectedTab === i
-                    ? LandingScreenStyles.buttonSelectedText
-                    : LandingScreenStyles.buttonText
+                    ? FranchiseScreenStyles.buttonSelectedText
+                    : FranchiseScreenStyles.buttonText
                 }
               >
                 {item}

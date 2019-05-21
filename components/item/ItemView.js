@@ -37,7 +37,6 @@ export default class ItemView extends Component {
   }
 
   addToCartFunction = (data) => {
-    console.log("data is : ", data)
     addToCart(data) 
   }
   render() {

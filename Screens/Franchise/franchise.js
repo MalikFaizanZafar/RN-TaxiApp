@@ -11,7 +11,7 @@ export default class FranchiseMainScreen extends Component {
   state = {
     franchise: {},
     categories: [],
-    tabItems: ["Items", "Deals"],
+    tabItems: ["Items", "Deals", "Reviews"],
     selectedTab: 0,
     dataLoading: true
   };
@@ -24,6 +24,7 @@ export default class FranchiseMainScreen extends Component {
         franchise: getFranchiseDataResponse.data.data,
         items: getFranchiseDataResponse.data.data.items,
         deals: getFranchiseDataResponse.data.data.deals,
+        reviews: getFranchiseDataResponse.data.data.reviews,
         categories: getUniqueFranchiseCategories(
           getFranchiseDataResponse.data.data.items
         ),
@@ -54,7 +55,11 @@ export default class FranchiseMainScreen extends Component {
     this.props.navigation.navigate('Map', { latitude , longitude})
   }
   itemPressHandler(item){
-    this.props.navigation.navigate('Item', {item, franchiseId: this.state.franchise.id})
+    if(this.state.selectedTab === 2){
+      // console.log("Nothing")
+    }else {
+      this.props.navigation.navigate('Item', {item, franchiseId: this.state.franchise.id})
+    }
   }
   render() {
     const franchise = this.state.franchise;
@@ -81,8 +86,9 @@ export default class FranchiseMainScreen extends Component {
               data={
                 this.state.selectedTab === 0
                   ? this.state.items
-                  : this.state.deals
+                  : this.state.selectedTab === 1? this.state.deals: this.state.reviews
               }
+              selectedTab={this.state.selectedTab}
               franchiseId={this.state.franchise.id}
               itemPressHandler={(itemId) => this.itemPressHandler(itemId)}
             />

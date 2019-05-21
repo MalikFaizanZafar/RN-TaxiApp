@@ -27,8 +27,4 @@ export const addToCart = async itemDeal => {
       }
     }
   });
-  // await AsyncStorage.getItem("@SubQuch-User-cart").then(data => {
-  //   // console.log("Item Cart size is  : ", data.length);
-  //   console.log("Item Cart has(Now) : ", data);
-  // });
 };
