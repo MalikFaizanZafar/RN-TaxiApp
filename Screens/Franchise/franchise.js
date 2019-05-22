@@ -54,12 +54,15 @@ export default class FranchiseMainScreen extends Component {
   viewMapHandler(latitude, longitude) {
     this.props.navigation.navigate("Map", { latitude, longitude });
   }
-  itemPressHandler(item) {
-    if (this.state.selectedTab === 2) {
-      // console.log("Nothing")
-    } else {
+  itemPressHandler(itemDeal) {
+    if (this.state.selectedTab === 1) {
       this.props.navigation.navigate("Item", {
-        item,
+        itemDeal: {...itemDeal, type: 'deal' },
+        franchiseId: this.state.franchise.id
+      });
+    } else if(this.state.selectedTab === 0) {
+      this.props.navigation.navigate("Item", {
+        itemDeal: {...itemDeal, type: 'item' },
         franchiseId: this.state.franchise.id
       });
     }

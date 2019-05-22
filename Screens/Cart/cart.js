@@ -1,40 +1,55 @@
 import React, { Component } from "react";
 import { View, Text, AsyncStorage, ScrollView, Dimensions } from "react-native";
 import { Card, Badge, Input, Button } from "react-native-elements";
+import { sendOrder } from "../../services/sendOrder";
+import { getGroupedOrders } from "../../services/helperFunctions";
 
 export default class CartMainScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      cartItems: []
+      cartItems: [],
+      addingOrder: false
     };
   }
   componentDidMount() {
     AsyncStorage.getItem("@SubQuch-User-cart").then(cartItems => {
-      // this.setState({ cartItems: JSON.parse(cartItems)});
       let cartArray = JSON.parse(cartItems);
-      console.log("cartArray is : ", cartArray);
       let modifiedCart = [];
       cartArray.forEach(item => {
         let newItem = {
+          id: item.id,
           name: item.name,
+          type: item.type,
           price: item.price,
           quantity: 0,
-          total: 0
+          total: 0,
+          franchiseId: item.franchiseId
         };
         modifiedCart.push(newItem);
       });
       this.setState({ cartItems: modifiedCart });
-      console.log("this.state is ", this.state);
     });
   }
   setItemTotal(quantity, price, itemIndex) {
     let tempItems = this.state.cartItems;
+    tempItems[itemIndex].quantity = quantity;
     tempItems[itemIndex].total = price * quantity;
     this.setState({
       cartItems: tempItems
     });
-    console.log("modified cart Items are : ", this.state.cartItems);
+  }
+
+  orderNowHandler() {
+    console.log("getGroupedOrders is ", getGroupedOrders(this.state.cartItems));
+    this.setState({ addingOrder: true });
+    try {
+      sendOrder(getGroupedOrders(this.state.cartItems));
+      this.setState({ addingOrder: false });
+      this.props.navigation.navigate("Landing");
+    } catch (error) {
+      console.log("Error Adding Order");
+    }
   }
   render() {
     let dimensions = Dimensions.get("window");
@@ -50,16 +65,7 @@ export default class CartMainScreen extends Component {
                 <View style={{ justifyContent: "center" }}>
                   <View style={{ flexDirection: "row", alignItems: "center" }}>
                     <Text>Item </Text>
-                    <Badge
-                      value={item.name}
-                      badgeStyle={{
-                        height: 30,
-                        width: 100,
-                        backgroundColor: "#171616",
-                        marginLeft: 25
-                      }}
-                      textStyle={{ fontSize: 10, color: "#fff" }}
-                    />
+                    <Text style={{ marginLeft: 27 }}>{item.name} </Text>
                   </View>
                   <View
                     style={{
@@ -69,16 +75,7 @@ export default class CartMainScreen extends Component {
                     }}
                   >
                     <Text>Price </Text>
-                    <Badge
-                      value={`${item.price} PKR`}
-                      badgeStyle={{
-                        height: 30,
-                        width: 100,
-                        backgroundColor: "#171616",
-                        marginLeft: 25
-                      }}
-                      textStyle={{ fontSize: 10, color: "#fff" }}
-                    />
+                    <Text style={{ marginLeft: 25 }}>{item.price} </Text>
                   </View>
                 </View>
                 <View>
@@ -86,11 +83,11 @@ export default class CartMainScreen extends Component {
                     style={{
                       flexDirection: "row",
                       alignItems: "center",
-                      marginTop: 10,
+                      marginTop: 5,
                       width: dimensions.width * 0.5
                     }}
                   >
-                    <Text>Quantity </Text>
+                    <Text style={{ marginTop: 10 }}>Quantity </Text>
                     <Input
                       placeholder="Quantity"
                       keyboardType="numeric"
@@ -106,17 +103,35 @@ export default class CartMainScreen extends Component {
                       marginTop: 10
                     }}
                   >
-                    <Text>Total :       {`${item.total} PKR`} </Text>
+                    <Text>Total : {`${item.total} PKR`} </Text>
                   </View>
                 </View>
               </Card>
             );
           })}
-          <View style={{ flexDirection: "row", justifyContent: "center", marginTop: 10, marginBottom: 10}}>
-          <Button
-            title="Check Out"
-            containerStyle={{width : 200}}
-          />
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "center",
+              marginTop: 10,
+              marginBottom: 10
+            }}
+          >
+            {this.state.addingOrder ? (
+              <ActivityIndicator
+                size="large"
+                color="#000"
+                style={{ marginTop: 10 }}
+              />
+            ) : (
+              <View>
+                <Button
+                  title="Check Out"
+                  containerStyle={{ width: 200 }}
+                  onPress={() => this.orderNowHandler()}
+                />
+              </View>
+            )}
           </View>
         </ScrollView>
       </View>

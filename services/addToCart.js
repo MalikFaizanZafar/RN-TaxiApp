@@ -9,6 +9,7 @@ export const addToCart = async itemDeal => {
   await AsyncStorage.getItem("@SubQuch-User-cart").then(data => {
     if (data == null) {
       storeUserData("cart", JSON.stringify(itemDeal));
+      cartItemsCount.next(1)
     } else {
       let cartArray = [];
       let tempData = JSON.parse(data);

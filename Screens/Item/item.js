@@ -5,15 +5,15 @@ import ItemView from '../../components/item/ItemView';
 export default class ItemMainScreen extends Component {
 
   state = {
-    item: {},
+    itemDeal: {},
     franchiseId: 0
   };
 
   componentDidMount() {
     const { params } = this.props.navigation.state;
-    const item = params ? params.item : null;
+    const itemDeal = params ? params.itemDeal : null;
     const franchiseId = params ? params.franchiseId : null;
-    this.setState({item: item, franchiseId: franchiseId})
+    this.setState({itemDeal: itemDeal, franchiseId: franchiseId})
   }
   cartPressHandler() {
     this.props.navigation.navigate("Cart");
@@ -22,7 +22,7 @@ export default class ItemMainScreen extends Component {
     return (
       <View >
         <AppTopBar  openSubquchDrawer={() => this.props.navigation.openDrawer()}  onCartPress={() => this.cartPressHandler()}/>
-        <ItemView item={this.state.item} franchiseId={this.state.franchiseId} />
+        <ItemView item={this.state.itemDeal} franchiseId={this.state.franchiseId} />
       </View>
     )
   }

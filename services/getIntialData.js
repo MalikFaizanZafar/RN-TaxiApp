@@ -1,4 +1,3 @@
-import React from "react";
 import { PermissionsAndroid } from "react-native";
 import axios from "axios";
 import { SERVER_URL } from "../constants";
@@ -6,7 +5,7 @@ const URL = SERVER_URL
 export const getFilterQueryData = (latitude, longitude,distance) => {
   return new Promise((resolve, reject) => {
     axios
-      .get(`${URL}/api/filter?lat=${latitude}&long=${longitude}&distance=${distance}`)
+      .get(`${URL}/api/filter?lat=${latitude}&long=${longitude}&distance=${distance}&size=200`)
       .then(dataResponse => {
         resolve(dataResponse);
       })

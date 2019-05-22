@@ -1,44 +1,38 @@
 import React, { Component } from "react";
-import {
-  View,
-  Text,
-  ImageBackground,
-  Dimensions,
-  Alert
-} from "react-native";
+import { View, Text, ImageBackground, Dimensions, Alert } from "react-native";
 import { Card, Rating, Badge, Button } from "react-native-elements";
 import { addToCart } from "../../services/addToCart";
 export default class ItemView extends Component {
-  
   addToCardHandler() {
     console.log("Add to Cart Pressed");
     // this.props.itemPressHandler(datum)
     // this.props.navigation.navigate('Item')
     let cartItemDeal = {
-      id : this.props.item.id,
+      id: this.props.item.id,
       name: this.props.item.name,
+      type: this.props.item.type,
       price: this.props.item.price,
       discount: this.props.item.discount,
       franchiseId: this.props.franchiseId
-    }
+    };
     Alert.alert(
-      'Cart',
-      'Add This Item/Deal to the Cart?',
+      "Cart",
+      "Add This Item/Deal to the Cart?",
       [
         {
-          text: 'No',
-          onPress: () => console.log('Cancel Pressed'),
-          style: 'cancel',
+          text: "No",
+          onPress: () => console.log("Cancel Pressed"),
+          style: "cancel"
         },
-        {text: 'Yes', onPress: () => this.addToCartFunction(cartItemDeal)},
+        { text: "Yes", onPress: () => this.addToCartFunction(cartItemDeal) }
       ],
-      {cancelable: false},
+      { cancelable: false }
     );
   }
 
-  addToCartFunction = (data) => {
-    addToCart(data) 
-  }
+  addToCartFunction = data => {
+    addToCart(data);
+  };
   render() {
     let dimensions = Dimensions.get("window");
     return (
@@ -52,18 +46,18 @@ export default class ItemView extends Component {
               }}
               source={{ uri: this.props.item.image_url }}
             >
-                <Button
-                  title="Add to Cart"
-                  titleStyle={{ fontSize: 10 }}
-                  containerStyle={{
-                    width: dimensions.width * 0.24,
-                    marginTop: 280,
-                    marginLeft: 235
-                  }}
-                  onPress={() => {
-                    this.addToCardHandler()
-                  }}
-                />
+              <Button
+                title="Add to Cart"
+                titleStyle={{ fontSize: 10 }}
+                containerStyle={{
+                  width: dimensions.width * 0.24,
+                  marginTop: 280,
+                  marginLeft: 235
+                }}
+                onPress={() => {
+                  this.addToCardHandler();
+                }}
+              />
             </ImageBackground>
           </View>
           <View
