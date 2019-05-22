@@ -51,15 +51,21 @@ export default class FranchiseMainScreen extends Component {
       });
     }
   }
-  viewMapHandler(latitude, longitude){
-    this.props.navigation.navigate('Map', { latitude , longitude})
+  viewMapHandler(latitude, longitude) {
+    this.props.navigation.navigate("Map", { latitude, longitude });
   }
-  itemPressHandler(item){
-    if(this.state.selectedTab === 2){
+  itemPressHandler(item) {
+    if (this.state.selectedTab === 2) {
       // console.log("Nothing")
-    }else {
-      this.props.navigation.navigate('Item', {item, franchiseId: this.state.franchise.id})
+    } else {
+      this.props.navigation.navigate("Item", {
+        item,
+        franchiseId: this.state.franchise.id
+      });
     }
+  }
+  cartPressHandler() {
+    this.props.navigation.navigate("Cart");
   }
   render() {
     const franchise = this.state.franchise;
@@ -68,13 +74,17 @@ export default class FranchiseMainScreen extends Component {
       <View style={{ padding: 0 }}>
         <AppTopBar
           openSubquchDrawer={() => this.props.navigation.openDrawer()}
+          onCartPress={() => this.cartPressHandler()}
         />
-        <FranchiseInfoCard franchiseInfo={franchise} viewMapPressed={(lat, lon) => this.viewMapHandler(lat, lon)} />
+        <FranchiseInfoCard
+          franchiseInfo={franchise}
+          viewMapPressed={(lat, lon) => this.viewMapHandler(lat, lon)}
+        />
         <FranchiseCategoriesBar
           categories={this.state.categories}
           selectedCategory={id => this.onCategoryPressedHandler(id)}
         />
-        <View style={{ height: dimensions.height * 0.50 }}>
+        <View style={{ height: dimensions.height * 0.5 }}>
           {this.state.dataLoading ? (
             <ActivityIndicator
               size="large"
@@ -86,11 +96,13 @@ export default class FranchiseMainScreen extends Component {
               data={
                 this.state.selectedTab === 0
                   ? this.state.items
-                  : this.state.selectedTab === 1? this.state.deals: this.state.reviews
+                  : this.state.selectedTab === 1
+                  ? this.state.deals
+                  : this.state.reviews
               }
               selectedTab={this.state.selectedTab}
               franchiseId={this.state.franchise.id}
-              itemPressHandler={(itemId) => this.itemPressHandler(itemId)}
+              itemPressHandler={itemId => this.itemPressHandler(itemId)}
             />
           )}
         </View>

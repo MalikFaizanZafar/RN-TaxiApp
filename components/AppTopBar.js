@@ -1,5 +1,11 @@
 import React, { Component } from "react";
-import { StyleSheet, View, Image, AsyncStorage } from "react-native";
+import {
+  StyleSheet,
+  View,
+  Image,
+  AsyncStorage,
+  TouchableOpacity
+} from "react-native";
 import { Button, Avatar, Badge } from "react-native-elements";
 import { cartItemsCount } from "../services/addToCart";
 import { Subject } from "rxjs";
@@ -11,20 +17,20 @@ export default class AppTopBar extends Component {
     super(props);
     this.state = {
       cartItemsCount: 0
-    }
+    };
   }
-  componentDidMount(){
+  componentDidMount() {
     AsyncStorage.getItem("@SubQuch-User-cart").then(itemsCount => {
-      cartItemsCount.next(JSON.parse(itemsCount).length)
-      this.setState({cartItemsCount: JSON.parse(itemsCount).length})
+      cartItemsCount.next(JSON.parse(itemsCount).length);
+      this.setState({ cartItemsCount: JSON.parse(itemsCount).length });
       // console.log("AppTopBar itemsCount(1) is : ", JSON.parse(itemsCount).length)
-    })
+    });
     cartItemsCount.pipe(takeUntil(this.destroy$)).subscribe(cartCount => {
       // console.log("AppTopBar itemsCount(2) is : ", cartCount)
-      this.setState({cartItemsCount: cartCount})
-    })
+      this.setState({ cartItemsCount: cartCount });
+    });
   }
-  componentWillUnmount(){
+  componentWillUnmount() {
     this.destroy$.next();
     this.destroy$.complete();
   }
@@ -52,20 +58,25 @@ export default class AppTopBar extends Component {
           />
         </View>
         <View style={{ marginLeft: 50, marginTop: 10 }}>
-          {/* <Badge value="99+" status="error" /> */}
-          <View>
-            <Avatar
-              rounded
-              source={require("./../assets/cart.jpg")}
-              size="small"
-            />
+          <TouchableOpacity onPress={() => this.props.onCartPress()}>
+            <View>
+              <Avatar
+                rounded
+                source={require("./../assets/cart.jpg")}
+                size="small"
+              />
 
-            <Badge
-              value={this.state.cartItemsCount === null? 0: this.state.cartItemsCount}
-              status="success"
-              containerStyle={{ position: "absolute", top: 20, right: 25 }}
-            />
-          </View>
+              <Badge
+                value={
+                  this.state.cartItemsCount === null
+                    ? 0
+                    : this.state.cartItemsCount
+                }
+                status="success"
+                containerStyle={{ position: "absolute", top: 20, right: 25 }}
+              />
+            </View>
+          </TouchableOpacity>
         </View>
       </View>
     );

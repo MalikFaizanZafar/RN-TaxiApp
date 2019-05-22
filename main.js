@@ -9,6 +9,7 @@ import HomeScreen from "./Screens/home";
 import { FranchiseDrawerNavigator } from "./Screens/Franchise";
 import { ItemDrawerNavigator } from "./Screens/Item";
 import { userAuthStatus } from "./services/userAuth";
+import { CartDrawerNavigator } from "./Screens/Cart";
 
 _bootstrapAsync = () => {
   let user = "";
@@ -33,7 +34,8 @@ const AppNavigatorTwo = createStackNavigator(
   {
     Landing: MyDrawerNavigator,
     Franchise: FranchiseDrawerNavigator,
-    Item: ItemDrawerNavigator
+    Item: ItemDrawerNavigator,
+    Cart: CartDrawerNavigator
   },
   {
     initialRouteName: "Landing",

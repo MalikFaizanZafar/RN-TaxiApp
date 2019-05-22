@@ -272,12 +272,15 @@ export default class LandingScreen extends React.Component {
     } else {
     }
   }
-
+  cartPressHandler() {
+    this.props.navigation.navigate("Cart");
+  }
   render() {
     return (
       <View style={LandingScreenStyles.container}>
         <AppTopBar
           openSubquchDrawer={() => this.props.navigation.openDrawer()}
+          onCartPress={() => this.cartPressHandler()}
         />
         <AppSearchView
           updateSearch={val => {

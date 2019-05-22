@@ -15,11 +15,13 @@ export default class ItemMainScreen extends Component {
     const franchiseId = params ? params.franchiseId : null;
     this.setState({item: item, franchiseId: franchiseId})
   }
-
+  cartPressHandler() {
+    this.props.navigation.navigate("Cart");
+  }
   render() {
     return (
       <View >
-        <AppTopBar  openSubquchDrawer={() => this.props.navigation.openDrawer()} />
+        <AppTopBar  openSubquchDrawer={() => this.props.navigation.openDrawer()}  onCartPress={() => this.cartPressHandler()}/>
         <ItemView item={this.state.item} franchiseId={this.state.franchiseId} />
       </View>
     )
