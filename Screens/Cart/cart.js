@@ -9,17 +9,12 @@ export default class CartMainScreen extends Component {
     super(props);
     this.state = {
       cartItems: [],
-      itemDeal: {},
-      itemsNumber: 0,
       addingOrder: false
     };
   }
   componentDidMount() {
     AsyncStorage.getItem("@SubQuch-User-cart").then(cartItems => {
       let cartArray = JSON.parse(cartItems);
-      if (Object.getPrototypeOf(cartArray) === Object.prototype) {
-        this.setState({ itemsNumber: 1, itemDeal: cartArray });
-      } else {
         let modifiedCart = [];
         cartArray.forEach(item => {
           let newItem = {
@@ -34,10 +29,8 @@ export default class CartMainScreen extends Component {
           modifiedCart.push(newItem);
         });
         this.setState({
-          itemsNumber: modifiedCart.length,
           cartItems: modifiedCart
         });
-      }
     });
   }
   setItemTotal(quantity, price, itemIndex) {
@@ -77,60 +70,7 @@ export default class CartMainScreen extends Component {
           showsVerticalScrollIndicator={false}
           style={{ marginTop: 0 }}
         >
-          {this.state.itemsNumber === 1 ? (
-            <View>
-              <Card>
-                <View style={{ justifyContent: "center" }}>
-                  <View style={{ flexDirection: "row", alignItems: "center" }}>
-                    <Text>Item </Text>
-                    <Text style={{ marginLeft: 27 }}>
-                      {this.state.itemDeal.name}{" "}
-                    </Text>
-                  </View>
-                  <View
-                    style={{
-                      flexDirection: "row",
-                      alignItems: "center",
-                      marginTop: 10
-                    }}
-                  >
-                    <Text>Price </Text>
-                    <Text style={{ marginLeft: 25 }}>
-                      {this.state.itemDeal.price}{" "}
-                    </Text>
-                  </View>
-                </View>
-                <View>
-                  <View
-                    style={{
-                      flexDirection: "row",
-                      alignItems: "center",
-                      marginTop: 5,
-                      width: dimensions.width * 0.5
-                    }}
-                  >
-                    <Text style={{ marginTop: 10 }}>Quantity </Text>
-                    <Input
-                      placeholder="Quantity"
-                      keyboardType="numeric"
-                      onChangeText={quantity => {
-                        this.setItemTotal(quantity, item.price, i);
-                      }}
-                    />
-                  </View>
-                  <View
-                    style={{
-                      flexDirection: "row",
-                      alignItems: "center",
-                      marginTop: 10
-                    }}
-                  >
-                    <Text>Total : {`${this.state.itemDeal.total} PKR`} </Text>
-                  </View>
-                </View>
-              </Card>
-            </View>
-          ) : (
+          {
             this.state.cartItems.map((item, i) => {
               return (
                 <Card key={i}>
@@ -178,12 +118,13 @@ export default class CartMainScreen extends Component {
                       }}
                     >
                       <Text>Total : {`${item.total} PKR`} </Text>
+                      <Text>{`addingOrder : ${this.state.addingOrder}`}</Text>
                     </View>
                   </View>
                 </Card>
               );
             })
-          )}
+          }
           <View
             style={{
               flexDirection: "row",
@@ -192,6 +133,7 @@ export default class CartMainScreen extends Component {
               marginBottom: 10
             }}
           >
+          <Text>{this.state.addingOrder}</Text>
             {this.state.addingOrder == true ? (
               <ActivityIndicator
                 size="large"

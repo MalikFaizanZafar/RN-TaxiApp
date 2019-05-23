@@ -22,11 +22,7 @@ export default class AppTopBar extends Component {
   componentDidMount() {
     AsyncStorage.getItem("@SubQuch-User-cart").then(itemsCount => {
       let tempData = JSON.parse(itemsCount);
-      if(Object.getPrototypeOf( tempData ) === Object.prototype){
-        cartItemsCount.next(1)
-      } else {
-        cartItemsCount.next(tempData.length)
-      }
+      cartItemsCount.next(tempData.length);
     });
     cartItemsCount.pipe(takeUntil(this.destroy$)).subscribe(cartCount => {
       this.setState({ cartItemsCount: cartCount });

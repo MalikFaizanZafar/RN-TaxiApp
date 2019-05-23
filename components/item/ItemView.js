@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { View, Text, ImageBackground, Dimensions, Alert } from "react-native";
 import { Card, Rating, Badge, Button } from "react-native-elements";
 import { addToCart } from "../../services/addToCart";
+import { removeUserData } from "../../services/signUser";
 export default class ItemView extends Component {
   addToCardHandler() {
     console.log("Add to Cart Pressed");
