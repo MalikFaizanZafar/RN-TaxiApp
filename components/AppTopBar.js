@@ -59,7 +59,9 @@ export default class AppTopBar extends Component {
             source={require("../assets/subquch2.png")}
           />
         </View>
-        <View style={{ marginLeft: 50, marginTop: 10 }}>
+        {
+          this.state.cartItemsCount > 0 ? (
+            <View style={{ marginLeft: 50, marginTop: 10 }}>
           <TouchableOpacity onPress={() => this.props.onCartPress()}>
             <View>
               <Avatar
@@ -67,7 +69,6 @@ export default class AppTopBar extends Component {
                 source={require("./../assets/cart.png")}
                 size="small"
               />
-              {this.state.cartItemsCount > 0 ? (
                 <Badge
                   value={
                     this.state.cartItemsCount === null
@@ -77,10 +78,11 @@ export default class AppTopBar extends Component {
                   status="success"
                   containerStyle={{ position: "absolute", top: 20, right: 25 }}
                 />
-              ) : null}
             </View>
           </TouchableOpacity>
         </View>
+          ): null
+        }
       </View>
     );
   }
