@@ -27,7 +27,6 @@ export default class AppTopBar extends Component {
       } else {
         cartItemsCount.next(tempData.length)
       }
-      // this.setState({ cartItemsCount: JSON.parse(itemsCount).length });
     });
     cartItemsCount.pipe(takeUntil(this.destroy$)).subscribe(cartCount => {
       this.setState({ cartItemsCount: cartCount });
