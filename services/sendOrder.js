@@ -36,12 +36,10 @@ export const sendOrder = async orderArray => {
     promisesArray.push(addFranchiseOrder(order))
   })
   return axios.all(promisesArray).then(allPromisesResponse => {
-    console.log("allPromisesResponse ",allPromisesResponse )
     removeUserData("cart")
     cartItemsCount.next(0)
     return new Promise.resolve(allPromisesResponse)
   }).catch(allPromisesError => {
-    console.log("allPromisesError ",allPromisesError )
     return new Promise.reject(allPromisesError)
   })
 };
