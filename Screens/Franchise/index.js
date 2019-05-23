@@ -1,9 +1,8 @@
 import React from 'react'
 import { createDrawerNavigator, DrawerItems } from "react-navigation"
 import { ScrollView, SafeAreaView, View, Image } from 'react-native'
-import MapScreen from "../Landing/map";
-import MapScreenTwo from "../Landing/mapTwo";
 import FranchiseMainScreen from "./franchise";
+import AccountScreen from '../Account';
 
 const customDrawerComponent = (props) => (
   <SafeAreaView style={{flex : 1}}>
@@ -20,11 +19,8 @@ export const FranchiseDrawerNavigator = createDrawerNavigator(
     Landing: {
       screen: FranchiseMainScreen
     },
-    Map: {
-      screen: MapScreen
-    },
-    MapTwo: {
-      screen: MapScreenTwo
+    Account: {
+      screen: AccountScreen
     }
   },
   {
