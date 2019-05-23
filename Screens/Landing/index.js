@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
-import { createDrawerNavigator, DrawerItems } from "react-navigation";
+import React from 'react'
+import { createDrawerNavigator, DrawerItems } from "react-navigation"
 import { ScrollView, SafeAreaView, View, Image } from 'react-native'
-import LandingScreen from "./landing";
-import MapScreen from "./map";
-import MapScreenTwo from "./mapTwo";
+import LandingScreen from "./landing"
+import MapScreen from "./map"
+import MapScreenTwo from "./mapTwo"
 
 const customDrawerComponent = (props) => (
   <SafeAreaView style={{flex : 1}}>
