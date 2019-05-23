@@ -25,6 +25,7 @@ export const sendOrder = async orderArray => {
     let userInfo = JSON.parse(user);
     extraFields.userId = userInfo.userId;
   });
+  let promisesArray = []
   orderArray.forEach(franchiseOrder => {
     let order = {
       ...extraFields,
@@ -32,14 +33,19 @@ export const sendOrder = async orderArray => {
       items: franchiseOrder.items,
       deals: franchiseOrder.deals
     };
-    axios
-      .post(`${URL}/api/order`, order)
-      .then(franchiseOrderResponse => {
-        console.log("franchiseOrderResponse is : ", franchiseOrderResponse);
-      })
-      .catch(error => console.log("franchiseOrderError : ", error));
+    promisesArray.push(addFranchiseOrder(order))
   })
-  removeUserData("cart")
-  cartItemsCount.next(0)
+  return axios.all(promisesArray).then(allPromisesResponse => {
+    console.log("allPromisesResponse ",allPromisesResponse )
+    removeUserData("cart")
+    cartItemsCount.next(0)
+    return new Promise.resolve(allPromisesResponse)
+  }).catch(allPromisesError => {
+    console.log("allPromisesError ",allPromisesError )
+    return new Promise.reject(allPromisesError)
+  })
 };
 
+function addFranchiseOrder(order){
+  return axios.post(`${URL}/api/order`, order)
+}

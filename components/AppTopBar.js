@@ -21,8 +21,12 @@ export default class AppTopBar extends Component {
   }
   componentDidMount() {
     AsyncStorage.getItem("@SubQuch-User-cart").then(itemsCount => {
-      let tempData = JSON.parse(itemsCount);
-      cartItemsCount.next(tempData.length);
+      if (itemsCount === null) {
+        cartItemsCount.next(0);
+      } else {
+        let tempData = JSON.parse(itemsCount);
+        cartItemsCount.next(tempData.length);
+      }
     });
     cartItemsCount.pipe(takeUntil(this.destroy$)).subscribe(cartCount => {
       this.setState({ cartItemsCount: cartCount });
@@ -60,19 +64,20 @@ export default class AppTopBar extends Component {
             <View>
               <Avatar
                 rounded
-                source={require("./../assets/cart.jpg")}
+                source={require("./../assets/cart.png")}
                 size="small"
               />
-
-              <Badge
-                value={
-                  this.state.cartItemsCount === null
-                    ? 0
-                    : this.state.cartItemsCount
-                }
-                status="success"
-                containerStyle={{ position: "absolute", top: 20, right: 25 }}
-              />
+              {this.state.cartItemsCount > 0 ? (
+                <Badge
+                  value={
+                    this.state.cartItemsCount === null
+                      ? 0
+                      : this.state.cartItemsCount
+                  }
+                  status="success"
+                  containerStyle={{ position: "absolute", top: 20, right: 25 }}
+                />
+              ) : null}
             </View>
           </TouchableOpacity>
         </View>

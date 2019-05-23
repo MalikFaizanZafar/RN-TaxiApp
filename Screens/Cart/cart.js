@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { View, Text, AsyncStorage, ScrollView, Dimensions } from "react-native";
-import { Card, Badge, Input, Button } from "react-native-elements";
+import { View, Text, AsyncStorage, ScrollView, Dimensions, ActivityIndicator,Alert  } from "react-native";
+import { Card, Input, Button } from "react-native-elements";
 import { sendOrder } from "../../services/sendOrder";
 import { getGroupedOrders } from "../../services/helperFunctions";
 
@@ -51,17 +51,38 @@ export default class CartMainScreen extends Component {
     }
   }
 
-  orderNowHandler() {
-    console.log("getGroupedOrders is ", getGroupedOrders(this.state.cartItems));
+  continueWithOrder(){
     this.setState({ addingOrder: true });
-    try {
-      sendOrder(getGroupedOrders(this.state.cartItems));
+    sendOrder(getGroupedOrders(this.state.cartItems)).then(sendOrderResponse => {
       this.setState({ addingOrder: false });
+      console.log("Promise Returned Resolve ", sendOrderResponse)
       this.props.navigation.navigate("Landing");
-    } catch (error) {
-      console.log("Error Adding Order");
+    }).catch(error =>{
+      console.log("Error Adding Order ", error);
+    }) 
+  }
+
+  orderNowHandler() {
+    console.log("addingOrder is : ", this.state.addingOrder)
+    if(getGroupedOrders(this.state.cartItems).length > 1){
+      Alert.alert(
+        'Order Alert',
+        'This Order is from Multiple Vendors. Do You Still want to Continue ?',
+        [
+          {
+            text: 'Cancel',
+            onPress: () => console.log('Cancel Pressed'),
+            style: 'cancel',
+          },
+          {text: 'Yes', onPress: () => this.continueWithOrder()},
+        ],
+        {cancelable: false},
+      );
+    }else{
+      this.continueWithOrder()
     }
   }
+
   render() {
     let dimensions = Dimensions.get("window");
     return (
@@ -118,7 +139,6 @@ export default class CartMainScreen extends Component {
                       }}
                     >
                       <Text>Total : {`${item.total} PKR`} </Text>
-                      <Text>{`addingOrder : ${this.state.addingOrder}`}</Text>
                     </View>
                   </View>
                 </Card>
@@ -133,7 +153,6 @@ export default class CartMainScreen extends Component {
               marginBottom: 10
             }}
           >
-          <Text>{this.state.addingOrder}</Text>
             {this.state.addingOrder == true ? (
               <ActivityIndicator
                 size="large"
