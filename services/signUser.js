@@ -6,12 +6,17 @@ import firebase from "react-native-firebase";
 const URL = SERVER_URL
 export default signUser =  (userInfo) => {
   return new Promise((resolve, reject) => {
+    console.log("userInfo(1) is : ", userInfo)
     getNotificationToken().then(deviceToken => {
       userInfo.device = deviceToken
+      console.log("device Token is ", userInfo.device)
       if(userInfo.provider === "GOOGLE"){
         if(userInfo){
+          console.log("userInfo(Google) is ", userInfo)
           axios.post(`${URL}/api/auth/signup/user`, userInfo).then(res => {
-            storeUser(userInfo.socialId)
+            // storeUser(userInfo.socialId)
+            console.log("userInfo(Google) res is ", res)
+            storeUserData('info', JSON.stringify(res.data.data))
             resolve(res)
           }).catch(error => {
             console.log('error is ', error)
@@ -24,9 +29,10 @@ export default signUser =  (userInfo) => {
       }
       else{
         if(userInfo){
-          
+          console.log("userInfo(Fb) is ", userInfo)
           axios.post(`${URL}/api/auth/signup/user`, userInfo).then(res => {
-            console.log('res from server is ', res)
+            console.log("userInfo(fb) res is ", res)
+            storeUserData('info', JSON.stringify(res.data.data))
             storeUser(userInfo.socialId)
             resolve(res)
           }).catch(error => {
@@ -36,6 +42,7 @@ export default signUser =  (userInfo) => {
         }
       }
     }).catch(deviceTokenError => {
+      console.log('deviceTokenError is ', deviceTokenError)
       reject(deviceTokenError)
     })
   })

@@ -26,7 +26,7 @@ import { Avatar, Input } from "react-native-elements";
 import RadioForm from "react-native-simple-radio-button";
 import DatePicker from "react-native-datepicker";
 import { googleConfig } from "../configs/googleConfig";
-import HomeStyles from '../Styles/home'
+import HomeStyles from "../Styles/home";
 import { userAuthStatus } from "../services/userAuth";
 import { userRegistered } from "../services/userRegistered";
 
@@ -59,12 +59,14 @@ class HomeScreen extends React.Component {
   };
   componentDidMount() {
     GoogleSignin.configure(googleConfig);
-    userAuthStatus().then(userAtuh => {
-      console.log("userAtuh is ", userAtuh)
-      this.props.navigation.navigate('Landing');
-    }).catch(authFalse => {
-      console.log("authFalse is ", authFalse)
-    })
+    userAuthStatus()
+      .then(userAtuh => {
+        console.log("userAtuh is ", userAtuh);
+        this.props.navigation.navigate("Landing");
+      })
+      .catch(authFalse => {
+        console.log("authFalse is ", authFalse);
+      });
   }
   signIn = async () => {
     try {
@@ -81,14 +83,16 @@ class HomeScreen extends React.Component {
         verified: false,
         provider: "GOOGLE"
       };
-      userRegistered(googleUser.email).then(user => {
-        console.log("user is : ", user)
-        this.props.navigation.navigate('Landing');
-      }).catch(error => {
-        console.log("user Does not Exist")
-        this.setState({ userInfo: googleUser });
-        this.setState({ modalVisible: true });
-      })
+      userRegistered(googleUser.email)
+        .then(user => {
+          console.log("Google user is  : ", user);
+          this.props.navigation.navigate("Landing");
+        })
+        .catch(error => {
+          console.log("user Does not Exist");
+          this.setState({ userInfo: googleUser });
+          this.setState({ modalVisible: true });
+        });
     } catch (error) {
       if (error.code === statusCodes.SIGN_IN_CANCELLED) {
         // user cancelled the login flow
@@ -167,7 +171,6 @@ class HomeScreen extends React.Component {
                         }
                       },
                       (err, rslt) => {
-                        // console.log('graphRequest result is : ', rslt)
                         let facebookUser = {
                           socialId: rslt.id,
                           password: "1234",
@@ -178,8 +181,15 @@ class HomeScreen extends React.Component {
                           verified: false,
                           provider: "FACEBOOK"
                         };
-                        this.setState({ userInfo: facebookUser });
-                        this.setState({ modalVisible: true });
+                        userRegistered(facebookUser.email)
+                          .then(user => {
+                            console.log("Facebook user is : ", user);
+                            this.props.navigation.navigate("Landing");
+                          })
+                          .catch(err => {
+                            this.setState({ userInfo: facebookUser });
+                            this.setState({ modalVisible: true });
+                          });
                       }
                     );
                     // Start the graph request.
