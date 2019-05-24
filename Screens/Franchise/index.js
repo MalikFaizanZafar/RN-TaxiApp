@@ -4,6 +4,8 @@ import { ScrollView, SafeAreaView, View, Image } from 'react-native'
 import FranchiseMainScreen from "./franchise";
 import AccountScreen from '../Account';
 import DrawerUserView from '../../components/DrawerUserView';
+import LogoutButtton from '../../components/logoutButtton';
+import MapScreen from '../Landing/map';
 
 const customDrawerComponent = (props) => (
   <SafeAreaView style={{flex : 1}}>
@@ -21,6 +23,7 @@ const customDrawerComponent = (props) => (
     <ScrollView>
       <DrawerItems {...props} />
     </ScrollView>
+    <LogoutButtton />
   </SafeAreaView>
 )
 export const FranchiseDrawerNavigator = createDrawerNavigator(
@@ -30,6 +33,9 @@ export const FranchiseDrawerNavigator = createDrawerNavigator(
     },
     Account: {
       screen: AccountScreen
+    },
+    Map : {
+      screen: MapScreen
     }
   },
   {

@@ -4,6 +4,7 @@ import { ScrollView, SafeAreaView, View, Image } from 'react-native'
 import ItemMainScreen from "./item";
 import AccountScreen from '../Account';
 import DrawerUserView from '../../components/DrawerUserView';
+import LogoutButtton from '../../components/logoutButtton';
 
 const customDrawerComponent = (props) => (
   <SafeAreaView style={{flex : 1}}>
@@ -21,6 +22,7 @@ const customDrawerComponent = (props) => (
     <ScrollView>
       <DrawerItems {...props} />
     </ScrollView>
+    <LogoutButtton />
   </SafeAreaView>
 )
 

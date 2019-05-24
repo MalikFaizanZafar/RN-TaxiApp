@@ -12,6 +12,7 @@ import LandingScreen from "./landing";
 import AccountScreen from "../Account";
 import DrawerUserView from "../../components/DrawerUserView";
 import { userLogout } from "../../services/userLogout";
+import LogoutButtton from "../../components/logoutButtton";
 
 const customDrawerComponent = props => (
   <SafeAreaView style={{ flex: 1 }}>
@@ -29,16 +30,7 @@ const customDrawerComponent = props => (
     <ScrollView style={{height: 200}}>
       <DrawerItems {...props} />
     </ScrollView>
-    <TouchableOpacity style={{ marginBottom: 320}} onPress={() => {
-        console.log("Logout")
-        userLogout().then(logoutResponse => {
-          AsyncStorage.getItem("@SubQuch-User-auth").then(userAuthStatus => {
-            console.log("userAuthStatus is : ", userAuthStatus)
-          })
-        })
-      }}>
-      <Text style={{ fontWeight: "bold", marginLeft: 17 }}>Logout</Text>
-      </TouchableOpacity>
+      <LogoutButtton />
   </SafeAreaView>
 );
 export const MyDrawerNavigator = createDrawerNavigator(
