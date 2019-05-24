@@ -6,7 +6,8 @@ import {
   Text,
   Modal,
   TouchableHighlight,
-  Image
+  Image,
+  Alert
 } from "react-native";
 import {
   GoogleSignin,
@@ -26,6 +27,8 @@ import RadioForm from "react-native-simple-radio-button";
 import DatePicker from "react-native-datepicker";
 import { googleConfig } from "../configs/googleConfig";
 import HomeStyles from '../Styles/home'
+import { userAuthStatus } from "../services/userAuth";
+import { userRegistered } from "../services/userRegistered";
 
 class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -56,6 +59,12 @@ class HomeScreen extends React.Component {
   };
   componentDidMount() {
     GoogleSignin.configure(googleConfig);
+    userAuthStatus().then(userAtuh => {
+      console.log("userAtuh is ", userAtuh)
+      this.props.navigation.navigate('Landing');
+    }).catch(authFalse => {
+      console.log("authFalse is ", authFalse)
+    })
   }
   signIn = async () => {
     try {
@@ -72,8 +81,14 @@ class HomeScreen extends React.Component {
         verified: false,
         provider: "GOOGLE"
       };
-      this.setState({ userInfo: googleUser });
-      this.setState({ modalVisible: true });
+      userRegistered(googleUser.email).then(user => {
+        console.log("user is : ", user)
+        this.props.navigation.navigate('Landing');
+      }).catch(error => {
+        console.log("user Does not Exist")
+        this.setState({ userInfo: googleUser });
+        this.setState({ modalVisible: true });
+      })
     } catch (error) {
       if (error.code === statusCodes.SIGN_IN_CANCELLED) {
         // user cancelled the login flow

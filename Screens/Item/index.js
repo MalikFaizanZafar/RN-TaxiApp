@@ -37,6 +37,7 @@ export const ItemDrawerNavigator = createDrawerNavigator(
     contentComponent: customDrawerComponent,
     backgroundColor: "green",
     drawerWidth: 200,
-    initialRouteName: "Landing"
+    initialRouteName: "Landing",
+    drawerLockMode: 'locked-closed'
   }
 );

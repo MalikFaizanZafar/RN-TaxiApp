@@ -40,7 +40,7 @@ export default class WalletTable extends Component {
         <View style={{alignItems: "center", marginTop: 20, marginBottom: 10}}>
         <Text style={{fontWeight: "bold"}}>Wallet</Text>
         </View>
-        <Table height={dimensions.height * 0.5} columnWidth={60} columns={columns} dataSource={this.props.wallet}/>
+        <Table height={dimensions.height * 0.75} columnWidth={60} columns={columns} dataSource={this.props.wallet}/>
       </View>
     );
   }

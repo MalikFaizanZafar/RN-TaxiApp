@@ -34,19 +34,6 @@ export default class AccountScreen extends Component {
   render() {
     return (
       <View>
-        <View
-          style={{
-            alignItems: "center",
-            marginTop: 10
-          }}
-        >
-          <Image
-            style={{ width: 150, height: 150, borderRadius: 75 }}
-            source={{ uri: this.state.user.photo }}
-          />
-          <Text style={{ fontWeight: "bold"}}>{this.state.user.name}</Text>
-          <Text style={{ fontWeight: "300"}}>{this.state.user.email}</Text>
-        </View>
         {
           this.state.walletLoading?<ActivityIndicator
           size="large"
