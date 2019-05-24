@@ -3,15 +3,11 @@ import { createDrawerNavigator, DrawerItems } from "react-navigation";
 import {
   ScrollView,
   SafeAreaView,
-  View,
-  AsyncStorage,
-  Text,
-  TouchableOpacity
+  View
 } from "react-native";
 import LandingScreen from "./landing";
 import AccountScreen from "../Account";
 import DrawerUserView from "../../components/DrawerUserView";
-import { userLogout } from "../../services/userLogout";
 import LogoutButtton from "../../components/logoutButtton";
 
 const customDrawerComponent = props => (

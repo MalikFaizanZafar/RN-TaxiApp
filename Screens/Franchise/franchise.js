@@ -8,6 +8,10 @@ import FranchiseTabBar from "../../components/franchise/FranchiseTabBar";
 import { getUniqueFranchiseCategories } from "../../services/helperFunctions";
 import AppTopBar from "../../components/AppTopBar";
 export default class FranchiseMainScreen extends Component {
+  static navigationOptions = {
+    drawerLabel: () => null
+  };
+
   state = {
     franchise: {},
     categories: [],
@@ -57,12 +61,12 @@ export default class FranchiseMainScreen extends Component {
   itemPressHandler(itemDeal) {
     if (this.state.selectedTab === 1) {
       this.props.navigation.navigate("Item", {
-        itemDeal: {...itemDeal, type: 'deal' },
+        itemDeal: { ...itemDeal, type: "deal" },
         franchiseId: this.state.franchise.id
       });
-    } else if(this.state.selectedTab === 0) {
+    } else if (this.state.selectedTab === 0) {
       this.props.navigation.navigate("Item", {
-        itemDeal: {...itemDeal, type: 'item' },
+        itemDeal: { ...itemDeal, type: "item" },
         franchiseId: this.state.franchise.id
       });
     }

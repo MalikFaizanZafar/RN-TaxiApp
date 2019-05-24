@@ -5,6 +5,9 @@ import { sendOrder } from "../../services/sendOrder";
 import { getGroupedOrders } from "../../services/helperFunctions";
 
 export default class CartMainScreen extends Component {
+  static navigationOptions = {
+    drawerLabel: () => null
+  }
   constructor(props) {
     super(props);
     this.state = {

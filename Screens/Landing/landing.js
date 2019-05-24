@@ -15,13 +15,11 @@ import {
 } from "../../services/helperFunctions";
 import LandingScreenStyles from "./../../Styles/landing";
 import firebase from "react-native-firebase";
-import { fbConfig } from "../../configs/firebaseConfig";
 import { storeUserData } from "../../services/signUser";
-import { cartItemsCount } from "../../services/addToCart";
 export default class LandingScreen extends React.Component {
   static navigationOptions = {
-    header: null
-  };
+    drawerLabel: () => null
+  }
 
   state = {
     latitude: null,

@@ -1,12 +1,20 @@
 import React, { Component } from "react";
 import { View, Text, Image, Dimensions, TouchableOpacity } from "react-native";
 import { Card, Rating } from "react-native-elements";
+import { franchiseCheckin } from "../../services/franchiseCheckin";
+import { getUser } from '../../services/getUser'
 export default class FranchiseInfoCard extends Component {
 
   viewMapPressed(latitude, longitude) {
     this.props.viewMapPressed(latitude, longitude)
   }
-
+  checkInHandler(){
+    getUser().then(user => {
+      franchiseCheckin(user.userId, this.props.franchiseInfo.id).then(checkinRes => {
+        console.log("checkinRes is : ", checkinRes)
+      })
+    })
+  }
   render() {
     let dimensions = Dimensions.get("window");
     const franchiseInfo = this.props.franchiseInfo;
@@ -43,14 +51,23 @@ export default class FranchiseInfoCard extends Component {
                   {franchiseInfo.welcomeNote}
                 </Text>
                 <Rating imageSize={16} readonly startingValue={3} />
-                <View
-                  style={{
-                    flexDirection: "row",
-                    alignItems: "center",
-                    marginTop: 15,
-                    marginLeft: 140
-                  }}
-                />
+                <View style={{ flexDirection: "row", marginTop: 20}}>
+                <TouchableOpacity
+                  onPress={() => this.checkInHandler()
+                  }
+                >
+                  <View style={{ justifyContent: "flex-end" }}>
+                    <Text
+                      style={{
+                        color: "#03a9f4",
+                        fontSize: 12,
+                        marginBottom: 25
+                      }}
+                    >
+                      Check In
+                    </Text>
+                  </View>
+                </TouchableOpacity>
                 <TouchableOpacity
                   onPress={() =>
                     this.viewMapPressed(
@@ -64,14 +81,15 @@ export default class FranchiseInfoCard extends Component {
                       style={{
                         color: "#03a9f4",
                         fontSize: 12,
-                        marginLeft: 150,
-                        marginBottom: 25
+                        marginBottom: 25,
+                        marginLeft: 25
                       }}
                     >
                       View Map
                     </Text>
                   </View>
                 </TouchableOpacity>
+                </View>
               </View>
             </View>
           </View>
