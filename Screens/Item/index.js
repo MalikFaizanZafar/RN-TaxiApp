@@ -3,11 +3,20 @@ import { createDrawerNavigator, DrawerItems } from "react-navigation"
 import { ScrollView, SafeAreaView, View, Image } from 'react-native'
 import ItemMainScreen from "./item";
 import AccountScreen from '../Account';
+import DrawerUserView from '../../components/DrawerUserView';
 
 const customDrawerComponent = (props) => (
   <SafeAreaView style={{flex : 1}}>
-    <View style={{ height: 150, backgroundColor: 'white', justifyContent: "center", alignItems: "center"}}>
-      <Image source={require('../../assets/cart.jpg')} style={{height: 120, width:120, borderRadius: 60 }} />
+    <View
+      style={{
+        height: 150,
+        backgroundColor: "white",
+        justifyContent: "center",
+        alignItems: "flex-start",
+        marginTop: 10
+      }}
+    >
+     <DrawerUserView />
     </View>
     <ScrollView>
       <DrawerItems {...props} />

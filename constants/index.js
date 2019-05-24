@@ -1,4 +1,4 @@
-export const SERVER_URL = "http://192.168.1.2:8080"  //office
+export const SERVER_URL = "http://192.168.1.8:8080"  //office
 
 // export const SERVER_URL = "http://139.180.220.85:9080/api-0.0.1"
 
