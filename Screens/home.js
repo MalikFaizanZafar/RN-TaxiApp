@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  StyleSheet,
+  ActivityIndicator,
   View,
   Button,
   Text,
@@ -44,7 +44,8 @@ class HomeScreen extends React.Component {
       phone: "",
       gender: "",
       birthday: "",
-      modalVisible: false
+      modalVisible: false,
+      screenVisible: false
     };
   }
   setModalVisible(visible) {
@@ -65,6 +66,9 @@ class HomeScreen extends React.Component {
         this.props.navigation.navigate("Landing");
       })
       .catch(authFalse => {
+        this.setState({
+          screenVisible: true
+        })
         console.log("authFalse is ", authFalse);
       });
   }
@@ -132,80 +136,88 @@ class HomeScreen extends React.Component {
               source={require("./../assets/subquch.png")}
             />
           </View>
-          <View
-            style={{
-              marginTop: 20,
-              justifyContent: "center",
-              alignItems: "center"
-            }}
-          >
-            <LoginButton
-              style={{ width: 230, height: 30 }}
-              onLoginFinished={(error, result) => {
-                if (error) {
-                  alert("login has error: " + result.error);
-                } else if (result.isCancelled) {
-                  alert("login is cancelled.");
-                } else {
-                  AccessToken.getCurrentAccessToken().then(data => {
-                    let accessToken = data.accessToken;
-
-                    const responseInfoCallback = (error, result) => {
-                      if (error) {
-                        console.log(error);
-                        alert("Error fetching data: " + error.toString());
-                      } else {
-                        console.log(result);
-                        alert("Success fetching data: " + result.toString());
-                      }
-                    };
-
-                    const infoRequest = new GraphRequest(
-                      "/me",
-                      {
-                        accessToken: accessToken,
-                        parameters: {
-                          fields: {
-                            string: "email,name,picture"
-                          }
-                        }
-                      },
-                      (err, rslt) => {
-                        let facebookUser = {
-                          socialId: rslt.id,
-                          password: "1234",
-                          token: accessToken,
-                          name: rslt.name,
-                          email: rslt.email,
-                          photo: rslt.picture.data.url,
-                          verified: false,
-                          provider: "FACEBOOK"
-                        };
-                        userRegistered(facebookUser.email)
-                          .then(user => {
-                            console.log("Facebook user is : ", user);
-                            this.props.navigation.navigate("Landing");
-                          })
-                          .catch(err => {
-                            this.setState({ userInfo: facebookUser });
-                            this.setState({ modalVisible: true });
-                          });
-                      }
-                    );
-                    // Start the graph request.
-                    new GraphRequestManager().addRequest(infoRequest).start();
-                  });
-                }
+          {this.state.screenVisible ? (
+            <View
+              style={{
+                marginTop: 20,
+                justifyContent: "center",
+                alignItems: "center"
               }}
-              onLogoutFinished={() => alert("logout.")}
+            >
+              <LoginButton
+                style={{ width: 230, height: 30 }}
+                onLoginFinished={(error, result) => {
+                  if (error) {
+                    alert("login has error: " + result.error);
+                  } else if (result.isCancelled) {
+                    alert("login is cancelled.");
+                  } else {
+                    AccessToken.getCurrentAccessToken().then(data => {
+                      let accessToken = data.accessToken;
+
+                      const responseInfoCallback = (error, result) => {
+                        if (error) {
+                          console.log(error);
+                          alert("Error fetching data: " + error.toString());
+                        } else {
+                          console.log(result);
+                          alert("Success fetching data: " + result.toString());
+                        }
+                      };
+
+                      const infoRequest = new GraphRequest(
+                        "/me",
+                        {
+                          accessToken: accessToken,
+                          parameters: {
+                            fields: {
+                              string: "email,name,picture"
+                            }
+                          }
+                        },
+                        (err, rslt) => {
+                          let facebookUser = {
+                            socialId: rslt.id,
+                            password: "1234",
+                            token: accessToken,
+                            name: rslt.name,
+                            email: rslt.email,
+                            photo: rslt.picture.data.url,
+                            verified: false,
+                            provider: "FACEBOOK"
+                          };
+                          userRegistered(facebookUser.email)
+                            .then(user => {
+                              console.log("Facebook user is : ", user);
+                              this.props.navigation.navigate("Landing");
+                            })
+                            .catch(err => {
+                              this.setState({ userInfo: facebookUser });
+                              this.setState({ modalVisible: true });
+                            });
+                        }
+                      );
+                      // Start the graph request.
+                      new GraphRequestManager().addRequest(infoRequest).start();
+                    });
+                  }
+                }}
+                onLogoutFinished={() => alert("logout.")}
+              />
+              <GoogleSigninButton
+                style={{ width: 237, height: 35, marginTop: 10, elevation: 0 }}
+                size={GoogleSigninButton.Size.Wide}
+                color={GoogleSigninButton.Color.Light}
+                onPress={this.signIn}
+              />
+            </View>
+          ) : (
+            <ActivityIndicator
+              size="large"
+              color="#000"
+              style={{ marginTop: 50 }}
             />
-            <GoogleSigninButton
-              style={{ width: 237, height: 35, marginTop: 10, elevation: 0 }}
-              size={GoogleSigninButton.Size.Wide}
-              color={GoogleSigninButton.Color.Light}
-              onPress={this.signIn}
-            />
-          </View>
+          )}
           <View style={{ marginTop: 8 }}>
             <Modal
               style={{ justifyContent: "center", alignItems: "center" }}
