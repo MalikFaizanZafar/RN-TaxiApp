@@ -721,8 +721,10 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable amu_bubble_mask
 drawable amu_bubble_shadow
+drawable assets_cart
 drawable assets_subquch
 drawable assets_subquch2
+drawable assets_subquch3
 drawable com_facebook_auth_dialog_background
 drawable com_facebook_auth_dialog_cancel_background
 drawable com_facebook_auth_dialog_header_background

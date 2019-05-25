@@ -35,7 +35,8 @@ class HomeScreen extends React.Component {
     header: null
   };
   state = {
-    modalVisible: false
+    modalVisible: false,
+    signupLoading: false
   };
   constructor(props) {
     super(props);
@@ -67,7 +68,7 @@ class HomeScreen extends React.Component {
       .catch(authFalse => {
         this.setState({
           screenVisible: true
-        })
+        });
       });
   }
   signIn = async () => {
@@ -88,7 +89,7 @@ class HomeScreen extends React.Component {
       userRegistered(googleUser.email)
         .then(user => {
           console.log("Google user is  : ", user);
-          this.storeDataToStorage(user.data.data)
+          this.storeDataToStorage(user.data.data);
           this.props.navigation.navigate("Landing");
         })
         .catch(error => {
@@ -188,7 +189,7 @@ class HomeScreen extends React.Component {
                           userRegistered(facebookUser.email)
                             .then(user => {
                               console.log("Facebook user is : ", user);
-                              this.storeDataToStorage(user.data.data)
+                              this.storeDataToStorage(user.data.data);
                               this.props.navigation.navigate("Landing");
                             })
                             .catch(err => {
@@ -317,44 +318,54 @@ class HomeScreen extends React.Component {
                       }}
                     />
                   </View>
-                  <TouchableHighlight
-                    onPress={() => {
-                      this.setModalVisible(!this.state.modalVisible);
-                    }}
-                  >
-                    <View
-                      style={{
-                        marginTop: 40,
-                        marginLeft: 20,
-                        width: 320
+                  {this.state.signupLoading ? (
+                    <ActivityIndicator
+                      size="large"
+                      color="#000"
+                      style={{ marginTop: 80 }}
+                    />
+                  ) : (
+                    <TouchableHighlight
+                      onPress={() => {
+                        this.setModalVisible(!this.state.modalVisible);
                       }}
                     >
-                      <Button
-                        title="Save"
-                        disabled={this.isSaveDisabled()}
-                        onPress={() => {
-                          let stateData = this.state;
-                          let user = {
-                            ...stateData.userInfo,
-                            phone: stateData.phone,
-                            gender: stateData.gender,
-                            birthday: stateData.birthday
-                          };
-                          // console.log("user is ; ", user);
-                          signUser(user)
-                            .then(res => {
-                              console.log("Server Resonse is : ", res);
-                              this.storeDataToStorage(res.data.data);
-                              this.setState({ modalVisible: false });
-                              this.props.navigation.navigate("Landing");
-                            })
-                            .catch(msg2 => {
-                              console.log("msg 2 is ; ", msg2);
-                            });
+                      <View
+                        style={{
+                          marginTop: 40,
+                          marginLeft: 20,
+                          width: 320
                         }}
-                      />
-                    </View>
-                  </TouchableHighlight>
+                      >
+                        <Button
+                          title="Save"
+                          disabled={this.isSaveDisabled()}
+                          onPress={() => {
+                            this.setState({ signupLoading: true });
+                            let stateData = this.state;
+                            let user = {
+                              ...stateData.userInfo,
+                              phone: stateData.phone,
+                              gender: stateData.gender,
+                              birthday: stateData.birthday
+                            };
+                            // console.log("user is ; ", user);
+                            signUser(user)
+                              .then(res => {
+                                console.log("Server Resonse is : ", res);
+                                this.storeDataToStorage(res.data.data);
+                                this.props.navigation.navigate("Landing");
+                                // this.setState({ signupLoading: true })
+                                // this.setState({ modalVisible: false});
+                              })
+                              .catch(msg2 => {
+                                console.log("msg 2 is ; ", msg2);
+                              });
+                          }}
+                        />
+                      </View>
+                    </TouchableHighlight>
+                  )}
                 </View>
               </View>
             </Modal>

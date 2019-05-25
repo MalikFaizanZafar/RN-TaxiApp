@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun May 19 15:05:01 PKT 2019
+#Sat May 25 08:27:58 PKT 2019
 5.base=E\:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0
 42.base=E\:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0
 22.path=lib/x86/libjsc.so

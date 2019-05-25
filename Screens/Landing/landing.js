@@ -94,7 +94,6 @@ export default class LandingScreen extends React.Component {
     })
   }
   populateInitialData(latitude, longitude, distance) {
-    console.log(`latitude : ${latitude}, longitude : ${longitude}`)
     getFilterQueryData(latitude, longitude, distance)
       .then(promiseResponse => {
         console.log("promiseResponse is : ", promiseResponse);

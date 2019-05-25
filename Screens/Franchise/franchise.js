@@ -86,6 +86,7 @@ export default class FranchiseMainScreen extends Component {
         <FranchiseInfoCard
           franchiseInfo={franchise}
           viewMapPressed={(lat, lon) => this.viewMapHandler(lat, lon)}
+          loading={this.state.dataLoading}
         />
         <FranchiseCategoriesBar
           categories={this.state.categories}
