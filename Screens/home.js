@@ -62,14 +62,12 @@ class HomeScreen extends React.Component {
     GoogleSignin.configure(googleConfig);
     userAuthStatus()
       .then(userAtuh => {
-        console.log("userAtuh is ", userAtuh);
         this.props.navigation.navigate("Landing");
       })
       .catch(authFalse => {
         this.setState({
           screenVisible: true
         })
-        console.log("authFalse is ", authFalse);
       });
   }
   signIn = async () => {
@@ -90,6 +88,7 @@ class HomeScreen extends React.Component {
       userRegistered(googleUser.email)
         .then(user => {
           console.log("Google user is  : ", user);
+          this.storeDataToStorage(user.data.data)
           this.props.navigation.navigate("Landing");
         })
         .catch(error => {
@@ -189,6 +188,7 @@ class HomeScreen extends React.Component {
                           userRegistered(facebookUser.email)
                             .then(user => {
                               console.log("Facebook user is : ", user);
+                              this.storeDataToStorage(user.data.data)
                               this.props.navigation.navigate("Landing");
                             })
                             .catch(err => {

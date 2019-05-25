@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text, Image, Dimensions, TouchableOpacity } from "react-native";
+import { View, Text, Image, Dimensions, TouchableOpacity, Alert } from "react-native";
 import { Card, Rating } from "react-native-elements";
 import { franchiseCheckin } from "../../services/franchiseCheckin";
 import { getUser } from '../../services/getUser'
@@ -11,7 +11,14 @@ export default class FranchiseInfoCard extends Component {
   checkInHandler(){
     getUser().then(user => {
       franchiseCheckin(user.userId, this.props.franchiseInfo.id).then(checkinRes => {
-        console.log("checkinRes is : ", checkinRes)
+        Alert.alert(
+          'SubQuch Alert ',
+          'A Notification Has Been Sent to This Franchise About Your Checkin ',
+          [
+            {text: 'OK', onPress: () => console.log('OK Pressed')},
+          ],
+          {cancelable: false},
+        );
       })
     })
   }

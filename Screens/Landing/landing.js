@@ -16,6 +16,7 @@ import {
 import LandingScreenStyles from "./../../Styles/landing";
 import firebase from "react-native-firebase";
 import { storeUserData } from "../../services/signUser";
+import { isUserLocationStored } from "../../services/isUserLocationStored";
 export default class LandingScreen extends React.Component {
   static navigationOptions = {
     drawerLabel: () => null
@@ -35,47 +36,65 @@ export default class LandingScreen extends React.Component {
   };
 
   async LocationSerivce() {
-    try {
-      const granted = await PermissionsAndroid.request(
-        PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
-        {
-          title: "Location Permission",
-          message:
-            "SubQuch needs access to your location " +
-            "so we can know where you are."
-        }
+    isUserLocationStored().then(location => {
+      console.log("location Present : ", location)
+      this.populateInitialData(
+        parseFloat(location.latitude),
+        parseFloat(location.longitude),
+        35
       );
-      if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-        console.log("You can use locations ");
-        navigator.geolocation.getCurrentPosition(
-          position => {
-            console.log(position);
-            this.setState({
-              latitude: position.coords.latitude,
-              longitude: position.coords.longitude,
-              error: null
-            });
-            this.storeLatLonToStorage(
-              this.state.latitude,
-              this.state.longitude
+    }).catch( async (noLocation) => {
+        console.log("noLocation Present : ", noLocation)
+        try {
+          const granted = await PermissionsAndroid.request(
+            PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
+            {
+              title: "Location Permission",
+              message:
+                "SubQuch needs access to your location"
+            }
+          );
+          if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+            console.log("You can use locations ");
+            navigator.geolocation.getCurrentPosition(
+              position => {
+                console.log(position);
+                this.setState({
+                  latitude: position.coords.latitude,
+                  longitude: position.coords.longitude,
+                  error: null
+                });
+                this.storeLatLonToStorage(
+                  this.state.latitude,
+                  this.state.longitude
+                );
+                this.populateInitialData(
+                  position.coords.latitude,
+                  position.coords.longitude,
+                  35
+                );
+              },
+              error => this.setState({ error: error.message }),
+              { enableHighAccuracy: false, timeout: 200000, maximumAge: 1000 }
             );
-            this.populateInitialData(
-              position.coords.latitude,
-              position.coords.longitude,
-              35
+          } else {
+            console.log("Location permission denied");
+            Alert.alert(
+              'SubQuch Alert ',
+              'SubQuch Needs to Acess Your Location. Please Turn on Your GPS',
+              [
+                {text: 'OK', onPress: () => this.LocationSerivce()},
+              ],
+              {cancelable: false},
             );
-          },
-          error => this.setState({ error: error.message }),
-          { enableHighAccuracy: false, timeout: 200000, maximumAge: 1000 }
-        );
-      } else {
-        console.log("Location permission denied");
-      }
-    } catch (err) {
-      console.warn(err);
-    }
+          }
+        } catch (err) {
+          console.warn(err);
+        }
+    })
   }
   populateInitialData(latitude, longitude, distance) {
+    console.log(`latitude : ${latitude}, longitude : ${longitude}`)
     getFilterQueryData(latitude, longitude, distance)
       .then(promiseResponse => {
         console.log("promiseResponse is : ", promiseResponse);
