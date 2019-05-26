@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, ActivityIndicator, Dimensions } from "react-native";
+import { View, ActivityIndicator, Dimensions, Alert } from "react-native";
 import { getFranchiseData } from "../../services/franchiseService";
 import FranchiseInfoCard from "../../components/franchise/FranchiseInfoCard";
 import FranchiseListView from "../../components/franchise/FranchiseListView";
@@ -71,8 +71,19 @@ export default class FranchiseMainScreen extends Component {
       });
     }
   }
-  cartPressHandler() {
-    this.props.navigation.navigate("Cart");
+  cartPressHandler(cartItemsCount) {
+    if(cartItemsCount > 0){
+      this.props.navigation.navigate("Cart");
+    }else{
+      Alert.alert(
+        'SubQuch Alert',
+        'No Item or Deals in the Cart. Please Add Some Items or Deals',
+        [
+          {text: 'OK', onPress: () => console.log('OK Pressed')},
+        ],
+        {cancelable: false},
+      );
+    }
   }
   render() {
     const franchise = this.state.franchise;
@@ -81,7 +92,7 @@ export default class FranchiseMainScreen extends Component {
       <View style={{ padding: 0 }}>
         <AppTopBar
           openSubquchDrawer={() => this.props.navigation.openDrawer()}
-          onCartPress={() => this.cartPressHandler()}
+          onCartPress={(cartItemsCount) => this.cartPressHandler(cartItemsCount)}
         />
         <FranchiseInfoCard
           franchiseInfo={franchise}

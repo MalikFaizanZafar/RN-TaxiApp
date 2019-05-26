@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text, Image, ActivityIndicator } from "react-native";
+import { View, Text, Image, ActivityIndicator, Alert } from "react-native";
 import { getUser } from "../../services/getUser";
 import { getUserWallet } from "../../services/getUserWallet";
 import WalletTable from "../../components/account/WalletTable";
@@ -31,8 +31,19 @@ export default class AccountScreen extends Component {
       });
     });
   }
-  cartPressHandler() {
-    this.props.navigation.navigate("Cart");
+  cartPressHandler(cartItemsCount) {
+    if(cartItemsCount > 0){
+      this.props.navigation.navigate("Cart");
+    }else{
+      Alert.alert(
+        'SubQuch Alert',
+        'No Item or Deals in the Cart. Please Add Some Items or Deals',
+        [
+          {text: 'OK', onPress: () => console.log('OK Pressed')},
+        ],
+        {cancelable: false},
+      );
+    }
   }
 
   render() {
@@ -40,7 +51,7 @@ export default class AccountScreen extends Component {
       <View>
         <AppTopBar
           openSubquchDrawer={() => this.props.navigation.openDrawer()}
-          onCartPress={() => this.cartPressHandler()}
+          onCartPress={(cartItemsCount) => this.cartPressHandler(cartItemsCount)}
         />
         <View>
           {this.state.walletLoading ? (

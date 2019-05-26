@@ -288,15 +288,26 @@ export default class LandingScreen extends React.Component {
     } else {
     }
   }
-  cartPressHandler() {
-    this.props.navigation.navigate("Cart");
+  cartPressHandler(cartItemsCount) {
+    if(cartItemsCount > 0){
+      this.props.navigation.navigate("Cart");
+    }else{
+      Alert.alert(
+        'SubQuch Alert',
+        'No Item or Deals in the Cart. Please Add Some Items or Deals',
+        [
+          {text: 'OK', onPress: () => console.log('OK Pressed')},
+        ],
+        {cancelable: false},
+      );
+    }
   }
   render() {
     return (
       <View style={LandingScreenStyles.container}>
         <AppTopBar
           openSubquchDrawer={() => this.props.navigation.openDrawer()}
-          onCartPress={() => this.cartPressHandler()}
+          onCartPress={(cartItemsCount) => this.cartPressHandler(cartItemsCount)}
         />
         <AppSearchView
           updateSearch={val => {

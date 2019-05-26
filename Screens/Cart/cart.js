@@ -58,6 +58,7 @@ export default class CartMainScreen extends Component {
     this.setState({ addingOrder: true });
     sendOrder(getGroupedOrders(this.state.cartItems)).then(sendOrderResponse => {
       this.setState({ addingOrder: false });
+      console.log("sendOrderResponse is : ", sendOrderResponse)
       this.props.navigation.goBack(null);
     }).catch(error =>{
       console.log("Error Adding Order ", error);

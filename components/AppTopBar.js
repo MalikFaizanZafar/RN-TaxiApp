@@ -59,10 +59,8 @@ export default class AppTopBar extends Component {
             source={require("../assets/subquch2.png")}
           />
         </View>
-        {
-          this.state.cartItemsCount > 0 ? (
             <View style={{ marginLeft: 50, marginTop: 10 }}>
-          <TouchableOpacity onPress={() => this.props.onCartPress()}>
+          <TouchableOpacity onPress={() => this.props.onCartPress(this.state.cartItemsCount)}>
             <View>
               <Avatar
                 rounded
@@ -81,8 +79,7 @@ export default class AppTopBar extends Component {
             </View>
           </TouchableOpacity>
         </View>
-          ): null
-        }
+         
       </View>
     );
   }
