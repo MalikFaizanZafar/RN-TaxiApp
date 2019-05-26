@@ -176,6 +176,7 @@ class HomeScreen extends React.Component {
                           }
                         },
                         (err, rslt) => {
+                          console.log("fb rslt is : ", rslt)
                           let facebookUser = {
                             socialId: rslt.id,
                             password: "1234",
