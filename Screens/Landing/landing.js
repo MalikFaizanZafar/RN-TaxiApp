@@ -36,15 +36,6 @@ export default class LandingScreen extends React.Component {
   };
 
   async LocationSerivce() {
-    isUserLocationStored().then(location => {
-      console.log("location Present : ", location)
-      this.populateInitialData(
-        parseFloat(location.latitude),
-        parseFloat(location.longitude),
-        35
-      );
-    }).catch( async (noLocation) => {
-        console.log("noLocation Present : ", noLocation)
         try {
           const granted = await PermissionsAndroid.request(
             PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
@@ -91,7 +82,6 @@ export default class LandingScreen extends React.Component {
         } catch (err) {
           console.warn(err);
         }
-    })
   }
   populateInitialData(latitude, longitude, distance) {
     getFilterQueryData(latitude, longitude, distance)
