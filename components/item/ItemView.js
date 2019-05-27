@@ -5,9 +5,6 @@ import { addToCart } from "../../services/addToCart";
 import { removeUserData } from "../../services/signUser";
 export default class ItemView extends Component {
   addToCardHandler() {
-    console.log("Add to Cart Pressed");
-    // this.props.itemPressHandler(datum)
-    // this.props.navigation.navigate('Item')
     let cartItemDeal = {
       id: this.props.item.id,
       name: this.props.item.name,
@@ -55,6 +52,7 @@ export default class ItemView extends Component {
                   marginTop: 280,
                   marginLeft: 235
                 }}
+                disabled={this.props.itemStatus}
                 onPress={() => {
                   this.addToCardHandler();
                 }}
