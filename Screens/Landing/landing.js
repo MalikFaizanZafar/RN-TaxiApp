@@ -17,6 +17,7 @@ import LandingScreenStyles from "./../../Styles/landing";
 import firebase from "react-native-firebase";
 import { storeUserData } from "../../services/signUser";
 import { isUserLocationStored } from "../../services/isUserLocationStored";
+import { setDeviceToken } from "../../services/setDeviceToken";
 export default class LandingScreen extends React.Component {
   static navigationOptions = {
     drawerLabel: () => null
@@ -119,6 +120,11 @@ export default class LandingScreen extends React.Component {
     const fcmToken = await firebase.messaging().getToken();
     if (fcmToken) {
       console.log("fcmToken is : ", fcmToken);
+      setDeviceToken(fcmToken).then(setTokenResponse => {
+        console.log("device token is set", setTokenResponse)
+      }).catch(setDeviceError => {
+        console.log("device token is not set", setDeviceError)
+      })
       // firebase.initializeApp(fbConfig);
     } else {
       // user doesn't have a device token yet
