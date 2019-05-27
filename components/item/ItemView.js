@@ -21,7 +21,7 @@ export default class ItemView extends Component {
     };
     Alert.alert(
       "Cart",
-      "Add This Item/Deal to the Cart?",
+      `Add This ${cartItemDeal.type === 'deal'? 'Deal': 'Item'} to the Cart?`,
       [
         {
           text: "No",
