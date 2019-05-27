@@ -1,5 +1,14 @@
 import React, { Component } from "react";
-import { View, Text, AsyncStorage, ScrollView, Dimensions, ActivityIndicator,Alert, TouchableOpacity  } from "react-native";
+import {
+  View,
+  Text,
+  AsyncStorage,
+  ScrollView,
+  Dimensions,
+  ActivityIndicator,
+  Alert,
+  TouchableOpacity
+} from "react-native";
 import { Card, Input, Button } from "react-native-elements";
 import { sendOrder } from "../../services/sendOrder";
 import { getGroupedOrders } from "../../services/helperFunctions";
@@ -8,7 +17,7 @@ import { deleteCartItem } from "../../services/deleteCartItem";
 export default class CartMainScreen extends Component {
   static navigationOptions = {
     drawerLabel: () => null
-  }
+  };
   constructor(props) {
     super(props);
     this.state = {
@@ -19,22 +28,22 @@ export default class CartMainScreen extends Component {
   componentDidMount() {
     AsyncStorage.getItem("@SubQuch-User-cart").then(cartItems => {
       let cartArray = JSON.parse(cartItems);
-        let modifiedCart = [];
-        cartArray.forEach(item => {
-          let newItem = {
-            id: item.id,
-            name: item.name,
-            type: item.type,
-            price: item.price,
-            quantity: 0,
-            total: 0,
-            franchiseId: item.franchiseId
-          };
-          modifiedCart.push(newItem);
-        });
-        this.setState({
-          cartItems: modifiedCart
-        });
+      let modifiedCart = [];
+      cartArray.forEach(item => {
+        let newItem = {
+          id: item.id,
+          name: item.name,
+          type: item.type,
+          price: item.price,
+          quantity: 0,
+          total: 0,
+          franchiseId: item.franchiseId
+        };
+        modifiedCart.push(newItem);
+      });
+      this.setState({
+        cartItems: modifiedCart
+      });
     });
   }
   setItemTotal(quantity, price, itemIndex) {
@@ -55,74 +64,80 @@ export default class CartMainScreen extends Component {
     }
   }
 
-  continueWithOrder(){
+  continueWithOrder() {
     this.setState({ addingOrder: true });
-    sendOrder(getGroupedOrders(this.state.cartItems)).then(sendOrderResponse => {
-      this.setState({ addingOrder: false });
-      console.log("sendOrderResponse is : ", sendOrderResponse)
-      this.props.navigation.goBack(null);
-    }).catch(error =>{
-      console.log("Error Adding Order ", error);
-    }) 
+    sendOrder(getGroupedOrders(this.state.cartItems))
+      .then(sendOrderResponse => {
+        this.setState({ addingOrder: false });
+        console.log("sendOrderResponse is : ", sendOrderResponse);
+        this.props.navigation.goBack(null);
+      })
+      .catch(error => {
+        console.log("Error Adding Order ", error);
+      });
   }
 
   orderNowHandler() {
-    console.log("addingOrder is : ", this.state.addingOrder)
-    if(getGroupedOrders(this.state.cartItems).length > 1){
+    console.log("addingOrder is : ", this.state.addingOrder);
+    if (getGroupedOrders(this.state.cartItems).length > 1) {
       Alert.alert(
-        'Order Alert',
-        'This Order is from Multiple Vendors. Do You Still want to Continue ?',
+        "Order Alert",
+        "This Order is from Multiple Vendors. Do You Still want to Continue ?",
         [
           {
-            text: 'Cancel',
-            onPress: () => console.log('Cancel Pressed'),
-            style: 'cancel',
+            text: "Cancel",
+            onPress: () => console.log("Cancel Pressed"),
+            style: "cancel"
           },
-          {text: 'Yes', onPress: () => this.continueWithOrder()},
+          { text: "Yes", onPress: () => this.continueWithOrder() }
         ],
-        {cancelable: false},
+        { cancelable: false }
       );
-    }else{
-      this.continueWithOrder()
+    } else {
+      this.continueWithOrder();
     }
   }
-  deleteCartItemHandler(id){
-    console.log("deleteCartItemHandler id is : ", id)
+  deleteCartItemHandler(id) {
+    console.log("deleteCartItemHandler id is : ", id);
     deleteCartItem(id).then(cartItems => {
       this.setState({
         cartItems: this.state.cartItems.filter(item => item.id !== id)
-      })
-      if(this.state.cartItems.length === 0){
-        this.props.navigation.goBack(null)
-      }
-    })
+      });
+      // if (this.state.cartItems.length === 0) {
+      //   this.props.navigation.goBack(null);
+      // }
+    });
   }
-  onPressDeleteHandler(itemId){
+  onPressDeleteHandler(itemId) {
     Alert.alert(
-      'SubQuch Alert',
-      'Are You Sure You Want to Delete this Item / Deal from Your Cart ?',
+      "SubQuch Alert",
+      "Are You Sure You Want to Delete this Item / Deal from Your Cart ?",
       [
         {
-          text: 'Cancel',
-          onPress: () => console.log('Cancel Pressed'),
-          style: 'cancel',
+          text: "Cancel",
+          onPress: () => console.log("Cancel Pressed"),
+          style: "cancel"
         },
-        {text: 'OK', onPress: () => this.deleteCartItemHandler(itemId)},
+        { text: "OK", onPress: () => this.deleteCartItemHandler(itemId) }
       ],
-      {cancelable: false},
+      { cancelable: false }
     );
-    console.log("Delete Item itemId is ", itemId)
+    console.log("Delete Item itemId is ", itemId);
   }
   render() {
     let dimensions = Dimensions.get("window");
     return (
       <View>
-        <ScrollView
-          showsVerticalScrollIndicator={false}
-          style={{ marginTop: 0 }}
-        >
-          {
-            this.state.cartItems.map((item, i) => {
+        {this.state.cartItems.length === 0 ? (
+          <View style={{ justifyContent: "center", alignItems: "center", height: dimensions.height}}>
+            <Text style={{fontWeight: "bold"}}>No Items in The Cart</Text>
+          </View>
+        ) : (
+          <ScrollView
+            showsVerticalScrollIndicator={false}
+            style={{ marginTop: 0 }}
+          >
+            {this.state.cartItems.map((item, i) => {
               return (
                 <Card key={i}>
                   <View style={{ justifyContent: "center" }}>
@@ -131,8 +146,11 @@ export default class CartMainScreen extends Component {
                     >
                       <Text>Item </Text>
                       <Text style={{ marginLeft: 27 }}>{item.name} </Text>
-                      <TouchableOpacity style={{marginLeft: 140}} onPress={() => this.onPressDeleteHandler(item.id)}>
-                      <Text style={{color: "red"}}> Delete </Text>
+                      <TouchableOpacity
+                        style={{ marginLeft: 140 }}
+                        onPress={() => this.onPressDeleteHandler(item.id)}
+                      >
+                        <Text style={{ color: "red" }}> Delete </Text>
                       </TouchableOpacity>
                     </View>
                     <View
@@ -176,33 +194,33 @@ export default class CartMainScreen extends Component {
                   </View>
                 </Card>
               );
-            })
-          }
-          <View
-            style={{
-              flexDirection: "row",
-              justifyContent: "center",
-              marginTop: 10,
-              marginBottom: 10
-            }}
-          >
-            {this.state.addingOrder == true ? (
-              <ActivityIndicator
-                size="large"
-                color="#000"
-                style={{ marginTop: 10 }}
-              />
-            ) : (
-              <View>
-                <Button
-                  title="Check Out"
-                  containerStyle={{ width: 200 }}
-                  onPress={() => this.orderNowHandler()}
+            })}
+            <View
+              style={{
+                flexDirection: "row",
+                justifyContent: "center",
+                marginTop: 10,
+                marginBottom: 10
+              }}
+            >
+              {this.state.addingOrder == true ? (
+                <ActivityIndicator
+                  size="large"
+                  color="#000"
+                  style={{ marginTop: 10 }}
                 />
-              </View>
-            )}
-          </View>
-        </ScrollView>
+              ) : (
+                <View>
+                  <Button
+                    title="Check Out"
+                    containerStyle={{ width: 200 }}
+                    onPress={() => this.orderNowHandler()}
+                  />
+                </View>
+              )}
+            </View>
+          </ScrollView>
+        )}
       </View>
     );
   }

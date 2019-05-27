@@ -4,6 +4,12 @@ import { Card, Rating, Badge, Button } from "react-native-elements";
 import { addToCart } from "../../services/addToCart";
 import { removeUserData } from "../../services/signUser";
 export default class ItemView extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      itemExists: false
+    }
+  }
   addToCardHandler() {
     let cartItemDeal = {
       id: this.props.item.id,
