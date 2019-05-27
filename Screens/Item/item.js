@@ -46,6 +46,9 @@ export default class ItemMainScreen extends Component {
           item={this.state.itemDeal}
           franchiseId={this.state.franchiseId}
           itemStatus={this.state.itemExistsInCart}
+          backToFranchiseItems={() => {
+            this.props.navigation.goBack(null);
+          }}
         />
       </View>
     );

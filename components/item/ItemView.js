@@ -36,6 +36,7 @@ export default class ItemView extends Component {
 
   addToCartFunction = data => {
     addToCart(data);
+    this.props.backToFranchiseItems()
   };
   render() {
     let dimensions = Dimensions.get("window");
