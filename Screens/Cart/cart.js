@@ -144,7 +144,7 @@ export default class CartMainScreen extends Component {
                     <View
                       style={{ flexDirection: "row", alignItems: "center" }}
                     >
-                      <Text>Item </Text>
+                      <Text>{`${item.type === 'deal'?'Deal': 'Item'}`}</Text>
                       <Text style={{ marginLeft: 27 }}>{item.name} </Text>
                       <TouchableOpacity
                         style={{ marginLeft: 140 }}
