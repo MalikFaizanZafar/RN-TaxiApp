@@ -15,7 +15,7 @@ export default class FranchiseMainScreen extends Component {
   state = {
     franchise: {},
     categories: [],
-    tabItems: ["Items", "Deals", "Reviews"],
+    tabItems: ["Deals", "Items", "Reviews"],
     selectedTab: 0,
     dataLoading: true
   };
@@ -59,12 +59,12 @@ export default class FranchiseMainScreen extends Component {
     this.props.navigation.navigate("Map", { latitude, longitude });
   }
   itemPressHandler(itemDeal) {
-    if (this.state.selectedTab === 1) {
+    if (this.state.selectedTab === 0) {
       this.props.navigation.navigate("Item", {
         itemDeal: { ...itemDeal, type: "deal" },
         franchiseId: this.state.franchise.id
       });
-    } else if (this.state.selectedTab === 0) {
+    } else if (this.state.selectedTab === 1) {
       this.props.navigation.navigate("Item", {
         itemDeal: { ...itemDeal, type: "item" },
         franchiseId: this.state.franchise.id
@@ -113,9 +113,9 @@ export default class FranchiseMainScreen extends Component {
           ) : (
             <FranchiseListView
               data={
-                this.state.selectedTab === 0
+                this.state.selectedTab === 1
                   ? this.state.items
-                  : this.state.selectedTab === 1
+                  : this.state.selectedTab === 0
                   ? this.state.deals
                   : this.state.reviews
               }

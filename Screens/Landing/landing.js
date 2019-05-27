@@ -320,6 +320,7 @@ export default class LandingScreen extends React.Component {
         <AppBrandsListView
           data={this.state.ListViewData}
           dataLoading={this.state.dataLoading}
+          selectedTab={this.state.selectedTab}
           franchiseOnPress={id => this.franchiseOnPressHandler(id)}
         />
         <LandingTabBar

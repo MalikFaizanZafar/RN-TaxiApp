@@ -23,7 +23,7 @@ export default class FranchiseListView extends Component {
           showsVerticalScrollIndicator={false}
           style={{ marginTop: 0 }}
         >
-          {this.props.data.length === 0? <Text style={{marginLeft: 75, marginTop: 100}}>{`No ${this.props.selectedTab ===2? 'Reviews': this.props.selectedTab ===1? 'Deals': 'Items'} Exist For This Franchise`} </Text>  : this.props.data.map((datum, i) => {
+          {this.props.data.length === 0? <Text style={{marginLeft: 75, marginTop: 100}}>{`No ${this.props.selectedTab ===2? 'Reviews': this.props.selectedTab ===0? 'Deals': 'Items'} Exist For This Franchise`} </Text>  : this.props.data.map((datum, i) => {
             return (
               <TouchableOpacity
                 onPress={() => this.itemDealPressed(datum)}

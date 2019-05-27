@@ -28,7 +28,7 @@ export default class AppBrandsListView extends Component {
           />
         ) : this.props.data.length === 0 ? (
           <Text style={{ marginLeft: 40, marginTop: 100 }}>
-            No Franchises within the Range of 5 Kms
+            {`No ${this.props.selectedTab === 0 ? 'Deals':'Franchises'}  within the Range of 35 Kms`}
           </Text>
         ) :(<ScrollView
               showsVerticalScrollIndicator={false}
