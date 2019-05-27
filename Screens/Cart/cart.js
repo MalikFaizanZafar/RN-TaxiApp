@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import { View, Text, AsyncStorage, ScrollView, Dimensions, ActivityIndicator,Alert  } from "react-native";
+import { View, Text, AsyncStorage, ScrollView, Dimensions, ActivityIndicator,Alert, TouchableOpacity  } from "react-native";
 import { Card, Input, Button } from "react-native-elements";
 import { sendOrder } from "../../services/sendOrder";
 import { getGroupedOrders } from "../../services/helperFunctions";
+import { deleteCartItem } from "../../services/deleteCartItem";
 
 export default class CartMainScreen extends Component {
   static navigationOptions = {
@@ -85,7 +86,33 @@ export default class CartMainScreen extends Component {
       this.continueWithOrder()
     }
   }
-
+  deleteCartItemHandler(id){
+    console.log("deleteCartItemHandler id is : ", id)
+    deleteCartItem(id).then(cartItems => {
+      this.setState({
+        cartItems: this.state.cartItems.filter(item => item.id !== id)
+      })
+      if(this.state.cartItems.length === 0){
+        this.props.navigation.goBack(null)
+      }
+    })
+  }
+  onPressDeleteHandler(itemId){
+    Alert.alert(
+      'SubQuch Alert',
+      'Are You Sure You Want to Delete this Item / Deal from Your Cart ?',
+      [
+        {
+          text: 'Cancel',
+          onPress: () => console.log('Cancel Pressed'),
+          style: 'cancel',
+        },
+        {text: 'OK', onPress: () => this.deleteCartItemHandler(itemId)},
+      ],
+      {cancelable: false},
+    );
+    console.log("Delete Item itemId is ", itemId)
+  }
   render() {
     let dimensions = Dimensions.get("window");
     return (
@@ -104,6 +131,9 @@ export default class CartMainScreen extends Component {
                     >
                       <Text>Item </Text>
                       <Text style={{ marginLeft: 27 }}>{item.name} </Text>
+                      <TouchableOpacity style={{marginLeft: 140}} onPress={() => this.onPressDeleteHandler(item.id)}>
+                      <Text style={{color: "red"}}> Delete </Text>
+                      </TouchableOpacity>
                     </View>
                     <View
                       style={{
