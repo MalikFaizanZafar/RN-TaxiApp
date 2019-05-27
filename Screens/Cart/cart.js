@@ -69,7 +69,6 @@ export default class CartMainScreen extends Component {
     sendOrder(getGroupedOrders(this.state.cartItems))
       .then(sendOrderResponse => {
         this.setState({ addingOrder: false });
-        console.log("sendOrderResponse is : ", sendOrderResponse);
         this.props.navigation.goBack(null);
       })
       .catch(error => {
@@ -78,7 +77,6 @@ export default class CartMainScreen extends Component {
   }
 
   orderNowHandler() {
-    console.log("addingOrder is : ", this.state.addingOrder);
     if (getGroupedOrders(this.state.cartItems).length > 1) {
       Alert.alert(
         "Order Alert",
@@ -98,14 +96,10 @@ export default class CartMainScreen extends Component {
     }
   }
   deleteCartItemHandler(id) {
-    console.log("deleteCartItemHandler id is : ", id);
     deleteCartItem(id).then(cartItems => {
       this.setState({
         cartItems: this.state.cartItems.filter(item => item.id !== id)
       });
-      // if (this.state.cartItems.length === 0) {
-      //   this.props.navigation.goBack(null);
-      // }
     });
   }
   onPressDeleteHandler(itemId) {
@@ -122,7 +116,6 @@ export default class CartMainScreen extends Component {
       ],
       { cancelable: false }
     );
-    console.log("Delete Item itemId is ", itemId);
   }
   render() {
     let dimensions = Dimensions.get("window");
