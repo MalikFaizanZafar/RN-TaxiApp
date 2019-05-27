@@ -30,7 +30,7 @@ export default class LandingScreen extends React.Component {
     ListViewData: [],
     searchKey: "",
     dataLoading: true,
-    tabItems: ["Brands", "Deals"],
+    tabItems: ["Deals", "Brands"],
     selectedTab: 0,
     cartItems: 0
   };
@@ -92,7 +92,7 @@ export default class LandingScreen extends React.Component {
           dataLoading: false
         });
         this.setState({
-          ListViewData: getNearestFranchises(this.state.dataArray, "franchise"),
+          ListViewData: getNearestFranchises(this.state.dataArray, "deal"),
           selectedTab: 0
         });
       })
@@ -230,22 +230,34 @@ export default class LandingScreen extends React.Component {
   }
   onSearchHandler(searchKey) {
     this.setState({ dataLoading: true });
-    LandingSearchHandler(
-      this.state.latitude,
-      this.state.longitude,
-      35,
-      searchKey,
-      this.state.selectedTab
-    ).then(promiseResponse => {
-      this.setState(
-        {
-          ListViewData: promiseResponse
-        },
-        () => {
-          this.setState({ dataLoading: false });
-        }
-      );
-    });
+    if(!searchKey){
+      console.log("searchKey is empty", this.state.dataArray)
+      console.log(" getNearestFranchises(this.state.dataArray, deal): ", getNearestFranchises(this.state.dataArray, "deal"))
+      console.log(" getNearestFranchises(this.state.dataArray, franchise): ", getNearestFranchises(this.state.dataArray, "franchise"))
+      this.setState({
+        ListViewData: this.state.selectedTab === 0? getNearestFranchises(this.state.dataArray, "deal"):  getNearestFranchises(this.state.dataArray, "franchise")
+      });
+      this.setState({ dataLoading: false });
+    }else{
+      console.log("searchKey is NOT empty")
+      LandingSearchHandler(
+        this.state.latitude,
+        this.state.longitude,
+        35,
+        searchKey,
+        this.state.selectedTab
+      ).then(promiseResponse => {
+        console.log("searchPromise response is : ", promiseResponse)
+        this.setState(
+          {
+            ListViewData: promiseResponse
+          },
+          () => {
+            this.setState({ dataLoading: false });
+          }
+        );
+      });
+    }
   }
 
   updateSearch = search => {
@@ -269,7 +281,7 @@ export default class LandingScreen extends React.Component {
   }
 
   franchiseOnPressHandler(id) {
-    if (this.state.selectedTab === 0) {
+    if (this.state.selectedTab === 1) {
       this.props.navigation.navigate("Franchise", {
         franchiseId: id,
         userLat: this.state.latitude,
@@ -303,7 +315,7 @@ export default class LandingScreen extends React.Component {
           updateSearch={val => {
             this.onSearchHandler(val);
           }}
-          searchType={this.state.selectedTab === 0 ? "brands" : "deals"}
+          searchType={this.state.selectedTab === 0 ? "deals" : "brands"} 
         />
         <AppBrandsListView
           data={this.state.ListViewData}

@@ -19,10 +19,10 @@ export const getNearestFranchises = (data, type) => {
 
 export const LandingTabClickHandler = (data, tabIndex) => {
   if (tabIndex === 0) {
-    return getNearestFranchises(data, "franchise");
+    return getNearestFranchises(data, "deal"); 
   }
   if (tabIndex === 1) {
-    return getNearestFranchises(data, "deal");
+    return getNearestFranchises(data, "franchise");
   }
 };
 
@@ -34,24 +34,6 @@ export const LandingSearchHandler = (
   tabIndex
 ) => {
   return new Promise((resolve, reject) => {
-    if (!searchKey) {
-      axios
-        .get(
-          `${URL}/api/filter?lat=${latitude}&long=${longitude}&distance=${distance}`
-        )
-        .then(searchResponse => {
-          resolve(
-            getNearestFranchises(
-              searchResponse.data.data,
-              tabIndex === 0 ? "franchise" : "deal"
-            )
-          );
-        })
-        .catch(searchError => {
-          console.log("searchError is : ", searchError);
-          reject(searchError);
-        });
-    } else {
       axios
         .get(
           `${URL}/api/filter?lat=${latitude}&long=${longitude}&distance=${distance}&filter=${searchKey}`
@@ -60,7 +42,7 @@ export const LandingSearchHandler = (
           resolve(
             getNearestFranchises(
               searchResponse.data.data,
-              tabIndex === 0 ? "franchise" : "deal"
+              tabIndex === 1 ? "franchise" : "deal"
             )
           );
         })
@@ -68,7 +50,6 @@ export const LandingSearchHandler = (
           console.log("searchError is : ", searchError);
           reject(searchError);
         });
-    }
   });
 };
 
