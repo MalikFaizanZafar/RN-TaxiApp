@@ -12,7 +12,7 @@ MERGED from [:react-native-google-signin] E:\Office\subkuch-app\node_modules\rea
 MERGED from [:react-native-fbsdk] E:\Office\subkuch-app\node_modules\react-native-fbsdk\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:1-30:12
 MERGED from [com.facebook.android:facebook-android-sdk:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\e8c5daa1ef103521907746862375a803\AndroidManifest.xml:21:1-31:12
 MERGED from [:react-native-firebase] E:\Office\subkuch-app\node_modules\react-native-firebase\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-15:12
-MERGED from [com.facebook.react:react-native:0.57.5] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\3c9dfcbad7a33bee838bbc2306899e59\AndroidManifest.xml:2:1-15:12
+MERGED from [com.facebook.react:react-native:0.58.6] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\2e0b2f2a723d53488aa32bedc1794a44\AndroidManifest.xml:2:1-15:12
 MERGED from [com.facebook.android:facebook-login:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\4ae9a0349816e904a450fb46ed91335d\AndroidManifest.xml:21:1-31:12
 MERGED from [com.facebook.android:facebook-share:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\590c80d27a30fe443ee517cd4f9e7d40\AndroidManifest.xml:21:1-31:12
 MERGED from [com.facebook.android:facebook-common:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\6eea0471efedb052a2f0771bdfffa7c3\AndroidManifest.xml:21:1-37:12
@@ -81,7 +81,7 @@ MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.10.0] C:\Users\ZIXSOL\.
 MERGED from [com.facebook.fresco:drawee:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\32dac2da8e856b9f34228731ea831790\AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:imagepipeline:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\4ccb7bfe5d46f7c2b7e853ef078afe59\AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\295e9e495da625e98ce13d2a5e694cbb\AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.soloader:soloader:0.5.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\02847c3e0cecb75d55804ba2caefdbd0\AndroidManifest.xml:2:1-13:12
+MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\1155a3067cfc7a2e766904333384ed69\AndroidManifest.xml:2:1-13:12
 MERGED from [org.webkit:android-jsc:r174650] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\2c79d6912edbaafc45a684780af2d50b\AndroidManifest.xml:1:1-3:12
 MERGED from [com.android.support:multidex:1.0.2] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\57db52e1e7752a3c455351d286ce84ca\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-database-collection:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\78b8808b82a6064079bd8ae87416b4ef\AndroidManifest.xml:2:1-7:12
@@ -140,8 +140,8 @@ MERGED from [:react-native-fbsdk] E:\Office\subkuch-app\node_modules\react-nativ
 MERGED from [:react-native-fbsdk] E:\Office\subkuch-app\node_modules\react-native-fbsdk\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:28:5-20
 MERGED from [com.facebook.android:facebook-android-sdk:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\e8c5daa1ef103521907746862375a803\AndroidManifest.xml:28:5-29:19
 MERGED from [com.facebook.android:facebook-android-sdk:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\e8c5daa1ef103521907746862375a803\AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.react:react-native:0.57.5] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\3c9dfcbad7a33bee838bbc2306899e59\AndroidManifest.xml:13:5-20
-MERGED from [com.facebook.react:react-native:0.57.5] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\3c9dfcbad7a33bee838bbc2306899e59\AndroidManifest.xml:13:5-20
+MERGED from [com.facebook.react:react-native:0.58.6] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\2e0b2f2a723d53488aa32bedc1794a44\AndroidManifest.xml:13:5-20
+MERGED from [com.facebook.react:react-native:0.58.6] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\2e0b2f2a723d53488aa32bedc1794a44\AndroidManifest.xml:13:5-20
 MERGED from [com.facebook.android:facebook-login:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\4ae9a0349816e904a450fb46ed91335d\AndroidManifest.xml:28:5-29:19
 MERGED from [com.facebook.android:facebook-login:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\4ae9a0349816e904a450fb46ed91335d\AndroidManifest.xml:28:5-29:19
 MERGED from [com.facebook.android:facebook-share:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\590c80d27a30fe443ee517cd4f9e7d40\AndroidManifest.xml:28:5-29:19
@@ -206,8 +206,8 @@ MERGED from [com.android.support:support-compat:28.0.0] C:\Users\ZIXSOL\.gradle\
 MERGED from [com.android.support:support-compat:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\f7ae12414836de7b3d1d23728f9bc4f7\AndroidManifest.xml:22:5-94
 MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\18c5f5c09223ad5465096d2103f95a41\AndroidManifest.xml:22:5-23:19
 MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\18c5f5c09223ad5465096d2103f95a41\AndroidManifest.xml:22:5-23:19
-MERGED from [com.facebook.soloader:soloader:0.5.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\02847c3e0cecb75d55804ba2caefdbd0\AndroidManifest.xml:11:5-20
-MERGED from [com.facebook.soloader:soloader:0.5.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\02847c3e0cecb75d55804ba2caefdbd0\AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\1155a3067cfc7a2e766904333384ed69\AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\1155a3067cfc7a2e766904333384ed69\AndroidManifest.xml:11:5-20
 MERGED from [org.webkit:android-jsc:r174650] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\2c79d6912edbaafc45a684780af2d50b\AndroidManifest.xml:2:3-17
 MERGED from [org.webkit:android-jsc:r174650] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\2c79d6912edbaafc45a684780af2d50b\AndroidManifest.xml:2:3-17
 	android:appComponentFactory
@@ -306,8 +306,8 @@ MERGED from [com.facebook.android:facebook-android-sdk:4.34.0] C:\Users\ZIXSOL\.
 MERGED from [com.facebook.android:facebook-android-sdk:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\e8c5daa1ef103521907746862375a803\AndroidManifest.xml:24:5-26:41
 MERGED from [:react-native-firebase] E:\Office\subkuch-app\node_modules\react-native-firebase\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-firebase] E:\Office\subkuch-app\node_modules\react-native-firebase\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.react:react-native:0.57.5] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\3c9dfcbad7a33bee838bbc2306899e59\AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.react:react-native:0.57.5] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\3c9dfcbad7a33bee838bbc2306899e59\AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.58.6] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\2e0b2f2a723d53488aa32bedc1794a44\AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.58.6] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\2e0b2f2a723d53488aa32bedc1794a44\AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.android:facebook-login:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\4ae9a0349816e904a450fb46ed91335d\AndroidManifest.xml:24:5-26:41
 MERGED from [com.facebook.android:facebook-login:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\4ae9a0349816e904a450fb46ed91335d\AndroidManifest.xml:24:5-26:41
 MERGED from [com.facebook.android:facebook-share:4.34.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\590c80d27a30fe443ee517cd4f9e7d40\AndroidManifest.xml:24:5-26:41
@@ -444,8 +444,8 @@ MERGED from [com.facebook.fresco:imagepipeline:1.10.0] C:\Users\ZIXSOL\.gradle\c
 MERGED from [com.facebook.fresco:imagepipeline:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\4ccb7bfe5d46f7c2b7e853ef078afe59\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\295e9e495da625e98ce13d2a5e694cbb\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\295e9e495da625e98ce13d2a5e694cbb\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.soloader:soloader:0.5.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\02847c3e0cecb75d55804ba2caefdbd0\AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.soloader:soloader:0.5.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\02847c3e0cecb75d55804ba2caefdbd0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\1155a3067cfc7a2e766904333384ed69\AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\1155a3067cfc7a2e766904333384ed69\AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:multidex:1.0.2] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\57db52e1e7752a3c455351d286ce84ca\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:multidex:1.0.2] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\57db52e1e7752a3c455351d286ce84ca\AndroidManifest.xml:20:5-43
 MERGED from [com.google.firebase:firebase-database-collection:16.0.1] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\78b8808b82a6064079bd8ae87416b4ef\AndroidManifest.xml:5:5-44
@@ -462,8 +462,8 @@ INJECTED from E:\Office\subkuch-app\android\app\src\debug\AndroidManifest.xml
 		INJECTED from E:\Office\subkuch-app\android\app\src\debug\AndroidManifest.xml
 uses-permission#android.permission.SYSTEM_ALERT_WINDOW
 ADDED from E:\Office\subkuch-app\android\app\src\debug\AndroidManifest.xml:5:5-77
-MERGED from [com.facebook.react:react-native:0.57.5] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\3c9dfcbad7a33bee838bbc2306899e59\AndroidManifest.xml:11:5-78
-MERGED from [com.facebook.react:react-native:0.57.5] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\3c9dfcbad7a33bee838bbc2306899e59\AndroidManifest.xml:11:5-78
+MERGED from [com.facebook.react:react-native:0.58.6] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\2e0b2f2a723d53488aa32bedc1794a44\AndroidManifest.xml:11:5-78
+MERGED from [com.facebook.react:react-native:0.58.6] C:\Users\ZIXSOL\.gradle\caches\transforms-2\files-2.1\2e0b2f2a723d53488aa32bedc1794a44\AndroidManifest.xml:11:5-78
 	android:name
 		ADDED from E:\Office\subkuch-app\android\app\src\debug\AndroidManifest.xml:5:22-75
 uses-permission#android.permission.ACCESS_COARSE_LOCATION

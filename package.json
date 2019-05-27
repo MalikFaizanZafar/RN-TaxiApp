@@ -16,7 +16,7 @@
     "expo-font": "^4.0.0",
     "lodash": "^4.17.11",
     "react": "16.6.0-alpha.8af6728",
-    "react-native": "0.57.5",
+    "react-native": "^0.58.6",
     "react-native-datepicker": "^1.7.2",
     "react-native-elements": "^1.1.0",
     "react-native-fbsdk": "^0.8.0",

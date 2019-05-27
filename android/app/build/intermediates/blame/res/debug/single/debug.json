@@ -53,7 +53,7 @@
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\anim_catalyst_fade_in.xml.flat",
-        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\3c9dfcbad7a33bee838bbc2306899e59\\res\\anim\\catalyst_fade_in.xml"
+        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\2e0b2f2a723d53488aa32bedc1794a44\\res\\anim\\catalyst_fade_in.xml"
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
@@ -425,7 +425,7 @@
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\anim_catalyst_slide_up.xml.flat",
-        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\3c9dfcbad7a33bee838bbc2306899e59\\res\\anim\\catalyst_slide_up.xml"
+        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\2e0b2f2a723d53488aa32bedc1794a44\\res\\anim\\catalyst_slide_up.xml"
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\color_common_google_signin_btn_text_light.xml.flat",
@@ -538,6 +538,10 @@
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tooltip_frame_light.xml.flat",
         "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\f24d69a2664a423a0016c172cb54c13b\\res\\drawable\\tooltip_frame_light.xml"
+    },
+    {
+        "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_redbox_top_border_background.xml.flat",
+        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\2e0b2f2a723d53488aa32bedc1794a44\\res\\drawable\\redbox_top_border_background.xml"
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
@@ -793,7 +797,7 @@
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\anim_catalyst_fade_out.xml.flat",
-        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\3c9dfcbad7a33bee838bbc2306899e59\\res\\anim\\catalyst_fade_out.xml"
+        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\2e0b2f2a723d53488aa32bedc1794a44\\res\\anim\\catalyst_fade_out.xml"
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_messenger_bubble_small_blue.png.flat",
@@ -1157,7 +1161,7 @@
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\anim_catalyst_push_up_out.xml.flat",
-        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\3c9dfcbad7a33bee838bbc2306899e59\\res\\anim\\catalyst_push_up_out.xml"
+        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\2e0b2f2a723d53488aa32bedc1794a44\\res\\anim\\catalyst_push_up_out.xml"
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_messenger_button_send_blue_small.xml.flat",
@@ -1225,7 +1229,7 @@
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\xml_preferences.xml.flat",
-        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\3c9dfcbad7a33bee838bbc2306899e59\\res\\xml\\preferences.xml"
+        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\2e0b2f2a723d53488aa32bedc1794a44\\res\\xml\\preferences.xml"
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21_notification_template_custom_big.xml.flat",
@@ -1305,7 +1309,7 @@
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_redbox_view.xml.flat",
-        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\3c9dfcbad7a33bee838bbc2306899e59\\res\\layout\\redbox_view.xml"
+        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\2e0b2f2a723d53488aa32bedc1794a44\\res\\layout\\redbox_view.xml"
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
@@ -1797,7 +1801,7 @@
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\anim_catalyst_push_up_in.xml.flat",
-        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\3c9dfcbad7a33bee838bbc2306899e59\\res\\anim\\catalyst_push_up_in.xml"
+        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\2e0b2f2a723d53488aa32bedc1794a44\\res\\anim\\catalyst_push_up_in.xml"
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_btn_borderless_material.xml.flat",
@@ -1829,7 +1833,7 @@
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_redbox_item_title.xml.flat",
-        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\3c9dfcbad7a33bee838bbc2306899e59\\res\\layout\\redbox_item_title.xml"
+        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\2e0b2f2a723d53488aa32bedc1794a44\\res\\layout\\redbox_item_title.xml"
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
@@ -1837,7 +1841,7 @@
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_fps_view.xml.flat",
-        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\3c9dfcbad7a33bee838bbc2306899e59\\res\\layout\\fps_view.xml"
+        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\2e0b2f2a723d53488aa32bedc1794a44\\res\\layout\\fps_view.xml"
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_activity_chooser_view.xml.flat",
@@ -1889,7 +1893,7 @@
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_dev_loading_view.xml.flat",
-        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\3c9dfcbad7a33bee838bbc2306899e59\\res\\layout\\dev_loading_view.xml"
+        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\2e0b2f2a723d53488aa32bedc1794a44\\res\\layout\\dev_loading_view.xml"
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
@@ -1953,7 +1957,7 @@
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_redbox_item_frame.xml.flat",
-        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\3c9dfcbad7a33bee838bbc2306899e59\\res\\layout\\redbox_item_frame.xml"
+        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\2e0b2f2a723d53488aa32bedc1794a44\\res\\layout\\redbox_item_frame.xml"
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_primary_text_material_light.xml.flat",
@@ -2453,7 +2457,7 @@
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\anim_catalyst_slide_down.xml.flat",
-        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\3c9dfcbad7a33bee838bbc2306899e59\\res\\anim\\catalyst_slide_down.xml"
+        "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\2e0b2f2a723d53488aa32bedc1794a44\\res\\anim\\catalyst_slide_down.xml"
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
