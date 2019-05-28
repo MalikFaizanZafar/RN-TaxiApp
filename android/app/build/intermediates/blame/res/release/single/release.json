@@ -348,6 +348,10 @@
         "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\f24d69a2664a423a0016c172cb54c13b\\res\\color\\abc_primary_text_material_light.xml"
     },
     {
+        "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\release\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "E:\\Office\\subkuch-app\\android\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_abc_action_mode_close_item_material.xml.flat",
         "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\f24d69a2664a423a0016c172cb54c13b\\res\\layout\\abc_action_mode_close_item_material.xml"
     },
@@ -904,6 +908,10 @@
         "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\f24d69a2664a423a0016c172cb54c13b\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
     },
     {
+        "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\release\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "E:\\Office\\subkuch-app\\android\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
         "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\f24d69a2664a423a0016c172cb54c13b\\res\\drawable-xxxhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
     },
@@ -962,6 +970,10 @@
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_abc_popup_menu_header_item_layout.xml.flat",
         "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\f24d69a2664a423a0016c172cb54c13b\\res\\layout\\abc_popup_menu_header_item_layout.xml"
+    },
+    {
+        "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "E:\\Office\\subkuch-app\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
@@ -1628,6 +1640,10 @@
         "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\16c58322d9f1d1d065eae0c4b57455cd\\res\\drawable\\messenger_button_blue_bg_selector.xml"
     },
     {
+        "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\release\\mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "E:\\Office\\subkuch-app\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
+    },
+    {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4_abc_ic_star_black_48dp.png.flat",
         "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\f24d69a2664a423a0016c172cb54c13b\\res\\drawable-xxxhdpi-v4\\abc_ic_star_black_48dp.png"
     },
@@ -1790,6 +1806,10 @@
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_googleg_standard_color_18.png.flat",
         "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\3c3fe7bf12d2811b7714b0ed5dc2d238\\res\\drawable-hdpi-v4\\googleg_standard_color_18.png"
+    },
+    {
+        "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\release\\mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "E:\\Office\\subkuch-app\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_common_google_signin_btn_icon_dark.xml.flat",
@@ -2030,6 +2050,10 @@
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
         "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\f24d69a2664a423a0016c172cb54c13b\\res\\drawable-xhdpi-v4\\abc_list_pressed_holo_dark.9.png"
+    },
+    {
+        "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "E:\\Office\\subkuch-app\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_template_part_time.xml.flat",
@@ -2406,6 +2430,10 @@
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\release\\mipmap-mdpi_ic_launcher_round.png.flat",
         "source": "E:\\Office\\subkuch-app\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "E:\\Office\\subkuch-app\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\release\\layout-v21_notification_action.xml.flat",

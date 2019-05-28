@@ -28,10 +28,10 @@ public final class R {
     public static final class color {
         private color() {}
 
-        public static final int notification_action_color_filter = 0x7f040061;
-        public static final int notification_icon_bg_color = 0x7f040062;
-        public static final int ripple_material_light = 0x7f04006d;
-        public static final int secondary_text_default_material_light = 0x7f04006f;
+        public static final int notification_action_color_filter = 0x7f040062;
+        public static final int notification_icon_bg_color = 0x7f040063;
+        public static final int ripple_material_light = 0x7f04006e;
+        public static final int secondary_text_default_material_light = 0x7f040070;
     }
     public static final class dimen {
         private dimen() {}

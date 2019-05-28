@@ -211,9 +211,9 @@ MERGED from [org.webkit:android-jsc:r174650] C:\Users\ZIXSOL\.gradle\caches\tran
 	android:label
 		ADDED from E:\Office\subkuch-app\android\app\src\main\AndroidManifest.xml:8:7-39
 	android:roundIcon
-		ADDED from E:\Office\subkuch-app\android\app\src\main\AndroidManifest.xml:10:7-42
+		ADDED from E:\Office\subkuch-app\android\app\src\main\AndroidManifest.xml:10:7-46
 	android:icon
-		ADDED from E:\Office\subkuch-app\android\app\src\main\AndroidManifest.xml:9:7-37
+		ADDED from E:\Office\subkuch-app\android\app\src\main\AndroidManifest.xml:9:7-41
 	android:allowBackup
 		ADDED from E:\Office\subkuch-app\android\app\src\main\AndroidManifest.xml:11:7-34
 	android:theme
