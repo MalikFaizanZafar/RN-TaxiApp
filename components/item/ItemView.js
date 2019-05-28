@@ -56,8 +56,8 @@ export default class ItemView extends Component {
                 titleStyle={{ fontSize: 10 }}
                 containerStyle={{
                   width: dimensions.width * 0.24,
-                  marginTop: 280,
-                  marginLeft: 235
+                  marginTop: dimensions.height*0.43,
+                  marginLeft: dimensions.width*0.63
                 }}
                 disabled={this.props.itemStatus}
                 onPress={() => {

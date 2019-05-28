@@ -5,7 +5,8 @@ import {
   Text,
   AsyncStorage,
   BackHandler,
-  Alert
+  Alert,
+  Dimensions
 } from "react-native";
 import { userLogout } from "../services/userLogout";
 export default class LogoutButtton extends Component {
@@ -18,10 +19,11 @@ export default class LogoutButtton extends Component {
     });
   }
   render() {
+    let dimensions = Dimensions.get('window')
     return (
       <View>
         <TouchableOpacity
-          style={{ marginBottom: 375 }}
+          style={{ marginBottom: dimensions.height*0.63 }}
           onPress={() => {
             console.log("Logout");
             Alert.alert(

@@ -3,6 +3,7 @@ import {
   View,
   Text,
   ScrollView,
+  Dimensions,
   TouchableOpacity
 } from "react-native";
 import FranchiseScreenStyles from './../../Styles/franchise'
@@ -11,8 +12,9 @@ export default class FranchiseTabBar extends Component {
     this.props.tabClicked(id)
   }
   render() {
+    let dimensions = Dimensions.get('window')
     return (
-      <View>
+      <View style={{marginTop:dimensions.width*0.07}}>
       <ScrollView
         horizontal={true}
         style={{ height: 50 }}

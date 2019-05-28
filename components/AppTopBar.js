@@ -4,6 +4,7 @@ import {
   View,
   Image,
   AsyncStorage,
+  Dimensions,
   TouchableOpacity
 } from "react-native";
 import { Button, Avatar, Badge } from "react-native-elements";
@@ -37,6 +38,7 @@ export default class AppTopBar extends Component {
     this.destroy$.complete();
   }
   render() {
+    let dimensions = Dimensions.get('window')
     return (
       <View style={styles.topBar}>
         <View style={styles.topBarIcon}>
@@ -59,7 +61,7 @@ export default class AppTopBar extends Component {
             source={require("../assets/subquch2.png")}
           />
         </View>
-            <View style={{ marginLeft: 50, marginTop: 10 }}>
+            <View style={{ marginLeft: dimensions.width*0.23, marginTop: 10 }}>
           <TouchableOpacity onPress={() => this.props.onCartPress(this.state.cartItemsCount)}>
             <View>
               <Avatar

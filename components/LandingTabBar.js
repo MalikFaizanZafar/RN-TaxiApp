@@ -3,7 +3,8 @@ import {
   View,
   Text,
   ScrollView,
-  TouchableOpacity
+  TouchableOpacity,
+  Dimensions
 } from "react-native";
 import LandingScreenStyles from '../Styles/landing'
 export default class LandingTabBar extends Component {
@@ -11,8 +12,9 @@ export default class LandingTabBar extends Component {
     this.props.tabClicked(id)
   }
   render() {
+    let dimensions = Dimensions.get('window')
     return (
-      <View>
+      <View style={{width: dimensions.width}}>
       <ScrollView
         horizontal={true}
         style={{ height: 45 }}
