@@ -19,9 +19,10 @@ export default class FranchiseListView extends Component {
   render() {
     let dimensions = Dimensions.get("window");
     return (
-      <View style={{ height: dimensions.height * 0.5 }}>
+      <View style={{ flex: 1}}>
         <ScrollView
           showsVerticalScrollIndicator={false}
+          style={{ height: dimensions.height * 0.5 }}
         >
           {this.props.data.length === 0? <Text style={{marginLeft: 75, marginTop: 100}}>{`No ${this.props.selectedTab ===2? 'Reviews': this.props.selectedTab ===0? 'Deals': 'Items'} Exist For This Franchise`} </Text>  : this.props.data.map((datum, i) => {
             return (
@@ -89,7 +90,7 @@ export default class FranchiseListView extends Component {
                           style={{
                             flexDirection: "row",
                             alignItems: "center",
-                            marginTop: 15,
+                            marginTop: dimensions.height*0.15,
                             marginLeft: 150
                           }}
                         >

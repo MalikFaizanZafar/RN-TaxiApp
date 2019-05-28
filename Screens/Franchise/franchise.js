@@ -87,51 +87,51 @@ export default class FranchiseMainScreen extends Component {
     const franchise = this.state.franchise;
     let dimensions = Dimensions.get("window");
     return (
-      <View style={{ padding: 0 }}>
+      <View style={{ flex: 1}}>
         <AppTopBar
           openSubquchDrawer={() => this.props.navigation.openDrawer()}
           onCartPress={cartItemsCount => this.cartPressHandler(cartItemsCount)}
         />
-        <FranchiseInfoCard
-          franchiseInfo={franchise}
-          viewMapPressed={(lat, lon) => this.viewMapHandler(lat, lon)}
-          loading={this.state.dataLoading}
-        />
-        <FranchiseCategoriesBar
-          categories={this.state.categories}
-          selectedCategory={id => this.onCategoryPressedHandler(id)}
-        />
-        <View>
-          {this.state.dataLoading ? (
-            <ActivityIndicator
-              size="large"
-              color="#000"
-              style={{ marginTop: 150 }}
-            />
-          ) : (
-            <FranchiseListView
-              data={
-                this.state.selectedTab === 1
-                  ? this.state.items
-                  : this.state.selectedTab === 0
-                  ? this.state.deals
-                  : this.state.reviews
-              }
-              selectedTab={this.state.selectedTab}
-              franchiseId={this.state.franchise.id}
-              itemPressHandler={itemId => this.itemPressHandler(itemId)}
-            />
-          )}
-        </View>
-        <View>
-          {this.state.dataLoading ? null : (
-            <FranchiseTabBar
-              tabItems={this.state.tabItems}
-              tabClicked={id => this.tabClicked(id)}
-              selectedTab={this.state.selectedTab}
-            />
-          )}
-        </View>
+        {this.state.dataLoading ? null : (
+          <FranchiseInfoCard
+            franchiseInfo={franchise}
+            viewMapPressed={(lat, lon) => this.viewMapHandler(lat, lon)}
+            loading={this.state.dataLoading}
+          />
+        )}
+        {this.state.dataLoading ? null : (
+          <FranchiseCategoriesBar
+            categories={this.state.categories}
+            selectedCategory={id => this.onCategoryPressedHandler(id)}
+          />
+        )}
+        {this.state.dataLoading ? (
+          <ActivityIndicator
+            size="large"
+            color="#000"
+            style={{ marginTop: 150 }}
+          />
+        ) : (
+          <FranchiseListView
+            data={
+              this.state.selectedTab === 1
+                ? this.state.items
+                : this.state.selectedTab === 0
+                ? this.state.deals
+                : this.state.reviews
+            }
+            selectedTab={this.state.selectedTab}
+            franchiseId={this.state.franchise.id}
+            itemPressHandler={itemId => this.itemPressHandler(itemId)}
+          />
+        )}
+        {this.state.dataLoading ? null : (
+          <FranchiseTabBar
+            tabItems={this.state.tabItems}
+            tabClicked={id => this.tabClicked(id)}
+            selectedTab={this.state.selectedTab}
+          />
+        )}
       </View>
     );
   }

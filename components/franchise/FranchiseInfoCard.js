@@ -34,13 +34,6 @@ export default class FranchiseInfoCard extends Component {
     const franchiseInfo = this.props.franchiseInfo;
     return (
       <View>
-        {this.props.loading ? (
-          <ActivityIndicator
-            size="large"
-            color="#000"
-            style={{ marginTop: 60 }}
-          />
-        ) : (
           <Card containerStyle={{ padding: 0 }}>
             <View style={{ flexDirection: "row", padding: 0 }}>
               <View style={{ padding: 0 }}>
@@ -112,7 +105,6 @@ export default class FranchiseInfoCard extends Component {
               </View>
             </View>
           </Card>
-        )}
       </View>
     );
   }
