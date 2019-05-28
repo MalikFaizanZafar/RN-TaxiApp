@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon May 27 17:31:24 PKT 2019
+#Tue May 28 12:04:18 PKT 2019
 56.path=lib/x86_64/libyoga.so
 5.base=E\:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0
 42.base=E\:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0
@@ -17,7 +17,7 @@
 21.set=ASSET
 46.base=E\:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0
 39.set=NATIVE_RESOURCE
-26.path=lib/armeabi-v7a/libreactnativejni.so
+26.path=lib/arm64-v8a/libglog.so
 56.base=E\:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0
 6.baseType=DIRECTORY
 36.path=ula.kml
@@ -79,7 +79,7 @@
 48.baseType=DIRECTORY
 39.baseType=DIRECTORY
 20.baseType=DIRECTORY
-27.path=lib/arm64-v8a/libglog.so
+27.path=lib/armeabi-v7a/libreactnativejni.so
 58.baseType=DIRECTORY
 57.base=E\:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0
 37.path=lib/armeabi-v7a/libglog.so

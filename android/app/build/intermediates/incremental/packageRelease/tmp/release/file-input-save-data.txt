@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue May 28 10:53:42 PKT 2019
+#Tue May 28 12:13:47 PKT 2019
 56.path=lib/x86/libimagepipeline.so
 5.base=E\:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\merged_assets\\release\\out
 42.base=E\:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\merged_assets\\release\\out
