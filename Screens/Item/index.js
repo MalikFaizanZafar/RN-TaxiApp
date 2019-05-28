@@ -21,8 +21,8 @@ const customDrawerComponent = (props) => (
     </View>
     <ScrollView>
       <DrawerItems {...props} />
+      <LogoutButtton />
     </ScrollView>
-    <LogoutButtton />
   </SafeAreaView>
 )
 

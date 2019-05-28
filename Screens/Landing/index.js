@@ -3,7 +3,8 @@ import { createDrawerNavigator, DrawerItems } from "react-navigation";
 import {
   ScrollView,
   SafeAreaView,
-  View
+  View,
+  Button
 } from "react-native";
 import LandingScreen from "./landing";
 import AccountScreen from "../Account";
@@ -23,10 +24,10 @@ const customDrawerComponent = props => (
     >
      <DrawerUserView />
     </View>
-    <ScrollView style={{height: 200}}>
+    <ScrollView style={{flex: 1, height: 50}}>
       <DrawerItems {...props} />
-    </ScrollView>
       <LogoutButtton />
+    </ScrollView>
   </SafeAreaView>
 );
 export const MyDrawerNavigator = createDrawerNavigator(
