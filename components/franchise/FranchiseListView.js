@@ -90,7 +90,7 @@ export default class FranchiseListView extends Component {
                           style={{
                             flexDirection: "row",
                             alignItems: "center",
-                            marginTop: dimensions.height*0.15,
+                            marginTop: 15,
                             marginLeft: 150
                           }}
                         >
