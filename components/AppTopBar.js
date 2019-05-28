@@ -45,9 +45,10 @@ export default class AppTopBar extends Component {
           <Button
             title="|||"
             type="outline"
-            buttonStyle={{ borderWidth: 0 }}
+            buttonStyle={{ borderWidth: 0}}
             titleStyle={{
               fontWeight: "bold",
+              padding: 5,
               color: "#fff",
               fontSize: 25,
               transform: [{ rotate: "90deg" }]
