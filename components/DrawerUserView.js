@@ -15,7 +15,7 @@ export default class DrawerUserView extends Component {
   }
   render() {
     return (
-      <View style={{ alignItems: "center", marginLeft: 20}}>
+      <View style={{ alignItems: "center", marginLeft: 40}}>
         <Image source={{ uri: this.state.user.photo}} style={{ height: 100, width: 100, borderRadius: 50}} />
         <Text style={{ fontWeight: "bold", marginTop: 10}}>{this.state.user.name}</Text>
         <Text style={{ fontSize: 10}}>{this.state.user.email}</Text>
