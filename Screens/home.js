@@ -18,6 +18,7 @@ import {
   LoginButton,
   AccessToken,
   GraphRequest,
+  LoginManager,
   GraphRequestManager
 } from "react-native-fbsdk";
 import { addUser } from "../store/actions";
@@ -145,6 +146,7 @@ class HomeScreen extends React.Component {
               }}
             >
               <LoginButton
+                readPermissions={["email"]}
                 style={{ width: 230, height: 30 }}
                 onLoginFinished={(error, result) => {
                   if (error) {
@@ -152,9 +154,20 @@ class HomeScreen extends React.Component {
                   } else if (result.isCancelled) {
                     alert("login is cancelled.");
                   } else {
+                    LoginManager.logInWithReadPermissions(['public_profile', 'email']).then(
+                      (result) => {
+                        if (result.isCancelled) {
+                          alert('Login cancelled');
+                        } else {
+                          // alert('Login success with permissions: ' + JSON.stringify(result));
+                        }
+                      },
+                      (error) => {
+                        alert('Login fail with error: ' + error);
+                      }
+                    );
                     AccessToken.getCurrentAccessToken().then(data => {
                       let accessToken = data.accessToken;
-
                       const responseInfoCallback = (error, result) => {
                         if (error) {
                           console.log(error);
