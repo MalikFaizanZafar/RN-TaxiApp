@@ -72,16 +72,14 @@ export default class FranchiseMainScreen extends Component {
     }
   }
   cartPressHandler(cartItemsCount) {
-    if(cartItemsCount > 0){
+    if (cartItemsCount > 0) {
       this.props.navigation.navigate("Cart");
-    }else{
+    } else {
       Alert.alert(
-        'SubQuch Alert',
-        'No Item or Deals in the Cart. Please Add Some Items or Deals',
-        [
-          {text: 'OK', onPress: () => console.log('OK Pressed')},
-        ],
-        {cancelable: false},
+        "SubQuch Alert",
+        "No Item or Deals in the Cart. Please Add Some Items or Deals",
+        [{ text: "OK", onPress: () => console.log("OK Pressed") }],
+        { cancelable: false }
       );
     }
   }
@@ -92,7 +90,7 @@ export default class FranchiseMainScreen extends Component {
       <View style={{ padding: 0 }}>
         <AppTopBar
           openSubquchDrawer={() => this.props.navigation.openDrawer()}
-          onCartPress={(cartItemsCount) => this.cartPressHandler(cartItemsCount)}
+          onCartPress={cartItemsCount => this.cartPressHandler(cartItemsCount)}
         />
         <FranchiseInfoCard
           franchiseInfo={franchise}
@@ -103,7 +101,7 @@ export default class FranchiseMainScreen extends Component {
           categories={this.state.categories}
           selectedCategory={id => this.onCategoryPressedHandler(id)}
         />
-        <View style={{ height: dimensions.height * 0.5 }}>
+        <View>
           {this.state.dataLoading ? (
             <ActivityIndicator
               size="large"
@@ -125,11 +123,15 @@ export default class FranchiseMainScreen extends Component {
             />
           )}
         </View>
-        <FranchiseTabBar
-          tabItems={this.state.tabItems}
-          tabClicked={id => this.tabClicked(id)}
-          selectedTab={this.state.selectedTab}
-        />
+        <View>
+          {this.state.dataLoading ? null : (
+            <FranchiseTabBar
+              tabItems={this.state.tabItems}
+              tabClicked={id => this.tabClicked(id)}
+              selectedTab={this.state.selectedTab}
+            />
+          )}
+        </View>
       </View>
     );
   }

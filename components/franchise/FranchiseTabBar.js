@@ -14,7 +14,7 @@ export default class FranchiseTabBar extends Component {
   render() {
     let dimensions = Dimensions.get('window')
     return (
-      <View style={{marginTop:dimensions.width*0.07}}>
+      <View>
       <ScrollView
         horizontal={true}
         style={{ height: 50 }}

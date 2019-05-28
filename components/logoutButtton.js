@@ -23,7 +23,7 @@ export default class LogoutButtton extends Component {
     return (
       <View>
         <TouchableOpacity
-          style={{ marginBottom: dimensions.height*0.63 }}
+          style={{ marginBottom: dimensions.height*0.61 }}
           onPress={() => {
             console.log("Logout");
             Alert.alert(

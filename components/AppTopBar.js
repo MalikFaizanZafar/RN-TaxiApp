@@ -38,14 +38,14 @@ export default class AppTopBar extends Component {
     this.destroy$.complete();
   }
   render() {
-    let dimensions = Dimensions.get('window')
+    let dimensions = Dimensions.get("window");
     return (
       <View style={styles.topBar}>
         <View style={styles.topBarIcon}>
           <Button
             title="|||"
             type="outline"
-            buttonStyle={{ marginLeft: 5, borderWidth: 0 }}
+            buttonStyle={{ borderWidth: 0 }}
             titleStyle={{
               fontWeight: "bold",
               color: "#fff",
@@ -55,46 +55,49 @@ export default class AppTopBar extends Component {
             onPress={this.props.openSubquchDrawer}
           />
         </View>
-        <View style={{ marginLeft: 75, marginTop: 5 }}>
+        <View style={{width: dimensions.width*0.6, alignItems: "center" }}>
           <Image
-            style={{ height: 42, width: 150 }}
+            style={{ height: dimensions.height*0.065, width: dimensions.width * 0.42 }}
             source={require("../assets/subquch2.png")}
           />
         </View>
-            <View style={{ marginLeft: dimensions.width*0.23, marginTop: 10 }}>
-          <TouchableOpacity onPress={() => this.props.onCartPress(this.state.cartItemsCount)}>
+        <View style={{ width: dimensions.width*0.2, alignItems: "flex-end", paddingRight:dimensions.width*0.03 }}>
+        <TouchableOpacity
+            onPress={() => this.props.onCartPress(this.state.cartItemsCount)}
+          >
             <View>
               <Avatar
                 rounded
                 source={require("./../assets/cart.png")}
                 size="small"
               />
-                <Badge
-                  value={
-                    this.state.cartItemsCount === null
-                      ? 0
-                      : this.state.cartItemsCount
-                  }
-                  status="success"
-                  containerStyle={{ position: "absolute", top: 20, right: 25 }}
-                />
+              <Badge
+                value={
+                  this.state.cartItemsCount === null
+                    ? 0
+                    : this.state.cartItemsCount
+                }
+                status="success"
+                containerStyle={{ position: "absolute", top: 20, right: 20 }}
+              />
             </View>
           </TouchableOpacity>
         </View>
-         
       </View>
     );
   }
 }
-
+let dims = Dimensions.get("window");
 const styles = StyleSheet.create({
   topBar: {
     backgroundColor: "#171616",
     flexDirection: "row",
-    height: 50
+    height: dims.height*0.08,
+    alignItems: "center"
   },
   topBarIcon: {
     justifyContent: "flex-start",
-    alignItems: "flex-start"
+    alignItems: "flex-start",
+    width: dims.width*0.2
   }
 });

@@ -484,10 +484,6 @@
         "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\f24d69a2664a423a0016c172cb54c13b\\res\\layout-v26\\abc_screen_toolbar.xml"
     },
     {
-        "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_subquch.png.flat",
-        "source": "E:\\Office\\subkuch-app\\android\\app\\src\\main\\res\\mipmap-xhdpi\\subquch.png"
-    },
-    {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
         "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\f24d69a2664a423a0016c172cb54c13b\\res\\drawable-xxhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
     },
@@ -650,10 +646,6 @@
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\f24d69a2664a423a0016c172cb54c13b\\res\\drawable-xhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
-    },
-    {
-        "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_subquch.png.flat",
-        "source": "E:\\Office\\subkuch-app\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\subquch.png"
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_star_black_48dp.png.flat",
@@ -1168,10 +1160,6 @@
         "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\6eea0471efedb052a2f0771bdfffa7c3\\res\\drawable-xxhdpi-v4\\com_facebook_button_icon_white.png"
     },
     {
-        "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_subquch.png.flat",
-        "source": "E:\\Office\\subkuch-app\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\subquch.png"
-    },
-    {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_black_48dp.png.flat",
         "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\f24d69a2664a423a0016c172cb54c13b\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_48dp.png"
     },
@@ -1612,10 +1600,6 @@
         "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\f24d69a2664a423a0016c172cb54c13b\\res\\drawable-xhdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
     },
     {
-        "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_subquch.png.flat",
-        "source": "E:\\Office\\subkuch-app\\android\\app\\src\\main\\res\\mipmap-mdpi\\subquch.png"
-    },
-    {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\f24d69a2664a423a0016c172cb54c13b\\res\\drawable-ldrtl-xhdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
     },
@@ -2046,10 +2030,6 @@
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\f24d69a2664a423a0016c172cb54c13b\\res\\drawable-xhdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_subquch.png.flat",
-        "source": "E:\\Office\\subkuch-app\\android\\app\\src\\main\\res\\mipmap-hdpi\\subquch.png"
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_support_simple_spinner_dropdown_item.xml.flat",

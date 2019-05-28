@@ -1084,7 +1084,6 @@ int layout support_simple_spinner_dropdown_item 0x7f090041
 int mipmap ic_launcher 0x7f0a0000
 int mipmap ic_launcher_foreground 0x7f0a0001
 int mipmap ic_launcher_round 0x7f0a0002
-int mipmap subquch 0x7f0a0003
 int raw amu_ballon_gx_prefix 0x7f0b0000
 int raw amu_basic_folder 0x7f0b0001
 int raw amu_basic_placemark 0x7f0b0002

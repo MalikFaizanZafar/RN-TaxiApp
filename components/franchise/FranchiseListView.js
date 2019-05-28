@@ -8,6 +8,7 @@ import {
   TouchableOpacity
 } from "react-native";
 import { Card, Rating, Badge } from "react-native-elements";
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 export default class FranchiseListView extends Component {
   constructor(props) {
     super(props);
@@ -18,10 +19,9 @@ export default class FranchiseListView extends Component {
   render() {
     let dimensions = Dimensions.get("window");
     return (
-      <View>
+      <View style={{ height: dimensions.height * 0.5 }}>
         <ScrollView
           showsVerticalScrollIndicator={false}
-          style={{ marginTop: 0 }}
         >
           {this.props.data.length === 0? <Text style={{marginLeft: 75, marginTop: 100}}>{`No ${this.props.selectedTab ===2? 'Reviews': this.props.selectedTab ===0? 'Deals': 'Items'} Exist For This Franchise`} </Text>  : this.props.data.map((datum, i) => {
             return (

@@ -224,16 +224,8 @@
         "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\4ae9a0349816e904a450fb46ed91335d\\res\\drawable\\com_facebook_button_login_silver_background.xml"
     },
     {
-        "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\release\\mipmap-mdpi_subquch.png.flat",
-        "source": "E:\\Office\\subkuch-app\\android\\app\\src\\main\\res\\mipmap-mdpi\\subquch.png"
-    },
-    {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\f24d69a2664a423a0016c172cb54c13b\\res\\drawable-xhdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xhdpi_subquch.png.flat",
-        "source": "E:\\Office\\subkuch-app\\android\\app\\src\\main\\res\\mipmap-xhdpi\\subquch.png"
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
@@ -1860,10 +1852,6 @@
         "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\f24d69a2664a423a0016c172cb54c13b\\res\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
     },
     {
-        "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxhdpi_subquch.png.flat",
-        "source": "E:\\Office\\subkuch-app\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\subquch.png"
-    },
-    {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_notification_bg_normal.9.png.flat",
         "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\f7ae12414836de7b3d1d23728f9bc4f7\\res\\drawable-hdpi-v4\\notification_bg_normal.9.png"
     },
@@ -1960,16 +1948,8 @@
         "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\3404aa4212fdfc75cc8eddcbe0848deb\\res\\raw\\amu_unsupported.kml"
     },
     {
-        "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxxhdpi_subquch.png.flat",
-        "source": "E:\\Office\\subkuch-app\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\subquch.png"
-    },
-    {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_com_facebook_close.png.flat",
         "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\6eea0471efedb052a2f0771bdfffa7c3\\res\\drawable-mdpi-v4\\com_facebook_close.png"
-    },
-    {
-        "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\release\\mipmap-hdpi_subquch.png.flat",
-        "source": "E:\\Office\\subkuch-app\\android\\app\\src\\main\\res\\mipmap-hdpi\\subquch.png"
     },
     {
         "merged": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\res\\merged\\release\\raw_amu_multiple_placemarks.kml.flat",

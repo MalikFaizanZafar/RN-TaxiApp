@@ -1072,7 +1072,6 @@ layout support_simple_spinner_dropdown_item
 mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
-mipmap subquch
 raw amu_ballon_gx_prefix
 raw amu_basic_folder
 raw amu_basic_placemark

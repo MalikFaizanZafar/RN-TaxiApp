@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue May 28 13:07:08 PKT 2019
+#Tue May 28 14:18:19 PKT 2019
 56.path=lib/x86_64/libyoga.so
 5.base=E\:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0
 42.base=E\:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0

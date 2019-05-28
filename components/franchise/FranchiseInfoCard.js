@@ -33,7 +33,7 @@ export default class FranchiseInfoCard extends Component {
     let dimensions = Dimensions.get("window");
     const franchiseInfo = this.props.franchiseInfo;
     return (
-      <View style={{ height: dimensions.height * 0.2 }}>
+      <View>
         {this.props.loading ? (
           <ActivityIndicator
             size="large"
