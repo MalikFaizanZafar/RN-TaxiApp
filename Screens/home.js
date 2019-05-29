@@ -73,6 +73,7 @@ class HomeScreen extends React.Component {
       });
   }
   signIn = async () => {
+    this.setState({screenVisible : false})
     try {
       await GoogleSignin.hasPlayServices();
       const userInfo = await GoogleSignin.signIn();
@@ -149,6 +150,7 @@ class HomeScreen extends React.Component {
                 readPermissions={["email"]}
                 style={{ width: 230, height: 30 }}
                 onLoginFinished={(error, result) => {
+                  this.setState({screenVisible : false})
                   if (error) {
                     alert("login has error: " + result.error);
                   } else if (result.isCancelled) {
