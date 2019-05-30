@@ -173,7 +173,7 @@ export default class LandingScreen extends React.Component {
         console.log("notification has : ", notification)
         if(!isNaN(notification.body)){
           this.setState({currentOrderId: Number(notification.body)}, () => {
-            this.setState({reviewDialog: true})
+            this.showReviewAlert()
           })
         }else{
           const { title, body } = notification;
@@ -217,6 +217,15 @@ export default class LandingScreen extends React.Component {
       title,
       body,
       [{ text: "OK", onPress: () => console.log("OK Pressed") }],
+      { cancelable: false }
+    );
+  }
+
+  showReviewAlert() {
+    Alert.alert(
+      'SubQuch Order Review',
+      'Your Order has been Completed. We would Like You to Write a Review for the Service ',
+      [{ text: "OK", onPress: () => this.setState({reviewDialog: true}) }],
       { cancelable: false }
     );
   }
