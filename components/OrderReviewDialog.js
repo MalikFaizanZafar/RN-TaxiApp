@@ -2,12 +2,14 @@ import React, { Component } from "react";
 import {
   ActivityIndicator,
   View,
+  Text,
   Modal,
   TouchableHighlight,
   Alert,
   Dimensions
 } from "react-native";
 import { Input, Rating,Button } from "react-native-elements";
+import { sendOrderReview } from "../services/sendOrderReview";
 export default class OrderReviewDialog extends Component {
   constructor(props) {
     super(props);
@@ -23,9 +25,20 @@ export default class OrderReviewDialog extends Component {
     this.props.closeReviewDialog();
   }
   ratingCompleted(rating) {
+    this.setState({rating : rating})
     console.log("Rating is: " + rating);
   }
-
+  addOrderReview(){
+    this.setState({addingReview: true})
+    sendOrderReview(this.props.orderId, this.state.review,this.state.rating).then(reviewResponse => {
+      this.setState({addingReview: false})
+      console.log("reviewResponse is : ", reviewResponse)
+      this.props.closeReviewDialog();
+    }).catch(reviewError => {
+      console.log("reviewError is : ", reviewError)
+      this.setState({ reviewDialogVisible: false });
+    })
+  }
   render() {
     let dimensions = Dimensions.get('window')
     this.state.reviewDialogVisible = this.props.reviewDialogVisible;
@@ -60,7 +73,7 @@ export default class OrderReviewDialog extends Component {
                   }}
                 />
                 <Rating
-                  onFinishRating={this.ratingCompleted}
+                  onFinishRating={(rating) => this.ratingCompleted(rating)}
                   style={{ paddingVertical: 10 }}
                 />
               </View>
@@ -71,28 +84,14 @@ export default class OrderReviewDialog extends Component {
                   style={{ marginTop: 80 }}
                 />
               ) : (
-                <TouchableHighlight
-                  onPress={() => {
-                    this.setModalVisible();
-                  }}
-                >
-                  <View
-                    style={{
-                      marginTop: 40,
-                      marginLeft: 20,
-                      width: 320
-                    }}
-                  >
                     <Button
                       title="Save"
                       buttonStyle={{ width: "40%", marginLeft:"30%"}}
                       // disabled={this.isSaveDisabled()}
                       onPress={() => {
-                        console.log("Save Pressed");
+                        this.addOrderReview()
                       }}
                     />
-                  </View>
-                </TouchableHighlight>
               )}
             </View>
           </View>

@@ -36,7 +36,8 @@ export default class LandingScreen extends React.Component {
     tabItems: ["Deals", "Brands"],
     selectedTab: 0,
     cartItems: 0,
-    reviewDialog: false
+    reviewDialog: false,
+    currentOrderId: 0
   };
 
   async LocationSerivce() {
@@ -164,8 +165,20 @@ export default class LandingScreen extends React.Component {
     this.notificationListener = firebase
       .notifications()
       .onNotification(notification => {
-        const { title, body } = notification;
-        this.showAlert(title, body);
+        new firebase.notifications.Notification()
+        .setNotificationId(notification.data.notificacionId)
+        .setTitle(notification.title)
+        .setBody(notification.body)
+        .setData(notification.data)
+        console.log("notification has : ", notification)
+        if(!isNaN(notification.body)){
+          this.setState({currentOrderId: Number(notification.body)}, () => {
+            this.setState({reviewDialog: true})
+          })
+        }else{
+          const { title, body } = notification;
+          this.showAlert(title, body);
+        }
       });
 
     /*
@@ -174,6 +187,7 @@ export default class LandingScreen extends React.Component {
     this.notificationOpenedListener = firebase
       .notifications()
       .onNotificationOpened(notificationOpen => {
+        console.log("onNotificationOpened", notificationOpen)
         const { title, body } = notificationOpen.notification;
         this.showAlert(title, body);
       });
@@ -185,6 +199,7 @@ export default class LandingScreen extends React.Component {
       .notifications()
       .getInitialNotification();
     if (notificationOpen) {
+      console.log("!notificationOpen(Background)", notificationOpen)
       const { title, body } = notificationOpen.notification;
       this.showAlert(title, body);
     }
@@ -320,7 +335,7 @@ export default class LandingScreen extends React.Component {
           openSubquchDrawer={() => this.props.navigation.openDrawer()}
           onCartPress={(cartItemsCount) => this.cartPressHandler(cartItemsCount)}
         />
-        {/* <AppSearchView
+        <AppSearchView
           updateSearch={val => {
             this.onSearchHandler(val);
           }}
@@ -336,11 +351,8 @@ export default class LandingScreen extends React.Component {
           tabItems={this.state.tabItems}
           tabClicked={id => this.tabClicked(id)}
           selectedTab={this.state.selectedTab}
-        /> */}
-        <Button onPress={() => {
-          this.setState({reviewDialog: true})
-        }}>Review Dialog</Button>
-        <OrderReviewDialog reviewDialogVisible={this.state.reviewDialog} closeReviewDialog={() => {
+        />
+        <OrderReviewDialog reviewDialogVisible={this.state.reviewDialog} orderId={this.state.currentOrderId} closeReviewDialog={() => {
           this.setState({reviewDialog: false})
         }} />
       </View>
