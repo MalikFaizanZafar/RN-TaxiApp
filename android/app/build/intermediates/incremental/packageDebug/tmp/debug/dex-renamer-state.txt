@@ -1,4 +1,4 @@
-#Wed May 29 11:26:59 PKT 2019
+#Thu May 30 11:27:51 PKT 2019
 base.0=E\:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 path.0=classes.dex
 renamed.0=classes.dex

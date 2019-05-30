@@ -18,6 +18,8 @@ import firebase from "react-native-firebase";
 import { storeUserData } from "../../services/signUser";
 import { isUserLocationStored } from "../../services/isUserLocationStored";
 import { setDeviceToken } from "../../services/setDeviceToken";
+import { Button } from "react-native-elements";
+import OrderReviewDialog from "../../components/OrderReviewDialog";
 export default class LandingScreen extends React.Component {
   static navigationOptions = {
     drawerLabel: () => null
@@ -33,7 +35,8 @@ export default class LandingScreen extends React.Component {
     dataLoading: true,
     tabItems: ["Deals", "Brands"],
     selectedTab: 0,
-    cartItems: 0
+    cartItems: 0,
+    reviewDialog: false
   };
 
   async LocationSerivce() {
@@ -317,7 +320,7 @@ export default class LandingScreen extends React.Component {
           openSubquchDrawer={() => this.props.navigation.openDrawer()}
           onCartPress={(cartItemsCount) => this.cartPressHandler(cartItemsCount)}
         />
-        <AppSearchView
+        {/* <AppSearchView
           updateSearch={val => {
             this.onSearchHandler(val);
           }}
@@ -333,7 +336,13 @@ export default class LandingScreen extends React.Component {
           tabItems={this.state.tabItems}
           tabClicked={id => this.tabClicked(id)}
           selectedTab={this.state.selectedTab}
-        />
+        /> */}
+        <Button onPress={() => {
+          this.setState({reviewDialog: true})
+        }}>Review Dialog</Button>
+        <OrderReviewDialog reviewDialogVisible={this.state.reviewDialog} closeReviewDialog={() => {
+          this.setState({reviewDialog: false})
+        }} />
       </View>
     );
   }
