@@ -67,12 +67,12 @@ class HomeScreen extends React.Component {
       };
       userRegistered(googleUser.email)
         .then(user => {
-          console.log("Google user is  : ", user);
+          // console.log("Google user is  : ", user);
           this.storeDataToStorage(user.data.data);
           this.props.navigation.navigate("Landing");
         })
         .catch(error => {
-          console.log("user Does not Exist");
+          // console.log("user Does not Exist");
           this.setState({ userInfo: googleUser });
           this.setState({ modalVisible: true });
         });
@@ -95,12 +95,9 @@ class HomeScreen extends React.Component {
   };
   fbLoginResultHandler(userExists, fbUser) {
     this.setState({ AuthButtonsVisible: false });
-    console.log("this.state.AuthButtonsVisible is (1) ", this.state.AuthButtonsVisible)
     if (userExists === true) {
-      console.log("this.state.AuthButtonsVisible is (2) ", this.state.AuthButtonsVisible)
       this.props.navigation.navigate("Landing");
     } else if (userExists === false) {
-      console.log("this.state.AuthButtonsVisible is (3) ", this.state.AuthButtonsVisible)
       this.setState({ userInfo: fbUser });
       this.setState({ modalVisible: true });
     }

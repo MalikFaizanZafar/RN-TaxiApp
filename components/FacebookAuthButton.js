@@ -7,7 +7,7 @@ import {
   LoginManager,
   GraphRequestManager
 } from "react-native-fbsdk";
-import { userRegistered } from "./../services/userRegistered";
+import { userRegistered } from "../services/userRegistered";
 import { storeUserData } from "../services/signUser";
 export default class FacebookAuthButton extends Component {
   storeDataToStorage = async userData => {
