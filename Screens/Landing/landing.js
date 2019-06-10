@@ -23,7 +23,7 @@ import OrderReviewDialog from "../../components/OrderReviewDialog";
 export default class LandingScreen extends React.Component {
   static navigationOptions = {
     drawerLabel: () => null
-  }
+  };
 
   state = {
     latitude: null,
@@ -41,52 +41,69 @@ export default class LandingScreen extends React.Component {
   };
 
   async LocationSerivce() {
-        try {
-          const granted = await PermissionsAndroid.request(
-            PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
-            {
-              title: "Location Permission",
-              message:
-                "SubQuch needs access to your location"
-            }
-          );
-          if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-            console.log("You can use locations ");
-            navigator.geolocation.getCurrentPosition(
-              position => {
-                console.log(position);
-                this.setState({
-                  latitude: position.coords.latitude,
-                  longitude: position.coords.longitude,
-                  error: null
-                });
-                this.storeLatLonToStorage(
-                  this.state.latitude,
-                  this.state.longitude
-                );
-                this.populateInitialData(
-                  position.coords.latitude,
-                  position.coords.longitude,
-                  35
-                );
-              },
-              error => this.setState({ error: error.message }),
-              { enableHighAccuracy: false, timeout: 200000, maximumAge: 1000 }
-            );
-          } else {
-            console.log("Location permission denied");
-            Alert.alert(
-              'SubQuch Alert ',
-              'SubQuch Needs to Acess Your Location. Please Turn on Your GPS',
-              [
-                {text: 'OK', onPress: () => this.LocationSerivce()},
-              ],
-              {cancelable: false},
-            );
-          }
-        } catch (err) {
-          console.warn(err);
+    try {
+      const granted = await PermissionsAndroid.request(
+        PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
+        {
+          title: "Location Permission",
+          message: "SubQuch needs access to your location"
         }
+      );
+      if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+        console.log("You can use locations ");
+        // console.log("navigator has :  ", navigator.geolocation);
+        // this.setState({
+        //   latitude: 33.6763934,
+        //   longitude: 72.9980016,
+        //   error: null
+        // });
+        // this.storeLatLonToStorage(this.state.latitude, this.state.longitude);
+        // this.populateInitialData(
+        //   33.6763934,
+        //   72.9980016,
+        //   35
+        // );
+        navigator.geolocation.getCurrentPosition(
+          position => {
+            console.log("position is : ",position);
+            this.setState({
+              latitude: position.coords.latitude,
+              longitude: position.coords.longitude,
+              error: null
+            });
+            this.storeLatLonToStorage(
+              this.state.latitude,
+              this.state.longitude
+            );
+            this.populateInitialData(
+              position.coords.latitude,
+              position.coords.longitude,
+              35
+            );
+          },
+          error => {
+            Alert.alert(
+              "SubQuch Alert ",
+              `SubQuch Needs to Acess Your Location. Please Turn ON Your GPS and Set Location Method to "High Accuracy" `,
+              [{ text: "OK", onPress: () => this.LocationSerivce() }],
+              { cancelable: false }
+            );
+            this.setState({ error: error.message })
+          },
+          { enableHighAccuracy: false, timeout: 200000 }
+        );
+      } else {
+        console.log("Location permission denied");
+        Alert.alert(
+          "SubQuch Alert ",
+          "SubQuch Needs to Acess Your Location. Please Turn on Your GPS",
+          [{ text: "OK", onPress: () => this.LocationSerivce() }],
+          { cancelable: false }
+        );
+      }
+    } catch (err) {
+      console.warn(err);
+    }
   }
   populateInitialData(latitude, longitude, distance) {
     getFilterQueryData(latitude, longitude, distance)
@@ -124,11 +141,13 @@ export default class LandingScreen extends React.Component {
     const fcmToken = await firebase.messaging().getToken();
     if (fcmToken) {
       console.log("fcmToken is : ", fcmToken);
-      setDeviceToken(fcmToken).then(setTokenResponse => {
-        console.log("device token is set", setTokenResponse)
-      }).catch(setDeviceError => {
-        console.log("device token is not set", setDeviceError)
-      })
+      setDeviceToken(fcmToken)
+        .then(setTokenResponse => {
+          console.log("device token is set", setTokenResponse);
+        })
+        .catch(setDeviceError => {
+          console.log("device token is not set", setDeviceError);
+        });
       // firebase.initializeApp(fbConfig);
     } else {
       // user doesn't have a device token yet
@@ -166,16 +185,16 @@ export default class LandingScreen extends React.Component {
       .notifications()
       .onNotification(notification => {
         new firebase.notifications.Notification()
-        .setNotificationId(notification.data.notificacionId)
-        .setTitle(notification.title)
-        .setBody(notification.body)
-        .setData(notification.data)
-        console.log("notification has : ", notification)
-        if(!isNaN(notification.body)){
-          this.setState({currentOrderId: Number(notification.body)}, () => {
-            this.showReviewAlert()
-          })
-        }else{
+          .setNotificationId(notification.data.notificacionId)
+          .setTitle(notification.title)
+          .setBody(notification.body)
+          .setData(notification.data);
+        console.log("notification has : ", notification);
+        if (!isNaN(notification.body)) {
+          this.setState({ currentOrderId: Number(notification.body) }, () => {
+            this.showReviewAlert();
+          });
+        } else {
           const { title, body } = notification;
           this.showAlert(title, body);
         }
@@ -187,7 +206,7 @@ export default class LandingScreen extends React.Component {
     this.notificationOpenedListener = firebase
       .notifications()
       .onNotificationOpened(notificationOpen => {
-        console.log("onNotificationOpened", notificationOpen)
+        console.log("onNotificationOpened", notificationOpen);
         const { title, body } = notificationOpen.notification;
         this.showAlert(title, body);
       });
@@ -199,7 +218,7 @@ export default class LandingScreen extends React.Component {
       .notifications()
       .getInitialNotification();
     if (notificationOpen) {
-      console.log("!notificationOpen(Background)", notificationOpen)
+      console.log("!notificationOpen(Background)", notificationOpen);
       const { title, body } = notificationOpen.notification;
       this.showAlert(title, body);
     }
@@ -223,9 +242,9 @@ export default class LandingScreen extends React.Component {
 
   showReviewAlert() {
     Alert.alert(
-      'SubQuch Order Review',
-      'Your Order has been Completed. We would Like You to Write a Review for the Service ',
-      [{ text: "OK", onPress: () => this.setState({reviewDialog: true}) }],
+      "SubQuch Order Review",
+      "Your Order has been Completed. We would Like You to Write a Review for the Service ",
+      [{ text: "OK", onPress: () => this.setState({ reviewDialog: true }) }],
       { cancelable: false }
     );
   }
@@ -263,16 +282,25 @@ export default class LandingScreen extends React.Component {
   }
   onSearchHandler(searchKey) {
     this.setState({ dataLoading: true });
-    if(!searchKey){
-      console.log("searchKey is empty", this.state.dataArray)
-      console.log(" getNearestFranchises(this.state.dataArray, deal): ", getNearestFranchises(this.state.dataArray, "deal"))
-      console.log(" getNearestFranchises(this.state.dataArray, franchise): ", getNearestFranchises(this.state.dataArray, "franchise"))
+    if (!searchKey) {
+      console.log("searchKey is empty", this.state.dataArray);
+      console.log(
+        " getNearestFranchises(this.state.dataArray, deal): ",
+        getNearestFranchises(this.state.dataArray, "deal")
+      );
+      console.log(
+        " getNearestFranchises(this.state.dataArray, franchise): ",
+        getNearestFranchises(this.state.dataArray, "franchise")
+      );
       this.setState({
-        ListViewData: this.state.selectedTab === 0? getNearestFranchises(this.state.dataArray, "deal"):  getNearestFranchises(this.state.dataArray, "franchise")
+        ListViewData:
+          this.state.selectedTab === 0
+            ? getNearestFranchises(this.state.dataArray, "deal")
+            : getNearestFranchises(this.state.dataArray, "franchise")
       });
       this.setState({ dataLoading: false });
-    }else{
-      console.log("searchKey is NOT empty")
+    } else {
+      console.log("searchKey is NOT empty");
       LandingSearchHandler(
         this.state.latitude,
         this.state.longitude,
@@ -280,7 +308,7 @@ export default class LandingScreen extends React.Component {
         searchKey,
         this.state.selectedTab
       ).then(promiseResponse => {
-        console.log("searchPromise response is : ", promiseResponse)
+        console.log("searchPromise response is : ", promiseResponse);
         this.setState(
           {
             ListViewData: promiseResponse
@@ -324,16 +352,14 @@ export default class LandingScreen extends React.Component {
     }
   }
   cartPressHandler(cartItemsCount) {
-    if(cartItemsCount > 0){
+    if (cartItemsCount > 0) {
       this.props.navigation.navigate("Cart");
-    }else{
+    } else {
       Alert.alert(
-        'SubQuch Alert',
-        'No Item or Deals in the Cart. Please Add Some Items or Deals',
-        [
-          {text: 'OK', onPress: () => console.log('OK Pressed')},
-        ],
-        {cancelable: false},
+        "SubQuch Alert",
+        "No Item or Deals in the Cart. Please Add Some Items or Deals",
+        [{ text: "OK", onPress: () => console.log("OK Pressed") }],
+        { cancelable: false }
       );
     }
   }
@@ -342,13 +368,13 @@ export default class LandingScreen extends React.Component {
       <View style={LandingScreenStyles.container}>
         <AppTopBar
           openSubquchDrawer={() => this.props.navigation.openDrawer()}
-          onCartPress={(cartItemsCount) => this.cartPressHandler(cartItemsCount)}
+          onCartPress={cartItemsCount => this.cartPressHandler(cartItemsCount)}
         />
         <AppSearchView
           updateSearch={val => {
             this.onSearchHandler(val);
           }}
-          searchType={this.state.selectedTab === 0 ? "deals" : "brands"} 
+          searchType={this.state.selectedTab === 0 ? "deals" : "brands"}
         />
         <AppBrandsListView
           data={this.state.ListViewData}
@@ -361,9 +387,13 @@ export default class LandingScreen extends React.Component {
           tabClicked={id => this.tabClicked(id)}
           selectedTab={this.state.selectedTab}
         />
-        <OrderReviewDialog reviewDialogVisible={this.state.reviewDialog} orderId={this.state.currentOrderId} closeReviewDialog={() => {
-          this.setState({reviewDialog: false})
-        }} />
+        <OrderReviewDialog
+          reviewDialogVisible={this.state.reviewDialog}
+          orderId={this.state.currentOrderId}
+          closeReviewDialog={() => {
+            this.setState({ reviewDialog: false });
+          }}
+        />
       </View>
     );
   }
