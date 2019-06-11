@@ -15,6 +15,22 @@
       },
       "oauth_client": [
         {
+          "client_id": "54989238851-cou0cgpcjfjv14jojhjtieeu0h86jpp9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.subquch",
+            "certificate_hash": "537495ca0e72a533c0c0e23ee56b0393bd4f6180"
+          }
+        },
+        {
+          "client_id": "54989238851-gass0eo2cs2qbvf84cipecoklibt9son.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.subquch",
+            "certificate_hash": "0978de4ba3d628958ec55151fa357e15e6b07d21"
+          }
+        },
+        {
           "client_id": "54989238851-3dldbv2i90f7atlge5ssd6rd9tiau4tf.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -28,7 +44,7 @@
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "54989238851-3dldbv2i90f7atlge5ssd6rd9tiau4tf.apps.googleusercontent.com",
+              "client_id": "54989238851-lgu9mmai3i2blko5qsngnmo8934raibv.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

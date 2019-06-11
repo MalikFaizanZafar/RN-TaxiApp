@@ -121,13 +121,14 @@ class HomeScreen extends React.Component {
               }}
             >
               <FacebookAuthButton
+                style={{marginTop: 50}}
                 fbSignResult={(userExists, fbUser) =>
                   this.fbLoginResultHandler(userExists, fbUser)
                 }
                 fbAuthInit={() => { this.setState({AuthButtonsVisible: false}) }}
               />
               <GoogleSigninButton
-                style={{ width: 237, height: 35, marginTop: 10, elevation: 0 }}
+                style={{ width: 237, height: 35, marginTop: 20, elevation: 0 }}
                 size={GoogleSigninButton.Size.Wide}
                 color={GoogleSigninButton.Color.Light}
                 onPress={this.signIn}
