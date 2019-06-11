@@ -22,18 +22,20 @@ export default class AppBrandsListView extends Component {
       <View style={{ flex: 1 }}>
         {this.props.dataLoading ? (
           <View style={{ marginTop: 150, alignItems: "center", fontSize: 10 }}>
-            <Text>Loading Franchises Near You</Text>
+            <Text style={{ fontSize: 15, fontWeight: "bold", color:"#000"}}>Loading Franchises Near You</Text>
             <ActivityIndicator
               size="large"
               color="#000"
             />
           </View>
         ) : this.props.data.length === 0 ? (
-          <Text style={{ marginLeft: 40, marginTop: 100 }}>
+          <View style={{ marginTop: 170, alignItems: "center" }}>
+            <Text style={{ fontSize: 15, fontWeight: "bold", color:"#000"}} >
             {`No ${
               this.props.selectedTab === 0 ? "Deals" : "Franchises"
             }  within the Range of 35 Kms`}
           </Text>
+          </View>
         ) : (
           <ScrollView
             showsVerticalScrollIndicator={false}
