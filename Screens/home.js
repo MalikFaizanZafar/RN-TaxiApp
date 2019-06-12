@@ -12,6 +12,7 @@ import { userAuthStatus } from "../services/userAuth";
 import { userRegistered } from "../services/userRegistered";
 import FacebookAuthButton from "../components/FacebookAuthButton";
 import UserMoreInfoDialog from "../components/UserMoreInfoDialog";
+import { Button } from "react-native-elements";
 
 class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -127,11 +128,15 @@ class HomeScreen extends React.Component {
                 }}
               />
               <GoogleSigninButton
-                style={{ width: 237, height: 35, marginTop: 20, elevation: 0 }}
+                style={{ width: 237, height: 35, marginTop: 20, elevation: 0, display: "none" }}
                 size={GoogleSigninButton.Size.Wide}
                 color={GoogleSigninButton.Color.Light}
                 onPress={this.signIn}
+                ref={component => this.googleBtn = component}
               />
+               <View style={{width: 250, height: 40, marginTop: 30}}>
+                 <Button title="Continue With Google" buttonStyle={{backgroundColor: "#000"}} onPress={() => this.googleBtn.props.onPress()} />
+               </View>
             </View>
           ) : (
             <View style={{ justifyContent: "center", marginTop: 75 }}>
