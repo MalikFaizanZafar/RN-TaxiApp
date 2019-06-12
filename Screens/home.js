@@ -1,5 +1,5 @@
 import React from "react";
-import { ActivityIndicator, View,Text, Image, Alert } from "react-native";
+import { ActivityIndicator, View, Text, Image, Alert } from "react-native";
 import {
   GoogleSignin,
   GoogleSigninButton,
@@ -89,13 +89,14 @@ class HomeScreen extends React.Component {
     await storeUserData("auth", "1");
   };
   fbLoginResultHandler(userExists, fbUser) {
-    this.setState({ AuthButtonsVisible: false });
-    if (userExists === true) {
-      this.props.navigation.navigate("Landing");
-    } else if (userExists === false) {
-      this.setState({ userInfo: fbUser });
-      this.setState({ modalVisible: true });
-    }
+    this.setState({ AuthButtonsVisible: false }, () => {
+      if (userExists === true) {
+        this.props.navigation.navigate("Landing");
+      } else if (userExists === false) {
+        this.setState({ userInfo: fbUser });
+        this.setState({ modalVisible: true });
+      }
+    });
   }
   render() {
     return (
@@ -121,6 +122,7 @@ class HomeScreen extends React.Component {
                   this.fbLoginResultHandler(userExists, fbUser)
                 }
                 fbAuthInit={() => {
+                  console.log("hiding auth Buttons");
                   this.setState({ AuthButtonsVisible: false });
                 }}
               />
@@ -132,12 +134,14 @@ class HomeScreen extends React.Component {
               />
             </View>
           ) : (
-            <View style={{justifyContent: "center",marginTop: 75}}>
-              <Text style={{ fontWeight: "bold", textAlign: "center" }}>Welcome Back To SubQuch</Text>
+            <View style={{ justifyContent: "center", marginTop: 75 }}>
+              <Text style={{ fontWeight: "bold", textAlign: "center" }}>
+                Welcome Back To SubQuch
+              </Text>
               <ActivityIndicator
                 size="large"
                 color="#000"
-                style={{marginTop: 10}}
+                style={{ marginTop: 10 }}
               />
             </View>
           )}
