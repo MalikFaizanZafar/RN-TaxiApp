@@ -127,15 +127,15 @@ class HomeScreen extends React.Component {
                   this.setState({ AuthButtonsVisible: false });
                 }}
               />
-              <GoogleSigninButton
+              {/* <GoogleSigninButton
                 style={{ width: 237, height: 35, marginTop: 20, elevation: 0, display: "none" }}
                 size={GoogleSigninButton.Size.Wide}
                 color={GoogleSigninButton.Color.Light}
                 onPress={this.signIn}
                 ref={component => this.googleBtn = component}
-              />
-               <View style={{width: 250, height: 40, marginTop: 30}}>
-                 <Button title="SignIn With Google" buttonStyle={{backgroundColor: "#DD4B39"}} onPress={() => this.googleBtn.props.onPress()} />
+              /> */}
+               <View style={{width: 250, height: 40, marginTop: 15}}>
+                 <Button title="SignIn With Google" buttonStyle={{backgroundColor: "#DD4B39"}} onPress={this.signIn} />
                </View>
             </View>
           ) : (

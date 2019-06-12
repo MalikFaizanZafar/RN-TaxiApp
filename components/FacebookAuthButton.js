@@ -16,24 +16,11 @@ export default class FacebookAuthButton extends Component {
     await storeUserData("info", JSON.stringify(userData));
     await storeUserData("auth", "1");
   };
-  // getToken(){
-  //   let token = ''
-  //   getUser().then(user => {
-  //     token= user.token
-  //   })
-  //   return token;
-  // }
   handleFbLogin = () => {
     this.props.fbAuthInit();
     LoginManager.logInWithReadPermissions(["public_profile", "email"]).then(
       result => {
-        console.log("result is : ", result);
         AccessToken.getCurrentAccessToken().then(data => {
-          console.log("data is : ", data);
-          if (data === null) {
-            console.log("data is null");
-            // this.btnRef.props.onPress()
-          }
           let accessToken = data.accessToken;
           const responseInfoCallback = (error, result) => {
             if (error) {
@@ -178,7 +165,7 @@ export default class FacebookAuthButton extends Component {
           }}
           onLogoutFinished={() => alert("logout.")}
         />
-        <View style={{ width: 250, height: 40 }}>
+        <View style={{ width: 250, height: 40, marginTop: 40 }}>
           <Button
             ref={component => (this.btnRef = component)}
             title="SignIn With Facebook"
