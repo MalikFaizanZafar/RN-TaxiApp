@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  ActivityIndicator,
-  View,
-  Image,
-  Alert
-} from "react-native";
+import { ActivityIndicator, View,Text, Image, Alert } from "react-native";
 import {
   GoogleSignin,
   GoogleSigninButton,
@@ -121,11 +116,13 @@ class HomeScreen extends React.Component {
               }}
             >
               <FacebookAuthButton
-                style={{marginTop: 50}}
+                style={{ marginTop: 50 }}
                 fbSignResult={(userExists, fbUser) =>
                   this.fbLoginResultHandler(userExists, fbUser)
                 }
-                fbAuthInit={() => { this.setState({AuthButtonsVisible: false}) }}
+                fbAuthInit={() => {
+                  this.setState({ AuthButtonsVisible: false });
+                }}
               />
               <GoogleSigninButton
                 style={{ width: 237, height: 35, marginTop: 20, elevation: 0 }}
@@ -135,11 +132,14 @@ class HomeScreen extends React.Component {
               />
             </View>
           ) : (
-            <ActivityIndicator
-              size="large"
-              color="#000"
-              style={{ marginTop: 50 }}
-            />
+            <View style={{justifyContent: "center",marginTop: 75}}>
+              <Text style={{ fontWeight: "bold", textAlign: "center" }}>Welcome Back To SubQuch</Text>
+              <ActivityIndicator
+                size="large"
+                color="#000"
+                style={{marginTop: 10}}
+              />
+            </View>
           )}
           <View style={{ marginTop: 8 }}>
             <UserMoreInfoDialog

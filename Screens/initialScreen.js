@@ -13,16 +13,12 @@ export default class InitialScreen extends Component {
     this.setState({
       userAuth: userAuthStatus()
     })
-    console.log("userAuthStatus is : ", userAuthStatus())
+    console.log("userAuthStatus((InitialScreen)) is : ", userAuthStatus())
   }
 
   render() {
     return (
-      <View>
-      {
         this.state.userAuth?<LandingScreen />: <HomeScreen />
-      }
-      </View>
     )
   }
 }
