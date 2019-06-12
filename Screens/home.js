@@ -136,7 +136,7 @@ class HomeScreen extends React.Component {
           ) : (
             <View style={{ justifyContent: "center", marginTop: 75 }}>
               <Text style={{ fontWeight: "bold", textAlign: "center" }}>
-                Welcome Back To SubQuch
+                Welcome To SubQuch
               </Text>
               <ActivityIndicator
                 size="large"
