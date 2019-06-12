@@ -181,8 +181,8 @@ export default class FacebookAuthButton extends Component {
         <View style={{ width: 250, height: 40 }}>
           <Button
             ref={component => (this.btnRef = component)}
-            title="Continue With Facebook"
-            buttonStyle={{ backgroundColor: "#000" }}
+            title="SignIn With Facebook"
+            buttonStyle={{ backgroundColor: "#3b5998" }}
             onPress={this.handleFbLogin}
           />
         </View>

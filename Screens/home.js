@@ -135,7 +135,7 @@ class HomeScreen extends React.Component {
                 ref={component => this.googleBtn = component}
               />
                <View style={{width: 250, height: 40, marginTop: 30}}>
-                 <Button title="Continue With Google" buttonStyle={{backgroundColor: "#000"}} onPress={() => this.googleBtn.props.onPress()} />
+                 <Button title="SignIn With Google" buttonStyle={{backgroundColor: "#DD4B39"}} onPress={() => this.googleBtn.props.onPress()} />
                </View>
             </View>
           ) : (
