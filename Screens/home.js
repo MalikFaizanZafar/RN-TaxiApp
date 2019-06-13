@@ -100,7 +100,6 @@ class HomeScreen extends React.Component {
     await storeUserData("auth", "1");
   };
   fbLoginResultHandler(userExists, fbUser) {
-    console.log("userExists is : ", userExists)
     this.setState({ AuthButtonsVisible: false }, () => {
       if (userExists === true) {
         this.props.navigation.navigate("Landing");
