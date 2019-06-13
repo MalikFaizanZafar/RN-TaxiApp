@@ -1,0 +1,4 @@
+#Thu Jun 13 11:18:55 PKT 2019
+base.0=E\:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\transforms\\dexMerger\\release\\0
+path.0=classes.dex
+renamed.0=classes.dex
