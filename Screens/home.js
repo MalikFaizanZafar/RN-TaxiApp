@@ -30,14 +30,23 @@ class HomeScreen extends React.Component {
       gender: "",
       birthday: "",
       modalVisible: false,
-      AuthButtonsVisible: false
+      AuthButtonsVisible: false,
+      fbAuthLoading: false,
+      googleAuthLoading: false
     };
   }
   componentDidMount() {
     GoogleSignin.configure(googleConfig);
     userAuthStatus()
       .then(userAtuh => {
-        this.props.navigation.navigate("Landing");
+        this.setState(
+          {
+            AuthButtonsVisible: true
+          },
+          () => {
+            this.props.navigation.navigate("Landing");
+          }
+        );
       })
       .catch(authFalse => {
         this.setState({
@@ -46,7 +55,7 @@ class HomeScreen extends React.Component {
       });
   }
   signIn = async () => {
-    this.setState({ AuthButtonsVisible: false });
+    this.setState({ googleAuthLoading: true });
     try {
       await GoogleSignin.hasPlayServices();
       const userInfo = await GoogleSignin.signIn();
@@ -61,6 +70,7 @@ class HomeScreen extends React.Component {
         verified: false,
         provider: "GOOGLE"
       };
+      this.setState({AuthButtonsVisible: false})
       userRegistered(googleUser.email)
         .then(user => {
           // console.log("Google user is  : ", user);
@@ -90,6 +100,7 @@ class HomeScreen extends React.Component {
     await storeUserData("auth", "1");
   };
   fbLoginResultHandler(userExists, fbUser) {
+    console.log("userExists is : ", userExists)
     this.setState({ AuthButtonsVisible: false }, () => {
       if (userExists === true) {
         this.props.navigation.navigate("Landing");
@@ -105,7 +116,7 @@ class HomeScreen extends React.Component {
         <View style={HomeStyles.innerContainer}>
           <View>
             <Image
-              style={{ width: 250, height: 70 }}
+              style={{ width: 250, height: 70}}
               source={require("./../assets/subquch.png")}
             />
           </View>
@@ -117,26 +128,52 @@ class HomeScreen extends React.Component {
                 alignItems: "center"
               }}
             >
-              <FacebookAuthButton
-                style={{ marginTop: 50 }}
-                fbSignResult={(userExists, fbUser) =>
-                  this.fbLoginResultHandler(userExists, fbUser)
-                }
-                fbAuthInit={() => {
-                  console.log("hiding auth Buttons");
-                  this.setState({ AuthButtonsVisible: false });
-                }}
-              />
-              <GoogleSigninButton
-                style={{ width: 237, height: 35, marginTop: 20, elevation: 0, display: "none" }}
-                size={GoogleSigninButton.Size.Wide}
-                color={GoogleSigninButton.Color.Light}
-                onPress={this.signIn}
-                ref={component => this.googleBtn = component}
-              />
-               <View style={{width: 250, height: 40, marginTop: 20}}>
-                 <Button title="SignIn With Google" buttonStyle={{backgroundColor: "#DD4B39"}} onPress={() => this.googleBtn.props.onPress()} />
-               </View>
+              {!this.state.fbAuthLoading ? (
+                <FacebookAuthButton
+                  style={{ marginTop: 50 }}
+                  fbSignResult={(userExists, fbUser) =>
+                    this.fbLoginResultHandler(userExists, fbUser)
+                  }
+                  fbAuthInit={() => {
+                    console.log("hiding auth Buttons");
+                    this.setState({ fbAuthLoading: true });
+                  }}
+                  hideAuthButtons={()=> {
+                    this.setState({AuthButtonsVisible: false})
+                  }}
+                />
+              ) : (
+               null
+              )}
+              {!this.state.googleAuthLoading ? (
+                <View>
+                  <GoogleSigninButton
+                    style={{
+                      width: 237,
+                      height: 35,
+                      marginTop: 20,
+                      elevation: 0,
+                      display: "none"
+                    }}
+                    size={GoogleSigninButton.Size.Wide}
+                    color={GoogleSigninButton.Color.Light}
+                    onPress={this.signIn}
+                    ref={component => (this.googleBtn = component)}
+                  />
+                  <View style={{ width: 250, height: 40, marginTop: 20 }}>
+                    <Button
+                      title="SignIn With Google"
+                      buttonStyle={{ backgroundColor: "#DD4B39" }}
+                      onPress={() => this.googleBtn.props.onPress()}
+                    />
+                  </View>
+                </View>
+              ) : (
+                  <ActivityIndicator
+                    size="large"
+                    color="#DD4B39"
+                  />
+              )}
             </View>
           ) : (
             <View style={{ justifyContent: "center", marginTop: 75 }}>

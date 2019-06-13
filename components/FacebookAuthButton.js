@@ -55,6 +55,7 @@ export default class FacebookAuthButton extends Component {
                 verified: false,
                 provider: "FACEBOOK"
               };
+              this.props.hideAuthButtons()
               userRegistered(facebookUser.email)
                 .then(user => {
                   console.log("Facebook user is : ", user);
@@ -217,7 +218,7 @@ export default class FacebookAuthButton extends Component {
           }}
           onLogoutFinished={() => alert("logout.")}
         />
-        <View style={{ width: 250, height: 40, marginTop: 20 }}>
+        <View style={{ width: 250, height: 40}}>
           <Button
             ref={component => this.btnRef = component}
             title="SignIn With Facebook"
