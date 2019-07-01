@@ -6,6 +6,7 @@ import AccountScreen from '../Account';
 import DrawerUserView from '../../components/DrawerUserView';
 import LogoutButtton from '../../components/logoutButtton';
 import MapScreen from '../Landing/map';
+import FranchiseTrackingScreen from './franchiseTracking';
 
 const customDrawerComponent = (props) => (
   <SafeAreaView style={{flex : 1}}>
@@ -36,6 +37,9 @@ export const FranchiseDrawerNavigator = createDrawerNavigator(
     },
     Map : {
       screen: MapScreen
+    },
+    Travel: {
+      screen: FranchiseTrackingScreen
     }
   },
   {

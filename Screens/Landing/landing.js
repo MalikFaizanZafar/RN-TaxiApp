@@ -341,10 +341,11 @@ export default class LandingScreen extends React.Component {
     );
   }
 
-  franchiseOnPressHandler(id) {
+  franchiseOnPressHandler(id, franchiseDistance) {
     if (this.state.selectedTab === 1) {
       this.props.navigation.navigate("Franchise", {
         franchiseId: id,
+        franchiseDistance:franchiseDistance,
         userLat: this.state.latitude,
         userLon: this.state.longitude
       });
@@ -380,7 +381,7 @@ export default class LandingScreen extends React.Component {
           data={this.state.ListViewData}
           dataLoading={this.state.dataLoading}
           selectedTab={this.state.selectedTab}
-          franchiseOnPress={id => this.franchiseOnPressHandler(id)}
+          franchiseOnPress={(id,franchiseDistance) => this.franchiseOnPressHandler(id, franchiseDistance)}
         />
         <LandingTabBar
           tabItems={this.state.tabItems}

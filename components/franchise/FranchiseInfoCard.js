@@ -12,6 +12,7 @@ import { Card, Rating } from "react-native-elements";
 import { franchiseCheckin } from "../../services/franchiseCheckin";
 import { getUser } from "../../services/getUser";
 export default class FranchiseInfoCard extends Component {
+
   viewMapPressed(latitude, longitude) {
     this.props.viewMapPressed(latitude, longitude);
   }
@@ -34,51 +35,52 @@ export default class FranchiseInfoCard extends Component {
     const franchiseInfo = this.props.franchiseInfo;
     return (
       <View>
-          <Card containerStyle={{ padding: 0 }}>
-            <View style={{ flexDirection: "row", padding: 0 }}>
-              <View style={{ padding: 0 }}>
-                <Image
-                  style={{ height: 100, width: 100 }}
-                  source={{ uri: franchiseInfo.logo }}
-                />
-              </View>
+        <Card containerStyle={{ padding: 0 }}>
+          <View style={{ flexDirection: "row", padding: 0 }}>
+            <View style={{ padding: 0 }}>
+              <Image
+                style={{ height: 100, width: 100 }}
+                source={{ uri: franchiseInfo.logo }}
+              />
+            </View>
+            <View
+              style={{
+                width: dimensions.width * 0.6,
+                alignItems: "center",
+                justifyContent: "space-between",
+                flexDirection: "row",
+                paddingLeft: 10
+              }}
+            >
               <View
                 style={{
-                  width: dimensions.width * 0.6,
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  flexDirection: "row",
-                  paddingLeft: 10
+                  flexDirection: "column",
+                  alignItems: "flex-start",
+                  justifyContent: "center"
                 }}
               >
-                <View
-                  style={{
-                    flexDirection: "column",
-                    alignItems: "flex-start",
-                    justifyContent: "center"
-                  }}
-                >
-                  <Text style={{ marginTop: 20, fontWeight: "bold" }}>
-                    {franchiseInfo.brandName}
-                  </Text>
-                  <Text style={{ fontSize: 10, marginTop: 1 }}>
-                    {franchiseInfo.welcomeNote}
-                  </Text>
-                  <Rating imageSize={16} readonly startingValue={3} />
-                  <View style={{ flexDirection: "row", marginTop: 20 }}>
-                    <TouchableOpacity onPress={() => this.checkInHandler()}>
-                      <View style={{ justifyContent: "flex-end" }}>
-                        <Text
-                          style={{
-                            color: "#03a9f4",
-                            fontSize: 12,
-                            marginBottom: 25
-                          }}
-                        >
-                          Check In
-                        </Text>
-                      </View>
-                    </TouchableOpacity>
+                <Text style={{ marginTop: 20, fontWeight: "bold" }}>
+                  {franchiseInfo.brandName}
+                </Text>
+                <Text style={{ fontSize: 10, marginTop: 1 }}>
+                  {franchiseInfo.welcomeNote}
+                </Text>
+                <Rating imageSize={16} readonly startingValue={3} />
+                <View style={{ flexDirection: "row", marginTop: 20 }}>
+                  {/* <TouchableOpacity onPress={() => this.checkInHandler()}>
+                    <View style={{ justifyContent: "flex-end" }}>
+                      <Text
+                        style={{
+                          color: "#03a9f4",
+                          fontSize: 12,
+                          marginBottom: 25
+                        }}
+                      >
+                        Check In
+                      </Text>
+                    </View>
+                  </TouchableOpacity> */}
+                  {this.props.franchiseDistance > 0.1 ? (
                     <TouchableOpacity
                       onPress={() =>
                         this.viewMapPressed(
@@ -96,15 +98,40 @@ export default class FranchiseInfoCard extends Component {
                             marginLeft: 25
                           }}
                         >
-                          View Map
+                          Visit
                         </Text>
                       </View>
                     </TouchableOpacity>
-                  </View>
+                  ) : (
+                    <TouchableOpacity
+                      onPress={() =>
+                        Alert.alert(
+                          "SubQuch Alert ",
+                          "Would You Like to CheckIn ?",
+                          [{ text: "OK", onPress: () => console.log("OK Pressed") }],
+                          { cancelable: false }
+                        )
+                      }
+                    >
+                      <View style={{ justifyContent: "flex-end" }}>
+                        <Text
+                          style={{
+                            color: "#03a9f4",
+                            fontSize: 12,
+                            marginBottom: 25,
+                            marginLeft: 25
+                          }}
+                        >
+                          CheckIn
+                        </Text>
+                      </View>
+                    </TouchableOpacity>
+                  )}
                 </View>
               </View>
             </View>
-          </Card>
+          </View>
+        </Card>
       </View>
     );
   }

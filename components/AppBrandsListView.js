@@ -13,8 +13,8 @@ export default class AppBrandsListView extends Component {
   constructor(props) {
     super(props);
   }
-  franchisePress(franchiseId) {
-    this.props.franchiseOnPress(franchiseId);
+  franchisePress(franchiseId, franchiseDistance) {
+    this.props.franchiseOnPress(franchiseId, franchiseDistance);
   }
   render() {
     let dimensions = Dimensions.get("window");
@@ -44,7 +44,7 @@ export default class AppBrandsListView extends Component {
             {this.props.data.map((datum, i) => {
               return (
                 <TouchableOpacity
-                  onPress={() => this.franchisePress(datum.franchiseId)}
+                  onPress={() => this.franchisePress(datum.franchiseId, datum.distance.toFixed(3))}
                   key={i}
                   activeOpacity={0.6}
                 >

@@ -14,6 +14,7 @@ export default class FranchiseMainScreen extends Component {
 
   state = {
     franchise: {},
+    franchiseDistance: 0,
     categories: [],
     tabItems: ["Deals", "Items", "Reviews"],
     selectedTab: 0,
@@ -23,9 +24,11 @@ export default class FranchiseMainScreen extends Component {
   componentDidMount() {
     const { params } = this.props.navigation.state;
     const franchiseId = params ? params.franchiseId : null;
+    const franchiseDistance = params ? params.franchiseDistance : null;
     getFranchiseData(franchiseId).then(getFranchiseDataResponse => {
       this.setState({
         franchise: getFranchiseDataResponse.data.data,
+        franchiseDistance: franchiseDistance,
         items: getFranchiseDataResponse.data.data.items,
         deals: getFranchiseDataResponse.data.data.deals,
         reviews: getFranchiseDataResponse.data.data.reviews,
@@ -56,7 +59,7 @@ export default class FranchiseMainScreen extends Component {
     }
   }
   viewMapHandler(latitude, longitude) {
-    this.props.navigation.navigate("Map", { latitude, longitude });
+    this.props.navigation.navigate("Travel", { latitude, longitude });
   }
   itemPressHandler(itemDeal) {
     if (this.state.selectedTab === 0) {
@@ -95,6 +98,7 @@ export default class FranchiseMainScreen extends Component {
         {this.state.dataLoading ? null : (
           <FranchiseInfoCard
             franchiseInfo={franchise}
+            franchiseDistance={this.state.franchiseDistance}
             viewMapPressed={(lat, lon) => this.viewMapHandler(lat, lon)}
             loading={this.state.dataLoading}
           />
