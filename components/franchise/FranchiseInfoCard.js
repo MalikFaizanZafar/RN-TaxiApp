@@ -18,7 +18,7 @@ export default class FranchiseInfoCard extends Component {
   }
   checkInHandler() {
     getUser().then(user => {
-      franchiseCheckin(user.userId, this.props.franchiseInfo.id).then(
+      franchiseCheckin(user.userId, 108).then(
         checkinRes => {
           Alert.alert(
             "SubQuch Alert ",
@@ -80,7 +80,7 @@ export default class FranchiseInfoCard extends Component {
                       </Text>
                     </View>
                   </TouchableOpacity> */}
-                  {this.props.franchiseDistance > 0.1 ? (
+                  {this.props.franchiseDistance > 0.9 ? (
                     <TouchableOpacity
                       onPress={() =>
                         this.viewMapPressed(
@@ -105,12 +105,7 @@ export default class FranchiseInfoCard extends Component {
                   ) : (
                     <TouchableOpacity
                       onPress={() =>
-                        Alert.alert(
-                          "SubQuch Alert ",
-                          "Would You Like to CheckIn ?",
-                          [{ text: "OK", onPress: () => console.log("OK Pressed") }],
-                          { cancelable: false }
-                        )
+                        this.checkInHandler()
                       }
                     >
                       <View style={{ justifyContent: "flex-end" }}>
