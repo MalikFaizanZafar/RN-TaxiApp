@@ -2,10 +2,10 @@ import { PermissionsAndroid } from "react-native";
 import axios from "axios";
 import { SERVER_URL } from "../constants";
 const URL = SERVER_URL
-export const getFilterQueryData = (latitude, longitude,distance) => {
+export const getFilterQueryData = (latitude, longitude,distance,type) => {
   return new Promise((resolve, reject) => {
     axios
-      .get(`${URL}/api/filter?lat=${latitude}&long=${longitude}&distance=${distance}&size=200`)
+      .get(`${URL}/api/filter?lat=${latitude}&long=${longitude}&distance=${distance}&size=200&type=${type}`)
       .then(dataResponse => {
         resolve(dataResponse);
       })
@@ -65,3 +65,31 @@ export const getUserLocation = () => {
     }
   })
 }
+
+export const getNearByDeals = (latitude, longitude,distance,page,size) => {
+  return new Promise((resolve, reject) => {
+    axios
+      .get(`${URL}/api/filter?lat=${latitude}&long=${longitude}&distance=${distance}&page=${page}&size=${size}&type=deal`)
+      .then(dataResponse => {
+        resolve(dataResponse);
+      })
+      .catch(brandsError => {
+        // console.log("brandsError is : ", brandsError)
+        reject(brandsError);
+      });
+  });
+};
+
+export const getNearByFranchises = (latitude, longitude,distance,page,size) => {
+  return new Promise((resolve, reject) => {
+    axios
+      .get(`${URL}/api/filter?lat=${latitude}&long=${longitude}&distance=${distance}&page=${page}&size=${size}&type=franchise`)
+      .then(dataResponse => {
+        resolve(dataResponse);
+      })
+      .catch(brandsError => {
+        // console.log("brandsError is : ", brandsError)
+        reject(brandsError);
+      });
+  });
+};

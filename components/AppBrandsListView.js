@@ -22,7 +22,7 @@ export default class AppBrandsListView extends Component {
       <View style={{ flex: 1 }}>
         {this.props.dataLoading ? (
           <View style={{ marginTop: 150, alignItems: "center", fontSize: 10 }}>
-            <Text style={{ fontSize: 15, fontWeight: "bold", color:"#000"}}>Loading Franchises Near You</Text>
+            <Text style={{ fontSize: 15, fontWeight: "bold", color:"#000"}}>{`Loading ${this.props.selectedTab === 0 ? "Deals" : "Franchises"} Near You`}</Text>
             <ActivityIndicator
               size="large"
               color="#000"

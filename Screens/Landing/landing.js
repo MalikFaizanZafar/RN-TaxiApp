@@ -6,7 +6,9 @@ import LandingTabBar from "../../components/LandingTabBar";
 import AppBrandsListView from "../../components/AppBrandsListView";
 import {
   getFilterQueryData,
-  getUserLocation
+  getUserLocation,
+  getNearByDeals,
+  getNearByFranchises
 } from "../../services/getIntialData";
 import {
   getNearestFranchises,
@@ -65,7 +67,7 @@ export default class LandingScreen extends React.Component {
         // );
         navigator.geolocation.getCurrentPosition(
           position => {
-            console.log("position is : ",position);
+            console.log("position is : ", position);
             this.setState({
               latitude: position.coords.latitude,
               longitude: position.coords.longitude,
@@ -88,7 +90,7 @@ export default class LandingScreen extends React.Component {
               [{ text: "OK", onPress: () => this.LocationSerivce() }],
               { cancelable: false }
             );
-            this.setState({ error: error.message })
+            this.setState({ error: error.message });
           },
           { enableHighAccuracy: false, timeout: 200000 }
         );
@@ -106,15 +108,15 @@ export default class LandingScreen extends React.Component {
     }
   }
   populateInitialData(latitude, longitude, distance) {
-    getFilterQueryData(latitude, longitude, distance)
+    getNearByDeals(latitude, longitude, distance, 1, 25)
       .then(promiseResponse => {
-        console.log("promiseResponse is : ", promiseResponse);
+        console.log("NearByDeals  are : ", promiseResponse);
         this.setState({
           dataArray: promiseResponse.data.data,
           dataLoading: false
         });
         this.setState({
-          ListViewData: getNearestFranchises(this.state.dataArray, "deal"),
+          ListViewData: promiseResponse.data.data,
           selectedTab: 0
         });
       })
@@ -326,17 +328,46 @@ export default class LandingScreen extends React.Component {
   };
 
   tabClicked(id) {
+    console.log("selected Tab is : ", id)
     this.setState(
       {
-        selectedTab: id
+        selectedTab: id,
+        dataLoading: true
       },
       () => {
-        this.setState({
-          ListViewData: LandingTabClickHandler(
-            this.state.dataArray,
-            this.state.selectedTab
-          )
-        });
+        // this.setState({
+        //   ListViewData: LandingTabClickHandler(
+        //     this.state.dataArray,
+        //     this.state.selectedTab
+        //   )
+        // });
+        if (this.state.selectedTab === 0) {
+          getNearByDeals(this.state.latitude, this.state.longitude, 10, 1, 25).then(
+            promiseResponse => {
+              console.log("NearByDeals  are : ", promiseResponse);
+              this.setState({
+                dataArray: promiseResponse.data.data,
+                dataLoading: false
+              });
+              this.setState({
+                ListViewData: promiseResponse.data.data
+              });
+            }
+          );
+        }else if(this.state.selectedTab === 1){
+          getNearByFranchises(this.state.latitude, this.state.longitude, 10, 1, 25).then(
+            promiseResponse => {
+              console.log("NearByFranchises  are : ", promiseResponse);
+              this.setState({
+                dataArray: promiseResponse.data.data,
+                dataLoading: false
+              });
+              this.setState({
+                ListViewData: promiseResponse.data.data
+              });
+            }
+          );
+        }
       }
     );
   }
@@ -345,7 +376,7 @@ export default class LandingScreen extends React.Component {
     if (this.state.selectedTab === 1) {
       this.props.navigation.navigate("Franchise", {
         franchiseId: id,
-        franchiseDistance:franchiseDistance,
+        franchiseDistance: franchiseDistance,
         userLat: this.state.latitude,
         userLon: this.state.longitude
       });
@@ -381,7 +412,9 @@ export default class LandingScreen extends React.Component {
           data={this.state.ListViewData}
           dataLoading={this.state.dataLoading}
           selectedTab={this.state.selectedTab}
-          franchiseOnPress={(id,franchiseDistance) => this.franchiseOnPressHandler(id, franchiseDistance)}
+          franchiseOnPress={(id, franchiseDistance) =>
+            this.franchiseOnPressHandler(id, franchiseDistance)
+          }
         />
         <LandingTabBar
           tabItems={this.state.tabItems}

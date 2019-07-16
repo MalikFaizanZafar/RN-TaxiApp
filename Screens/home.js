@@ -36,6 +36,7 @@ class HomeScreen extends React.Component {
     };
   }
   componentDidMount() {
+    console.log("Home Component Mounted")
     GoogleSignin.configure(googleConfig);
     userAuthStatus()
       .then(userAtuh => {
@@ -56,6 +57,7 @@ class HomeScreen extends React.Component {
   }
   signIn = async () => {
     this.setState({ googleAuthLoading: true });
+    console.log("google signIn Triggered")
     try {
       await GoogleSignin.hasPlayServices();
       const userInfo = await GoogleSignin.signIn();
