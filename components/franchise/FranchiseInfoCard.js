@@ -80,7 +80,6 @@ export default class FranchiseInfoCard extends Component {
                       </Text>
                     </View>
                   </TouchableOpacity> */}
-                  {this.props.franchiseDistance > 0.9 ? (
                     <TouchableOpacity
                       onPress={() =>
                         this.viewMapPressed(
@@ -102,7 +101,6 @@ export default class FranchiseInfoCard extends Component {
                         </Text>
                       </View>
                     </TouchableOpacity>
-                  ) : (
                     <TouchableOpacity
                       onPress={() =>
                         this.checkInHandler()
@@ -121,7 +119,6 @@ export default class FranchiseInfoCard extends Component {
                         </Text>
                       </View>
                     </TouchableOpacity>
-                  )}
                 </View>
               </View>
             </View>

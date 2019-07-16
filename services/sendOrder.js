@@ -45,5 +45,5 @@ export const sendOrder = async orderArray => {
 };
 
 function addFranchiseOrder(order){
-  return axios.post(`${URL}/api/order`, order)
+  return axios.post(`${URL}/api/auth/order`, order)
 }

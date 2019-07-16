@@ -132,7 +132,7 @@ export default class FranchiseTrackingScreen extends Component {
             onReady={result => {
               console.log(`Distance: ${result.distance} km`);
               console.log(`Duration: ${result.duration} min.`);
-              if (result.distance < 0.01) {
+              if (result.distance < 1.3) {
                 Alert.alert(
                   "SubQuch Alert ",
                   "You Have Reached the Franchise. Would You Like To Checkin?",
