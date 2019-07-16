@@ -37,6 +37,7 @@ export default class LandingScreen extends React.Component {
     ListViewData: [],
     searchKey: "",
     dataLoading: true,
+    loadingMore: false,
     tabItems: ["Deals", "Brands"],
     selectedTab: 0,
     cartItems: 0,
@@ -340,6 +341,7 @@ export default class LandingScreen extends React.Component {
       {
         selectedTab: id,
         dataLoading: true,
+        loadingMore: false,
         searchKey: ""
       },
       () => {
@@ -406,9 +408,8 @@ export default class LandingScreen extends React.Component {
     }
   }
   loadMoreData() {
-    console.log("loadMore triggered inside Screen");
     let page = this.state.currentPage;
-    this.setState({ currentPage: page + 1}, () => {
+    this.setState({ currentPage: page + 1, dataLoading: true, loadingMore: true}, () => {
       if (this.state.selectedTab === 0) {
         getNearByDeals(
           this.state.latitude,
@@ -417,7 +418,6 @@ export default class LandingScreen extends React.Component {
           this.state.currentPage,
           5
         ).then(promiseResponse => {
-          console.log("NearByDeals(LoadMore)  are : ", promiseResponse);
           let dArray = this.state.dataArray
           let lvdArray = this.state.ListViewData
           dArray = dArray.concat(promiseResponse.data.data)
@@ -438,7 +438,6 @@ export default class LandingScreen extends React.Component {
           this.state.currentPage,
           5
         ).then(promiseResponse => {
-          console.log("NearByFranchises(LoadMore)  are : ", promiseResponse);
           let dArray = this.state.dataArray
           let lvdArray = this.state.ListViewData
           dArray = dArray.concat(promiseResponse.data.data)
@@ -470,6 +469,7 @@ export default class LandingScreen extends React.Component {
         <AppBrandsListView
           data={this.state.ListViewData}
           dataLoading={this.state.dataLoading}
+          loadingMore={this.state.loadingMore}
           selectedTab={this.state.selectedTab}
           loadMore={() => this.loadMoreData()}
           franchiseOnPress={(id, franchiseDistance) =>

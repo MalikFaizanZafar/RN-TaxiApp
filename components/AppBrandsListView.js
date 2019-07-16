@@ -6,7 +6,6 @@ import {
   ActivityIndicator,
   TouchableOpacity,
   Dimensions,
-  ScrollView,
   FlatList
 } from "react-native";
 import { Card, Rating, Badge } from "react-native-elements";
@@ -19,7 +18,6 @@ export default class AppBrandsListView extends Component {
   }
 
   _handleLoadMore(){
-    console.log("loadMore triggered inside component")
     this.props.loadMore()
   }
   render() {
@@ -28,8 +26,8 @@ export default class AppBrandsListView extends Component {
       <View style={{ flex: 1 }}>
         {this.props.dataLoading ? (
           <View style={{ marginTop: 150, alignItems: "center", fontSize: 10 }}>
-            <Text style={{ fontSize: 15, fontWeight: "bold", color:"#000"}}>{`Loading ${this.props.selectedTab === 0 ? "Deals" : "Franchises"} Near You`}</Text>
-            <ActivityIndicator
+            <Text style={{ fontSize: 15, fontWeight: "bold", color:"#000"}}>{`Loading ${this.props.loadingMore === true ? "More" : ""} Near By ${this.props.selectedTab === 0 ? "Deals" : "Franchises"}`}</Text>
+            <ActivityIndicator 
               size="large"
               color="#000"
             />
@@ -45,12 +43,11 @@ export default class AppBrandsListView extends Component {
         ) : (
           <FlatList
             data={this.props.data}
-            showsVerticalScrollIndicator
-            showsVerticalScrollIndicator={false}
+            showsVerticalScrollIndicator={true}
             style={{ marginTop: 0 }}
             keyExtractor={item => item.typeId.toString()}
             onEndReached={() => this._handleLoadMore()}
-            onEndReachedThreshold={0.5}
+            onEndReachedThreshold={0.1}
             renderItem={({item})=> (
               <TouchableOpacity
                   onPress={() => this.franchisePress(item.franchiseId, item.distance.toFixed(3))}
