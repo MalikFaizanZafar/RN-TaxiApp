@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\Office\\subkuch-app\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-fr-rCA\\values-fr-rCA.xml",
+            "outputFile": "E:\\Office\\SubQuch\\subkuch-app\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-fr-rCA\\values-fr-rCA.xml",
             "map": [
                 {
                     "source": "C:\\Users\\ZIXSOL\\.gradle\\caches\\transforms-2\\files-2.1\\3c3fe7bf12d2811b7714b0ed5dc2d238\\res\\values-fr-rCA\\values.xml",

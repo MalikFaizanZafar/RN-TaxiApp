@@ -41,7 +41,8 @@ export default class LandingScreen extends React.Component {
     selectedTab: 0,
     cartItems: 0,
     reviewDialog: false,
-    currentOrderId: 0
+    currentOrderId: 0,
+    currentPage: 1
   };
 
   async LocationSerivce() {
@@ -110,7 +111,7 @@ export default class LandingScreen extends React.Component {
     }
   }
   populateInitialData(latitude, longitude, distance) {
-    getNearByDeals(latitude, longitude, distance, 1, 25)
+    getNearByDeals(latitude, longitude, distance, this.state.currentPage, 5)
       .then(promiseResponse => {
         console.log("NearByDeals  are : ", promiseResponse);
         this.setState({
@@ -287,35 +288,45 @@ export default class LandingScreen extends React.Component {
   onSearchHandler(searchKey) {
     this.setState({ dataLoading: true });
     if (!searchKey) {
-      this.tabClicked(this.state.selectedTab)
+      this.tabClicked(this.state.selectedTab);
     } else {
       console.log("searchKey is NOT empty");
-      if(this.state.selectedTab === 0){
-        getNearByDealsWithFilter(this.state.latitude, this.state.longitude, 10, 1, 25, searchKey).then(
-          promiseResponse => {
-            console.log("NearByDeals Search  : ", promiseResponse);
-            this.setState({
-              dataArray: promiseResponse.data.data,
-              dataLoading: false
-            });
-            this.setState({
-              ListViewData: promiseResponse.data.data
-            });
-          }
-        );
-      }else if(this.state.selectedTab === 1){
-        getNearByFranchisesWithFilter(this.state.latitude, this.state.longitude, 10, 1, 25, searchKey).then(
-          promiseResponse => {
-            console.log("NearByFranchises Search  : ", promiseResponse);
-            this.setState({
-              dataArray: promiseResponse.data.data,
-              dataLoading: false
-            });
-            this.setState({
-              ListViewData: promiseResponse.data.data
-            });
-          }
-        );
+      if (this.state.selectedTab === 0) {
+        getNearByDealsWithFilter(
+          this.state.latitude,
+          this.state.longitude,
+          10,
+          this.state.currentPage,
+          5,
+          searchKey
+        ).then(promiseResponse => {
+          console.log("NearByDeals Search  : ", promiseResponse);
+          this.setState({
+            dataArray: promiseResponse.data.data,
+            dataLoading: false
+          });
+          this.setState({
+            ListViewData: promiseResponse.data.data
+          });
+        });
+      } else if (this.state.selectedTab === 1) {
+        getNearByFranchisesWithFilter(
+          this.state.latitude,
+          this.state.longitude,
+          10,
+          this.state.currentPage,
+          5,
+          searchKey
+        ).then(promiseResponse => {
+          console.log("NearByFranchises Search  : ", promiseResponse);
+          this.setState({
+            dataArray: promiseResponse.data.data,
+            dataLoading: false
+          });
+          this.setState({
+            ListViewData: promiseResponse.data.data
+          });
+        });
       }
     }
   }
@@ -333,31 +344,39 @@ export default class LandingScreen extends React.Component {
       },
       () => {
         if (this.state.selectedTab === 0) {
-          getNearByDeals(this.state.latitude, this.state.longitude, 10, 1, 25).then(
-            promiseResponse => {
-              console.log("NearByDeals  are : ", promiseResponse);
-              this.setState({
-                dataArray: promiseResponse.data.data,
-                dataLoading: false
-              });
-              this.setState({
-                ListViewData: promiseResponse.data.data
-              });
-            }
-          );
-        }else if(this.state.selectedTab === 1){
-          getNearByFranchises(this.state.latitude, this.state.longitude, 10, 1, 25).then(
-            promiseResponse => {
-              console.log("NearByFranchises  are : ", promiseResponse);
-              this.setState({
-                dataArray: promiseResponse.data.data,
-                dataLoading: false
-              });
-              this.setState({
-                ListViewData: promiseResponse.data.data
-              });
-            }
-          );
+          getNearByDeals(
+            this.state.latitude,
+            this.state.longitude,
+            10,
+            this.state.currentPage,
+            5
+          ).then(promiseResponse => {
+            console.log("NearByDeals  are : ", promiseResponse);
+            this.setState({
+              dataArray: promiseResponse.data.data,
+              dataLoading: false
+            });
+            this.setState({
+              ListViewData: promiseResponse.data.data
+            });
+          });
+        } else if (this.state.selectedTab === 1) {
+          getNearByFranchises(
+            this.state.latitude,
+            this.state.longitude,
+            10,
+            this.state.currentPage,
+            5
+          ).then(promiseResponse => {
+            console.log("NearByFranchises  are : ", promiseResponse);
+            this.setState({
+              dataArray: promiseResponse.data.data,
+              dataLoading: false
+            });
+            this.setState({
+              ListViewData: promiseResponse.data.data
+            });
+          });
         }
       }
     );
@@ -386,6 +405,55 @@ export default class LandingScreen extends React.Component {
       );
     }
   }
+  loadMoreData() {
+    console.log("loadMore triggered inside Screen");
+    let page = this.state.currentPage;
+    this.setState({ currentPage: page + 1}, () => {
+      if (this.state.selectedTab === 0) {
+        getNearByDeals(
+          this.state.latitude,
+          this.state.longitude,
+          10,
+          this.state.currentPage,
+          5
+        ).then(promiseResponse => {
+          console.log("NearByDeals(LoadMore)  are : ", promiseResponse);
+          let dArray = this.state.dataArray
+          let lvdArray = this.state.ListViewData
+          dArray = dArray.concat(promiseResponse.data.data)
+          lvdArray = lvdArray.concat(promiseResponse.data.data)
+          this.setState({
+            dataArray: [...dArray],
+            dataLoading: false
+          });
+          this.setState({
+            ListViewData: [...lvdArray]
+          });
+        });
+      } else if (this.state.selectedTab === 1) {
+        getNearByFranchises(
+          this.state.latitude,
+          this.state.longitude,
+          10,
+          this.state.currentPage,
+          5
+        ).then(promiseResponse => {
+          console.log("NearByFranchises(LoadMore)  are : ", promiseResponse);
+          let dArray = this.state.dataArray
+          let lvdArray = this.state.ListViewData
+          dArray = dArray.concat(promiseResponse.data.data)
+          lvdArray = lvdArray.concat(promiseResponse.data.data)
+          this.setState({
+            dataArray: [...dArray],
+            dataLoading: false
+          });
+          this.setState({
+            ListViewData: [...lvdArray]
+          });
+        });
+      }
+    });
+  }
   render() {
     return (
       <View style={LandingScreenStyles.container}>
@@ -403,6 +471,7 @@ export default class LandingScreen extends React.Component {
           data={this.state.ListViewData}
           dataLoading={this.state.dataLoading}
           selectedTab={this.state.selectedTab}
+          loadMore={() => this.loadMoreData()}
           franchiseOnPress={(id, franchiseDistance) =>
             this.franchiseOnPressHandler(id, franchiseDistance)
           }

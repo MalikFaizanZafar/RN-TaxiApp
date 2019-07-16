@@ -6,7 +6,8 @@ import {
   ActivityIndicator,
   TouchableOpacity,
   Dimensions,
-  ScrollView
+  ScrollView,
+  FlatList
 } from "react-native";
 import { Card, Rating, Badge } from "react-native-elements";
 export default class AppBrandsListView extends Component {
@@ -15,6 +16,11 @@ export default class AppBrandsListView extends Component {
   }
   franchisePress(franchiseId, franchiseDistance) {
     this.props.franchiseOnPress(franchiseId, franchiseDistance);
+  }
+
+  _handleLoadMore(){
+    console.log("loadMore triggered inside component")
+    this.props.loadMore()
   }
   render() {
     let dimensions = Dimensions.get("window");
@@ -37,25 +43,27 @@ export default class AppBrandsListView extends Component {
           </Text>
           </View>
         ) : (
-          <ScrollView
+          <FlatList
+            data={this.props.data}
+            showsVerticalScrollIndicator
             showsVerticalScrollIndicator={false}
             style={{ marginTop: 0 }}
-          >
-            {this.props.data.map((datum, i) => {
-              return (
-                <TouchableOpacity
-                  onPress={() => this.franchisePress(datum.franchiseId, datum.distance.toFixed(3))}
-                  key={i}
+            keyExtractor={item => item.typeId.toString()}
+            onEndReached={() => this._handleLoadMore()}
+            onEndReachedThreshold={0.5}
+            renderItem={({item})=> (
+              <TouchableOpacity
+                  onPress={() => this.franchisePress(item.franchiseId, item.distance.toFixed(3))}
                   activeOpacity={0.6}
                 >
-                  <Card containerStyle={{ padding: 0 }} key={i}>
+                  <Card containerStyle={{ padding: 0 }} >
                     <View style={{ flexDirection: "row", padding: 0 }}>
                       <View
                         style={{ width: dimensions.width * 0.3, padding: 0 }}
                       >
                         <Image
                           style={{ height: 100, width: 100 }}
-                          source={{ uri: datum.imageUrl }}
+                          source={{ uri: item.imageUrl }}
                         />
                       </View>
                       <View
@@ -73,12 +81,12 @@ export default class AppBrandsListView extends Component {
                           }}
                         >
                           <Text>
-                            {datum.type == "franchise"
-                              ? datum.name
-                              : datum.typeName}
+                            {item.type == "franchise"
+                              ? item.name
+                              : item.typeName}
                           </Text>
                           <Text style={{ fontSize: 10 }}>
-                            {datum.type == "franchise" ? datum.address : ""}
+                            {item.type == "franchise" ? item.address : ""}
                           </Text>
                           <Rating imageSize={16} readonly startingValue={3} />
                           <View
@@ -91,9 +99,9 @@ export default class AppBrandsListView extends Component {
                           >
                             <Badge
                               value={
-                                datum.type === "franchise"
-                                  ? datum.distance.toFixed(2)
-                                  : datum.price
+                                item.type === "franchise"
+                                  ? item.distance.toFixed(2)
+                                  : item.price
                               }
                               badgeStyle={{
                                 height: 25,
@@ -103,7 +111,7 @@ export default class AppBrandsListView extends Component {
                               textStyle={{ fontSize: 10, color: "#fff" }}
                             />
                             <Text style={{ fontSize: 10 }}>
-                              {datum.type === "franchise" ? " Km" : " Rs"}
+                              {item.type === "franchise" ? " Km" : " Rs"}
                             </Text>
                           </View>
                         </View>
@@ -111,9 +119,10 @@ export default class AppBrandsListView extends Component {
                     </View>
                   </Card>
                 </TouchableOpacity>
-              );
-            })}
-          </ScrollView>
+        )}
+            >
+            )}
+          </FlatList>
         )}
       </View>
     );
