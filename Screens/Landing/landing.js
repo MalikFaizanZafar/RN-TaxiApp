@@ -8,7 +8,9 @@ import {
   getFilterQueryData,
   getUserLocation,
   getNearByDeals,
-  getNearByFranchises
+  getNearByFranchises,
+  getNearByDealsWithFilter,
+  getNearByFranchisesWithFilter
 } from "../../services/getIntialData";
 import {
   getNearestFranchises,
@@ -285,62 +287,51 @@ export default class LandingScreen extends React.Component {
   onSearchHandler(searchKey) {
     this.setState({ dataLoading: true });
     if (!searchKey) {
-      console.log("searchKey is empty", this.state.dataArray);
-      console.log(
-        " getNearestFranchises(this.state.dataArray, deal): ",
-        getNearestFranchises(this.state.dataArray, "deal")
-      );
-      console.log(
-        " getNearestFranchises(this.state.dataArray, franchise): ",
-        getNearestFranchises(this.state.dataArray, "franchise")
-      );
-      this.setState({
-        ListViewData:
-          this.state.selectedTab === 0
-            ? getNearestFranchises(this.state.dataArray, "deal")
-            : getNearestFranchises(this.state.dataArray, "franchise")
-      });
-      this.setState({ dataLoading: false });
+      this.tabClicked(this.state.selectedTab)
     } else {
       console.log("searchKey is NOT empty");
-      LandingSearchHandler(
-        this.state.latitude,
-        this.state.longitude,
-        35,
-        searchKey,
-        this.state.selectedTab
-      ).then(promiseResponse => {
-        console.log("searchPromise response is : ", promiseResponse);
-        this.setState(
-          {
-            ListViewData: promiseResponse
-          },
-          () => {
-            this.setState({ dataLoading: false });
+      if(this.state.selectedTab === 0){
+        getNearByDealsWithFilter(this.state.latitude, this.state.longitude, 10, 1, 25, searchKey).then(
+          promiseResponse => {
+            console.log("NearByDeals Search  : ", promiseResponse);
+            this.setState({
+              dataArray: promiseResponse.data.data,
+              dataLoading: false
+            });
+            this.setState({
+              ListViewData: promiseResponse.data.data
+            });
           }
         );
-      });
+      }else if(this.state.selectedTab === 1){
+        getNearByFranchisesWithFilter(this.state.latitude, this.state.longitude, 10, 1, 25, searchKey).then(
+          promiseResponse => {
+            console.log("NearByFranchises Search  : ", promiseResponse);
+            this.setState({
+              dataArray: promiseResponse.data.data,
+              dataLoading: false
+            });
+            this.setState({
+              ListViewData: promiseResponse.data.data
+            });
+          }
+        );
+      }
     }
   }
 
-  updateSearch = search => {
-    this.setState({ search });
+  updateSearch = searchKey => {
+    this.setState({ search: searchKey });
   };
 
   tabClicked(id) {
-    console.log("selected Tab is : ", id)
     this.setState(
       {
         selectedTab: id,
-        dataLoading: true
+        dataLoading: true,
+        searchKey: ""
       },
       () => {
-        // this.setState({
-        //   ListViewData: LandingTabClickHandler(
-        //     this.state.dataArray,
-        //     this.state.selectedTab
-        //   )
-        // });
         if (this.state.selectedTab === 0) {
           getNearByDeals(this.state.latitude, this.state.longitude, 10, 1, 25).then(
             promiseResponse => {

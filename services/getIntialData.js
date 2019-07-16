@@ -93,3 +93,30 @@ export const getNearByFranchises = (latitude, longitude,distance,page,size) => {
       });
   });
 };
+export const getNearByDealsWithFilter = (latitude, longitude,distance,page,size, filter) => {
+  return new Promise((resolve, reject) => {
+    axios
+      .get(`${URL}/api/filter?lat=${latitude}&long=${longitude}&distance=${distance}&page=${page}&size=${size}&type=deal&filter=${filter}`)
+      .then(dataResponse => {
+        resolve(dataResponse);
+      })
+      .catch(brandsError => {
+        // console.log("brandsError is : ", brandsError)
+        reject(brandsError);
+      });
+  });
+};
+
+export const getNearByFranchisesWithFilter = (latitude, longitude,distance,page,size, filter) => {
+  return new Promise((resolve, reject) => {
+    axios
+      .get(`${URL}/api/filter?lat=${latitude}&long=${longitude}&distance=${distance}&page=${page}&size=${size}&type=franchise&filter=${filter}`)
+      .then(dataResponse => {
+        resolve(dataResponse);
+      })
+      .catch(brandsError => {
+        // console.log("brandsError is : ", brandsError)
+        reject(brandsError);
+      });
+  });
+};
