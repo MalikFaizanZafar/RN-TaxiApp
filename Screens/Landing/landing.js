@@ -24,12 +24,14 @@ import { isUserLocationStored } from "../../services/isUserLocationStored";
 import { setDeviceToken } from "../../services/setDeviceToken";
 import { Button } from "react-native-elements";
 import OrderReviewDialog from "../../components/OrderReviewDialog";
+import { getCityAd } from "../../services/getCityAd";
 export default class LandingScreen extends React.Component {
   static navigationOptions = {
     drawerLabel: () => null
   };
 
   state = {
+    adImage: 'https://cdn.pixabay.com/photo/2015/12/15/09/04/banner-1093909__340.jpg',
     latitude: null,
     longitude: null,
     error: null,
@@ -164,6 +166,13 @@ export default class LandingScreen extends React.Component {
     await storeUserData("longitude", longitude.toString());
   };
   async componentDidMount() {
+    getCityAd('islamabad').then(cityAdsResponse => {
+      let adImagesArray = cityAdsResponse.data.data;
+      let adImageString = adImagesArray.filter(ad => ad.priority == "Mobile")[0]
+      this.setState({
+        adImage: adImageString.image
+      })
+    })
     this.checkPermission();
     this.LocationSerivce();
     this.getNotificationToken();
@@ -465,6 +474,7 @@ export default class LandingScreen extends React.Component {
             this.onSearchHandler(val);
           }}
           searchType={this.state.selectedTab === 0 ? "deals" : "brands"}
+          adImage={this.state.adImage}
         />
         <AppBrandsListView
           data={this.state.ListViewData}

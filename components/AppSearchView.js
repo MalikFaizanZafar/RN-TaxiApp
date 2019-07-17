@@ -21,7 +21,7 @@ export default class AppSearchView extends Component {
             justifyContent: "center",
             alignItems: "center"
           }}
-          source={require("../assets/subquch3.jpeg")}
+          source={{ uri: this.props.adImage }}
         >
           <SearchBar
             placeholder={`Search for ${this.props.searchType}`}
