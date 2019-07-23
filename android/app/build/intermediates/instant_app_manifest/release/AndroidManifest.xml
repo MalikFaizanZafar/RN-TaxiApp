@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.subquch"
     android:targetSandboxVersion="2"
-    android:versionCode="12"
-    android:versionName="12" >
+    android:versionCode="1311"
+    android:versionName="1311" >
 
     <uses-sdk
         android:minSdkVersion="16"
