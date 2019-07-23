@@ -37,7 +37,7 @@ export default class AppBrandsListView extends Component {
             <Text style={{ fontSize: 15, fontWeight: "bold", color:"#000"}} >
             {`No ${
               this.props.selectedTab === 0 ? "Deals" : "Franchises"
-            }  within the Range of 35 Kms`}
+            }  within the Range of 10 Kms`}
           </Text>
           </View>
         ) : (

@@ -50,6 +50,24 @@ export default class FranchiseTrackingScreen extends Component {
         }
       ]
     });
+    navigator.geolocation.watchPosition(
+      position => {
+        this.setState({
+          coordinates: [
+            {
+              latitude: position.coords.latitude,
+              longitude: position.coords.longitude // 33.639849, 72.987583
+            },
+            {
+              latitude: Number(params.latitude),
+              longitude: Number(params.longitude) //33.668819, 72.998826
+            }
+          ]
+        });
+      },
+      error => console.log("error is : ", error),
+      { enableHighAccuracy: true, timeout: 200000 }
+    );
     // locs = [
     //   { lat: 33.494652, lon: 73.101231 },
     //   { lat: 33.494766, lon: 73.10125 },
@@ -132,7 +150,7 @@ export default class FranchiseTrackingScreen extends Component {
             onReady={result => {
               console.log(`Distance: ${result.distance} km`);
               console.log(`Duration: ${result.duration} min.`);
-              if (result.distance < 1.3) {
+              if (result.distance < 0.1) {
                 Alert.alert(
                   "SubQuch Alert ",
                   "You Have Reached the Franchise. Would You Like To Checkin?",
