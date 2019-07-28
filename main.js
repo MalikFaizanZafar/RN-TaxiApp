@@ -4,15 +4,13 @@ import {
   createAppContainer
 } from "react-navigation";
 import HomeScreen from "./Screens/home";
-import CustomerScreen from "./Screens/home/customer";
-import ProviderScreen from "./Screens/home/provider";
+import LandingScreen from "./Screens/landing";
 
 
 const AppNavigator = createStackNavigator(
   {
     Home: HomeScreen,
-    Customer: CustomerScreen,
-    Provider: ProviderScreen
+    Landing: LandingScreen
   },
   {
     initialRouteName: "Home",
