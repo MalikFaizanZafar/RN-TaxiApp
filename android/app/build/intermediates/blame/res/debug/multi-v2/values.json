@@ -69,11 +69,9 @@
                 {
                     "source": "E:\\Office\\SubQuch\\Taxi App\\android\\app\\src\\main\\res\\values\\strings.xml",
                     "from": {
-                        "startLines": "1,-1,-1",
-                        "startColumns": "4,-1,-1",
-                        "startOffsets": "17,-1,-1",
-                        "endColumns": "44,-1,-1",
-                        "endOffsets": "57,-1,-1"
+                        "startLines": "-1,-1,-1",
+                        "startColumns": "-1,-1,-1",
+                        "startOffsets": "-1,-1,-1"
                     },
                     "to": {
                         "startLines": "314,381,382",
@@ -164,9 +162,11 @@
                 {
                     "source": "E:\\Office\\SubQuch\\Taxi App\\android\\app\\src\\main\\res\\values\\ic_launcher_background.xml",
                     "from": {
-                        "startLines": "-1",
-                        "startColumns": "-1",
-                        "startOffsets": "-1"
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "57",
+                        "endColumns": "56",
+                        "endOffsets": "109"
                     },
                     "to": {
                         "startLines": "70",
@@ -195,11 +195,9 @@
                 {
                     "source": "E:\\Office\\SubQuch\\Taxi App\\android\\app\\build\\generated\\res\\google-services\\debug\\values\\values.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,199,307,389,493,596,716,813",
-                        "endColumns": "143,107,81,103,102,119,96,73",
-                        "endOffsets": "194,302,384,488,591,711,808,882"
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1"
                     },
                     "to": {
                         "startLines": "380,384,385,386,387,388,389,394",
