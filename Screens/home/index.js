@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text } from "react-native";
-import HomeStyles from "../Styles/home";
+import HomeStyles from "../../Styles/home";
 
 class HomeScreen extends React.Component {
   static navigationOptions = {
