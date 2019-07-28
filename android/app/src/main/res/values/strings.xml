@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SubQuch</string>
+    <string name="app_name">TaxiApp</string>
     <string name="facebook_app_id">2327804567453388</string>
     <string name="fb_login_protocol_scheme">fb{2327804567453388}</string>
 </resources>

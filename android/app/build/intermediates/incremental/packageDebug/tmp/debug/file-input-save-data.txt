@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Jul 28 12:23:56 PKT 2019
+#Sun Jul 28 17:14:04 PKT 2019
 56.path=lib/x86_64/libgnustl_shared.so
 5.base=E\:\\Office\\SubQuch\\Taxi App\\android\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0
 42.base=E\:\\Office\\SubQuch\\Taxi App\\android\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0

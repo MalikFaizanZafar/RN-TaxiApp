@@ -102,11 +102,11 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.subquch"
+        applicationId "com.taxiapp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1311
-        versionName "1311"
+        versionCode 1
+        versionName "1"
     }
     signingConfigs {
         release {

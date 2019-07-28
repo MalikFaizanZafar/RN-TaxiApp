@@ -238,7 +238,7 @@ MERGED from [org.webkit:android-jsc:r174650] C:\Users\ZIXSOL\.gradle\caches\tran
 	android:name
 		ADDED from E:\Office\SubQuch\Taxi App\android\app\src\main\AndroidManifest.xml:7:7-38
 		ADDED from E:\Office\SubQuch\Taxi App\android\app\src\main\AndroidManifest.xml:7:7-38
-activity#com.subquch.MainActivity
+activity#com.taxiapp.MainActivity
 ADDED from E:\Office\SubQuch\Taxi App\android\app\src\main\AndroidManifest.xml:13:7-22:18
 	android:label
 		ADDED from E:\Office\SubQuch\Taxi App\android\app\src\main\AndroidManifest.xml:15:9-41

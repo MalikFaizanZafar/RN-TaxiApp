@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="default_web_client_id" translatable="false">54989238851-3dldbv2i90f7atlge5ssd6rd9tiau4tf.apps.googleusercontent.com</string>
-    <string name="firebase_database_url" translatable="false">https://subquch-d4369.firebaseio.com</string>
-    <string name="gcm_defaultSenderId" translatable="false">54989238851</string>
-    <string name="google_api_key" translatable="false">AIzaSyC57TPzzimuTGYH0618sejzQKhm99e7IsY</string>
-    <string name="google_app_id" translatable="false">1:54989238851:android:0a57b084b369fa24</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyC57TPzzimuTGYH0618sejzQKhm99e7IsY</string>
-    <string name="google_storage_bucket" translatable="false">subquch-d4369.appspot.com</string>
-    <string name="project_id" translatable="false">subquch-d4369</string>
+    <string name="default_web_client_id" translatable="false">101075333855-5uj877us8r4jfbsn9qnac65ufd98jkls.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://taxiapp-1f1ef.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">101075333855</string>
+    <string name="google_api_key" translatable="false">AIzaSyBEXC5kAc0BsgZfMXp-KYsUCTWl_084YYk</string>
+    <string name="google_app_id" translatable="false">1:101075333855:android:6f221a77aea0c5d3</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBEXC5kAc0BsgZfMXp-KYsUCTWl_084YYk</string>
+    <string name="google_storage_bucket" translatable="false">taxiapp-1f1ef.appspot.com</string>
+    <string name="project_id" translatable="false">taxiapp-1f1ef</string>
 </resources>
