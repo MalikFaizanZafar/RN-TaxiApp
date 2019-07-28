@@ -2,8 +2,6 @@ import React from "react";
 import { View, ImageBackground } from "react-native";
 import { Button } from 'react-native-elements';
 import HomeStyles from "../../Styles/home";
-import DriverScreen from "./driver";
-import PassengerScreen from "./passenger";
 
 class HomeScreen extends React.Component {
   constructor(props) {
@@ -11,6 +9,14 @@ class HomeScreen extends React.Component {
     this.state = {
       driver: true
     };
+  }
+
+  navigateTo= (i) => {
+    if(i === 1) {
+      this.props.navigation.navigate('Customer')
+    }else {
+      this.props.navigation.navigate('Provider')
+    }
   }
   render() {
     return (
@@ -24,11 +30,13 @@ class HomeScreen extends React.Component {
               containerStyle={{width: 200, marginTop: 50}}
               buttonStyle={{ backgroundColor: "#23225C" }}
               title="I am Customer"
+              onPress={() => this.navigateTo(1)}
             />
             <Button
               containerStyle={{width: 200, marginTop: 10}}
               buttonStyle={{ backgroundColor: "#23225C" }}
-              title="I am Deliverer"
+              title="I am Provider"
+              onPress={()=>this.navigateTo(2)}
               
             />
           </View>

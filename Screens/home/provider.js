@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text } from "react-native";
 import HomeStyles from "../../Styles/home";
 
-class DriverScreen extends React.Component {
+class ProviderScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -10,10 +10,10 @@ class DriverScreen extends React.Component {
   render() {
     return (
       <View style={HomeStyles.container}>
-        <Text>Welcome Driver!</Text>
+        <Text>Welcome Provider!</Text>
       </View>
     );
   }
 }
 
-export default DriverScreen;
+export default ProviderScreen;

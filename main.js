@@ -4,11 +4,15 @@ import {
   createAppContainer
 } from "react-navigation";
 import HomeScreen from "./Screens/home";
+import CustomerScreen from "./Screens/home/customer";
+import ProviderScreen from "./Screens/home/provider";
 
 
 const AppNavigator = createStackNavigator(
   {
-    Home: HomeScreen
+    Home: HomeScreen,
+    Customer: CustomerScreen,
+    Provider: ProviderScreen
   },
   {
     initialRouteName: "Home",
