@@ -3,21 +3,8 @@ import {
   createStackNavigator,
   createAppContainer
 } from "react-navigation";
-import { AsyncStorage } from "react-native";
-import { MyDrawerNavigator } from "./Screens/Landing";
 import HomeScreen from "./Screens/home";
-import { FranchiseDrawerNavigator } from "./Screens/Franchise";
-import { ItemDrawerNavigator } from "./Screens/Item";
-import { CartDrawerNavigator } from "./Screens/Cart";
 
-_bootstrapAsync = () => {
-  let user = "";
-  AsyncStorage.getItem("@SubQuch-User").then(data => {
-    user = data
-  })
-  console.log("subquchUser is : ", subquchUser)
-  return user.length == 0? true : false;
-};
 
 const AppNavigator = createStackNavigator(
   {
@@ -29,24 +16,11 @@ const AppNavigator = createStackNavigator(
     headerMode: "none"
   }
 );
-const AppNavigatorTwo = createStackNavigator(
-  {
-    Landing: MyDrawerNavigator,
-    Franchise: FranchiseDrawerNavigator,
-    Item: ItemDrawerNavigator,
-    Cart: CartDrawerNavigator
-  },
-  {
-    initialRouteName: "Landing",
-    header: null,
-    headerMode: "none"
-  }
-);
+
 
 const switchNavigator = createSwitchNavigator(
   {
-    Home: AppNavigator,
-    Landing: AppNavigatorTwo
+    Home: AppNavigator
   },
   {
     initialRouteName: "Home"
